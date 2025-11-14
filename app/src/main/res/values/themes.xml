@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="Theme.Mygrowth" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary Branding -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Toolbar Color -->
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+
+        <!-- Bottom Navigation/Drawer Color -->
+        <item name="android:navigationBarColor">@color/colorPrimary</item>
+
+        <!-- Text Colors -->
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+
+        <!-- Default Background -->
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+</resources>

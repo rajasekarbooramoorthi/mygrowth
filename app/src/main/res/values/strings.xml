@@ -1,0 +1,27 @@
+<resources>
+
+    <!-- App Name -->
+    <string name="app_name">MyGrowth</string>
+
+    <!-- Drawer Strings -->
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+
+    <!-- Bottom Navigation Titles -->
+    <string name="title_home">Home</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- Drawer Menu Titles -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Toolbar Titles -->
+    <string name="toolbar_title_home">Home</string>
+    <string name="toolbar_title_profile">Profile</string>
+    <string name="toolbar_title_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>
