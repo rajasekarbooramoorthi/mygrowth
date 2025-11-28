@@ -1,0 +1,15 @@
+
+CREATE TABLE Bnk_details (
+    b_sno INT AUTO_INCREMENT PRIMARY KEY,
+    b_name VARCHAR(255),
+    b_cust_id VARCHAR(255),
+    b_acc_name VARCHAR(255),
+    b_card_num VARCHAR(255),
+    b_cpin VARCHAR(255),
+    b_psw VARCHAR(255),
+    b_profile_password VARCHAR(255),
+    b_created_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    b_updated DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+

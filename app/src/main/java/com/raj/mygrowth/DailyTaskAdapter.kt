@@ -28,13 +28,20 @@ class DailyTaskAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = groups[position]
 
-        holder.tvTaskName.text = item.taskName
+        // Capitalize first letter only — optimized
+        val formattedTitle = item.taskName.replaceFirstChar { it.uppercase() }
 
-        // Set layout manager once
-        holder.recyclerView.layoutManager =
-            LinearLayoutManager(holder.itemView.context)
+        holder.tvTaskName.text = formattedTitle
 
-        // Set inner adapter
-        holder.recyclerView.adapter = DailyTaskAdapterItem(item.list)
+        // Avoid creating LayoutManager & Adapter repeatedly on scroll
+        if (holder.recyclerView.layoutManager == null) {
+            holder.recyclerView.layoutManager =
+                LinearLayoutManager(holder.itemView.context)
+        }
+
+        // Set adapter only if not set already
+        if (holder.recyclerView.adapter == null) {
+            holder.recyclerView.adapter = DailyTaskAdapterItem(item.list)
+        }
     }
 }

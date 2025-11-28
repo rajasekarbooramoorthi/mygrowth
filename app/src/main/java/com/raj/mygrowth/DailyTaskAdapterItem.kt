@@ -18,7 +18,7 @@ class DailyTaskAdapterItem(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.adapter_header_daily_task, parent, false)
+            .inflate(R.layout.adapter_item_daily_task, parent, false)
         return ViewHolder(view)
     }
 
