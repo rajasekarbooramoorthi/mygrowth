@@ -46,8 +46,19 @@ class HomeFragment : Fragment() {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                    val adapter = DailyTaskAdapter(response.data.all_list)
+                    val adapter = DailyTaskAdapter(response.data)
                     binding.rvDailyTask.adapter = adapter
+                    var position = 0
+                    response.data.forEachIndexed { index, item ->
+                        if (item.taskName == "today") {
+                            position = index
+                        }
+                        println("Index = $index, Item = $item")
+                    }
+
+                    binding.rvDailyTask.post {
+                        binding.rvDailyTask.smoothScrollToPosition(position)
+                    }
                     Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
 
                 } else {

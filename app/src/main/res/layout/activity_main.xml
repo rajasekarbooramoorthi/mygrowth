@@ -24,6 +24,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
+                    android:layout_marginTop="@dimen/_14sdp"
                     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
             </com.google.android.material.appbar.AppBarLayout>
 

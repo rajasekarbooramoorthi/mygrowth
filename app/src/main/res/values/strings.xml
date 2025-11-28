@@ -1,7 +1,7 @@
 <resources>
 
     <!-- App Name -->
-    <string name="app_name">MyGrowth</string>
+    <string name="app_name">Task</string>
 
     <!-- Drawer Strings -->
     <string name="open_drawer">Open Navigation Drawer</string>

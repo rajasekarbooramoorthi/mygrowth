@@ -18,6 +18,9 @@ okhttp = "5.0.0-alpha.16"
 loggingInterceptor = "5.0.0-alpha.16"
 sspAndroid = "1.1.1"
 sdpAndroid = "1.1.1"
+epoxy = "5.1.4"
+epoxyDatabinding = "5.1.4"
+epoxyProcessor = "5.1.4"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -44,9 +47,14 @@ okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhtt
 logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
 ssp-android = { group = "com.intuit.ssp", name = "ssp-android", version.ref = "sspAndroid" }
 sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "sdpAndroid" }
+epoxy = { group = "com.airbnb.android", name = "epoxy", version.ref = "epoxy" }
+epoxy-databinding = { group = "com.airbnb.android", name = "epoxy-databinding", version.ref = "epoxyDatabinding" }
+epoxy-processor = { group = "com.airbnb.android", name = "epoxy-processor", version.ref = "epoxyProcessor" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+
 

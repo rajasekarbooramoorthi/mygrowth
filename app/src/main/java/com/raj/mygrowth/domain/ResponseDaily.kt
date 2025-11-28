@@ -1,22 +1,15 @@
 package com.raj.mygrowth.domain
 
 data class DailyTaskResponse(
-    val status: Boolean, val message: String?, val data: Data
-)
-
-data class Data(
-    val today: ArrayList<DailyTask>,
-    val tomorrow: ArrayList<DailyTask>,
-    val this_week: ArrayList<DailyTask>,
-    val this_month: ArrayList<DailyTask>,
-    val next_month: ArrayList<DailyTask>,
-    val future: ArrayList<DailyTask>,
-    val overdue: ArrayList<DailyTask>,
-    val all_list: ArrayList<DailyTask>
-
+    val status: Boolean, val message: String?, val data: ArrayList<DailyTask>
 )
 
 data class DailyTask(
+    val taskName: String,
+    val list: ArrayList<DailyTaskItem>
+)
+
+data class DailyTaskItem(
     val dt_sno: String,
     val dt_id: String,
     val dt_name: String,
