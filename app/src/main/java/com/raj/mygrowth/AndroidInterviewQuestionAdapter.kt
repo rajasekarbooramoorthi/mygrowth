@@ -2,6 +2,7 @@ package com.raj.mygrowth
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterItemAndroidInterviewBinding
 import com.raj.mygrowth.domain.AndroidInterviewItem
@@ -29,5 +30,16 @@ class AndroidInterviewQuestionAdapter(
         val item = list[position]
         holder.binding.item = item
         holder.binding.executePendingBindings()
+
+        // Avoid creating LayoutManager & Adapter repeatedly on scroll
+        if (holder.binding.recyclerView.layoutManager == null) {
+            holder.binding.recyclerView.layoutManager =
+                LinearLayoutManager(holder.itemView.context)
+        }
+
+        // Set adapter only if not set already
+        if (holder.binding.recyclerView.adapter == null) {
+            holder.binding.recyclerView.adapter = AndroidInterviewQuestionLinkAdapter(item.links)
+        }
     }
 }

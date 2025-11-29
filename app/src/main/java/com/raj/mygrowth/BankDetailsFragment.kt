@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.databinding.FragmentPasswordBinding
+import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
@@ -39,7 +40,7 @@ class BankDetailsFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.getBankDetails("get_master_Bank")
+                val response = api.getBankDetails(RequestAction("get_master_Bank"))
 
                 binding.progressBar.visibility = View.GONE
 

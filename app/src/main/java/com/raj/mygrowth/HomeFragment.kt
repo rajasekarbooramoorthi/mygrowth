@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.databinding.FragmentHomeBinding
+import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
@@ -41,7 +42,7 @@ class HomeFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.insertTask("get_daily_task")
+                val response = api.insertTask(RequestAction("get_daily_task"))
 
                 binding.progressBar.visibility = View.GONE
 

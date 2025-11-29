@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterItemBankDetailsBinding
-import com.raj.mygrowth.databinding.AdapterItemPasswordBinding
 import com.raj.mygrowth.domain.BankItem
 
 class BankDetailsAdapter(
