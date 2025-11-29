@@ -5,7 +5,6 @@
     app:startDestination="@id/homeFragment">
 
 
-
     <activity
         android:id="@+id/mainActivity"
         android:name="com.raj.mygrowth.MainActivity"
@@ -34,5 +33,9 @@
         android:id="@+id/bankDetailsFragment"
         android:name="com.raj.mygrowth.BankDetailsFragment"
         android:label="Bank Details" />
+    <fragment
+        android:id="@+id/androidInterviewFragment"
+        android:name="com.raj.mygrowth.AndroidInterviewQuestionsFragment"
+        android:label="Interview Question" />
 
 </navigation>

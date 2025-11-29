@@ -1,6 +1,7 @@
 package com.raj.mygrowth.networkUtility
 
 import com.raj.mygrowth.domain.DailyTaskResponse
+import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponsePassword
 import retrofit2.http.Field
@@ -26,4 +27,9 @@ interface ApiService {
     suspend fun getBankDetails(
         @Field("action") taskName: String
     ): ResponseBankDetails
+    @POST("getmydata.php")
+    @FormUrlEncoded
+    suspend fun getAndroidInterview(
+        @Field("action") taskName: String
+    ): ResponseAndroidInterview
 }
