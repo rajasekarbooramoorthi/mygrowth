@@ -20,4 +20,5 @@
     <!-- Text Colors -->
     <color name="textPrimary">#212121</color>           <!-- Dark Gray -->
     <color name="textSecondary">#757575</color>         <!-- Light Gray -->
+    <color name="ggray">#757575</color>         <!-- Light Gray -->
 </resources>

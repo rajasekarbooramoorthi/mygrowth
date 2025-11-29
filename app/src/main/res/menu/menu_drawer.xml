@@ -3,19 +3,27 @@
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_home"
-            android:title="Home"
-            android:icon="@drawable/ic_home" />
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
 
         <item
-            android:id="@+id/nav_profile"
-            android:title="Profile"
-            android:icon="@drawable/ic_profile" />
+            android:id="@+id/profileFragment"
+            android:icon="@drawable/ic_profile"
+            android:title="Profile" />
 
         <item
-            android:id="@+id/nav_settings"
-            android:title="Settings"
-            android:icon="@drawable/ic_settings" />
+            android:id="@+id/settingsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/passwordFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="Password" />
+        <item
+            android:id="@+id/bankDetailsFragment"
+            android:icon="@drawable/ic_settings"
+            android:title="Bank Details" />
 
     </group>
 
