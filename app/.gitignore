@@ -1,1 +1,47 @@
-/build
+# Gradle files
+.gradle/
+build/
+*/build/
+
+# Local configuration
+local.properties
+
+# IntelliJ/Android Studio
+*.iml
+.idea/
+.DS_Store
+
+# Keystore files
+*.jks
+*.keystore
+
+# Kotlin specific
+*.kotlin_module
+
+# Android specific
+captures/
+output.json
+externalNativeBuild/
+
+# Log files
+*.log
+
+# NDK
+obj/
+.cxx/
+
+# Misc
+*.apk
+*.ap_
+*.aab
+
+# Google Services
+google-services.json
+
+# Generated Files
+generated/
+# Gradle / build cache files
+buildOutputCleanup.lock
+executionHistory.lock
+fileHashes.bin
+fileHashes.lock
