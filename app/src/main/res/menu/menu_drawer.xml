@@ -24,6 +24,10 @@
             android:id="@+id/bankDetailsFragment"
             android:icon="@drawable/ic_settings"
             android:title="Bank Details" />
+        <item
+            android:id="@+id/androidSelfImprovement"
+            android:icon="@drawable/ic_settings"
+            android:title="Self Improvement" />
 
     </group>
 

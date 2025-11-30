@@ -21,6 +21,8 @@ sdpAndroid = "1.1.1"
 epoxy = "5.1.4"
 epoxyDatabinding = "5.1.4"
 epoxyProcessor = "5.1.4"
+material = "1.13.0"
+activity = "1.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -50,6 +52,8 @@ sdp-android = { group = "com.intuit.sdp", name = "sdp-android", version.ref = "s
 epoxy = { group = "com.airbnb.android", name = "epoxy", version.ref = "epoxy" }
 epoxy-databinding = { group = "com.airbnb.android", name = "epoxy-databinding", version.ref = "epoxyDatabinding" }
 epoxy-processor = { group = "com.airbnb.android", name = "epoxy-processor", version.ref = "epoxyProcessor" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -23,3 +23,15 @@ CREATE TABLE AndroidSkillMaster (
 );
 
 
+CREATE TABLE selfImprovement (
+    ai_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ai_name VARCHAR(255) NOT NULL,
+    ai_created_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ai_updated DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+
+
+

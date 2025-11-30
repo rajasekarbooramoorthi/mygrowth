@@ -42,5 +42,9 @@
         android:id="@+id/androidMaster"
         android:name="com.raj.mygrowth.AndroidMasterFragment"
         android:label="Android Master Skill" />
+    <fragment
+        android:id="@+id/androidSelfImprovement"
+        android:name="com.raj.mygrowth.SelfImprovementFragment"
+        android:label="Self Improvement" />
 
 </navigation>

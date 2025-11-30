@@ -67,6 +67,8 @@ dependencies {
     implementation(libs.sdp.android)
     implementation(libs.epoxy)
     implementation(libs.epoxy.databinding)
+    implementation(libs.material)
+    implementation(libs.androidx.activity)
     kapt(libs.epoxy.processor)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
