@@ -4,6 +4,7 @@ import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidInterview
+import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponsePassword
 import retrofit2.http.Body
@@ -17,12 +18,12 @@ interface ApiService {
     ): DailyTaskResponse
 
     @POST("getmydata.php")
-     suspend fun getPassword(
+    suspend fun getPassword(
         @Body request: RequestAction
     ): ResponsePassword
 
     @POST("getmydata.php")
-     suspend fun getBankDetails(
+    suspend fun getBankDetails(
         @Body request: RequestAction
     ): ResponseBankDetails
 
@@ -35,4 +36,10 @@ interface ApiService {
     suspend fun insertInterviewQuestion(
         @Body request: RequestActionAndroidInterview
     ): ResponseAndroidInterview
+
+    @POST("getmydata.php")
+    suspend fun getAndroidMaster(
+        @Body request: RequestAction
+    ): ResponseAndroidMaster
+
 }

@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_profile" />
 
     <item
-        android:id="@+id/menu_bottom_settingsFragment"
-        android:title="Settings"
+        android:id="@+id/androidMaster"
+        android:title="Master"
         android:icon="@drawable/ic_settings" />
 </menu>
