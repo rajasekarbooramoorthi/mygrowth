@@ -11,7 +11,6 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.LinearSnapHelper
 import com.raj.mygrowth.databinding.FragmentAndroidMasterBinding
 import com.raj.mygrowth.domain.ConceptModel
 import com.raj.mygrowth.domain.RequestAction
@@ -59,15 +58,11 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                     val adapter =
                         MasterSkillAdapter(
                             response.data,
-                            binding.recyclerViewHorizontal,
                             this@AndroidMasterFragment
                         )
                     binding.recyclerViewHorizontal.adapter = adapter
-                    binding.recyclerViewHorizontal.setHasFixedSize(true)
                     binding.recyclerViewHorizontal.isNestedScrollingEnabled = false
 
-                    val snapHelper = LinearSnapHelper()
-                    snapHelper.attachToRecyclerView(binding.recyclerViewHorizontal)
                     Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
@@ -77,10 +72,40 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                 Toast.makeText(requireContext(), e.message, Toast.LENGTH_LONG).show()
             }
         }
+    }
+
+    private fun loadDetails(tag: String) {
+
+        binding.progressBar.visibility = View.VISIBLE
+
+        lifecycleScope.launch {
+            try {
+                val api = RetrofitClient.instance.create(ApiService::class.java)
+                val response = api.getAndroidMasterData(RequestAction(tag))
+
+                binding.progressBar.visibility = View.GONE
+
+                if (response.status) {
+                    binding.recyclerViewVertical.layoutManager =
+                        LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
+                    val adapter =
+                        MasterGenericAdapter(
+                            response.data,
+                            this@AndroidMasterFragment
+                        )
+                    binding.recyclerViewVertical.adapter = adapter
+                    binding.recyclerViewVertical.isNestedScrollingEnabled = false
+
+                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                }
 
 
-        //pickCsvFile()
-
+            } catch (e: Exception) {
+                binding.progressBar.visibility = View.GONE
+                Toast.makeText(requireContext(), e.message, Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     private fun sendToApi(list: ArrayList<ConceptModel>) {
@@ -184,7 +209,11 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     }
 
     override fun click(id: String) {
-println("Lkobal")
+        loadDetails(id)
+    }
+
+    override fun clickChild(id: String) {
+
     }
 
 

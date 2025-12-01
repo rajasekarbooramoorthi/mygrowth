@@ -5,10 +5,10 @@ data class ResponseAndroidMaster(
 )
 
 data class AndroidMaster(
-    val asm_sno: String,
-    val asm_id: String,
-    val asm_name: String,
-    val asm_tag: String,
+    val ms_sno: String,
+    val ms_id: String,
+    val ms_name: String,
+    val ms_tag: String,
     val links: ArrayList<String>?
 )
 

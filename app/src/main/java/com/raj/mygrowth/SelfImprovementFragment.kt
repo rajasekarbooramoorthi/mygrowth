@@ -73,4 +73,8 @@ class SelfImprovementFragment : Fragment(), SimpleClick {
         startActivity(intent)
         println("Url-->$id")
     }
+
+    override fun clickChild(id: String) {
+
+    }
 }

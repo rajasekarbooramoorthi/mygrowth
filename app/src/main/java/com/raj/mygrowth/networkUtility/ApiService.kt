@@ -6,6 +6,8 @@ import com.raj.mygrowth.domain.RequestActionAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
+import com.raj.mygrowth.domain.ResponseGeneric
+import com.raj.mygrowth.domain.ResponseGenericItem
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSelfImprovement
 import retrofit2.http.Body
@@ -47,5 +49,11 @@ interface ApiService {
     suspend fun getSelfImprovement(
         @Body request: RequestAction
     ): ResponseSelfImprovement
+
+    @POST("getmydata.php")
+    suspend fun getAndroidMasterData(
+        @Body request: RequestAction
+    ): ResponseGeneric
+
 
 }

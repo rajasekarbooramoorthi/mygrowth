@@ -3,20 +3,20 @@ package com.raj.mygrowth
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.raj.mygrowth.databinding.AdapterItemMasterSkillBinding
-import com.raj.mygrowth.domain.AndroidMaster
+import com.raj.mygrowth.databinding.AdapterItemMasterGenericBinding
+import com.raj.mygrowth.domain.ResponseGenericItem
 import com.raj.mygrowth.interfaces.SimpleClick
 
-class MasterSkillAdapter(
-    private val list: List<AndroidMaster>, click_: SimpleClick
-) : RecyclerView.Adapter<MasterSkillAdapter.ViewHolder>() {
+class MasterGenericAdapter(
+    private val list: List<ResponseGenericItem>,click_: SimpleClick
+) : RecyclerView.Adapter<MasterGenericAdapter.ViewHolder>() {
     var click = click_
 
-    class ViewHolder(val binding: AdapterItemMasterSkillBinding) :
+    class ViewHolder(val binding: AdapterItemMasterGenericBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = AdapterItemMasterSkillBinding.inflate(
+        val binding = AdapterItemMasterGenericBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return ViewHolder(binding)
@@ -28,7 +28,7 @@ class MasterSkillAdapter(
         val item = list[position]
         holder.binding.item = item
         holder.binding.root.setOnClickListener {
-            click.click(item.ms_tag)
+            click.clickChild(item.name)
         }
         holder.binding.executePendingBindings()
     }

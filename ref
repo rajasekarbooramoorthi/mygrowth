@@ -17,7 +17,6 @@ CREATE TABLE AndroidSkillMaster (
     asm_id INT NOT NULL DEFAULT 0,
     asm_name VARCHAR(255) NOT NULL,
     asm_tag VARCHAR(100),
-
     asm_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     asm_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
@@ -31,7 +30,446 @@ CREATE TABLE selfImprovement (
 );
 
 
+CREATE TABLE AndroidSkillSpecific (
+    ass_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ass_id INT NOT NULL DEFAULT 0,
+    ass_name VARCHAR(255) NOT NULL,
+    ass_tag VARCHAR(100),
+    ass_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ass_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AndroidSkillSpecificLink (
+    assl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    assl_id INT NOT NULL DEFAULT 0,
+    assl_link VARCHAR(255) NOT NULL,
+    assl_tag VARCHAR(100),
+    assl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    assl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE BookSummaryDevelopment (
+    bsd_sno INT AUTO_INCREMENT PRIMARY KEY,
+    bsd_id INT NOT NULL DEFAULT 0,
+    bsd_name VARCHAR(255) NOT NULL,
+    bsd_tag VARCHAR(100),
+    bsd_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    bsd_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE BookSummaryDevelopmentLink (
+    bsdl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    bsdl_id INT NOT NULL DEFAULT 0,
+    bsdl_link VARCHAR(255) NOT NULL,
+    bsdl_tag VARCHAR(100),
+    bsdl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    bsdl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE CareerBooks (
+    cb_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cb_id INT NOT NULL DEFAULT 0,
+    cb_name VARCHAR(255) NOT NULL,
+    cb_tag VARCHAR(100),
+    cb_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cb_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE CareerBooksLink (
+    cbl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cbl_id INT NOT NULL DEFAULT 0,
+    cbl_link VARCHAR(255) NOT NULL,
+    cbl_tag VARCHAR(100),
+    cbl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cbl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE DataStructure (
+    ds_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ds_id INT NOT NULL DEFAULT 0,
+    ds_name VARCHAR(255) NOT NULL,
+    ds_tag VARCHAR(100),
+    ds_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ds_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE DataStructureLink (
+    dsl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    dsl_id INT NOT NULL DEFAULT 0,
+    dsl_link VARCHAR(255) NOT NULL,
+    dsl_tag VARCHAR(100),
+    dsl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    dsl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Development (
+    dp_sno INT AUTO_INCREMENT PRIMARY KEY,
+    dp_id INT NOT NULL DEFAULT 0,
+    dp_name VARCHAR(255) NOT NULL,
+    dp_tag VARCHAR(100),
+    dp_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    dp_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE DevelopmentLink (
+    dpl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    dpl_id INT NOT NULL DEFAULT 0,
+    dpl_link VARCHAR(255) NOT NULL,
+    dpl_tag VARCHAR(100),
+    dpl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    dpl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE EnglishCommunication (
+    ec_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ec_id INT NOT NULL DEFAULT 0,
+    ec_name VARCHAR(255) NOT NULL,
+    ec_tag VARCHAR(100),
+    ec_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ec_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE EnglishCommunicationLink (
+    ecl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ecl_id INT NOT NULL DEFAULT 0,
+    ecl_link VARCHAR(255) NOT NULL,
+    ecl_tag VARCHAR(100),
+    ecl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ecl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE InterviewTips (
+    ip_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ip_id INT NOT NULL DEFAULT 0,
+    ip_name VARCHAR(255) NOT NULL,
+    ip_tag VARCHAR(100),
+    ip_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ip_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE InterviewTipsLink (
+    ipl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ipl_id INT NOT NULL DEFAULT 0,
+    ipl_link VARCHAR(255) NOT NULL,
+    ipl_tag VARCHAR(100),
+    ipl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ipl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 
 
 
 
+CREATE TABLE CompanyInterviewTips (
+    cip_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cip_id INT NOT NULL DEFAULT 0,
+    cip_name VARCHAR(255) NOT NULL,
+    cip_tag VARCHAR(100),
+    cip_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cip_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE CompanyInterviewTipsLink (
+    cipl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cipl_id INT NOT NULL DEFAULT 0,
+    cipl_link VARCHAR(255) NOT NULL,
+    cipl_tag VARCHAR(100),
+    cipl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cipl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE CompanyInterviewTips (
+    cip_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cip_id INT NOT NULL DEFAULT 0,
+    cip_name VARCHAR(255) NOT NULL,
+    cip_tag VARCHAR(100),
+    cip_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cip_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE CompanyInterviewTipsLink (
+    cipl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    cipl_id INT NOT NULL DEFAULT 0,
+    cipl_link VARCHAR(255) NOT NULL,
+    cipl_tag VARCHAR(100),
+    cipl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    cipl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE AndroidMasterConcepts (
+    amc_sno INT AUTO_INCREMENT PRIMARY KEY,
+    amc_id INT NOT NULL DEFAULT 0,
+    amc_name VARCHAR(255) NOT NULL,
+    amc_tag VARCHAR(100),
+    amc_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    amc_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AndroidMasterConceptsLink (
+    amcl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    amcl_id INT NOT NULL DEFAULT 0,
+    amcl_link VARCHAR(255) NOT NULL,
+    amcl_tag VARCHAR(100),
+    amcl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    amcl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE KotlinMasterConcepts (
+    kmc_sno INT AUTO_INCREMENT PRIMARY KEY,
+    kmc_id INT NOT NULL DEFAULT 0,
+    kmc_name VARCHAR(255) NOT NULL,
+    kmc_tag VARCHAR(100),
+    kmc_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    kmc_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE KotlinMasterConceptsLink (
+    kmcl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    kmcl_id INT NOT NULL DEFAULT 0,
+    kmcl_link VARCHAR(255) NOT NULL,
+    kmcl_tag VARCHAR(100),
+    kmcl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    kmcl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE AndroidSkillMasterConcepts (
+    asmc_sno INT AUTO_INCREMENT PRIMARY KEY,
+    asmc_id INT NOT NULL DEFAULT 0,
+    asmc_name VARCHAR(255) NOT NULL,
+    asmc_tag VARCHAR(100),
+    asmc_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    asmc_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AndroidSkillMasterConceptsLink (
+    asmcl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    asmcl_id INT NOT NULL DEFAULT 0,
+    asmcl_link VARCHAR(255) NOT NULL,
+    asmcl_tag VARCHAR(100),
+    asmcl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    asmcl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+CREATE TABLE UdemySkillMasterConcepts (
+    usmc_sno INT AUTO_INCREMENT PRIMARY KEY,
+    usmc_id INT NOT NULL DEFAULT 0,
+    usmc_name VARCHAR(255) NOT NULL,
+    usmc_tag VARCHAR(100),
+    usmc_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    usmc_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE UdemySkillMasterConceptsLink (
+    usmcl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    usmcl_id INT NOT NULL DEFAULT 0,
+    usmcl_link VARCHAR(255) NOT NULL,
+    usmcl_tag VARCHAR(100),
+    usmcl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    usmcl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE GenAISkillMasterConcepts (
+    gsmc_sno INT AUTO_INCREMENT PRIMARY KEY,
+    gsmc_id INT NOT NULL DEFAULT 0,
+    gsmc_name VARCHAR(255) NOT NULL,
+    gsmc_tag VARCHAR(100),
+    gsmc_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    gsmc_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE GenAISkillMasterConceptsLink (
+    gsmcl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    gsmcl_id INT NOT NULL DEFAULT 0,
+    gsmcl_link VARCHAR(255) NOT NULL,
+    gsmcl_tag VARCHAR(100),
+    gsmcl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    gsmcl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE MASTER_SKILL (
+    ms_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ms_id INT NOT NULL DEFAULT 0,
+    ms_name VARCHAR(255) NOT NULL,
+    ms_tag VARCHAR(100),
+    ms_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ms_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+Books Summary
+Career Book
+Data Structure
+Development
+English Communication
+Interview Tips
+Company Interview
+Android Master Concepts
+Kotlin Master Concepts
+Android Skills
+Udemy Course
+GenAI Reskills
+
+BookSummaryDevelopment
+
+bsd_id
+bsd_name
+bsd_tag
+
+
+Power of 48 Laws
+Calm under the pressure and stress
+can not hurt me
+Confident
+Emotional Intelligence
+Surrounded by Idiots
+Stop Overthinking
+Think fast and slow
+
+
+
+
+BookSummaryDevelopmentLink
+bsdl_id
+bsdl_link
+bsdl_tag
+
+give me the insert command
+
+48 law of power.pdf
+Calm under pressure and stress.pdf
+Can_not_hurt me.pdf
+confident.pdf
+Emotional Intelligence English.pdf
+Surrounded by idiots.pdf
+stop overthinking.pdf
+Thinking fast and slow daniel kahman.pdf
+
+
+
+CareerBooks
+
+cb_id
+cb_name
+cb_tag
+
+give me insert command
+
+
+Android Security Internals
+Android Enterprise Security
+Cracking the Coding Interview 6th-Edition-189
+Java 8 The Complete Reference Ninth Edition
+Java Collections Cheat Sheet
+Java-8-Features
+jenkins2_upandrunning
+Master the Interview Click here for Course Link
+Reactive Programming with RxJava
+Slides in PDF
+System Design Interview
+System Design Interview volume 2
+
+
+
+CareerBooksLink
+
+cbl_id
+cbl_link
+cbl_tag
+
+give me insert comand
+
+Android Security Internals.pdf
+Android_Enterprise_Security_White_Paper_2019.pdf
+Cracking-the-Coding-Interview-6th-Edition-189.pdf
+Java 8 The Complete Reference Ninth Edition.pdf
+Java_Collections_Cheat_Sheet.pdf
+Java-8-Features.pdf
+jenkins2_upandrunning.pdf
+Master_the_Interview_Click_here_for_Course_Link_.pdf
+Reactive Programming with RxJava.pdf
+Slides+in+PDF.pdf
+System Design Interview.pdf
+system-design-interview-volume-2.pdf
+
+
+
+
+give me insert command
+
+CompanyInterviewTips
+
+cip_id
+cip_name
+cip_tag
+
+Current Projects
+Google Interview Prep Guide SWE
+GoogleInterview
+QualComm interview
+
+CompanyInterviewTipsLink
+
+cipl_id
+cipl_link
+cipl_tag
+
+
+Current Projects.docx.pdf
+Google Interview Prep Guide SWE .pdf
+GoogleInterview.pdf
+QualComm interview.pdf
+
+
+Above table is contains Books name and the name contains many books the links are in android table with id can u able to  give the list like book name with links as list in Json
+
+
+Where cipl_id = cip_id
+
+and pls align pgp code also
+
+
+if ($action === "get_company_interview_tips") {
+    $data = [];
+
+    $query = "
+        SELECT
+            bsd.bsd_sno,
+            bsd.bsd_name,
+            GROUP_CONCAT(bsdl.bsdl_link SEPARATOR '|||') AS links
+        FROM CareerBooks bsd
+        LEFT JOIN CareerBooksLink bsdl
+            ON bsdl.bsdl_id = bsd.bsd_id
+        GROUP BY bsd.bsd_sno, bsd.bsd_name
+        ORDER BY bsd.bsd_sno ASC
+    ";
+
+    $result = mysqli_query($conn, $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = [
+            "id"   => $row["bsd_sno"],
+            "name" => $row["bsd_name"],
+            "links"     => !empty($row["links"]) ? explode('|||', $row["links"]) : []
+        ];
+    }
+
+    echo json_encode([
+        "status" => !empty($data),
+        "data"   => $data
+    ], JSON_UNESCAPED_SLASHES);
+
+    exit;
+}
