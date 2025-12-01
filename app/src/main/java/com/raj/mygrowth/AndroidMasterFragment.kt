@@ -18,7 +18,9 @@ import com.raj.mygrowth.domain.RequestActionAndroidInterview
 import com.raj.mygrowth.interfaces.SimpleClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -115,7 +117,8 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val requestAction = RequestActionAndroidInterview("insert_interview_concept", list)
+                val requestAction =
+                    RequestActionAndroidInterview("insert_android_skill_specific", list)
                 val response = api.insertInterviewQuestion(requestAction)
 
                 binding.progressBar.visibility = View.GONE
@@ -147,73 +150,87 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     fun pickCsvFile() {
         csvPicker.launch("text/*")
     }
-
     private fun readCsvFile(uri: Uri) {
-        try {
-            val inputStream = requireContext().contentResolver.openInputStream(uri)
-            val reader = BufferedReader(InputStreamReader(inputStream))
+        lifecycleScope.launch(Dispatchers.IO) {
 
             val list = ArrayList<ConceptModel>()
-            var isHeader = true
 
-            reader.forEachLine { rawLine ->
-                val line = rawLine.trim()
-                if (line.isEmpty()) return@forEachLine   // skip blank rows
+            try {
+                val inputStream = requireContext().contentResolver.openInputStream(uri)
+                val reader = BufferedReader(InputStreamReader(inputStream))
 
-                if (isHeader) {
-                    isHeader = false
-                    return@forEachLine
-                }
+                var isHeader = true
 
-                // Split CSV safely, including text containing commas inside quotes
-                val columns = mutableListOf<String>()
-                var current = StringBuilder()
-                var insideQuotes = false
+                reader.forEachLine { rawLine ->
+                    val line = rawLine.trim()
+                    if (line.isEmpty()) return@forEachLine // skip blank rows
 
-                for (char in line) {
-                    when (char) {
-                        '"' -> insideQuotes = !insideQuotes
-                        ',' -> {
-                            if (insideQuotes) {
-                                current.append(char)
-                            } else {
-                                columns.add(current.toString())
-                                current = StringBuilder()
-                            }
-                        }
-
-                        else -> current.append(char)
+                    if (isHeader) {
+                        isHeader = false
+                        return@forEachLine
                     }
+
+                    // Split CSV safely including commas inside quotes
+                    val columns = mutableListOf<String>()
+                    var current = StringBuilder()
+                    var insideQuotes = false
+
+                    for (char in line) {
+                        when (char) {
+                            '"' -> insideQuotes = !insideQuotes
+                            ',' -> {
+                                if (insideQuotes) current.append(char)
+                                else {
+                                    columns.add(current.toString())
+                                    current = StringBuilder()
+                                }
+                            }
+                            else -> current.append(char)
+                        }
+                    }
+                    columns.add(current.toString())
+
+                    if (columns.isEmpty()) return@forEachLine
+
+                    val name = columns[0].trim()
+
+                    // ❗ Skip if name is empty
+                    if (name.isEmpty()) return@forEachLine
+
+                    val links = columns.drop(1).map { it.trim() }.filter { it.isNotEmpty() }
+                    val id = (list.size + 1).toString()
+
+                    list.add(
+                        ConceptModel(
+                            conceptId = id,
+                            conceptName = name,
+                            links = links
+                        )
+                    )
                 }
-                columns.add(current.toString()) // last value
 
-                if (columns.size < 2) return@forEachLine
+                reader.close()
 
-                val id = columns[0].trim()
-                val name = columns[1].trim()
-                val links = columns.drop(2).map { it.trim() }.filter { it.isNotEmpty() }
+                withContext(Dispatchers.Main) {
+                    Log.d("CSV_FINAL", list.firstOrNull().toString())
+                    sendToApi(list)
+                }
 
-                list.add(ConceptModel(conceptId = id, conceptName = name, links = links))
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(requireContext(), "Error reading CSV: ${e.message}", Toast.LENGTH_LONG).show()
+                    Log.e("CSV_ERROR", e.toString())
+                }
             }
-
-            reader.close()
-            Log.d("CSV_FINAL", list.toString())
-
-            // Send to API
-
-        } catch (e: Exception) {
-            Toast.makeText(requireContext(), "Error reading CSV: ${e.message}", Toast.LENGTH_LONG)
-                .show()
-            Log.e("CSV_ERROR", e.toString())
         }
     }
 
     override fun click(id: String) {
         loadDetails(id)
+        //pickCsvFile()
     }
 
     override fun clickChild(id: String) {
-
     }
 
 
