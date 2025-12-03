@@ -34,6 +34,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     private var _binding: FragmentAndroidMasterBinding? = null
     private val binding get() = _binding!!
     private var PATH_CURRENT = ""
+    private var PATH_TYPE = ""
     private var DOMANI = "http://v8m.b07.mytemp.website/app/apps/"
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -237,6 +238,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
 
     override fun click(id: String, path: String, type: String) {
         PATH_CURRENT = path
+        PATH_TYPE = type
         loadDetails(id)
         //pickCsvFile()
     }
@@ -250,11 +252,19 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     }
 
     override fun clickUrl(url: String) {
-        val prep = buildSafeUrl(DOMANI, PATH_CURRENT, url)
-        val intent = Intent(context, ActivityPdfView::class.java)
-        intent.putExtra("FILE_URL", prep)
-        startActivity(intent)
-        println("Url-->$prep")
+        if (PATH_TYPE == "pdf") {
+            val prep = buildSafeUrl(DOMANI, PATH_CURRENT, url)
+            val intent = Intent(context, ActivityPdfView::class.java)
+            intent.putExtra("FILE_URL", prep)
+            startActivity(intent)
+            println("Url pdf-->$prep")
+        } else {
+            val intent = Intent(context, ActivityWebView::class.java)
+            intent.putExtra("FILE_URL", url)
+            startActivity(intent)
+            println("Url pdf-->$url")
+
+        }
     }
 
     fun buildSafeUrl(domain: String, path: String, fileName: String): String {

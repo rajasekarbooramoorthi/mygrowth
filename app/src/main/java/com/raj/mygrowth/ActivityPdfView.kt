@@ -2,23 +2,24 @@ package com.raj.mygrowth
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.View
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
 import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
-import com.raj.mygrowth.databinding.ActivityWebViewBinding
+import com.raj.mygrowth.databinding.ActivityPdfViewBinding
 
 class ActivityPdfView : AppCompatActivity() {
 
-    private lateinit var binding: ActivityWebViewBinding
+    private lateinit var binding: ActivityPdfViewBinding
     private val fileViewer = "file:///android_asset/pdfjs/viewer.html?file="
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val pdfUrl = intent?.getStringExtra("FILE_URL") ?: ""
-        binding = ActivityWebViewBinding.inflate(layoutInflater)
+        binding = ActivityPdfViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupWebView(pdfUrl)
     }
@@ -32,6 +33,7 @@ class ActivityPdfView : AppCompatActivity() {
 
         // HIGH QUALITY PDF
         val finalUrl = "${fileViewer}url=$url#zoom=page-width&dpi=200&disableStream=true"
+        binding.progressBar.visibility = View.GONE
         loadUrl(finalUrl)
     }
 

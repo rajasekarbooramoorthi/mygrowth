@@ -1,7 +1,6 @@
 package com.raj.mygrowth
 
 import android.graphics.Bitmap
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebChromeClient
@@ -22,29 +21,23 @@ class ActivityWebView : AppCompatActivity() {
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Get URL from Intent or fallback to default
-        val fileUrl = intent?.getStringExtra("FILE_URL")
-            ?: ""
-
-        // Encode URL for Google Docs viewer
-        val viewerUrl = "https://docs.google.com/gview?embedded=true&url=${Uri.encode(fileUrl)}"
-
-        setupWebView(viewerUrl)
+        val fileUrl = intent?.getStringExtra("FILE_URL") ?: ""
+        setupWebView(fileUrl)
     }
 
     private fun setupWebView(url: String) {
         with(binding.webView) {
             settings.apply {
                 javaScriptEnabled = true
-                loadWithOverviewMode = true
+                domStorageEnabled = true
                 useWideViewPort = true
+                loadWithOverviewMode = true
                 builtInZoomControls = true
                 displayZoomControls = false
             }
 
             webChromeClient = WebChromeClient()
             webViewClient = object : WebViewClient() {
-
                 override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                     binding.progressBar.visibility = View.VISIBLE
                 }
@@ -61,10 +54,9 @@ class ActivityWebView : AppCompatActivity() {
                     binding.progressBar.visibility = View.GONE
                     Toast.makeText(
                         this@ActivityWebView,
-                        "Unable to load document: ${error?.description}",
+                        "Unable to load page: ${error?.description}",
                         Toast.LENGTH_SHORT
                     ).show()
-                    println("WebView Error --> $error")
                 }
             }
 
