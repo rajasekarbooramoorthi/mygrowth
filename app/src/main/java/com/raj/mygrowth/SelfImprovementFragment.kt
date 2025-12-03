@@ -1,6 +1,5 @@
 package com.raj.mygrowth
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -67,7 +66,7 @@ class SelfImprovementFragment : Fragment(), SimpleClick {
         _binding = null  // avoid memory leak
     }
 
-    override fun click(id: String) {
+    override fun click(id: String, path: String, type: String) {
 
     }
 

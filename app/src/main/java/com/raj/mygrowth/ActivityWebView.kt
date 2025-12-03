@@ -1,6 +1,7 @@
 package com.raj.mygrowth
 
 import android.graphics.Bitmap
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebChromeClient
@@ -13,49 +14,66 @@ import androidx.appcompat.app.AppCompatActivity
 import com.raj.mygrowth.databinding.ActivityWebViewBinding
 
 class ActivityWebView : AppCompatActivity() {
+
     private lateinit var binding: ActivityWebViewBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val fileUrl = intent?.getStringExtra("FILE_URL") ?: ""  // String
 
-        val webView = binding.webView
-        val progressBar = binding.progressBar
+        // Get URL from Intent or fallback to default
+        val fileUrl = intent?.getStringExtra("FILE_URL")
+            ?: ""
 
-        webView.settings.javaScriptEnabled = true
-        webView.settings.loadWithOverviewMode = true
-        webView.settings.useWideViewPort = true
-        webView.settings.builtInZoomControls = true
-        webView.settings.displayZoomControls = false
+        // Encode URL for Google Docs viewer
+        val viewerUrl = "https://docs.google.com/gview?embedded=true&url=${Uri.encode(fileUrl)}"
 
+        setupWebView(viewerUrl)
+    }
 
-        webView.webViewClient = object : WebViewClient() {
-            override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
-                progressBar.visibility = View.VISIBLE
+    private fun setupWebView(url: String) {
+        with(binding.webView) {
+            settings.apply {
+                javaScriptEnabled = true
+                loadWithOverviewMode = true
+                useWideViewPort = true
+                builtInZoomControls = true
+                displayZoomControls = false
             }
 
-            override fun onPageFinished(view: WebView?, url: String?) {
-                progressBar.visibility = View.GONE
+            webChromeClient = WebChromeClient()
+            webViewClient = object : WebViewClient() {
+
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    binding.progressBar.visibility = View.VISIBLE
+                }
+
+                override fun onPageFinished(view: WebView?, url: String?) {
+                    binding.progressBar.visibility = View.GONE
+                }
+
+                override fun onReceivedError(
+                    view: WebView?,
+                    request: WebResourceRequest?,
+                    error: WebResourceError?
+                ) {
+                    binding.progressBar.visibility = View.GONE
+                    Toast.makeText(
+                        this@ActivityWebView,
+                        "Unable to load document: ${error?.description}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    println("WebView Error --> $error")
+                }
             }
 
-            override fun onReceivedError(
-                view: WebView?,
-                request: WebResourceRequest?,
-                error: WebResourceError?
-            ) {
-                Toast.makeText(this@ActivityWebView, "Unable to load document", Toast.LENGTH_SHORT)
-                    .show()
-            }
+            loadUrl(url)
         }
-
-        webView.webChromeClient = WebChromeClient()
-        webView.loadUrl(fileUrl)
     }
 
     override fun onBackPressed() {
         if (binding.webView.canGoBack()) binding.webView.goBack()
         else super.onBackPressed()
     }
-
 }

@@ -9,6 +9,8 @@ data class AndroidMaster(
     val ms_id: String,
     val ms_name: String,
     val ms_tag: String,
+    val ms_folder: String,
+    val ms_type: String,
     val links: ArrayList<String>?
 )
 

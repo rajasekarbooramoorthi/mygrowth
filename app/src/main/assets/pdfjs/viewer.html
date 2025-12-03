@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>PDF.js Smooth Zoom + Drag</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #pdf-viewer {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background: #ccc;
+            -webkit-overflow-scrolling: touch;
+        }
+        .page-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+        .page-canvas {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div id="pdf-viewer"></div>
+
+<script src="pdf.js"></script>
+<script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
+
+    let currentScale = 1.0;
+    let baseScale = 1.0;
+    let pdfDoc = null;
+    let observer;
+    const deviceScale = window.devicePixelRatio || 1;
+    let lastTap = 0;
+    let zoomedIn = false;
+    let touchMoved = false;
+    let zoomLock = false;
+
+    window.addEventListener('load', () => {
+        if (typeof Android !== "undefined" && typeof Android.getPdfUrl === "function") {
+            initPdf(Android.getPdfUrl());
+        }
+    });
+
+    function initPdf(url) {
+        const container = document.getElementById('pdf-viewer');
+        container.innerHTML = '';
+
+        // Get token from Android interface if available
+        const token = (typeof Android !== "undefined" && typeof Android.getAuthToken === "function") ? Android.getAuthToken() : "";
+
+        pdfjsLib.getDocument({
+            url: url,
+            httpHeaders: {
+                'Authorization': 'Bearer ' + token
+            }
+        }).promise.then(pdf => {
+            pdfDoc = pdf;
+
+            pdf.getPage(1).then(page => {
+                const unscaledViewport = page.getViewport({ scale: 1 });
+                const containerWidth = container.clientWidth;
+                baseScale = containerWidth / unscaledViewport.width;
+                currentScale = baseScale;
+                setupPages();
+            });
+        }).catch(err => {
+            console.error(err);
+            container.innerHTML = '<p>Failed to load PDF.</p>';
+        });
+    }
+
+    function setupPages() {
+        const container = document.getElementById('pdf-viewer');
+        container.innerHTML = '';
+        for (let i = 1; i <= pdfDoc.numPages; i++) {
+            const wrapper = document.createElement('div');
+            wrapper.classList.add('page-wrapper');
+
+            const canvas = document.createElement('canvas');
+            canvas.classList.add('page-canvas');
+            canvas.dataset.pageNumber = i;
+
+            wrapper.appendChild(canvas);
+            container.appendChild(wrapper);
+        }
+        setupLazyRender();
+        setupDoubleTap();
+    }
+
+    function setupLazyRender() {
+        if (observer) observer.disconnect();
+
+        observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const canvas = entry.target;
+                    const pageNum = parseInt(canvas.dataset.pageNumber);
+                    if (!canvas.dataset.rendered) {
+                        renderPage(pageNum, canvas);
+                    }
+                }
+            });
+        }, { root: document.getElementById('pdf-viewer'), threshold: 0.1 });
+
+        document.querySelectorAll('.page-canvas').forEach(canvas => observer.observe(canvas));
+    }
+
+    function renderPage(pageNum, canvas, scaleOverride) {
+        const scaleToUse = (scaleOverride || currentScale) * deviceScale;
+        pdfDoc.getPage(pageNum).then(page => {
+            const viewport = page.getViewport({ scale: scaleToUse });
+            const context = canvas.getContext('2d');
+
+            canvas.width = viewport.width;
+            canvas.height = viewport.height;
+            canvas.style.width = (viewport.width / deviceScale) + "px";
+            canvas.style.height = (viewport.height / deviceScale) + "px";
+
+            page.render({ canvasContext: context, viewport: viewport }).promise.then(() => {
+                canvas.dataset.rendered = "true";
+            });
+        });
+    }
+
+    function setupDoubleTap() {
+        const container = document.getElementById('pdf-viewer');
+
+        container.addEventListener('touchstart', () => {
+            touchMoved = false;
+        }, { passive: true });
+
+        container.addEventListener('touchmove', () => {
+            touchMoved = true;
+        }, { passive: true });
+
+        container.addEventListener('touchend', function (event) {
+            event.preventDefault();
+            const now = Date.now();
+            const timeSince = now - lastTap;
+
+            if (!touchMoved && timeSince < 300 && timeSince > 0) {
+                if (!zoomLock) {
+                    zoomLock = true;
+                    toggleZoom();
+                    setTimeout(() => zoomLock = false, 500);
+                }
+            }
+            lastTap = now;
+        }, { passive: false });
+    }
+
+    function toggleZoom() {
+        const viewer = document.getElementById('pdf-viewer');
+        const prevScrollLeft = viewer.scrollLeft;
+        const prevScrollTop = viewer.scrollTop;
+        const centerX = prevScrollLeft + viewer.clientWidth / 2;
+        const centerY = prevScrollTop + viewer.clientHeight / 2;
+
+        zoomedIn = !zoomedIn;
+        currentScale = zoomedIn ? baseScale * 2 : baseScale;
+
+        document.querySelectorAll('.page-canvas').forEach(canvas => {
+            canvas.dataset.rendered = "";
+            renderPage(parseInt(canvas.dataset.pageNumber), canvas);
+        });
+
+        viewer.scrollLeft = centerX * (currentScale / baseScale) - viewer.clientWidth / 2;
+        viewer.scrollTop = centerY * (currentScale / baseScale) - viewer.clientHeight / 2;
+    }
+</script>
+</body>
+</html>

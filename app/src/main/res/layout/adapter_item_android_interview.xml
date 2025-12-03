@@ -37,7 +37,7 @@
                     android:id="@+id/tvName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@{item.concept_name}"
+                    android:text="@{item.name}"
                     android:textSize="@dimen/_16ssp"
                     android:textStyle="bold" />
 

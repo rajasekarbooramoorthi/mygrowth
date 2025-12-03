@@ -41,7 +41,7 @@ class SelfImprovementAdapter(
                 visiblePasswordPositions.add(position)
 
             notifyItemChanged(position)
-            click.click(item.ai_link)
+            //click.click(item.ai_link)
         }
 
         holder.binding.executePendingBindings()

@@ -5,8 +5,8 @@ data class ResponseAndroidInterview(
 )
 
 data class AndroidInterviewItem(
-    val concept_id: String,
-    val concept_name: String,
+    val id: String,
+    val name: String,
     val links: ArrayList<String>
 )
 

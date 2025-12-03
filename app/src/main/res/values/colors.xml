@@ -21,8 +21,11 @@
     <color name="textPrimary">#212121</color>           <!-- Dark Gray -->
     <color name="textSecondary">#757575</color>         <!-- Light Gray -->
     <color name="grayline">#66E0E0E0</color>         <!-- Light Gray -->
+    <color name="gray">#2196F3</color>         <!-- Light Gray -->
 
     <color name="blue">#2196F3</color>
     <color name="light_blue_50">#E3F2FD</color>
+    <color name="skill_color">#0288D1</color>
+    <color name="skill_item_color">#0288D1</color>
 
 </resources>

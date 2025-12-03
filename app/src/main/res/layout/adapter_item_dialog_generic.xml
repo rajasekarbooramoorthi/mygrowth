@@ -24,8 +24,8 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_7sdp"
             android:layout_marginBottom="@dimen/_7sdp"
-            android:textSize="@dimen/_12ssp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/sans_regular"
+            android:textSize="@dimen/_12ssp" />
 
         <View
             android:layout_width="match_parent"

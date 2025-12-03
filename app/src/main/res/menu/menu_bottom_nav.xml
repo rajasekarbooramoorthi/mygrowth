@@ -14,4 +14,13 @@
         android:icon="@drawable/ic_settings"
         android:title="Master" />
 
+    <item
+        android:id="@+id/androidMaster"
+        android:icon="@drawable/ic_profile"
+        android:title="sdfghj" />
+    <item
+        android:id="@+id/androidMaster"
+        android:icon="@drawable/ic_profile"
+        android:title="sdfghj" />
+
 </menu>

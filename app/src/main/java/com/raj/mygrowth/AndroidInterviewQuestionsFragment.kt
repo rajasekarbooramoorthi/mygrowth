@@ -47,7 +47,7 @@ class AndroidInterviewQuestionsFragment : Fragment() {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.getAndroidInterview(RequestAction("get_prep_link"))
+                val response = api.getAndroidInterview(RequestAction("get_interview_preparation"))
 
                 binding.progressBar.visibility = View.GONE
 

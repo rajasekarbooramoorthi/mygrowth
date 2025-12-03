@@ -26,13 +26,15 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.net.URLEncoder
 
 
 class AndroidMasterFragment : Fragment(), SimpleClick {
 
     private var _binding: FragmentAndroidMasterBinding? = null
     private val binding get() = _binding!!
-
+    private var PATH_CURRENT = ""
+    private var DOMANI = "http://v8m.b07.mytemp.website/app/apps/"
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -152,6 +154,8 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     }
 
     private fun readCsvFile(uri: Uri) {
+
+        println("aj uri-->$uri")
         lifecycleScope.launch(Dispatchers.IO) {
 
             val list = ArrayList<ConceptModel>()
@@ -215,7 +219,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
 
                 withContext(Dispatchers.Main) {
                     Log.d("CSV_FINAL", list.firstOrNull().toString())
-                    sendToApi(list)
+                    //sendToApi(list)
                 }
 
             } catch (e: Exception) {
@@ -231,34 +235,48 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         }
     }
 
-    override fun click(id: String) {
+    override fun click(id: String, path: String, type: String) {
+        PATH_CURRENT = path
         loadDetails(id)
         //pickCsvFile()
     }
 
     override fun clickChild(list: List<String>) {
         if (list.size == 1) {
-            clickUrl(list[0].toString())
+            clickUrl(list[0])
         } else {
             dialog(list)
         }
     }
 
     override fun clickUrl(url: String) {
-        val intent = Intent(context, ActivityWebView::class.java)
-        intent.putExtra("FILE_URL", url)
+        val prep = buildSafeUrl(DOMANI, PATH_CURRENT, url)
+        val intent = Intent(context, ActivityPdfView::class.java)
+        intent.putExtra("FILE_URL", prep)
         startActivity(intent)
-        println("Url-->$url")
+        println("Url-->$prep")
+    }
+
+    fun buildSafeUrl(domain: String, path: String, fileName: String): String {
+        // Encode only file name, not full URL
+        val encodedFileName = URLEncoder.encode(fileName, "UTF-8")
+            .replace("+", "%20")        // proper space
+            .replace("%28", "(")        // keep brackets readable
+            .replace("%29", ")")
+            .replace("%2C", ",")        // keep comma
+            .replace("%26", "&")        // keep ampersand if needed in name
+            .replace("%27", "'")
+
+        return domain.trimEnd('/') + "/" +
+                path.trim('/') + "/" +
+                encodedFileName
     }
 
     fun dialog(list: List<String>) {
         val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         dialog.setContentView(R.layout.adapterdialog)
-
-        // allow outside touch to close
         dialog.setCancelable(true)
         dialog.setCanceledOnTouchOutside(true)
-
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
         rvDialog?.adapter = DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)

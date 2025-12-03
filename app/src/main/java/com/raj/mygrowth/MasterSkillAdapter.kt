@@ -28,7 +28,7 @@ class MasterSkillAdapter(
         val item = list[position]
         holder.binding.item = item
         holder.binding.root.setOnClickListener {
-            click.click(item.ms_tag)
+            click.click(item.ms_tag,item.ms_folder,item.ms_type)
         }
         holder.binding.executePendingBindings()
     }
