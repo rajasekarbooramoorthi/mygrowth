@@ -433,7 +433,29 @@ GoogleInterview.pdf
 QualComm interview.pdf
 
 
-Above table is contains Books name and the name contains many books the links are in android table with id can u able to  give the list like book name with links as list in Json
+
+
+CREATE TABLE AndroidSkillSpecific (
+    ass_sno INT AUTO_INCREMENT PRIMARY KEY,
+    ass_id INT NOT NULL DEFAULT 0,
+    ass_name VARCHAR(255) NOT NULL,
+    ass_tag VARCHAR(100),
+    ass_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ass_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE AndroidSkillSpecificLink (
+    assl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    assl_id INT NOT NULL DEFAULT 0,
+    assl_link VARCHAR(255) NOT NULL,
+    assl_tag VARCHAR(100),
+    assl_created_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    assl_updated DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+
+
+Above table is contains   name and the name contains many books the links are in android table with id can u able to  give the list like book name with links as list in Json
 
 
 Where cipl_id = cip_id
@@ -473,3 +495,1979 @@ if ($action === "get_company_interview_tips") {
 
     exit;
 }
+
+
+AndroidMasterConcepts
+
+amc_id
+amc_name
+amc_tag
+
+
+AndroidMasterConceptsLink
+
+amcl_id
+amcl_link
+amcl_tag
+
+Above table is contains   name and the name contains many books the links are in android table with id can u able to  give the list like book name with links as list in Json
+
+
+where amcl_id = amc_id
+
+
+and pls align pgp code also
+
+
+if ($action === "get_company_interview_tips") {
+    $data = [];
+
+    $query = "
+        SELECT
+            bsd.bsd_sno,
+            bsd.bsd_name,
+            GROUP_CONCAT(bsdl.bsdl_link SEPARATOR '|||') AS links
+        FROM CareerBooks bsd
+        LEFT JOIN CareerBooksLink bsdl
+            ON bsdl.bsdl_id = bsd.bsd_id
+        GROUP BY bsd.bsd_sno, bsd.bsd_name
+        ORDER BY bsd.bsd_sno ASC
+    ";
+
+    $result = mysqli_query($conn, $query);
+
+    while ($row = mysqli_fetch_assoc($result)) {
+        $data[] = [
+            "id"   => $row["bsd_sno"],
+            "name" => $row["bsd_name"],
+            "links"     => !empty($row["links"]) ? explode('|||', $row["links"]) : []
+        ];
+    }
+
+    echo json_encode([
+        "status" => !empty($data),
+        "data"   => $data
+    ], JSON_UNESCAPED_SLASHES);
+
+    exit;
+}
+
+
+
+
+
+Kotlin basics
+kotlin null safety
+Kotlin inheritance
+Properties vs Fields
+Properties in Kotlin
+Vararg and spread operator
+Spread operator in Kotlin
+Kotlin oops fundamentals
+Simple onclick listeners
+Recycler view ItemTouchHelper callbacl
+Recycler view
+Diff util for recycler view
+Coordinator layouts
+Singleton in Kotlin
+kotlin concepts
+Kotlin tools
+OkHTTP - interceptors
+OKHTTP - Caching mechanism
+
+ViewLifecyclerOwner vs LifecycleOwner
+
+Map & Reduce in Kotlin
+
+
+Kotlin inline class
+Inline class usecases
+Inline class representation
+Improvements to inline classes
+Public API inline functions
+
+
+Recycler view
+
+
+
+Understanding thread and runnable
+Handlers in android
+Executor Framework
+Thread Pool Executor
+Thread Pool Executor android
+Handler thread
+Thread pool executor
+Android thread pool
+Android Background
+Introduction to Android Thread Pool and ThreadPoolExecutor
+Handler android
+Thread Looper  handler
+Mastering Android Handler
+Executor Framework
+Difference between bitmap and drawable
+What is context ?
+
+
+
+What is the use of hashCode in Java? - Stack Overflow
+Omit Interface methods I dont use
+JItpack to the rescue
+Jitpack github
+JItpack library
+Android library by Jitpack
+
+
+
+Services in android
+Intent service in android
+Bound service in android
+
+
+MediaCodec
+Why JVM static
+
+
+
+What is Framelayout
+
+
+Comparator in kotlin
+Compator in Java
+
+
+
+
+Android Jetpack walkthrought
+Navigation Architecture
+Navigation component
+Navigation Architecture Component Tutorial: Getting Started
+Navigation Component for Android Part 2: Graphs and Deep Links
+Navigation Component for Android Part 3: Transition and Navigation
+Drawe layout with top leve dest nav host
+Navigation component with navigation drawer
+Drawer with Android Navigation Components
+Pass data using NavigationComponent in android with kotlin
+Transitions in Android Navigation Component
+Handle Complex Navigation Flow with Single-Activity Architecture and Android Jetpack’s Navigation component
+A problem like Navigation — Part 1
+The New Android In-App Navigation
+Exploring Firebase on Android: Dynamic Links
+Exploring Dynamic Feature Navigation on Android
+Android Navigation Components - Navigating between Activities
+Using Safe args plugin — current state of affairs
+Android Navigation Component. Navigate with ease
+navigation component with navigation drawer with navcontroller click listener
+Android Navigation Component : Similar Back Stack Like Instagram Youtube and More
+Deeplink and navigation in android architecture component part-3
+Android Jetpack Weekly #7
+Android navigation component with shared view models
+MVVM view model jetpack
+NestedNavigationExample
+Master-Detail views with Navigation Components
+Android Navigation Component Tips & Tricks - Implementing Splash screen
+Navigate Back with Navigation Component
+New navigation component from arch with nested navigation graph
+Everything You Want to Know About Android Jetpack’sNavigation Component
+Navigation component playground
+Dynamic feature Nvigation
+Navigation Component curious case
+Differrent toolbar for navigation controller
+
+Object expression vs Object declaration
+The beauty of Kotlin typing system
+
+Caching made simple android
+
+Kotlin Delegates in Android
+
+
+MergeAdapter
+Merge Adapter in android
+Merge Adapter Tutorial for Beginners
+MergeAdapter at first glance
+Playing with the new MergeAdapter on Android
+Concatenate adapters sequentially with ConcatAdapter
+Merge multiple RecyclerView.Adapter for use with single RecyclerView (Android)
+Merge adapter
+Difference between position getAdapterPosition() and getLayoutPosition() in RecyclerView.
+Merge multiple RecyclerView.Adapter for use with single RecyclerView (Android)
+
+
+
+Exploring the View Pager 2
+ViewPager2 in Android: Getting Started
+Custom views at TabLayout with highlighted text style at the selected tab
+Android ViewPager(2) with dots indicator
+ViewPager 2
+
+
+
+
+Custom View part 1
+Create circular image view
+Danger of assumptions Kotlin
+Custom compound views
+Renderer thread
+Canvas draw an arc
+From View to Pixel
+Rendering phase by Phase
+Performance capture a trace perfetto
+OnMeasure
+Measuring views
+Perfetto app's performance
+Measure… Layout… Draw!
+Layout Once Layout Twice — Sold!
+A Battle towards Performance- Constraint Layout vs Other Layouts(Part -1)
+Double taxation
+A Battle towards Performance- Understanding Systrace and Overdraw
+Improve android app performance with Profilers
+App performance improvemwnt with profiler
+Jetpack benchmark library
+.Idea folder in android
+Image view
+Circle image view with border
+Canvas Drawing for Fun and Profit - Doughnut
+Drawing custom shapes
+Cnavas voice wave - Busuu
+Drawaing in canvas queen : circle
+Custom views
+Custom Views
+Measuring texts in custom views
+Learn all android canvas draw functions
+Star field in Canvas
+
+
+
+
+Custom View Lifecycle aware
+Lifecycle aware viewmodels
+Ripple effect
+Ripple effect in canvas
+Application performance
+Constraint layout flow
+
+Recycler view state restoration policy
+Save and Restore recycler view state
+Saving scroll state
+
+
+
+Sliding Panel layout
+
+
+
+
+Implementing selection in Recyclerview
+Use site targets
+SAM Conversions in Kotlin
+
+
+Data binding tips and tricks
+Introduction to Data Binding For Android
+Data binding samples
+Data Tags Binding Expressions Imports and Include
+Layouts and binding expressions
+RecyclerViews and Event Handling with Data Binding
+Binding Adapters and Observable Objects
+Observable viewmodel
+Databinding with List adapter(new way of recycler view)
+View binding vs Databinding
+Android Binding Adapter - custom databinding tutorial in Kotlin
+Android Data Binding Part 2
+Android Jetpack:Empower your UI with Android Data Binding-Part 2
+Event Handling using DataBinding in Android.
+Defining Android Binding Adapter in Kotlin
+Custom attributes using BindingAdapters setters in Kotlin
+Binding Adapters with Kotlin: Part 1
+Two way data binding
+Two way data binding with example
+Data binding under the hood
+Data binding with Kotlin
+Bindable and Base observable
+View model with base observable
+
+
+
+
+Google play billing library part 1
+Google play biling library
+Google play billing into android app
+
+
+
+Workmanagers in android app
+Workmanager with dagger 2
+WorkManager
+
+
+Bustin performance myths
+
+
+Semantic version
+Calendar version
+
+
+
+
+Getting to know Kotlin’s Extension functions: some caveats to keep in mind
+Advanced work maanger
+Experiments with Work mangers
+Animation for recycler view
+
+Diff util tips and tricks
+Replacing interface callbacks with higher order functions
+Kotlin sequences vs collections
+Kotlin 'filter' and 'map'. Using Lambdas for Filtering & Sorting
+Kotlin series
+Lambda basics
+Lambda & higher order function
+
+Java functional interfaces
+Lambda expression
+Kotlin functional interface
+Lambda vs Method Reference
+Lambda & higher order function tips and tricks
+Lambda  handling click
+Lambda kotlin
+Lambda button click
+Replace interface call backs with higher order functions
+Kotlin DSL
+Lambda for call back
+Kotlin DSLs
+Kotlin sequences
+
+
+Kotlin DSL started
+
+
+
+
+
+Composition over inhertance kotlin way
+Composition over inheritance
+Delegation pattern
+Interface delegation
+Delegation in kotlin
+Property delegation
+Composition in Kotlin
+Kotlin class delgation
+Composition over Inheritance
+Kotlin Delegates in Android
+Kotlin property delegation
+Custom property delegates
+Magic in kotlin delegates
+Kotlin delegates
+Delegation in kotlin
+Property delegates
+Advanced Kotlin delegates
+Kotlin delegates in Android development 
+Delegates in Kotlin
+Delegate Properties in Kotlin
+Kotlin Class Delegates: Compose with Style
+Delegating to elements
+Kotlin class and property delegation
+Super powers of delegation
+Delegation pattern
+Forwarding resuable decorators
+Forwarding decorator
+Decorator design pattern
+Decorator design pattern with Kotlin
+Design pattern Kotlin
+Decorator pattern
+Decorator patterns with class delegates
+
+
+
+
+
+
+Operator overloading
+Kotlin Operator Overloading
+Operator overloading
+
+
+
+
+Kotlin awesome tricks for Android
+Kotlin sequnces vs collections
+List adapter
+List adapter android
+SMS token authentication
+
+
+
+
+
+How recycler view works internally
+File template for recycler view
+List adapter template
+Why View model builder ?
+Kotlin Multibinding of Viewmodel
+
+
+
+Latest Room
+Room
+Fragment Factory
+
+Passing data between fragments
+Fragment container view
+Work manager
+
+Kotlin collection filtering
+Filter map function map
+Data binding One way and two way
+Material design 2
+Variance in Kotlin
+Declaration site variance
+Generics and variance
+Kotlin generics
+Reified in kotlin
+Generic interfacce and methods
+Receiver in kotlin
+Generics Covariance & Contravariance
+Difference use case of star projection
+KClass
+
+
+Permission manager
+Activity Result API
+Intent activity result
+Activity result API
+Pick images Activity result API
+Activity result API
+Finally a clean way to deal with permissions in Android
+
+
+
+
+
+
+
+Settings panels app engaement
+
+
+
+Extension functions and extension properties
+Kotlin extension function
+Kotlin standard function
+Truth about Kotlin extension
+DynamicTextWatcher
+
+
+
+Lifecycle component
+
+
+
+
+
+Provider & Lazy
+Dagger lazy
+Lazy vs Provider
+Dagger android migration
+Dagger 2 Tutorial For Android: Advanced
+Feature scopes and dagger-android in an all activity architecture
+Multimodule real use case
+Multimodule project - dagger2
+MultiBinding
+Google's take on DI
+ Dagger android for MVP
+Dagger single activity architecture
+Custom scopes and sub components
+Multibinding in ViewModels
+Dagger 2 multibinding - IntoMap in dagger
+@IntoSet @StringKey @ClassKey
+Field @Named annotation in Kotlin
+Correct use of @Named annotation in kotlin & @Named annotation on kotlin properties
+How to set up dagger
+Google Dagger
+Custom Scopes
+What is @Injectable
+@Inject acting as @Provides
+@Qualifier and @Named
+Custom scopes Component dependencies & subcomponent
+Understanding components and modules
+Power of scoping
+DaggerAppCompactActivity
+How components work in dagger 2
+ How to inject on Activity & Fragment
+How modules work in dagger 2
+Dagger 2 basic guidelines
+Diff b/w componenet builder and component factory
+What is a component factory
+Dager 2 all components basics
+Dagger 2 @Provides vs @Binds
+Dagger injector
+Musatafashoud Dagger movies app
+Multibinding KT academy
+Fragment factory and fragment factory multibinding
+Dagger Scopes —Let’s explain it simply
+Sample DI
+Dagger 2 sets and Map multibinding
+
+Dagger 2 Annotations: @Binds & @ContributesAndroidInjector
+ContributesAndroidInjector - Is it easy?
+Deep Dive into Dagger Lazy
+Setting Up Android Modules With Dagger 2 - Elye
+Dependency Injection in your app with Dagger 2
+Dagger Android — Behind the Scenes - DispatchingAndroidInjector
+Dagger-Android - Migrating to Dagger android BTS - wow
+Dagger tips: how do you use that in your modularization - Component dependencies and subcomponent
+Dagger tips: elegantly handle your Activities and Fragments by AndroidInjector
+Dagger Android  - Multibinding BTS
+Component Dependency & Subcomponent
+Dagger – A New Dependency Injection for JAVA And Android
+What else Dagger 2 injection provides?
+Dagger2 with RepositoryPattern
+Dagger 2 Navigation component Fragment Factory
+Dagger android
+Nested navigation with Viewmodel
+AssistedInject
+Assisted inject in dagger
+Dagger android to dagger
+
+
+
+
+
+
+Fieldmap in retrofit
+Partmap in retrofit
+
+
+
+Securing network data for android
+
+
+
+
+Understanding Android Matrix transformations
+Starting with Canvas
+Android Canvas Drawing: Useful Graphics Classes & Operations
+Matrix in canvas android
+Scale type in Image view
+ImageView AdjustViewBounds
+Aliasing
+
+
+
+
+Object Expressions and Declarations
+Object expression vs Object declaration
+Object keyword in Kotlin
+
+
+
+
+MediatorLiveData: a simple use case
+Medaitor live data
+5 common mistakes when using Architecture Components
+Livedate and MediatorLiveData -> Eg: Observing writing in file.
+ Coroutines and LiveData
+Understanding LiveData
+Live data with Coroutines
+The One-Shot Operation with Coroutines ( the power of liveDataBuilder) 2
+Live data Transformations
+LiveData beyond the ViewModel
+How does ViewModel retain post destruction - survival - destroy
+Live data transformation examples
+Android Live Data
+Live data and view model patterns
+Making Network Calls with LiveData Transformations
+Live data Transformations - MediatorLiveData
+"LiveData beyond the ViewModel
+"
+Map & Switch map
+LiveData Transformations
+Exploring LiveData Architecture component
+SingleLiveEvent to help you work with LiveData and events
+Navigation & Events in MVVM on Android via LiveData
+LiveData with SnackBar Navigation and other events (the SingleLiveEvent case)
+ViewModels and LiveData: Patterns + AntiPatterns
+Optimizing Android ViewModel with Lifecycle 2.2.0
+
+ViewModels: Persistence onSaveInstanceState() Restoring UI State and Loaders
+A step by step guide on how to use Nav-graph Scoped ViewModels
+
+
+
+
+
+
+
+
+
+
+
+
+Android Live Templates
+Live templates android studio
+Live templates in android studio
+Live template studio
+
+
+
+
+Destructuring in Kotlin
+Destructuring Declarations
+"Kotlin Unpacking Params
+"
+"Destructuring Declarations
+"
+Kotlin: Destructuring Declarations
+Destructuring declaration in kotlin
+
+
+
+
+
+Paging for network
+Pagination from Jetpack
+Android Jetpack Paging
+7 steps to implement Paging library in Android
+Implementing Paging Library in Android
+Exploring Paging Library from Jetpack
+Android Jetpack: manage infinite lists with RecyclerView  and Paging (Google I/O '18)
+Implementing Pagination for fetching Instagram photos
+Android Paging Library with Kotlin Coroutines
+Non library approach vs library approach
+
+
+Paging 3
+Paging 3 library
+Paging 3 video
+Android Jetpack Paging Version 3.0
+Paging library for android
+Paging 3 easier way to pagiation
+Paging 3 loading states
+Paging 3 library with offset
+Paging 3
+Exploring Paging3 — Part 2
+Paging 3 — Loading States Separators refresh() retry()
+Paging 3
+Pagination 3 android
+
+
+
+
+Kotlin Conventions
+Operator Overloading
+Functions in kotlin
+
+
+
+
+Dissecting Corotine library
+Kotlin Coroutines - Exception handling
+Caching Kotlin courotines
+Coroutines - one stop shop*
+Kotlin Coroutines SupervisorJob Async Exceptions and Cancellation
+Coroutines basics
+Coroutines patterns and anti patters
+Exploring new Coroutines and Lifecycle Architectural Components integration on Android
+Reason to avoid Global scopes in Coroutines
+Kotlin and Exceptions
+Coroutine context and scope
+Parallel Multiple Network Calls Using Kotlin Coroutines
+Parallel map in coroutine
+Understanding suspend function in Kotlin Coroutine
+Suspend functions
+Coroutines - Structural
+Difference between CoroutineScope and coroutineScope in Kotlin
+Coroutine in Android: Working with Lifecycle
+Architecture Components pitfalls — Part 1
+Structured concurrency with Kotlin coroutines
+Room Coroutines
+Kotlin Coroutines
+How can we use CoroutineScopes in Kotlin?
+Kotlin Coroutines
+Caching with coroutines
+Concurreny in android
+Why your class probably shouldn't implement coroutinescope
+Coroutine Cancellation and Structured Concurrency
+Structured concurrency
+
+Kotlin Coroutines - How to block to await/join all jobs?
+Coroutines on Android
+Coroutines: First things first - very basics
+Android Kotlin Coroutine Best Practices
+Kotlin christmas
+Making Asynchronous Network Calls With Kotlin Coroutines in Android
+Async operation in Coroutines and basics
+Coroutines Tips and Tricks
+Kotlin Coroutines in Android — Suspending Functions
+Suspend function under the hood
+Live Data with Coroutines and Flow
+
+
+
+
+
+
+
+Flow + MVI
+Coroutines tutorial with Flow
+Kotlin Flows and Channels for Android - Goto
+Kotlin flow callbacks
+LiveData with Coroutines and Flow (Android Dev Summit '19)
+Callable Future
+Kotlin flow and coroutines
+Callback flow
+Cold Flows & Hot Channels
+An Early look at Kotlin Coroutine’s Flow
+What is Flow in Kotlin
+Channels and Flows
+Future and Flow
+Intermediate operation and terminal operation
+Transmitting Streams of values with Channels
+Flow for android
+No more LiveData in Your Repository: There are better options
+Playing with Kotlin Flows
+Backpressure in Kotlin flows
+Simple Design of Kotlin Flow
+Kotlin Flow for Android: Getting Started
+How to combine flows
+Coroutines and Channels
+Kotlin Flow
+MVVM using mediator live data
+MVI coroutines flow
+Kotlin Coroutines in Android — Channel*
+Exploring live data and flow
+A library based on Kotlin Flow
+Flow on android quick guide
+Live Data Flow in MVVM
+Coroutines Flow
+Simplifying APIs with coroutines and flow
+Live data with flow
+Channels
+Channels and Flows
+Deep on Channels
+Flows & Channels
+Channel
+Flow with live data and search
+Kotlin Flows
+Testing flow
+Safer way to collect flows
+
+
+
+
+
+
+Kotlin coroutine
+StateFlow Kotlin
+StateFlow & SharedFlow
+StateFlow
+Shared Flow
+State Flow in andorid
+Migrating to Flow - Akshay Chordia
+StateFlow APIs Kotlin
+Migrating from LiveData to StateFlow
+State and Shared flow
+Shared Flows and Broadcast channels
+Shared flow & State flow
+Live data to state flow
+Chanel and SharedFlow
+Stateflow & SharedFlow
+Safe way to collect flow
+
+
+
+
+Curved Recycler view
+Recyclerview Snaphelper
+Recyclerview Snaphelper - Github
+Snap helper tricks
+
+
+
+
+Video processor on android
+Media in android : Components and tricks
+
+
+
+
+
+
+
+
+
+
+
+
+Dalvik vs ART
+Proguard rules
+Android CPU Compilers D8 & R8
+Shrinking app R8
+Proguard issues
+R8 rules
+Proguard vs R8
+Kotlin code obfuscated??
+
+
+Crashlytics
+Firebase Crashlytics
+Managing your App Distribution with Firebase
+Crashlytics - Firebase
+
+Firebase Remote config
+
+
+
+
+
+
+
+Enum in android
+Enum vs sealed class
+Enum vs Sealed Classes in Kotlin
+Sealed Class
+Kotlin — What is a Sealed Class?
+Understanding Kotlin Sealed Classes
+Sealed Class and Enum
+Sealed with a class
+Beyond the Basics with Sealed Classes
+Structured Concurrency
+Structured Concurrency Kotlin
+
+
+Animation
+
+
+
+Activity Results API
+Use{} function in kotlin
+
+
+Kotlin reified work around
+Reified Types
+Generics reified
+Reified in Kotlin
+Navigation component playground tree
+
+
+
+
+Annotation Processting
+Annotation processing super charge
+Writing your own annotation processors
+
+
+
+
+
+Annotation Processing
+Annotations in Kotlin
+Use site targets
+Kotlin annotations
+Kotlin annotations
+Annotations in Kotlin
+Shrinking kotlin libraries
+Idiomatic Kotlin: Annotations and Reflection
+Kotlin annotations
+Reflection in kotlin annotation
+
+
+
+Functional operations
+Kotlin all collection functions
+
+
+MDC 1.1.0
+Material design for motion
+TaskStackBuilder
+Labels in Kotlin nested function
+
+
+
+
+
+Coroutines with architecture components
+
+
+
+ApplicationComponent in dagger
+Notification in android
+Handling location data
+
+
+
+
+
+Building a video player app
+Exoplayer caching
+Exoplayer video preload
+Exoplayer getting more control
+Exo Player
+Exoplayer in android
+Exoplayer
+Codelabs exoplayer
+Exo Player With Custom Controller
+ExoPlayer in android - Simple but great
+All articles about exoplayer
+Easy Audio Focus with ExoPlayer
+Exoplayer - release notes
+ExoPlayer Components Explained
+Exoplayerr dev
+"ExoPlayer 2.11 - What’s new
+"
+Android ExoPlayer: Starter’s Guide
+How to play Youtube video in ExoPlayer in Android?
+Improving ExoPlayer rendering performance
+ANDROID MEDIA STREAMING WITH EXOPLAYER
+Exoplayer videos
+Kotlin android development tutorial: DASH video streaming using ExoPlayer
+Kotlin camera2 API video playback using ExoPlayer
+Exoplayer
+Audio focus puasing video
+Working with exoplayer - The clean way — and customization
+Exoplayer recycler view
+Debugging on exoplayer
+Whats new in media ?
+Building feature-rich media apps with ExoPlayer
+
+
+
+
+GeoJson on google maps
+
+
+
+
+
+
+
+Data safety encryption
+Bio metric prompt
+Incremental anotation process -  speed up your build time
+
+
+
+Hiding bottom navigation
+
+
+Bitmaps in android
+Bitmap in android
+Loading Large Bitmaps Efficiently in Android
+DiskLruCache
+
+Screen measuremennt in android
+Display metrics class in android
+PorterDuff mode
+Poter duff mode explanantion
+Porter Xfermode
+Text Baseline descent bottom
+Powerof XferMode
+Crop a shape from Bitmap android cutout
+Porter mode
+Shader usage of android
+Colour Matrix
+
+
+Px Dp
+
+
+
+
+OPtimise bitmap using Glide/Picasso
+Glide App module
+Glide tips
+Glide - optimise memory consumption in Glide
+Glide Image loader The basic - series
+Benchmark in android
+Wendergram
+Glide Module
+Glide load image
+Glide all details
+
+
+
+
+
+
+Understanding Camera 2 API
+Understanding Camera 2 AP - Part 2
+The least you can do with Camera2 API
+The Ultimate Tutorial on Recording and Streaming Video with Android Camera2 API
+Kotlin Camera2 API  - Series
+How to use android camera2 API's - Part 2 Setting preview surface width & height
+Camera 2 API using exoplayer
+Camera 2 RAW
+Camera 2
+Kotlin camera2 API video capture - series
+Camera 2
+Camera 2 google sample texture view
+Camera 2 surface view
+
+
+
+
+
+Media store
+Media store cook book
+Media store Sample
+Stored Media and Camera
+Scoped storage
+Media atore to list all the Files
+Scoped data storage
+Media store example in android 10 and above
+Media store android 10 issues
+Android scoped storage
+Scoped storage
+
+
+Media store shared media
+Custom camera utils
+Get file extension
+Scoped storage
+Scoped storage
+Storage from Andorid 10
+Content provider vs Content resolver
+Content Observers
+Scoped storage
+Scoped storage
+Android 10 open failed scoped storage
+Scoped storage in android 11
+Folder creation in android
+Folder creation android
+Folder in android
+File provider in android
+
+
+
+
+
+Downloading file into local
+What is HttpUrlConnection
+HttpUrlConnection
+Range header
+
+
+
+
+Clean architecure lecture
+Guide on Clean architecture
+MVVM architecture
+Kotlin clean architecture
+Clean architecure lecture for android
+Clean architecture android
+Dependecny injection framework
+Clean architecutre implementation
+Guide mobile application architecture
+Android app architure part 2 domain layer
+Android architecture example layers
+Android app architecture
+App architecture by example
+Clean architecture data flow dependency rule
+Clean architecture Antonio Leiva
+Modularised android projects
+Clean archtecture android
+
+
+
+
+Camera X
+CameraX: Getting Started
+CameraX: HDR Night and Portrait mode
+Android CameraX
+Camera X Android
+Android CameraX
+Camera X analysis
+ML Kit and Camera X
+Camera X exposure compensation API
+
+
+
+
+
+
+String plurals
+Understanding the Android Material Theme
+Materical componenet
+What do you mean by android colorPrimary colorPrimaryDark and colorAccent? - Programmer Sought
+Android application design with styles and themes - Tutorial
+Android styling: themes vs styles
+Android styling: common theme attributes
+Material  theming
+Setting up a Material Components theme for Android
+Dark Theme with MDC
+Material Components for Android 1.2.0 is now available
+Styles and Themes inheritance
+Nesting Themes
+Android styling themes overlay
+Android styles and theme
+Attr vs android:attr
+Attr
+Shape Drawable arrow
+Theme overlay
+Context Theme Wrapper
+Developing themes with style
+Material Shape Appearance
+Style default
+Adding default styles
+Refactoring themes with styles
+Refactoring themes with overlays
+Shapable imageview
+Migrating from Appcompat to MDC
+
+
+
+
+
+
+Dark theme in your application
+Dark mode to your app
+Applying dark theme to your android app
+Dark mode theme app
+
+
+
+
+Jacoco + SonarQube
+Jacoco
+SonarQube android integration
+Jacoco for android
+Unified code coeverage with jacoco
+Jacoco for android
+
+
+
+
+Synchronization Thread-Safety and Locking Techniques in Java and Kotlin
+Kotlin contracts
+Contracts compiler smart
+Atomic variables in Java
+ThreadLocalRandom
+
+
+
+Beginners guide to gradle
+Simplest guide to Gradle
+Gradle course*
+Gradle Tutorial for Android: Getting Started
+Gradle Tips and Tricks for Android
+Understanding Android Gradle build files
+Gradle Dependency management Kotlin DSL
+Next level of dependencies declaration with Kotlin DSL scripts
+Gradle basics
+The New Way of Writing Build Gradle with Kotlin DSL
+Kotlin DSL
+DSL gradle scripts
+Kotlin DSL gradle
+Gradlew
+Kotlin DSL gradle script
+Signing configs with gradle android
+Gradle buildConfigField
+Beginners guide to gradle
+Build ocnfiguration fields & resources
+Version properties gradle
+Playing with gradle
+Default build type
+Product flavours
+Android gradle plugin
+Gradle tasks
+Enter Flavor Dimension
+Profuct flavours in android
+
+
+
+Journey of launching an android activity
+
+
+
+
+Material shape cutting corners
+Shape Drawable
+Materical component floating button
+ShapeableImageView
+Material Shape drawable
+Material Shape edges
+Drawable colour state list
+Material shape cutting
+Layer list drawable
+What is webp ?
+
+
+
+
+
+AIDL android
+AIDL interface android
+AIDL android
+
+
+
+Serializable vs Parcelable
+Parcelable android tutorial
+Implement parcelable
+Parcelable made easy
+Parcelable vs serializable
+
+
+
+
+
+Referencing Attributes vs Resources
+
+
+
+Open SSL
+Android bootup
+Open SSL android
+
+
+
+
+Reducing the app size using apk split
+Android App Bundle
+ABI Filters
+Android App Bundles vs. APKs
+App bundle andorid
+Introduction to ap bundle
+Android App Bundle
+Android App Bundles: Getting Started
+AAB & Dynamic feature module
+
+
+
+Multiple product flavors
+Product flavours
+Build type & flavours
+Product flavours
+Product flavours
+Product flavours and build variants
+Creating Different Build Variants in Android
+Product flavours
+Manifest placeholders
+
+
+
+
+
+Understanding layout inflaters
+
+
+Android X core
+
+
+
+Release signed apk signing config
+Signing apk
+Signing config with gradle
+Add signing config
+
+
+
+Packing options in Gradle
+
+
+
+FCM message style
+Android notification
+Push notification
+Push notification using firebase
+
+
+
+
+
+
+Firebasing with Kotlin Flow
+Cloud firestore vs FIrebase real time DB
+Cloud fire store
+Cloud firestore android
+Cloud fire store basics
+CLoud firestore firebase team
+Cloud firestore basics
+
+
+Google play console tour
+
+
+Dynamic Blur effecct in android
+
+5 things about Kotlin
+Clean architecture
+
+Clean architecture Rick & Morty
+Clean architecture - latest recommended
+
+Quality in mobile app
+
+TDD
+Free Testing course Udemy
+
+
+
+
+
+TDD android talk
+Fix Kotlin and new ActivityTestRule
+Ui Testing for Beginners
+IsDisplayed in TDD
+Espresor Cheat sheet
+UI Testing for Beginners
+UI Testing with Espresso
+Introduction to TDD
+Difference between real object and mock object
+Difference between mock and spy
+Uncle bob the little mocker
+Espresso Recycler view
+View Actions in Espresso
+Custom Matchers
+Some useful custom Espresso Matchers in Android
+Creating Custom view matchers
+Espresso for Noobs 1
+AutoCoplete text box espresso
+Espresso for Noobs
+ActivityInstumentationTestCase 2
+Custom scroll approach in espresso
+Espresso Recipes
+Espresso and Linkify
+Espresso recycler view
+Espresso - link text alert dialog
+Espresso example
+Android training unit test
+Evolution of unit tests
+Activity scenario
+Target non-default windows
+Espresso Idling resource
+Espresso android guide
+Run timr permission espresso
+Run time permission 3 different ways
+Android with Espresso part 2
+Espresso Ui Test
+Android kotlin test training
+Unit test - Philip Lackner*
+Espresso test case
+Espresso android UI testing
+
+
+
+
+
+
+Unit Tests and Test Doubles like Mocks Stubs & Fakes
+Fakes Mocks Stubs Spys
+Fakes Mocks Stubs Spys
+Differencce between Fakes Mocks & Stub
+MocKK
+MockK Library - Kotlin Christmas
+Test Driven Development w/ Kotlin Coroutines Mockk JUnit 5 | Android Testing Tutorial Part 2
+Mockk example Yannick de truk
+Mockk coroutines*
+Kotlin Mockk
+Mockk Features
+Mockk runassertions
+Mocking constructors
+Mocking coroutines
+Mocking Spy
+Mocking Relaxed true
+Suspend with Mockk
+MockK Kotlin Coroutines
+Kotlin mockk
+Kotlin unit testing with mockk
+
+
+
+Pub sub
+Cloud tasks or pub sub
+Message filter
+
+
+
+
+
+Android test
+Android test
+JUnit for android - Introduction
+Testing livedata - InstantTaskExecutionRule
+InstantTaskExecutor Rule
+InstantTaskExecutor Rule MainCoroutineRule*
+Android unit testing junit4
+JUnit test frameworks
+Paramterized test in Junit
+What is mocking
+Junit rules
+Creating custom viewmatchers
+Junit 4 rules
+Junit asset exception
+
+Codelabs unit testing android
+Kotlin coroutines in android test
+Testing coroutines in android
+
+
+
+
+Firebase Remote Config
+
+
+
+
+
+Android reference to avoid memory
+References work in android & java
+
+
+
+
+
+
+What is VSync in android
+What is Choreographer in android
+
+
+
+
+
+Custom Lint checks
+Android lint
+Android ktlint and pre-commit Git Hook
+Klint Kotlin
+Simplify Android Kotlin Code with Ktlint
+Vladimir Ivanov Dev Blog
+
+
+Jetpack datastore
+Datastore
+Preference datastore
+Proto DataStore - Persist Typed Objects with Protocol Buffers
+Preference datastore - Jetpack
+Android data store migration
+Jetpack data store
+Shared preferences
+Jetpack datastore preferences
+Preference data store
+Protocol buffers java
+Protocol Buffers & JSON - SingaporeJS
+What is protocol buffer
+Protocol buffer JS
+ProtoBuf
+Understanding Protocol Buffers
+Protocol buffers Java
+Datastore tutorial
+Jetpack datastore
+JetpackDatastore Tutorial
+Android Jetpack Datastore
+Proto datastore
+
+
+
+
+
+Android Ktx extensions
+Kotlin Copy data class
+
+
+
+
+Jetpack Compose
+Jetpack compose beta
+Jetpack compose
+Gradient over Image in Jetpack compose
+Jetpack compose layouts
+
+
+
+
+Github actions
+
+
+Kotlin tail recursion
+Kotlin recursion
+
+
+
+Postman for android developers
+
+
+
+
+What is Rest API
+Docker file
+Learn Git
+
+Git commands beginner
+Git merging
+Bitcoin transaction
+Lean Github in 20 mins
+Git pull overwrite changes
+Stevdza-San
+Big O notation
+Bazel
+
+
+Android weekly
+
+
+API vs SDK
+REST API and OpenAPI
+
+
+
+
+
+
+Epoxy
+Exopy made easy*
+Epoxy kotlin recycler view
+Epoxy
+Epoxy complex screens faster
+Recycler view with Epoxy
+
+
+
+
+
+
+Flashing border card view
+Image rotation
+Animation for shifting bottom navgation android
+Collapsing avator toolbar sample
+Pivot x and Pivot y in animation
+How to rotate line
+Layerlist and animations
+Animation vs Animator
+Animation
+Material design transition
+Scenes and Trasitions
+Difference between animation and transition api
+Marquee behaviour using value animator
+5 best libraries
+Animation with ConstraintSet
+Physics based animation
+Dynamic animation in android fling spring
+Android Animation tutorial
+Dynamic animation fling spring
+Animation
+Animation in android
+What is Transitions in Android Lollipop
+Animation Tutorial android
+Animation selector android
+Simple frame animations
+Shared element transition guide
+Android scene transition
+Animated selector drawable
+Custom Transition
+Shared element transition framework
+Vector Drawable path command
+Animated icon strike through
+Card selection animation
+Path Effect
+Animated Image drawable
+Spring Animation - physics based
+Physics based animation android
+Android Animation realm academy
+Physics animation in android
+Android: Using Physics-based Animations in Custom Views
+How transition works
+Material components design motion
+Animated vector drawable***
+Number Tweening
+Nothing to Material transitions
+
+
+
+
+
+
+
+
+System windows and Consuming Insets
+What is Window Insets
+Full screen Ui with transparent status bar
+Window Insets and changess in android 11
+Modifying system UI visibility
+clipToPadding
+Window manager - Elye
+Chat head window
+Jetpack window manager
+
+
+
+
+
+
+
+MotionEvent
+Dragging effect
+ViewDragHelper
+ViewDragHelper
+Mastering the Android Touch System
+Android touch system
+Touch events delivery
+Global visible rect
+Motion event
+Drag items in android
+
+
+
+
+View outline provider
+View outline custom path
+View shadow effect
+
+
+
+
+Bezier curves
+How to draw Bezier Curve in android
+Bezier curve in android and graph view
+Drawing bezier curve like in material
+Custom tutorial on Bezier curves Smiley
+
+
+
+
+Detekt Driodcon
+Detekt codebase
+Kotlin code smells with Detekt
+Detekt gradle plugin
+Detekt
+Detekt
+Custom Detekt rule
+First Detekt rule
+Detekt
+Detekt Plugin
+Detekt Rules
+Detekt rule set
+
+
+
+
+Hilt official
+What new in Hilt
+
+
+
+
+
+
+
+Audio Opus files
+How to open archived WhatsApp Opus files?
+Audio Recorder vs MediaRecorder
+Whats app Opus
+Ogg vorbs vs Ogg opus
+Audio File Formats - MP3 AAC WAV  FLAC
+Audio Bit Depth & Sample Rates
+ogg vs mp3
+Stereo vs Mono
+ANR
+3GPP vs AMR
+Record Audio in AMR
+Android media supported audio formats
+VOIP Opus
+Media container formats
+Audio visualizer
+What is frequency
+
+
+
+
+
+What is NDK in Android how is it useful and how it works?
+Android NDK android tutorial
+Android NDK droidcon
+NDK and CMAKE
+NDK CMAKE and NDK Build
+Command line autiomation with makefile
+Android Bp & Android Mk file
+
+
+
+
+
+
+Video codecs and encoding X 265
+
+
+
+
+
+Calcualte video file size
+Calcualte video bit rates
+What is a Video container
+
+
+
+What is a surface view
+Surface view android
+Android Surface Flinger
+Surface view android - Elye
+Surafec flinger
+Surface view
+Canvas and Surface
+
+
+
+
+Media in detail
+FFMPEG in android
+NDK Speex
+FFFMPEG
+
+
+
+Guide for OpenGL Es
+Render triangle using OpenGLes
+
+
+
+
+
+Splash screen android 12
+
+
+
+
+Motion Layout in android
+Motion Layout & Motion editor
+Motion layout **
+Motion layout for android getting started
+Motion layout podcast
+
+
+
+
+What are keyframes
+Motion layout
+Keyframe animations
+
+
+
+
+Linear interpolation
+Linear interpolation function
+Easing fucntion
+
+
+
+
+Linear interpolation
+Linear interpolation in UI animation
+
+
+
+
+How to obtain SHA 1 for release android studio
+
+
+
+Beginner's guide to CI/CD
+Fastlane
+
+
+
+
+Compose tutorial
+Jetpack compose android
+
+
+
+
+Refererral program
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

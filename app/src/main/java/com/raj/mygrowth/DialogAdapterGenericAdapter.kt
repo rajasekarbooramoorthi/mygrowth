@@ -3,20 +3,19 @@ package com.raj.mygrowth
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.raj.mygrowth.databinding.AdapterItemMasterGenericBinding
-import com.raj.mygrowth.domain.ResponseGenericItem
+import com.raj.mygrowth.databinding.AdapterItemDialogGenericBinding
 import com.raj.mygrowth.interfaces.SimpleClick
 
-class MasterGenericAdapter(
-    private val list: List<ResponseGenericItem>, click_: SimpleClick
-) : RecyclerView.Adapter<MasterGenericAdapter.ViewHolder>() {
+class DialogAdapterGenericAdapter(
+    private val list: List<String>, click_: SimpleClick
+) : RecyclerView.Adapter<DialogAdapterGenericAdapter.ViewHolder>() {
     var click = click_
 
-    class ViewHolder(val binding: AdapterItemMasterGenericBinding) :
+    class ViewHolder(val binding: AdapterItemDialogGenericBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val binding = AdapterItemMasterGenericBinding.inflate(
+        val binding = AdapterItemDialogGenericBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
         return ViewHolder(binding)
@@ -26,12 +25,11 @@ class MasterGenericAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
-        holder.binding.item = item
-        holder.binding.tvName.text = item.id + ":" + item.name
+        //holder.binding.item = item
+        holder.binding.tvName.text = item
         holder.binding.root.setOnClickListener {
-            item.links?.let { click.clickChild(it) }
-
+            click.clickUrl(item)
         }
-        holder.binding.executePendingBindings()
+        // holder.binding.executePendingBindings()
     }
 }

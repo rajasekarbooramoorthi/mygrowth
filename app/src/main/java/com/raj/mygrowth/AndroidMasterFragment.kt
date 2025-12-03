@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -11,6 +12,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentAndroidMasterBinding
 import com.raj.mygrowth.domain.ConceptModel
 import com.raj.mygrowth.domain.RequestAction
@@ -23,6 +26,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.BufferedReader
 import java.io.InputStreamReader
+
 
 class AndroidMasterFragment : Fragment(), SimpleClick {
 
@@ -64,8 +68,6 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                         )
                     binding.recyclerViewHorizontal.adapter = adapter
                     binding.recyclerViewHorizontal.isNestedScrollingEnabled = false
-
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -98,8 +100,6 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                         )
                     binding.recyclerViewVertical.adapter = adapter
                     binding.recyclerViewVertical.isNestedScrollingEnabled = false
-
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -150,6 +150,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     fun pickCsvFile() {
         csvPicker.launch("text/*")
     }
+
     private fun readCsvFile(uri: Uri) {
         lifecycleScope.launch(Dispatchers.IO) {
 
@@ -185,6 +186,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                                     current = StringBuilder()
                                 }
                             }
+
                             else -> current.append(char)
                         }
                     }
@@ -218,7 +220,11 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
 
             } catch (e: Exception) {
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(requireContext(), "Error reading CSV: ${e.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Error reading CSV: ${e.message}",
+                        Toast.LENGTH_LONG
+                    ).show()
                     Log.e("CSV_ERROR", e.toString())
                 }
             }
@@ -230,8 +236,35 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         //pickCsvFile()
     }
 
-    override fun clickChild(id: String) {
+    override fun clickChild(list: List<String>) {
+        if (list.size == 1) {
+            clickUrl(list[0].toString())
+        } else {
+            dialog(list)
+        }
     }
 
+    override fun clickUrl(url: String) {
+        val intent = Intent(context, ActivityWebView::class.java)
+        intent.putExtra("FILE_URL", url)
+        startActivity(intent)
+        println("Url-->$url")
+    }
+
+    fun dialog(list: List<String>) {
+        val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
+        dialog.setContentView(R.layout.adapterdialog)
+
+        // allow outside touch to close
+        dialog.setCancelable(true)
+        dialog.setCanceledOnTouchOutside(true)
+
+        val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
+        rvDialog?.layoutManager = LinearLayoutManager(requireContext())
+        rvDialog?.adapter = DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)
+        rvDialog?.isNestedScrollingEnabled = false
+
+        dialog.show()
+    }
 
 }

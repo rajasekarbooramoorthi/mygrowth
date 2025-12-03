@@ -18,6 +18,7 @@ class ActivityWebView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val fileUrl = intent?.getStringExtra("FILE_URL") ?: ""  // String
 
         val webView = binding.webView
         val progressBar = binding.progressBar
@@ -28,24 +29,6 @@ class ActivityWebView : AppCompatActivity() {
         webView.settings.builtInZoomControls = true
         webView.settings.displayZoomControls = false
 
-        // Full Drive URL
-        val driveUrl = "https://drive.google.com/file/d/1f5eNFJwwzQyPgjVcjX3UpSlhrdzfU3ba/view?usp=sharing"
-
-        // Extract only file id
-        val fileId = driveUrl.substringAfter("/d/").substringBefore("/")
-
-        // Direct downloadable url
-        val fileUrl = fileId
-
-        // Detect type from link
-        val urlLower = driveUrl.lowercase()
-        val finalUrl = if (urlLower.endsWith(".pdf")) {
-            // PDF → open directly in WebView
-            fileUrl
-        } else {
-            // DOC, DOCX → open using Google Docs Viewer
-            "https://docs.google.com/gview?embedded=true&url=$fileUrl"
-        }
 
         webView.webViewClient = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
@@ -61,12 +44,13 @@ class ActivityWebView : AppCompatActivity() {
                 request: WebResourceRequest?,
                 error: WebResourceError?
             ) {
-                Toast.makeText(this@ActivityWebView, "Unable to load document", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ActivityWebView, "Unable to load document", Toast.LENGTH_SHORT)
+                    .show()
             }
         }
 
         webView.webChromeClient = WebChromeClient()
-        webView.loadUrl(finalUrl)
+        webView.loadUrl(fileUrl)
     }
 
     override fun onBackPressed() {

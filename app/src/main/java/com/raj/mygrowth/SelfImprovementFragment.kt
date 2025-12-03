@@ -68,13 +68,14 @@ class SelfImprovementFragment : Fragment(), SimpleClick {
     }
 
     override fun click(id: String) {
-        val intent = Intent(context, ActivityWebView::class.java)
-        intent.putExtra("FILE_URL", id)
-        startActivity(intent)
-        println("Url-->$id")
-    }
-
-    override fun clickChild(id: String) {
 
     }
+
+    override fun clickChild(list: List<String>) {
+
+    }
+
+    override fun clickUrl(url: String) {
+    }
+
 }

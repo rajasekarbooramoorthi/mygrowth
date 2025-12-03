@@ -20,7 +20,7 @@
     <!-- Text Colors -->
     <color name="textPrimary">#212121</color>           <!-- Dark Gray -->
     <color name="textSecondary">#757575</color>         <!-- Light Gray -->
-    <color name="ggray">#757575</color>         <!-- Light Gray -->
+    <color name="grayline">#66E0E0E0</color>         <!-- Light Gray -->
 
     <color name="blue">#2196F3</color>
     <color name="light_blue_50">#E3F2FD</color>
