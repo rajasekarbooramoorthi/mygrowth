@@ -1,23 +1,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_bottom_Fragment"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
-        android:title="Home" />
-
-    <item
-        android:id="@+id/androidInterviewFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Profile" />
+        android:title="ToDo" />
 
     <item
         android:id="@+id/androidMaster"
+        android:icon="@drawable/ic_profile"
+        android:title="Skill" />
+
+    <item
+        android:id="@+id/bankDetailsFragment"
         android:icon="@drawable/ic_settings"
-        android:title="Master" />
+        android:title="Cred" />
 
     <item
-        android:id="@+id/androidMaster"
+        android:id="@+id/passwordFragment"
         android:icon="@drawable/ic_profile"
-        android:title="sdfghj" />
+        android:title="Fin" />
     <item
         android:id="@+id/androidMaster"
         android:icon="@drawable/ic_profile"
