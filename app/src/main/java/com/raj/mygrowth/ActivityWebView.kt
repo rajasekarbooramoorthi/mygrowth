@@ -20,7 +20,7 @@ class ActivityWebView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWebViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        setToolbarInsetsFullscreen()
         val fileUrl = intent?.getStringExtra("FILE_URL") ?: ""
         setupWebView(fileUrl)
     }

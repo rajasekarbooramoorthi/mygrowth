@@ -14,7 +14,7 @@ import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
 
-class PasswordFragment : Fragment() {
+class CredentialsFragment : Fragment() {
 
     private var _binding: FragmentPasswordBinding? = null
     private val binding get() = _binding!!
@@ -30,10 +30,11 @@ class PasswordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loadDailyTasks()
+        loadPassword()
+        click()
     }
 
-    private fun loadDailyTasks() {
+    private fun loadPassword() {
 
         binding.progressBar.visibility = View.VISIBLE
 
@@ -59,8 +60,46 @@ class PasswordFragment : Fragment() {
         }
     }
 
+    fun click() {
+        binding.cardPassword.setOnClickListener {
+            loadPassword()
+        }
+        binding.cardBanks.setOnClickListener {
+            loadBank()
+        }
+        binding.cardOthers.setOnClickListener {
+
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null  // avoid memory leak
+    }
+
+    private fun loadBank() {
+
+        binding.progressBar.visibility = View.VISIBLE
+
+        lifecycleScope.launch {
+            try {
+                val api = RetrofitClient.instance.create(ApiService::class.java)
+                val response = api.getBankDetails(RequestAction("get_master_Bank"))
+
+                binding.progressBar.visibility = View.GONE
+
+                if (response.status) {
+                    binding.rvPassword.layoutManager = LinearLayoutManager(requireContext())
+                    val adapter = BankDetailsAdapter(response.data)
+                    binding.rvPassword.adapter = adapter
+                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                }
+
+
+            } catch (e: Exception) {
+                binding.progressBar.visibility = View.GONE
+                Toast.makeText(requireContext(), e.message, Toast.LENGTH_LONG).show()
+            }
+        }
     }
 }

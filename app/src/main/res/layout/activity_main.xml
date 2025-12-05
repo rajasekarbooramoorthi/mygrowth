@@ -4,22 +4,34 @@
 
     <data />
 
-
-    <!-- MAIN CONTENT -->
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+   <!--     &lt;!&ndash; TOOLBAR INSIDE APPBAR &ndash;&gt;
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:titleTextColor="@android:color/white"
+                android:background="@color/colorPrimary" />
+        </com.google.android.material.appbar.AppBarLayout>-->
+
+        <!-- NAV HOST -->
         <fragment
             android:id="@+id/nav_host_fragment"
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:defaultNavHost="true"
-            android:layout_marginBottom="@dimen/_50sdp"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             app:navGraph="@navigation/nav_graph" />
 
+        <!-- BOTTOM NAV -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
@@ -30,6 +42,7 @@
             app:itemTextColor="@color/bottom_nav_text_color"
             app:labelVisibilityMode="labeled"
             app:menu="@menu/menu_bottom_nav" />
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </layout>

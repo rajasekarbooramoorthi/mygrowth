@@ -8,16 +8,16 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.raj.mygrowth.databinding.FragmentSelfImprovementBinding
+import com.raj.mygrowth.databinding.FragmentCareerDetailsBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.interfaces.SimpleClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
 
-class SelfImprovementFragment : Fragment(), SimpleClick {
+class CareerDetailsFragment : Fragment(), SimpleClick {
 
-    private var _binding: FragmentSelfImprovementBinding? = null
+    private var _binding: FragmentCareerDetailsBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -25,7 +25,7 @@ class SelfImprovementFragment : Fragment(), SimpleClick {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSelfImprovementBinding.inflate(inflater, container, false)
+        _binding = FragmentCareerDetailsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -48,7 +48,7 @@ class SelfImprovementFragment : Fragment(), SimpleClick {
                 if (response.status) {
                     binding.rvPassword.layoutManager = LinearLayoutManager(requireContext())
                     val adapter =
-                        SelfImprovementAdapter(response.data, this@SelfImprovementFragment)
+                        SelfImprovementAdapter(response.data, this@CareerDetailsFragment)
                     binding.rvPassword.adapter = adapter
                     Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }

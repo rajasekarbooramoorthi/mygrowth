@@ -1,26 +1,27 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_home"
+        android:icon="@drawable/ic_todo"
         android:title="ToDo" />
 
     <item
         android:id="@+id/androidMaster"
-        android:icon="@drawable/ic_profile"
+        android:icon="@drawable/ic_skills"
         android:title="Skill" />
 
     <item
-        android:id="@+id/bankDetailsFragment"
-        android:icon="@drawable/ic_settings"
+        android:id="@+id/credentialsFragment"
+        android:icon="@drawable/ic_cred"
         android:title="Cred" />
 
     <item
         android:id="@+id/passwordFragment"
-        android:icon="@drawable/ic_profile"
+        android:icon="@drawable/ic_fin"
         android:title="Fin" />
+
     <item
-        android:id="@+id/androidMaster"
-        android:icon="@drawable/ic_profile"
-        android:title="sdfghj" />
+        android:id="@+id/androidCareer"
+        android:icon="@drawable/ic_work"
+        android:title="Career" />
 
 </menu>

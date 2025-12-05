@@ -28,7 +28,6 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.URLEncoder
 
-
 class AndroidMasterFragment : Fragment(), SimpleClick {
 
     private var _binding: FragmentAndroidMasterBinding? = null
@@ -262,7 +261,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
             val intent = Intent(context, ActivityWebView::class.java)
             intent.putExtra("FILE_URL", url)
             startActivity(intent)
-            println("Url pdf-->$url")
+            println("Url url-->$url")
 
         }
     }

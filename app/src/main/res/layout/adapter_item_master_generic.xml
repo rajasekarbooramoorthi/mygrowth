@@ -21,11 +21,11 @@
             android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_7sdp"
             android:layout_marginBottom="@dimen/_7sdp"
             android:fontFamily="@font/sans_regular"
-            android:textSize="@dimen/_15ssp" />
+            android:textSize="@dimen/_14ssp" />
 
         <View
             android:layout_width="match_parent"

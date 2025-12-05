@@ -20,6 +20,7 @@ class ActivityPdfView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val pdfUrl = intent?.getStringExtra("FILE_URL") ?: ""
         binding = ActivityPdfViewBinding.inflate(layoutInflater)
+        setToolbarInsetsFullscreen()
         setContentView(binding.root)
         setupWebView(pdfUrl)
     }

@@ -8,6 +8,18 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
+                  <entry key="androidCareer">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="256" />
+                            <option name="y" value="12" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="androidInterviewFragment">
                     <value>
                       <LayoutPositions>
@@ -32,7 +44,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="androidSelfImprovement">
+                  <entry key="bankDetailsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -44,7 +56,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="bankDetailsFragment">
+                  <entry key="credentialsFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -69,18 +81,6 @@
                     </value>
                   </entry>
                   <entry key="mainActivity">
-                    <value>
-                      <LayoutPositions>
-                        <option name="myPosition">
-                          <Point>
-                            <option name="x" value="12" />
-                            <option name="y" value="12" />
-                          </Point>
-                        </option>
-                      </LayoutPositions>
-                    </value>
-                  </entry>
-                  <entry key="passwordFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
