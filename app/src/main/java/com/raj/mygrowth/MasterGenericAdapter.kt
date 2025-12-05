@@ -27,7 +27,7 @@ class MasterGenericAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
         holder.binding.item = item
-        holder.binding.tvName.text = item.id + ":" + item.name
+        holder.binding.tvName.text = item.id + " " + item.name
         holder.binding.root.setOnClickListener {
             item.links?.let { click.clickChild(it) }
 

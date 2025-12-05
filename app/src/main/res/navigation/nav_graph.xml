@@ -16,23 +16,10 @@
         android:label="Home" />
 
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.raj.mygrowth.ProfileFragment"
-        android:label="Profile" />
-
-    <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.raj.mygrowth.SettingsFragment"
-        android:label="Settings" />
-
-    <fragment
         android:id="@+id/credentialsFragment"
         android:name="com.raj.mygrowth.CredentialsFragment"
         android:label="Password" />
-    <fragment
-        android:id="@+id/bankDetailsFragment"
-        android:name="com.raj.mygrowth.BankDetailsFragment"
-        android:label="Bank Details" />
+
     <fragment
         android:id="@+id/androidInterviewFragment"
         android:name="com.raj.mygrowth.AndroidInterviewQuestionsFragment"
@@ -42,6 +29,7 @@
         android:id="@+id/androidMaster"
         android:name="com.raj.mygrowth.AndroidMasterFragment"
         android:label="Android Master Skill" />
+
     <fragment
         android:id="@+id/androidCareer"
         android:name="com.raj.mygrowth.CareerDetailsFragment"

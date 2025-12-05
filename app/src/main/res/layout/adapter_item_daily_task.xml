@@ -16,7 +16,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_8sdp"
+            android:layout_margin="@dimen/_5sdp"
             android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/_6sdp"
             app:cardElevation="6dp"
@@ -48,9 +48,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.9"
                         android:text="@{title}"
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                        android:fontFamily="@font/sans_bold"
+                        android:textSize="@dimen/_12ssp" />
 
                     <CheckBox
                         android:id="@+id/chk"
@@ -63,10 +62,11 @@
                     android:id="@+id/tvDueDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="8dp"
-                    android:text="Due Date"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:text="Due Date "
+                    android:fontFamily="@font/sans_regular"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/_7sdp" />
 
             </LinearLayout>
 

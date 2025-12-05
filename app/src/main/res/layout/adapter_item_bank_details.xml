@@ -15,12 +15,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/_5sdp">
+        android:layout_margin="@dimen/_5sdp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_8sdp"
+            android:layout_margin="@dimen/_3sdp"
             android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/_6sdp"
             app:cardElevation="6dp"
@@ -35,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/_15sdp">
+                android:padding="@dimen/_5sdp">
 
                 <!-- Title -->
 
@@ -53,8 +53,7 @@
                         android:fontFamily="@font/sans_regular"
                         android:gravity="left|center"
                         android:text="@{item.b_name}"
-                        android:textSize="@dimen/_17ssp"
-                        android:textStyle="bold" />
+                        android:textSize="@dimen/_16ssp" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -70,6 +69,7 @@
                             android:layout_height="wrap_content"
                             android:padding="@dimen/_8sdp"
                             android:text="Edit"
+                            android:fontFamily="@font/sans_bold"
                             android:textSize="@dimen/_12sdp" />
                     </LinearLayout>
 
@@ -81,25 +81,29 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Customer ID:" />
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/sans_regular"
+                        android:text="Customer ID" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvCustID"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text="@{item.b_cust_id}" />
                 </LinearLayout>
                 <!--
@@ -115,25 +119,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Account Number:" />
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/sans_regular"
+
+                        android:text="Account Number" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvAccNum"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text="@{item.b_acc_number}" />
                 </LinearLayout>
 
@@ -144,25 +154,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Card Number:" />
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/sans_regular"
+
+                        android:text="Card Number" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvCardNum"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+
+                        android:fontFamily="@font/sans_regular"
                         android:text='@{isVisible ? item.b_card_num : "**** **** **** ****"}' />
                 </LinearLayout>
 
@@ -173,25 +189,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="PIN:" />
+                        android:layout_weight="0.7"
+
+                        android:fontFamily="@font/sans_regular"
+                        android:text="PIN" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvCPin"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text='@{isVisible ? item.b_cpin : "****"}' />
                 </LinearLayout>
 
@@ -202,25 +224,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
+
+                        android:fontFamily="@font/sans_regular"
                         android:text="Password:" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvPassword"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_bold"
+                        android:textSize="@dimen/_16sdp"
                         android:text='@{isVisible ? item.b_psw : "******"}' />
                 </LinearLayout>
 
@@ -229,27 +257,35 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_5sdp"
+                    android:fontFamily="@font/sans_regular"
+
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Profile Pwd:" />
+                        android:layout_weight="0.7"
+                        android:fontFamily="@font/sans_regular"
+
+                        android:text="Profile Pwd" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvProfilePwd"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text='@{isVisible ? item.b_profile_password : "******"}' />
                 </LinearLayout>
 
@@ -260,25 +296,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_8sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Ifsc code:" />
+                        android:layout_weight="0.7"
+
+                        android:fontFamily="@font/sans_regular"
+                        android:text="IFSC Code" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvIfsc"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text="@{item.b_updated}" />
                 </LinearLayout>
 
@@ -288,25 +330,31 @@
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_8sdp"
-                    android:weightSum="3">
+                    android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
+                        android:layout_weight="0.7"
+
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Updated:" />
+                        android:fontFamily="@font/sans_regular"
+                        android:text="Updated" />
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.5"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_regular"
+
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvUpdated"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.3"
+
+                        android:fontFamily="@font/sans_regular"
                         android:text="@{item.b_updated}" />
                 </LinearLayout>
 

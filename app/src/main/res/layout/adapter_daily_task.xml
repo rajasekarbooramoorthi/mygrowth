@@ -17,14 +17,13 @@
             android:id="@+id/tvTaskName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|center_vertical"
-            android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/background_gray"
+            android:fontFamily="@font/sans_bold"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_7sdp"
             android:gravity="center_vertical"
-            android:padding="@dimen/_4sdp"
             android:textSize="@dimen/_14ssp"
-            android:textStyle="bold" />
+            android:paddingBottom="@dimen/_10sdp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDailyTask"
