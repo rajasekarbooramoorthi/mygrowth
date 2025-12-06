@@ -118,14 +118,14 @@ class HomeFragment : Fragment() {
 
 
     fun dialog() {
-        var dueDate: String = ""
-        var priority = "0"
+        var dueDate = ""
+        var priority: String
         val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
         dialogBottomSheetDialog.setContentView(binding.root)
 
         binding.icDate.setOnClickListener {
             showNormalDatePicker { date ->
-                dueDate = date.toString()
+                dueDate = date
             }
         }
         binding.btnSubmit.setOnClickListener {

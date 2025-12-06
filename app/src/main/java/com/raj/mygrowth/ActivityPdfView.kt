@@ -9,6 +9,7 @@ import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import com.raj.mygrowth.databinding.ActivityPdfViewBinding
+import java.net.URLEncoder
 
 class ActivityPdfView : AppCompatActivity() {
 
@@ -16,13 +17,39 @@ class ActivityPdfView : AppCompatActivity() {
     private val fileViewer = "file:///android_asset/pdfjs/viewer.html?file="
 
     @SuppressLint("SetJavaScriptEnabled")
-    override fun onCreate(savedInstanceState: Bundle?) {
+   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val pdfUrl = intent?.getStringExtra("FILE_URL") ?: ""
+        val pdfUrl_ = intent?.getStringExtra("FILE_URL") ?: ""
         binding = ActivityPdfViewBinding.inflate(layoutInflater)
         setToolbarInsetsFullscreen()
         setContentView(binding.root)
-        setupWebView(pdfUrl)
+        setupWebView(pdfUrl_)
+    }
+
+
+      fun _onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val pdfUrl = intent?.getStringExtra("FILE_URL") ?: ""
+        binding = ActivityPdfViewBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+        val encoded = URLEncoder.encode(pdfUrl, "UTF-8")
+        val url = "https://docs.google.com/gview?embedded=true&url=$encoded"
+
+        binding.webView.settings.apply {
+            javaScriptEnabled = true
+            cacheMode = WebSettings.LOAD_DEFAULT
+            builtInZoomControls = true
+            displayZoomControls = false
+        }
+        binding.webView.webViewClient = WebViewClient()
+        binding.webView.loadUrl(url)
+    }
+
+    override fun onDestroy() {
+        binding.webView.destroy()
+        super.onDestroy()
     }
 
     @SuppressLint("AddJavascriptInterface")

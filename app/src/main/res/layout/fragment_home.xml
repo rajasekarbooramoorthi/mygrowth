@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data />
@@ -31,15 +30,14 @@
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            tools:layout_editor_absoluteX="166dp" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fabAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/_16sdp"
-            android:layout_marginBottom="@dimen/_75sdp"
+            android:layout_marginBottom="@dimen/_100sdp"
             android:contentDescription="Add Task"
             android:elevation="10dp"
             app:backgroundTint="@color/colorAccent"
