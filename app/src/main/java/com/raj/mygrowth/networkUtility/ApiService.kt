@@ -2,23 +2,20 @@ package com.raj.mygrowth.networkUtility
 
 import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseGeneric
-import com.raj.mygrowth.domain.ResponseGenericItem
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSelfImprovement
+import com.raj.mygrowth.domain.ResponseSimple
 import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("getmydata.php")
-    suspend fun insertTask(
-        @Body request: RequestAction
-    ): DailyTaskResponse
 
     @POST("getmydata.php")
     suspend fun getPassword(
@@ -55,5 +52,14 @@ interface ApiService {
         @Body request: RequestAction
     ): ResponseGeneric
 
+    @POST("getmydata.php")
+    suspend fun addTask(
+        @Body request: RequestActionAddTask
+    ): ResponseSimple
+
+    @POST("getmydata.php")
+    suspend fun getTaskDetails(
+        @Body request: RequestAction
+    ): DailyTaskResponse
 
 }

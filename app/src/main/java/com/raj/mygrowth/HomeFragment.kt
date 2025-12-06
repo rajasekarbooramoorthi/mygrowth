@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,16 +9,21 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.raj.mygrowth.databinding.BottomDialogAddTaskBinding
 import com.raj.mygrowth.databinding.FragmentHomeBinding
 import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
+import java.util.Calendar
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    val api = RetrofitClient.instance.create(ApiService::class.java)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,6 +38,9 @@ class HomeFragment : Fragment() {
 
         binding.rvDailyTask.layoutManager = LinearLayoutManager(requireContext())
 
+        binding.fabAdd.setOnClickListener {
+            dialog()
+        }
         loadDailyTasks()
     }
 
@@ -41,8 +50,7 @@ class HomeFragment : Fragment() {
 
         lifecycleScope.launch {
             try {
-                val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.insertTask(RequestAction("get_daily_task"))
+                val response = api.getTaskDetails(RequestAction("get_daily_task"))
 
                 binding.progressBar.visibility = View.GONE
 
@@ -60,7 +68,7 @@ class HomeFragment : Fragment() {
                     binding.rvDailyTask.post {
                         binding.rvDailyTask.smoothScrollToPosition(position)
                     }
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
 
                 } else {
                     Toast.makeText(requireContext(), "No data found", Toast.LENGTH_SHORT).show()
@@ -77,4 +85,73 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    fun showNormalDatePicker(onDateSelected: (String) -> Unit) {
+
+        val calendar = Calendar.getInstance()
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePicker = DatePickerDialog(
+            requireContext(),
+            { _, selectedYear, selectedMonth, selectedDay ->
+
+                val formattedDate = String.format(
+                    "%04d-%02d-%02d",
+                    selectedYear,
+                    selectedMonth + 1,
+                    selectedDay
+                )
+
+                onDateSelected(formattedDate)
+            },
+            year,
+            month,
+            day
+        )
+
+        datePicker.show()
+    }
+
+
+    fun dialog() {
+        val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
+        var dueDate: String = ""
+        var priority = "0"
+        val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
+        dialog.setContentView(binding.root)
+
+        binding.icDate.setOnClickListener {
+            showNormalDatePicker { date ->
+                dueDate = date.toString()
+            }
+        }
+        binding.btnSubmit.setOnClickListener {
+
+            val taskName = binding.editTextName.text
+            if (taskName != null) {
+                priority = if (binding.cbPriority.isChecked) {
+                    "1"
+                } else {
+                    "0"
+                }
+
+                val requestAction = RequestActionAddTask(
+                    taskName = taskName.toString(),
+                    priority = priority,
+                    dueDate = dueDate,
+                    description = "",
+                    action = "insert_daily_task"
+                )
+                lifecycleScope.launch {
+                    api.addTask(requestAction)
+                }
+
+            }
+        }
+
+        dialog.show()
+    }
+
 }

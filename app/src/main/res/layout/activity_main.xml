@@ -7,20 +7,6 @@
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-   <!--     &lt;!&ndash; TOOLBAR INSIDE APPBAR &ndash;&gt;
-        <com.google.android.material.appbar.AppBarLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:titleTextColor="@android:color/white"
-                android:background="@color/colorPrimary" />
-        </com.google.android.material.appbar.AppBarLayout>-->
-
         <!-- NAV HOST -->
         <fragment
             android:id="@+id/nav_host_fragment"
