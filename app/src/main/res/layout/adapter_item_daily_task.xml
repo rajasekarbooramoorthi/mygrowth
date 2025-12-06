@@ -16,10 +16,10 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_5sdp"
-            android:foreground="?attr/selectableItemBackground"
+             android:foreground="?attr/selectableItemBackground"
             app:cardCornerRadius="@dimen/_6sdp"
-            app:cardElevation="6dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
