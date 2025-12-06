@@ -18,8 +18,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_14sdp"
                 android:fontFamily="@font/sans_regular"
                 android:padding="@dimen/_5sdp"
                 android:text="Name of the task "
@@ -29,20 +30,22 @@
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
-                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_7sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:layout_marginBottom="@dimen/_24sdp"
                 android:background="@drawable/edt_rounded"
-                android:padding="@dimen/_15sdp">
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/_15sdp"
+                android:singleLine="false" />
 
-            </androidx.appcompat.widget.AppCompatEditText>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_24sdp"
-                android:layout_marginBottom="@dimen/_150sdp"
+                android:layout_marginBottom="@dimen/_100sdp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -86,7 +89,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="@dimen/_24sdp"
                 android:layout_marginEnd="@dimen/_24sdp"
-                android:layout_marginBottom="@dimen/_70sdp"
+                android:layout_marginBottom="@dimen/_50sdp"
                 android:background="@drawable/btn_rounded"
                 android:fontFamily="@font/sans_regular"
                 android:padding="@dimen/_5sdp"

@@ -16,13 +16,15 @@ import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
 class HomeFragment : Fragment() {
-
+    lateinit var dialogBottomSheetDialog: BottomSheetDialog
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+
     val api = RetrofitClient.instance.create(ApiService::class.java)
 
     override fun onCreateView(
@@ -37,7 +39,7 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvDailyTask.layoutManager = LinearLayoutManager(requireContext())
-
+        dialogBottomSheetDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         binding.fabAdd.setOnClickListener {
             dialog()
         }
@@ -116,11 +118,10 @@ class HomeFragment : Fragment() {
 
 
     fun dialog() {
-        val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         var dueDate: String = ""
         var priority = "0"
         val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
-        dialog.setContentView(binding.root)
+        dialogBottomSheetDialog.setContentView(binding.root)
 
         binding.icDate.setOnClickListener {
             showNormalDatePicker { date ->
@@ -145,13 +146,28 @@ class HomeFragment : Fragment() {
                     action = "insert_daily_task"
                 )
                 lifecycleScope.launch {
-                    api.addTask(requestAction)
+                    if (api.addTask(requestAction).status) {
+                        if (api.addTask(requestAction).status) {
+                            lifecycleScope.launch {
+                                Toast.makeText(
+                                    requireContext(),
+                                    "Task added successfully",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                                delay(1000) // 2 seconds
+                                dialogBottomSheetDialog.dismiss()
+
+                            }
+                        }
+
+                    }
+
                 }
 
             }
         }
 
-        dialog.show()
+        dialogBottomSheetDialog.show()
     }
 
 }
