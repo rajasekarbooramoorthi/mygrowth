@@ -146,7 +146,6 @@ class HomeFragment : Fragment() {
                     action = "insert_daily_task"
                 )
                 lifecycleScope.launch {
-                    if (api.addTask(requestAction).status) {
                         if (api.addTask(requestAction).status) {
                             lifecycleScope.launch {
                                 Toast.makeText(
@@ -159,9 +158,6 @@ class HomeFragment : Fragment() {
 
                             }
                         }
-
-                    }
-
                 }
 
             }
