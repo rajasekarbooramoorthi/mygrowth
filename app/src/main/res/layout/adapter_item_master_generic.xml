@@ -22,10 +22,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_12sdp"
-            android:layout_marginTop="@dimen/_7sdp"
-            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:fontFamily="@font/sans_regular"
-            android:textSize="@dimen/_14ssp" />
+            android:textSize="@dimen/_16ssp" />
 
         <View
             android:layout_width="match_parent"
