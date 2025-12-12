@@ -253,10 +253,13 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
     override fun clickUrl(url: String) {
         if (PATH_TYPE == "pdf") {
             val prep = buildSafeUrl(DOMANI, PATH_CURRENT, url)
-            val intent = Intent(context, ActivityPdfView::class.java)
-            intent.putExtra("FILE_URL", prep)
+            //val intent = Intent(context, ActivityPdfView::class.java)
+            //intent.putExtra("FILE_URL", prep)
+            //startActivity(intent)
+            val fixedUrl = urlProcess(urlProcess(prep))   // your function to add http if missing
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fixedUrl))
             startActivity(intent)
-            println("Url pdf-->$prep")
+           // println("Url pdf-->$prep")
         } else {
             // val intent = Intent(context, ActivityRichWebview::class.java)
             // intent.putExtra("FILE_URL", urlProcess(url))
