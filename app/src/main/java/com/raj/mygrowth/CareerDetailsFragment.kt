@@ -50,7 +50,7 @@ class CareerDetailsFragment : Fragment(), SimpleClick {
                     val adapter =
                         SelfImprovementAdapter(response.data, this@CareerDetailsFragment)
                     binding.rvPassword.adapter = adapter
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 

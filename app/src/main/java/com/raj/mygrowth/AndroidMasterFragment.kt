@@ -126,7 +126,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                   // Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 

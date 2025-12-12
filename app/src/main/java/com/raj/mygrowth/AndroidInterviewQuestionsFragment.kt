@@ -55,7 +55,7 @@ class AndroidInterviewQuestionsFragment : Fragment() {
                     binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
                     val adapter = AndroidInterviewQuestionAdapter(response.data)
                     binding.recyclerView.adapter = adapter
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                  //  Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -83,7 +83,7 @@ class AndroidInterviewQuestionsFragment : Fragment() {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 

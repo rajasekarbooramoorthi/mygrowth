@@ -49,7 +49,7 @@ class CredentialsFragment : Fragment() {
                     binding.rvPassword.layoutManager = LinearLayoutManager(requireContext())
                     val adapter = PasswordAdapterItem(response.data)
                     binding.rvPassword.adapter = adapter
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -92,7 +92,7 @@ class CredentialsFragment : Fragment() {
                     binding.rvPassword.layoutManager = LinearLayoutManager(requireContext())
                     val adapter = BankDetailsAdapter(response.data)
                     binding.rvPassword.adapter = adapter
-                    Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 

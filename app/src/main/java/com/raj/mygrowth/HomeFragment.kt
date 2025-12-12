@@ -24,6 +24,7 @@ class HomeFragment : Fragment() {
     lateinit var dialogBottomSheetDialog: BottomSheetDialog
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    var dueDate: String? = null
 
     val api = RetrofitClient.instance.create(ApiService::class.java)
 
@@ -116,9 +117,7 @@ class HomeFragment : Fragment() {
         datePicker.show()
     }
 
-
     fun dialog() {
-        var dueDate = ""
         var priority: String
         val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
         dialogBottomSheetDialog.setContentView(binding.root)
@@ -131,7 +130,7 @@ class HomeFragment : Fragment() {
         binding.btnSubmit.setOnClickListener {
 
             val taskName = binding.editTextName.text
-            if (taskName != null) {
+            if (taskName?.isEmpty() != true && dueDate != null) {
                 priority = if (binding.cbPriority.isChecked) {
                     "1"
                 } else {
@@ -141,7 +140,7 @@ class HomeFragment : Fragment() {
                 val requestAction = RequestActionAddTask(
                     taskName = taskName.toString(),
                     priority = priority,
-                    dueDate = dueDate,
+                    dueDate = dueDate.toString(),
                     description = "",
                     action = "insert_daily_task"
                 )
@@ -155,10 +154,14 @@ class HomeFragment : Fragment() {
                                 ).show()
                                 delay(1000) // 2 seconds
                                 dialogBottomSheetDialog.dismiss()
+                                dueDate = null
 
                             }
                         }
                 }
+
+
+                loadDailyTasks()
 
             }
         }
