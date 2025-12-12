@@ -23,6 +23,7 @@ epoxyDatabinding = "5.1.4"
 epoxyProcessor = "5.1.4"
 material = "1.13.0"
 activity = "1.12.0"
+swiperefreshlayout = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,6 +55,7 @@ epoxy-databinding = { group = "com.airbnb.android", name = "epoxy-databinding", 
 epoxy-processor = { group = "com.airbnb.android", name = "epoxy-processor", version.ref = "epoxyProcessor" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swiperefreshlayout" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

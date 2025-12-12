@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.epoxy.databinding)
     implementation(libs.material)
     implementation(libs.androidx.activity)
+    implementation(libs.androidx.swiperefreshlayout)
     kapt(libs.epoxy.processor)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

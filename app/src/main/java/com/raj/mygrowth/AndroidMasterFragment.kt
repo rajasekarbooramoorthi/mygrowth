@@ -258,13 +258,26 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
             startActivity(intent)
             println("Url pdf-->$prep")
         } else {
-            val intent = Intent(context, ActivityWebView::class.java)
-            intent.putExtra("FILE_URL", url)
+            // val intent = Intent(context, ActivityRichWebview::class.java)
+            // intent.putExtra("FILE_URL", urlProcess(url))
+            // startActivity(intent)
+            // println("Url url-->$url")
+
+            val fixedUrl = urlProcess(urlProcess(url))   // your function to add http if missing
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fixedUrl))
             startActivity(intent)
-            println("Url url-->$url")
 
         }
     }
+
+    fun urlProcess(url: String): String {
+        return if (url.startsWith("http://") || url.startsWith("https://")) {
+            url
+        } else {
+            "http://$url"
+        }
+    }
+
 
     fun buildSafeUrl(domain: String, path: String, fileName: String): String {
         // Encode only file name, not full URL

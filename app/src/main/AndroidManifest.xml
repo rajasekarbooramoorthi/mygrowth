@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Mygrowth"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ActivityRichWebview"
+            android:exported="false" />
+        <activity
             android:name=".ActivityAddTask"
             android:exported="false" />
         <activity
