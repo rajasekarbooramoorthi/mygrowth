@@ -273,6 +273,10 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         }
     }
 
+    override fun checkCompleted(id: String) {
+
+    }
+
     fun urlProcess(url: String): String {
         return if (url.startsWith("http://") || url.startsWith("https://")) {
             url

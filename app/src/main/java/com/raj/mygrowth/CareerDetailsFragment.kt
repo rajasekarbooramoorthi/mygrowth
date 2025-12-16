@@ -77,4 +77,7 @@ class CareerDetailsFragment : Fragment(), SimpleClick {
     override fun clickUrl(url: String) {
     }
 
+    override fun checkCompleted(id: String) {
+     }
+
 }

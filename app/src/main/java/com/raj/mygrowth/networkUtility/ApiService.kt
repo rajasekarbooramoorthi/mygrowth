@@ -4,6 +4,7 @@ import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionAndroidInterview
+import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
@@ -61,5 +62,10 @@ interface ApiService {
     suspend fun getTaskDetails(
         @Body request: RequestAction
     ): DailyTaskResponse
+
+    @POST("getmydata.php")
+    suspend fun setStatusCompleted(
+        @Body request: RequestActionTaskCompleted
+    ): ResponseSimple
 
 }

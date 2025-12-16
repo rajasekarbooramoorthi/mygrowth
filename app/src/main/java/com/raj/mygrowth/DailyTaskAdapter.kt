@@ -7,11 +7,13 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.domain.DailyTask
+import com.raj.mygrowth.interfaces.SimpleClick
 
 class DailyTaskAdapter(
-    private val groups: List<DailyTask>
+    private val groups: List<DailyTask>, listener_: SimpleClick
 ) : RecyclerView.Adapter<DailyTaskAdapter.ViewHolder>() {
 
+    private val listener = listener_
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTaskName: TextView = view.findViewById(R.id.tvTaskName)
         val recyclerView: RecyclerView = view.findViewById(R.id.rvDailyTask)
@@ -39,9 +41,10 @@ class DailyTaskAdapter(
                 LinearLayoutManager(holder.itemView.context)
         }
 
+        holder.tvTaskName
         // Set adapter only if not set already
         if (holder.recyclerView.adapter == null) {
-            holder.recyclerView.adapter = DailyTaskAdapterItem(item.list)
+            holder.recyclerView.adapter = DailyTaskAdapterItem(item.list, listener)
         }
     }
 }

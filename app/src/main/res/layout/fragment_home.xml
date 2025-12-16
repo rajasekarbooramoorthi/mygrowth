@@ -26,7 +26,7 @@
             android:id="@+id/rvDailyTask"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:paddingBottom="@dimen/_50sdp"
+            android:paddingBottom="@dimen/_55sdp"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"

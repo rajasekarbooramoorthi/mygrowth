@@ -14,13 +14,15 @@ import com.raj.mygrowth.databinding.BottomDialogAddTaskBinding
 import com.raj.mygrowth.databinding.FragmentHomeBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
+import com.raj.mygrowth.domain.RequestActionTaskCompleted
+import com.raj.mygrowth.interfaces.SimpleClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Calendar
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), SimpleClick {
     lateinit var dialogBottomSheetDialog: BottomSheetDialog
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
@@ -58,7 +60,7 @@ class HomeFragment : Fragment() {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                    val adapter = DailyTaskAdapter(response.data)
+                    val adapter = DailyTaskAdapter(response.data, this@HomeFragment)
                     binding.rvDailyTask.adapter = adapter
                     var position = 0
                     response.data.forEachIndexed { index, item ->
@@ -71,8 +73,6 @@ class HomeFragment : Fragment() {
                     binding.rvDailyTask.post {
                         binding.rvDailyTask.smoothScrollToPosition(position)
                     }
-                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
-
                 } else {
                     Toast.makeText(requireContext(), "No data found", Toast.LENGTH_SHORT).show()
                 }
@@ -117,6 +117,19 @@ class HomeFragment : Fragment() {
         datePicker.show()
     }
 
+    fun completed(id: String) {
+        lifecycleScope.launch {
+            if (api.setStatusCompleted(RequestActionTaskCompleted("update_task", id)).status) {
+                lifecycleScope.launch {
+                    Toast.makeText(
+                        requireContext(),
+                        "Task completed successfully",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        }
+    }
     fun dialog() {
         var priority: String
         val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
@@ -146,6 +159,7 @@ class HomeFragment : Fragment() {
                 )
                 lifecycleScope.launch {
                         if (api.addTask(requestAction).status) {
+                            binding.editTextName.text = null
                             lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
@@ -167,6 +181,22 @@ class HomeFragment : Fragment() {
         }
 
         dialogBottomSheetDialog.show()
+    }
+
+    override fun click(id: String, path: String, type: String) {
+
+    }
+
+    override fun clickChild(list: List<String>) {
+
+    }
+
+    override fun clickUrl(url: String) {
+
+    }
+
+    override fun checkCompleted(id: String) {
+        completed(id)
     }
 
 }
