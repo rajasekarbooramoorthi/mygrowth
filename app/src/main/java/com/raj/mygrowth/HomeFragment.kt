@@ -173,10 +173,7 @@ class HomeFragment : Fragment(), SimpleClick {
                             }
                         }
                 }
-
-
                 loadDailyTasks()
-
             }
         }
 

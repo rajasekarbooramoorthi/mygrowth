@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentAndroidMasterBinding
 import com.raj.mygrowth.domain.ConceptModel
@@ -306,12 +307,31 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         dialog.setContentView(R.layout.adapterdialog)
         dialog.setCancelable(true)
         dialog.setCanceledOnTouchOutside(true)
+
+        dialog.setOnShowListener { dialogInterface ->
+            val bottomSheetDialog = dialogInterface as BottomSheetDialog
+            val bottomSheet =
+                bottomSheetDialog.findViewById<View>(
+                    com.google.android.material.R.id.design_bottom_sheet
+                )
+
+            bottomSheet?.let {
+                val behavior = BottomSheetBehavior.from(it)
+                behavior.state = BottomSheetBehavior.STATE_EXPANDED
+                behavior.skipCollapsed = true
+
+                it.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            }
+        }
+
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        rvDialog?.adapter = DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)
-        rvDialog?.isNestedScrollingEnabled = false
+        rvDialog?.adapter =
+            DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)
+        rvDialog?.isNestedScrollingEnabled = true
 
         dialog.show()
     }
+
 
 }
