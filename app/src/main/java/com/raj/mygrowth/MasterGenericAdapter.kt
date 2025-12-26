@@ -2,6 +2,7 @@ package com.raj.mygrowth
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterItemMasterGenericBinding
 import com.raj.mygrowth.domain.ResponseGenericItem
@@ -27,7 +28,8 @@ class MasterGenericAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
         holder.binding.item = item
-        holder.binding.tvName.text = item.id + " " + item.name
+        holder.binding.tvName.text =
+            HtmlCompat.fromHtml(item.id+"\t\t"+item.name, HtmlCompat.FROM_HTML_MODE_LEGACY)
         holder.binding.root.setOnClickListener {
             item.links?.let { click.clickChild(it) }
 
