@@ -20,6 +20,7 @@ class MasterGenericAdapter(
         val binding = AdapterItemMasterGenericBinding.inflate(
             LayoutInflater.from(parent.context), parent, false
         )
+
         return ViewHolder(binding)
     }
 
