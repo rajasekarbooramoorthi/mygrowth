@@ -33,6 +33,7 @@ data class FinanceData(
     val status: String,
     val priority: String,
     val days: Int,
+    val remining: Int,
     val flmAmountPaid: Int,
     val daysRedable: String,
     val dateOn: String,

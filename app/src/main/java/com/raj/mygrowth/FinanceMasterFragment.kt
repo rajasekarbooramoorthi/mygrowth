@@ -15,7 +15,7 @@ import com.raj.mygrowth.databinding.FragmentFinanceMasterBinding
 import com.raj.mygrowth.domain.FinanceData
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.ResponseFinanceItem
-import com.raj.mygrowth.interfaces.SimpleClick
+import com.raj.mygrowth.interfaces.FinancialClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
@@ -25,17 +25,15 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class FinanceMasterFragment : Fragment(), SimpleClick {
+class FinanceMasterFragment : Fragment(), FinancialClick {
 
     private var _binding: FragmentFinanceMasterBinding? = null
     private val binding get() = _binding!!
-    private var PATH_CURRENT = ""
-    private var PATH_TYPE = ""
 
     var totalPrinciple = 0
     var totalInterest = 0
     var totalSumOfLoan: Long = 0
-    private var DOMANI = "http://v8m.b07.mytemp.website/app/apps/"
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -67,7 +65,8 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
 
                     binding.recyclerViewVertical.layoutManager =
                         LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-                    val adapter = FinanceDetailsAdapter(getData(response.data))
+                    val adapter =
+                        FinanceDetailsAdapter(getData(response.data), this@FinanceMasterFragment)
                     binding.recyclerViewVertical.adapter = adapter
                     binding.recyclerViewVertical.isNestedScrollingEnabled = false
                     val totalPrincipalInWords = numberToIndianWords(totalSumOfLoan)
@@ -76,6 +75,8 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
                     binding.tvInterest.text = formatIndianCurrency(totalInterest)
                     binding.tvPrinciple.text = formatIndianCurrency(totalPrinciple)
                     binding.tvSumOfLoan.text = formatIndianCurrency(totalSumOfLoan.toInt())
+
+                    binding.cardview.visibility = View.VISIBLE
 
                 }
 
@@ -94,30 +95,15 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
     }
 
 
-    override fun click(id: String, path: String, type: String) {
-        PATH_CURRENT = path
-        PATH_TYPE = type
-    }
+    override fun click(id: String) {
 
-    override fun clickChild(list: List<String>) {
-        if (list.size == 1) {
-            clickUrl(list[0])
-        } else {
-            dialog(list)
-        }
-    }
-
-    override fun clickUrl(url: String) {
-    }
-
-    override fun checkCompleted(id: String) {
-
+        dialog(ArrayList<String>())
     }
 
 
     fun dialog(list: List<String>) {
         val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
-        dialog.setContentView(R.layout.adapterdialog)
+        dialog.setContentView(R.layout.bottom_dialog_update_loan)
         dialog.setCancelable(true)
         dialog.setCanceledOnTouchOutside(true)
 
@@ -137,11 +123,10 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
             }
         }
 
-        val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
-        rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        rvDialog?.adapter =
-            DialogAdapterGenericAdapter(list, this@FinanceMasterFragment)
-        rvDialog?.isNestedScrollingEnabled = true
+       // val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
+        //rvDialog?.layoutManager = LinearLayoutManager(requireContext())
+        //rvDialog?.adapter = DialogAdapterGenericAdapter(list, this@FinanceMasterFragment)
+       // rvDialog?.isNestedScrollingEnabled = true
 
         dialog.show()
     }
@@ -211,14 +196,14 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
         for (i in 0 until data.size) {
             val dataItem = data[i]
             val cts = calculateTotalInterest(
-                loanAmount = dataItem.flmAmount,
+                loanAmount = (dataItem.flmAmount - dataItem.flmAmountPaid),
                 interestPercentage = dataItem.flmInterest.toDouble(),
                 loanOnDateStr = dataItem.flmLoanDate
             )
 
-            totalPrinciple += dataItem.flmAmount.toInt()
+            totalPrinciple += (dataItem.flmAmount.toInt() - dataItem.flmAmountPaid.toInt())
             totalInterest += cts.interestAmount.toInt()
-            totalSumOfLoan += cts.totalAmount.toInt()
+            totalSumOfLoan += (cts.totalAmount.toInt() - dataItem.flmAmountPaid.toInt())
 
             val sd = FinanceData(
                 sno = dataItem.flmSno,
@@ -235,7 +220,8 @@ class FinanceMasterFragment : Fragment(), SimpleClick {
                 status = dataItem.flmState,
                 durationText = cts.durationText,
                 daysRedable = cts.durationText,
-                flmAmountPaid = dataItem.flmAmountPaid.toInt()
+                flmAmountPaid = dataItem.flmAmountPaid.toInt(),
+                remining = (dataItem.flmAmount.toInt() - dataItem.flmAmountPaid.toInt())
             )
             listArray.add(sd)
 

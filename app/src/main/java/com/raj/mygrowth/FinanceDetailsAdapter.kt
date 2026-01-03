@@ -5,12 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterFinanceDetailsBinding
 import com.raj.mygrowth.domain.FinanceData
+import com.raj.mygrowth.interfaces.FinancialClick
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.Locale
 
 class FinanceDetailsAdapter(
-    private val list: ArrayList<FinanceData>
+    private val list: ArrayList<FinanceData>,
+    private val listener: FinancialClick
 ) : RecyclerView.Adapter<FinanceDetailsAdapter.ViewHolder>() {
 
 
@@ -43,6 +45,11 @@ class FinanceDetailsAdapter(
             bind.tvLoanOnDate.text = item.dateOn
             bind.tvPriority.text = item.priority
             bind.tvStatus.text = item.status
+            bind.tvTotalAmountRemining.text = item.remining.toString()
+
+            bind.tvEdit.setOnClickListener {
+                listener.click("")
+            }
         }
     }
 

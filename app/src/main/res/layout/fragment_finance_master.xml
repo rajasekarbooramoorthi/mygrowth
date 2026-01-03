@@ -29,6 +29,7 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="@dimen/_12sdp"
                     app:cardElevation="2dp"
+                    android:visibility="invisible"
                     app:cardUseCompatPadding="true">
 
                     <LinearLayout
