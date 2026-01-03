@@ -4,38 +4,65 @@
 
 
 
+CREATE TABLE MasterDocument (
+    rdl_sno INT AUTO_INCREMENT PRIMARY KEY,
+    rdl_id INT(10) NOT NULL,
+    rdl_name VARCHAR(100) NOT NULL,
+    rdl_tag VARCHAR(50),
+    rdl_created_date DATE DEFAULT CURRENT_DATE,
+    rdl_updated DATE DEFAULT CURRENT_DATE,
+    UNIQUE KEY uk_rdl_id (rdl_id)
+);
+
+
+CREATE TABLE RoadMapLearningLink (
+    rdll_sno INT AUTO_INCREMENT PRIMARY KEY,
+    rdll_id INT(10) NOT NULL,
+    rdll_link VARCHAR(250) NOT NULL,
+    rdll_tag VARCHAR(50),
+    rdll_created_date DATE DEFAULT CURRENT_DATE,
+    rdll_updated DATE DEFAULT CURRENT_DATE,
+    FOREIGN KEY (rdll_id) REFERENCES RoadMapLearning(rdl_id)
+);
+
+
+FinLoanMaster
+
+flmSno auto incerement
+flmName varchar 150
+flmDescription varchar 250
+flmReason varchar 150
+flmAmount deciml flot
+flmIntrestPercentage percentage interger
+flmLoanDate date format
+
+flmStates integer 0 or 1 default 0
+flmPriority integer 0 or 1 default 0
+flmsettledDate date
+flmDateUpdate date default current
+flmCreated date default current
 
 
 
+INSERT INTO FinLoanMaster
+(
+    flmName,
+    flmDescription,
+    flmReason,
+    flmAmount,
+    flmInterestPercentage,
+    flmLoanDate,
+    flmState,
+    flmPriority,
+    flmSettledDate
+)
+VALUES
+('Mama Amount', 'Solar Plant', 'Personal', 40000.00, 22, '2025-01-05', 1, 0, NULL),
+('Gold Loan', 'Sister Marriage', 'Family', 75000.00, 22, '2024-01-10', 1, 1, NULL),
+('Jothi Appa', 'Sister Marriage', 'Home Build', 500000.00, 22, '2023-12-15', 1, 1, NULL),
+('Saravaran Palayam', 'Sister Marriage', 'Vehicle', 85000.00, 22, '2024-01-01', 1, 0, NULL),
+('Dhanapal Bro', 'Sister Marriage', 'Education', 200000.00, 25, '2025-06-20', 1, 1, NULL),
+('Online Loan', 'Solar Plant', 'Vacation', 60000.00, 0, '2024-03-01', 1, 0, NULL),
+('Gold Loan', 'Gold mortgage loan', 'Gold', 120000.00, 17, '2023-11-10', 1, 0, NULL)
 
 
-
-
-
-machine-learning.pdf
-software-architect.pdf
-bi-analyst.pdf
-ux-design.pdf
-shell-bash.pdf
-python.pdf
-devrel.pdf
-qa.pdf
-java.pdf
-Backend-Performance-Best-Practices.pdf
-ios.pdf
-blockchain.pdf
-git-github.pdf
-kotlin.pdf
-prompt-engineering.pdf
-software-design-architecture.pdf
-react-native.pdf
-Code-Review-Best-Practices.pdf
-API-Security-Best-Practices.pdf
-system-design.pdf
-datastructures-and-algorithms.pdf
-graphql.pdf
-android.pdf
-devops.pdf
-api-design.pdf
-cyber-security.pdf
-ai-engineer.pdf

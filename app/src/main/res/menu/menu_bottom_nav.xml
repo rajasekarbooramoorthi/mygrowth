@@ -15,7 +15,7 @@
         android:title="Cred" />
 
     <item
-        android:id="@+id/passwordFragment"
+        android:id="@+id/androidFinance"
         android:icon="@drawable/ic_fin"
         android:title="Fin" />
 

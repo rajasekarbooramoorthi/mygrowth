@@ -8,6 +8,7 @@ import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
+import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponseGeneric
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSelfImprovement
@@ -52,6 +53,11 @@ interface ApiService {
     suspend fun getAndroidMasterData(
         @Body request: RequestAction
     ): ResponseGeneric
+
+    @POST("getmydata.php")
+    suspend fun getFinanceMasterData(
+        @Body request: RequestAction
+    ): ResponseFinance
 
     @POST("getmydata.php")
     suspend fun addTask(

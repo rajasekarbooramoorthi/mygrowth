@@ -35,4 +35,9 @@
         android:name="com.raj.mygrowth.CareerDetailsFragment"
         android:label="Career" />
 
+    <fragment
+        android:id="@+id/androidFinance"
+        android:name="com.raj.mygrowth.FinanceMasterFragment"
+        android:label="Career" />
+
 </navigation>

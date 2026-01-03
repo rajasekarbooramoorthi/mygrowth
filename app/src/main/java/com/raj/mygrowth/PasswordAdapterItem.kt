@@ -40,6 +40,10 @@ class PasswordAdapterItem(
             notifyItemChanged(position)
         }
 
+        holder.binding.root.setOnLongClickListener {
+            return@setOnLongClickListener true
+        }
+
         holder.binding.executePendingBindings()
     }
 }
