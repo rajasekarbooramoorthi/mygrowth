@@ -19,7 +19,6 @@ data class ResponseFinanceItem(
     val flmPriority: String,
 )
 
-
 data class FinanceData(
     val sno: Int,
     val name: String,

@@ -1,7 +1,9 @@
 package com.raj.mygrowth.domain
 
 data class ResponseAndroidMaster(
-    val status: Boolean, val message: String?, val data: ArrayList<AndroidMaster>
+    val status: Boolean,
+    val message: String?,
+    val data: ArrayList<AndroidMaster>
 )
 
 data class AndroidMaster(
@@ -13,4 +15,3 @@ data class AndroidMaster(
     val ms_type: String,
     val links: ArrayList<String>?
 )
-

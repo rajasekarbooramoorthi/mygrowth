@@ -1,0 +1,203 @@
+{
+  "knowledge_base_name": "Android Design System – Knowledge-Based Rules",
+  "platform_and_version_support": {
+    "android_compose_baseline": {
+      "minimum_android_api": 24,
+      "target_compile_sdk": "latest_stable",
+      "jetpack_compose": "latest_stable_only",
+      "material_design": "Material3"
+    },
+    "agent_requirements": {
+      "generate_latest_compose_material3_code": true,
+      "avoid_deprecated_apis": true,
+      "mention_api_constraints_only_when_required": true
+    }
+  },
+  "output_enforcement_rules": {
+    "compose_mandatory": true,
+    "xml_only_on_request": true,
+    "no_hybrid_answers_unless_migration": true
+  },
+  "design_token_knowledge": {
+    "token_authority": {
+      "tokens_immutable": true,
+      "no_hardcoded_values": true
+    },
+    "token_mapping": {
+      "map_to_material_theme": true,
+      "supported_tokens": [
+        "color",
+        "typography",
+        "spacing",
+        "shape",
+        "elevation"
+      ]
+    }
+  },
+  "component_response_structure": {
+    "mandatory": true,
+    "required_sections": [
+      "purpose",
+      "when_to_use",
+      "when_not_to_use",
+      "compose_implementation",
+      "xml_implementation_if_requested",
+      "parameters_and_contracts",
+      "state_handling",
+      "accessibility",
+      "do_and_dont",
+      "common_mistakes"
+    ],
+    "validation_rules": {
+      "compose_missing_invalid": true,
+      "deprecated_api_invalid": true,
+      "structure_missing_invalid": true
+    }
+  },
+  "code_implementation_rules": {
+    "public_api": {
+      "only_exposed_composable": true,
+      "stable_minimal_parameters": true,
+      "no_token_leakage": true
+    },
+    "internal_implementation": {
+      "private_only": true,
+      "uses_material3": true,
+      "encapsulates_tokens_and_styles": true
+    },
+    "design_token_usage": {
+      "rejected": [
+        "hardcoded_dp",
+        "hardcoded_color",
+        "hardcoded_textstyle"
+      ],
+      "allowed": [
+        "DesignSystemTokens",
+        "MaterialTheme.colorScheme",
+        "MaterialTheme.typography"
+      ]
+    },
+    "accessibility": {
+      "semantics_mandatory": true,
+      "state_announced": true,
+      "keyboard_accessible": true
+    },
+    "state_architecture": {
+      "state_owned_by_viewmodel": true,
+      "stateflow_required": true,
+      "collect_with_lifecycle": true
+    }
+  },
+  "ui_components_knowledge": {
+    "buttons": {
+      "compose_first": true,
+      "min_height_48dp": true,
+      "state_announced": true
+    },
+    "text_and_typography": {
+      "supports_font_scaling": true,
+      "semantic_roles": true,
+      "no_fixed_font_sizes": true
+    },
+    "input_components": {
+      "label_announced": true,
+      "error_announced": true,
+      "keyboard_behavior_defined": true
+    },
+    "selection_components": {
+      "state_announced": true,
+      "group_semantics": true,
+      "touch_spacing": true
+    },
+    "lists_and_collections": {
+      "item_semantics": true,
+      "stable_keys": true,
+      "scroll_announced": true
+    },
+    "layout_and_structure": {
+      "logical_reading_order": true,
+      "avoid_unnecessary_nesting": true
+    },
+    "navigation_components": {
+      "selected_state_announced": true,
+      "icon_descriptions_required": true,
+      "predictable_back_navigation": true
+    },
+    "feedback_and_status": {
+      "focus_trapped_in_dialogs": true,
+      "dismiss_accessible": true,
+      "progress_announced": true
+    },
+    "media_components": {
+      "content_description_required": true,
+      "decorative_marked": true
+    },
+    "surface_components": {
+      "role_announced_when_interactive": true,
+      "elevation_not_sole_affordance": true
+    },
+    "gesture_components": {
+      "gesture_alternatives": true,
+      "no_gesture_only_critical_actions": true
+    },
+    "system_ui_utilities": {
+      "insets_respected": true,
+      "keyboard_visibility_managed": true
+    }
+  },
+  "state_and_architecture": {
+    "rules": {
+      "state_hoisted": true,
+      "viewmodel_stateflow": true,
+      "remember_saveable_for_config": true
+    },
+    "anti_patterns": {
+      "no_mutable_state_in_ui": true,
+      "no_business_logic_in_composables": true
+    }
+  },
+  "theming": {
+    "single_design_system_theme": true,
+    "light_dark_parity": true,
+    "no_direct_color_dp_sp": true
+  },
+  "accessibility": {
+    "code_level_enforced": true,
+    "content_description_required": true,
+    "explicit_roles": true,
+    "state_announced": true
+  },
+  "xml_knowledge": {
+    "allowed_only_on_request": true,
+    "styles_xml_mandatory": true,
+    "view_binding_preferred": true,
+    "no_inline_styling": true
+  },
+  "compose_xml_interop": {
+    "use_compose_view_android_view": true,
+    "incremental_migration": true,
+    "side_by_side_examples": true
+  },
+  "performance": {
+    "avoid_recompositions": true,
+    "use_keys_in_lazy": true,
+    "prefer_immutable_models": true
+  },
+  "anti_pattern_rejection": {
+    "reject_hardcoded_values": true,
+    "reject_copy_paste_components": true,
+    "reject_material2_material3_mix": true,
+    "reject_custom_ui_outside_system": true
+  },
+  "design_dev_handoff": {
+    "identify_missing_specs": true,
+    "ask_structured_questions": true,
+    "default_to_design_system": true
+  },
+  "teaching_rule": {
+    "educate": true,
+    "enforce": true,
+    "standardize": true
+  },
+  "final_statement": "This knowledge base exists to train agents, protect UI consistency, and guarantee accessible, scalable Android UI implementation across the organization."
+}

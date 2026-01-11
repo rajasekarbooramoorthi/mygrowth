@@ -4,9 +4,6 @@ data class ResponseBankDetails(
     val status: Boolean, val message: String?, val data: ArrayList<BankItem>
 )
 
-
-
-
 data class BankItem(
     val b_sno: String,
     val b_name: String,

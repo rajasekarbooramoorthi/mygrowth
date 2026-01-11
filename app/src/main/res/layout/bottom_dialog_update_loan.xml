@@ -101,7 +101,7 @@
                     android:checked="false"
                     android:fontFamily="@font/sans_regular"
                     android:padding="@dimen/_5sdp"
-                    android:text="status\t"
+                    android:text="status  "
                     android:textColor="@color/textSecondary"
                     android:textSize="@dimen/_18sdp"
                     app:useMaterialThemeColors="true" />
