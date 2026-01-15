@@ -37,9 +37,9 @@ fun Activity.setToolbarInsetsActivity() {
 }
 
 fun Activity.setToolbarInsetsFullscreen() {
-    //val decorView = window.decorView as ViewGroup
-    // val toolbar = decorView.findToolbar()
-    // toolbar?.setInsets()
+    val decorView = window.decorView as ViewGroup
+     val toolbar = decorView.findToolbar()
+    toolbar?.setInsets()
     findViewById<View?>(android.R.id.content)?.apply {
         applyBottomTopInsets()
     }
@@ -101,4 +101,10 @@ fun View.applyNoPaddingInsets() {
         insets
     }
     ViewCompat.requestApplyInsets(this)
+}
+
+fun Activity.setToolbarInsetsFragment() {
+    val decorView = window.decorView as ViewGroup
+    val toolbar = decorView.findToolbar()
+    toolbar?.setInsets()
 }

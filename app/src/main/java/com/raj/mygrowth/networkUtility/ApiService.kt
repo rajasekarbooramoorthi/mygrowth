@@ -8,6 +8,8 @@ import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.domain.ResponseAndroidInterview
 import com.raj.mygrowth.domain.ResponseAndroidMaster
 import com.raj.mygrowth.domain.ResponseBankDetails
+import com.raj.mygrowth.domain.ResponseCareerItem
+import com.raj.mygrowth.domain.ResponseCareerMaster
 import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponseGeneric
 import com.raj.mygrowth.domain.ResponsePassword
@@ -73,5 +75,17 @@ interface ApiService {
     suspend fun setStatusCompleted(
         @Body request: RequestActionTaskCompleted
     ): ResponseSimple
+
+    @POST("getmydata.php")
+    suspend fun getCareerMaster(
+        @Body request: RequestAction
+    ): ResponseCareerMaster
+
+
+    @POST("getmydata.php")
+    suspend fun getCareerItem(
+        @Body request: RequestAction
+    ): ResponseCareerItem
+
 
 }

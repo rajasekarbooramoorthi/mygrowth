@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentAndroidMasterBinding
+import com.raj.mygrowth.databinding.FragmentCareerMasterBinding
 import com.raj.mygrowth.domain.ConceptModel
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAndroidInterview
@@ -29,9 +30,9 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.net.URLEncoder
 
-class AndroidMasterFragment : Fragment(), SimpleClick {
+class CareerMasterFragment : Fragment(), SimpleClick {
 
-    private var _binding: FragmentAndroidMasterBinding? = null
+    private var _binding: FragmentCareerMasterBinding? = null
     private val binding get() = _binding!!
     private var PATH_CURRENT = ""
     private var PATH_TYPE = ""
@@ -41,7 +42,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAndroidMasterBinding.inflate(inflater, container, false)
+        _binding = FragmentCareerMasterBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -57,7 +58,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.getAndroidMaster(RequestAction("get_master_skills"))
+                val response = api.getCareerMaster(RequestAction("get_master_career"))
 
                 binding.progressBar.visibility = View.GONE
 
@@ -65,9 +66,9 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                     binding.recyclerViewHorizontal.layoutManager =
                         LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
                     val adapter =
-                        MasterSkillAdapter(
+                        CareerSkillAdapter(
                             response.data,
-                            this@AndroidMasterFragment
+                            this@CareerMasterFragment
                         )
                     binding.recyclerViewHorizontal.adapter = adapter
                     binding.recyclerViewHorizontal.isNestedScrollingEnabled = false
@@ -88,7 +89,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.getAndroidMasterData(RequestAction(tag))
+                val response = api.getCareerItem(RequestAction("get_ibm_career_goal",tag))
 
                 binding.progressBar.visibility = View.GONE
 
@@ -97,9 +98,9 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                         LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
                     val adapter =
-                        MasterGenericAdapter(
+                        AdapterCareerGrowthItem(
                             response.data,
-                            this@AndroidMasterFragment
+                            this@CareerMasterFragment
                         )
                     binding.recyclerViewVertical.adapter = adapter
                     binding.recyclerViewVertical.isNestedScrollingEnabled = false
@@ -326,7 +327,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
         rvDialog?.adapter =
-            DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)
+            DialogAdapterGenericAdapter(list, this@CareerMasterFragment)
         rvDialog?.isNestedScrollingEnabled = true
 
         dialog.show()
