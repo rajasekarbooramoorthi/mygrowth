@@ -10,23 +10,24 @@
 
 
     <!-- Brand Colors -->
-    <color name="colorPrimary">#3F51B5</color>          <!-- Indigo 500 -->
-    <color name="colorPrimaryDark">#303F9F</color>      <!-- Indigo 700 -->
-    <color name="colorAccent">#FF4081</color>           <!-- Pink A200 -->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
 
     <!-- Background Colors -->
-    <color name="background">#FFFFFF</color>            <!-- White -->
+    <color name="background">#FFFFFF</color>
 
     <!-- Text Colors -->
-    <color name="textPrimary">#212121</color>           <!-- Dark Gray -->
-    <color name="textSecondary">#757575</color>         <!-- Light Gray -->
-    <color name="grayline">#66E0E0E0</color>         <!-- Light Gray -->
-    <color name="gray">#2196F3</color>         <!-- Light Gray -->
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="grayline">#66E0E0E0</color>
+    <color name="gray">#2196F3</color>
 
     <color name="blue">#2196F3</color>
     <color name="light_blue_50">#E3F2FD</color>
     <color name="skill_color">#0288D1</color>
     <color name="skill_item_color">#0288D1</color>
-    <color name="background_gray">#FAFAFA</color>         <!-- Light Gray -->
+    <color name="background_gray">#FAFAFA</color>
+    <color name="mygrowth">#FF4081</color>
 
 </resources>

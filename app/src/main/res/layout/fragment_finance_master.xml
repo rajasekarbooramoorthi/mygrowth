@@ -8,7 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- FULL PAGE SCROLL -->
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -27,9 +26,9 @@
                     android:id="@+id/cardview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:visibility="invisible"
                     app:cardCornerRadius="@dimen/_12sdp"
                     app:cardElevation="2dp"
-                    android:visibility="invisible"
                     app:cardUseCompatPadding="true">
 
                     <LinearLayout
@@ -38,115 +37,91 @@
                         android:orientation="vertical"
                         android:padding="@dimen/_10sdp">
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/tvAmountText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:orientation="horizontal"
-                            android:weightSum="1">
-
-                            <TextView
-                                android:id="@+id/tvAmountText"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/sans_regular"
-                                android:textColor="@color/colorAccent"
-                                android:textSize="@dimen/_14sdp" />
-                        </LinearLayout>
+                            android:fontFamily="@font/sans_regular"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/_14sdp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:orientation="horizontal"
-                            android:paddingTop="@dimen/_4sdp"
-                            android:weightSum="2">
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:fontFamily="@font/sans_regular"
                                 android:text="Total Principle" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:fontFamily="@font/sans_regular"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:text=":" />
 
                             <TextView
                                 android:id="@+id/tvPrinciple"
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:fontFamily="@font/sans_regular" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:orientation="horizontal"
-                            android:paddingTop="@dimen/_4sdp"
-                            android:weightSum="2">
-
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
-                                android:fontFamily="@font/sans_regular"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="/" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:text="Total Interest" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:fontFamily="@font/sans_regular"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:text=":" />
 
                             <TextView
                                 android:id="@+id/tvInterest"
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:fontFamily="@font/sans_regular" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:orientation="horizontal"
-                            android:paddingTop="@dimen/_4sdp"
-                            android:weightSum="2">
-
                             <TextView
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="0.7"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:text="/" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
                                 android:fontFamily="@font/sans_regular"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:text="Sum Of Loan" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginEnd="@dimen/_5sdp"
-                                android:fontFamily="@font/sans_regular"
+                                android:layout_marginEnd="@dimen/_2sdp"
                                 android:text=":" />
 
                             <TextView
                                 android:id="@+id/tvSumOfLoan"
-                                android:layout_width="0dp"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1.3"
                                 android:fontFamily="@font/sans_regular" />
                         </LinearLayout>
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- RECYCLER VIEW -->
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_view_vertical"
                     android:layout_width="match_parent"
@@ -159,14 +134,13 @@
 
         </androidx.core.widget.NestedScrollView>
 
-        <!-- PROGRESS BAR (NOT SCROLLING) -->
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

@@ -247,7 +247,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         if (list.size == 1) {
             clickUrl(list[0])
         } else {
-            dialog(list)
+            dialog(list,"")
         }
     }
 
@@ -302,7 +302,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
                 encodedFileName
     }
 
-    fun dialog(list: List<String>) {
+    fun dialog(list: List<String>, path: String) {
         val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         dialog.setContentView(R.layout.adapterdialog)
         dialog.setCancelable(true)
@@ -326,7 +326,7 @@ class AndroidMasterFragment : Fragment(), SimpleClick {
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
         rvDialog?.adapter =
-            DialogAdapterGenericAdapter(list, this@AndroidMasterFragment)
+            DialogAdapterGenericAdapter(list, this@AndroidMasterFragment, path)
         rvDialog?.isNestedScrollingEnabled = true
 
         dialog.show()

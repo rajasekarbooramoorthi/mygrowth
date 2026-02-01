@@ -10,5 +10,8 @@ data class ResponseGenericItem(
     val id: String,
     val name: String,
     val tag: String,
+    val folder: String="",
+    val type: String="",
+
     val links: ArrayList<String>?
 )

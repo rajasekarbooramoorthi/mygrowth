@@ -7,9 +7,12 @@ import com.raj.mygrowth.databinding.AdapterItemDialogGenericBinding
 import com.raj.mygrowth.interfaces.SimpleClick
 
 class DialogAdapterGenericAdapter(
-    private val list: List<String>, click_: SimpleClick
+    private val list: List<String>,
+    click_: SimpleClick,
+    path_: String = ""
 ) : RecyclerView.Adapter<DialogAdapterGenericAdapter.ViewHolder>() {
     var click = click_
+    var path = path_
 
     class ViewHolder(val binding: AdapterItemDialogGenericBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -28,7 +31,7 @@ class DialogAdapterGenericAdapter(
         //holder.binding.item = item
         holder.binding.tvName.text = item
         holder.binding.root.setOnClickListener {
-            click.clickUrl(item)
+            click.loadUrl(item, path)
         }
         // holder.binding.executePendingBindings()
     }

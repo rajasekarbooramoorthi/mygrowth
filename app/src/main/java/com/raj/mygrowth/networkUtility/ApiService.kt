@@ -87,5 +87,9 @@ interface ApiService {
         @Body request: RequestAction
     ): ResponseCareerItem
 
+    @POST("getmydata.php")
+    suspend fun getMyGrowth(
+        @Body request: RequestAction
+    ): ResponseGeneric
 
 }
