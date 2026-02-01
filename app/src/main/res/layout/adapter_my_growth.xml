@@ -34,7 +34,7 @@
                 android:clickable="false"
                 android:fontFamily="@font/sans_bold"
                 android:gravity="center"
-                android:minWidth="@dimen/_50sdp"
+                android:minWidth="@dimen/_40sdp"
                 android:text="@{item.name}"
                 android:textColor="@color/mygrowth"
                 android:textSize="@dimen/_9ssp" />

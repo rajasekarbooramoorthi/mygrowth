@@ -19,17 +19,25 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/rightContainer"
-            app:layout_constraintWidth_percent="0.35">
+             android:background="@color/layout_bc"
+             app:layout_constraintWidth_percent="0.35">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_horizontal_skill"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
                 android:clipToPadding="false"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
+             <View
+                 android:layout_width="wrap_content"
+                 android:layout_height="0.5dp"
+                 android:layout_marginTop="@dimen/_2sdp"
+                 android:background="@color/mygrowth" />
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"

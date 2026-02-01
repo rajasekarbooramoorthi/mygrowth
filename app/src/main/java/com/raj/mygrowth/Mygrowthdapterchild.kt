@@ -31,7 +31,7 @@ class Mygrowthdapterchild(
         if (position == selectedPosition) {
             holder.binding.linearName.setBackgroundResource(R.drawable.bg_item_selected)
         } else {
-            holder.binding.linearName.setBackgroundResource(R.drawable.bg_item_normal)
+            holder.binding.linearName.setBackgroundResource(R.drawable.bg_child_item_normal)
         }
         holder.binding.root.setOnClickListener {
             val previous = selectedPosition

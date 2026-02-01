@@ -30,4 +30,6 @@
     <color name="background_gray">#FAFAFA</color>
     <color name="mygrowth">#FF4081</color>
 
+    <color name="layout_bc">#F7F7F7</color>
+
 </resources>
