@@ -96,7 +96,7 @@ class ThirukuralFragment : Fragment() {
                 binding.recyclerViewVertical.apply {
                     layoutManager = LinearLayoutManager(requireContext())
                     itemAnimator = null   // 🚀 removes lag
-                    this.adapter = KuralAdapter(list.take(10))
+                    this.adapter = KuralAdapter(list.take(300))
                 }
                 //adapterKural.submitList(list)
             } catch (e: Exception) {
@@ -136,7 +136,7 @@ class ThirukuralFragment : Fragment() {
                 }
                 hideLoading()
 
-                val list = response.features.take(50)
+                val list = response.features.take(150)
 
                 binding.recyclerViewVertical.apply {
                     layoutManager = LinearLayoutManager(requireContext())
