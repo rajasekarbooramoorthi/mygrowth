@@ -73,7 +73,7 @@ class SinglePageMasterFragment : Fragment(), SimpleClick {
         showLoading()
         binding.searchView.visibility = View.GONE
         binding.recyclerViewVertical.visibility = View.GONE
-
+        println("Rajasekar -----11")
         lifecycleScope.launch {
             runCatching {
                 api.getMyGrowth(RequestAction("gey_mygrowth"))

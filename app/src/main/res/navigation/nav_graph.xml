@@ -32,7 +32,7 @@
 
     <fragment
         android:id="@+id/androidCareer"
-        android:name="com.raj.mygrowth.CareerMasterFragment"
+        android:name="com.raj.mygrowth.CategoryMasterFragment"
         android:label="Career" />
 
     <fragment

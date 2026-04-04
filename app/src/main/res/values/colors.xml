@@ -31,5 +31,6 @@
     <color name="mygrowth">#FF4081</color>
 
     <color name="layout_bc">#F7F7F7</color>
+    <color name="selected">#5875C1F8</color>
 
 </resources>

@@ -89,7 +89,7 @@ class CareerMasterFragment : Fragment(), SimpleClick {
         lifecycleScope.launch {
             try {
                 val api = RetrofitClient.instance.create(ApiService::class.java)
-                val response = api.getCareerItem(RequestAction("get_ibm_career_goal",tag))
+                val response = api.getCareerItem(RequestAction("get_ibm_career_goal", tag))
 
                 binding.progressBar.visibility = View.GONE
 
@@ -128,7 +128,7 @@ class CareerMasterFragment : Fragment(), SimpleClick {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                   // Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
+                    // Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -261,7 +261,7 @@ class CareerMasterFragment : Fragment(), SimpleClick {
             val fixedUrl = urlProcess(urlProcess(prep))   // your function to add http if missing
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(fixedUrl))
             startActivity(intent)
-           // println("Url pdf-->$prep")
+            // println("Url pdf-->$prep")
         } else {
             // val intent = Intent(context, ActivityRichWebview::class.java)
             // intent.putExtra("FILE_URL", urlProcess(url))
