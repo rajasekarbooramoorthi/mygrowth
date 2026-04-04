@@ -428,7 +428,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
     class DialogAdapterGenericAdapter(
         private val list: List<String>,
         click_: MasterInterFace,
-        path_: String = ""
+        path_: String
     ) : RecyclerView.Adapter<DialogAdapterGenericAdapter.ViewHolder>() {
         var click = click_
         var path = path_
