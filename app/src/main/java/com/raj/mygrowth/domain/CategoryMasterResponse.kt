@@ -15,8 +15,8 @@ data class Category(
 data class SubCategory(
     val subCategoryId: Int,
     val subcategoryName: String,
-    val folderName: String,
-    val filetype: String,
+    val folderName: String?,
+    val filetype: String?,
     val itemList: List<Item>
 )
 

@@ -38,8 +38,6 @@ class MasterItemAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = filteredList[position]
-
-        //holder.binding.tvName.text = item.name
         holder.binding.tvName.text = HtmlCompat.fromHtml(
             item.id + "\t\t" + item.name, HtmlCompat.FROM_HTML_MODE_LEGACY
         )

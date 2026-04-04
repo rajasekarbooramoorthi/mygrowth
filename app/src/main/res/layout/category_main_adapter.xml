@@ -30,9 +30,8 @@
                 android:focusable="false"
                 android:fontFamily="@font/sans_bold"
                 android:gravity="center"
-                android:text="Sample"
-                android:textColor="@color/mygrowth"
-                android:textSize="@dimen/_9ssp" />
+                android:textColor="@color/category_text"
+                android:textSize="@dimen/_11ssp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

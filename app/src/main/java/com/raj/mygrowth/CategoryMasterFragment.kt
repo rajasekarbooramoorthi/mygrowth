@@ -1,54 +1,43 @@
 package com.raj.mygrowth
 
-import android.annotation.SuppressLint
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Filter
-import android.widget.Filterable
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import androidx.core.text.HtmlCompat
+import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
+import com.raj.mygrowth.adapter.DialogAdapterMasterAdapter
 import com.raj.mygrowth.adapter.MasterItemAdapter
 import com.raj.mygrowth.adapter.MyCategoryMainAdapter
 import com.raj.mygrowth.adapter.MySubCategoryAdapter
-import com.raj.mygrowth.databinding.CategoryMainAdapterBinding
 import com.raj.mygrowth.databinding.CategoryMasterFragmentBinding
-import com.raj.mygrowth.databinding.DialogItemAdapterBinding
-import com.raj.mygrowth.databinding.MasterItemAdapterBinding
-import com.raj.mygrowth.databinding.SubCategoryAdpterBinding
-import com.raj.mygrowth.domain.Category
 import com.raj.mygrowth.domain.CategoryMasterResponse
 import com.raj.mygrowth.domain.Item
-import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.SubCategory
 import com.raj.mygrowth.interfaces.MasterInterFace
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
+import com.raj.mygrowth.networkUtility.RetrofitClient.DOMAIN
 import kotlinx.coroutines.launch
 import java.net.URLEncoder
-import androidx.core.net.toUri
 
 
 class CategoryMasterFragment : MasterInterFace, Fragment() {
 
     private var _binding: CategoryMasterFragmentBinding? = null
     val bindingParent get() = _binding!!
-
-    private val DOMAIN = "http://v8m.b07.mytemp.website/app/apps/"
-    private var pathCurrent = ""
-    private var pathType = ""
 
     private val api by lazy {
         RetrofitClient.instance.create(ApiService::class.java)
@@ -63,16 +52,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        bindingParent.recyclerViewHorizontalCategory.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-
-        bindingParent.recyclerViewSubCategory.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
-        bindingParent.recyclerViewVerticalItem.layoutManager =
-            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-
+        setRecyclerView()
         loadMasterSkillLocal()
     }
 
@@ -82,6 +62,32 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
     private fun hideLoading() {
         bindingParent.progressBar.visibility = View.GONE
+    }
+
+    private fun setRecyclerView() {
+
+        bindingParent.recyclerViewHorizontalCategory.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+
+        bindingParent.recyclerViewSubCategory.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
+
+        val divider = DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
+
+        val drawable = ContextCompat.getDrawable(requireContext(), R.drawable.divider_recycler)
+        drawable?.let {
+            divider.setDrawable(it)
+        }
+
+        bindingParent.recyclerViewSubCategory.addItemDecoration(divider)
+
+
+
+
+        bindingParent.recyclerViewVerticalItem.layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+
     }
 
     private fun loadMasterSkillLocal() {
@@ -94,6 +100,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                 mainList.data,
                 this@CategoryMasterFragment
             )
+        mainList.data.firstOrNull()?.subcategoryList?.let { clickSubCategory(it) }
     }
 
     private fun setupSearch(adapter: MasterItemAdapter) {
@@ -127,15 +134,6 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         openBrowser(finalUrl)
     }
 
-    fun clickUrl(url: String) {
-        val finalUrl = if (pathType == "pdf") {
-            buildSafeUrl(DOMAIN, pathCurrent, url)
-        } else {
-            ensureHttp(url)
-        }
-        openBrowser(finalUrl)
-    }
-
     private fun openBrowser(url: String) {
         val fixed = ensureHttp(url)
         startActivity(Intent(Intent.ACTION_VIEW, fixed.toUri()))
@@ -151,25 +149,6 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                 .replace("%29", ")").replace("%2C", ",").replace("%26", "&").replace("%27", "'")
 
         return domain.trimEnd('/') + "/" + path.trim('/') + "/" + encodedFileName
-    }
-
-// ---------------- Callbacks ----------------
-
-    fun click(id: String, path: String, type: String) {
-        pathCurrent = path
-        pathType = type
-    }
-
-    fun actionID(action: String, id: String, path: String) {
-        loadDetails(action, id, path)
-    }
-
-    fun callApi(id: String) {
-        // loadMaster(id)
-    }
-
-    fun clickChild(list: List<String>) {
-        if (list.size == 1) clickUrl(list[0]) else dialog(list, "")
     }
 
     override fun callIntent(list: List<String>, folderName: String, fileType: String) {
@@ -202,7 +181,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        rvDialog?.adapter = DialogAdapterGenericAdapter(list, this, path)
+        rvDialog?.adapter = DialogAdapterMasterAdapter(list, this@CategoryMasterFragment, path)
 
         dialog.show()
     }

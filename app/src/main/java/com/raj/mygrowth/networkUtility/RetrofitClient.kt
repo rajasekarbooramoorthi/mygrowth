@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit
 object RetrofitClient {
 
     private const val BASE_URL = "http://v8m.b07.mytemp.website/app/"
+    const val DOMAIN = "http://v8m.b07.mytemp.website/app/apps/"
 
     // Logging interceptor
     private val loggingInterceptor = HttpLoggingInterceptor().apply {

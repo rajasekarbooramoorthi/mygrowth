@@ -7,11 +7,11 @@ import com.raj.mygrowth.databinding.DialogItemAdapterBinding
 import com.raj.mygrowth.interfaces.MasterInterFace
 
 
-class DialogAdapterGenericAdapter(
+class DialogAdapterMasterAdapter(
     private val list: List<String>,
     click_: MasterInterFace,
     path_: String
-) : RecyclerView.Adapter<DialogAdapterGenericAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<DialogAdapterMasterAdapter.ViewHolder>() {
     var click = click_
     var path = path_
 

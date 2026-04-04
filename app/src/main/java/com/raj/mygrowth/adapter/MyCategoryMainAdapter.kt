@@ -15,7 +15,7 @@ class MyCategoryMainAdapter(
 ) : RecyclerView.Adapter<MyCategoryMainAdapter.ViewHolder>() {
     var click = click_
 
-    private var selectedPosition = RecyclerView.NO_POSITION
+    private var selectedPosition = 0
 
     class ViewHolder(val binding: CategoryMainAdapterBinding) :
         RecyclerView.ViewHolder(binding.root)

@@ -33,7 +33,7 @@ class MySubCategoryAdapter(
     ) {
         val item = list[position]
         if (position == selectedPosition) {
-            holder.binding.linearName.setBackgroundResource(R.drawable.bg_item_selected)
+            holder.binding.linearName.setBackgroundResource(R.drawable.bg_selected_sub_category)
         } else {
             holder.binding.linearName.setBackgroundResource(R.drawable.bg_child_item_normal)
         }
@@ -45,7 +45,11 @@ class MySubCategoryAdapter(
                 notifyItemChanged(previous)
             }
             notifyItemChanged(selectedPosition)
-            click.clickItem(item.itemList, item.folderName, item.filetype)
+            try {
+                click.clickItem(item.itemList, item.folderName ?: "", item.filetype ?: "")
+            } catch (e: Exception) {
+                println("Exception-->" + e)
+            }
         }
         holder.binding.executePendingBindings()
     }
