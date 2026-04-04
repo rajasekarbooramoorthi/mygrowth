@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
-import android.widget.Filter.FilterResults
 import android.widget.Filterable
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -21,19 +20,17 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
-import com.raj.mygrowth.databinding.AdapterItemMyGrowthActionviewBinding
 import com.raj.mygrowth.databinding.CategoryMainAdapterBinding
-import com.raj.mygrowth.databinding.FragmentAndroidMasterBinding
+import com.raj.mygrowth.databinding.CategoryMasterFragmentBinding
+import com.raj.mygrowth.databinding.DialogItemAdapterBinding
 import com.raj.mygrowth.databinding.MasterItemAdapterBinding
 import com.raj.mygrowth.databinding.SubCategoryAdpterBinding
 import com.raj.mygrowth.domain.Category
 import com.raj.mygrowth.domain.CategoryMasterResponse
 import com.raj.mygrowth.domain.Item
 import com.raj.mygrowth.domain.RequestAction
-import com.raj.mygrowth.domain.ResponseGenericItem
 import com.raj.mygrowth.domain.SubCategory
 import com.raj.mygrowth.interfaces.MasterInterFace
-import com.raj.mygrowth.interfaces.SimpleClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.launch
@@ -42,7 +39,7 @@ import java.net.URLEncoder
 
 class CategoryMasterFragment : MasterInterFace, Fragment() {
 
-    private var _binding: FragmentAndroidMasterBinding? = null
+    private var _binding: CategoryMasterFragmentBinding? = null
     val bindingParent get() = _binding!!
 
     private val DOMAIN = "http://v8m.b07.mytemp.website/app/apps/"
@@ -54,27 +51,25 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAndroidMasterBinding.inflate(inflater, container, false)
+        _binding = CategoryMasterFragmentBinding.inflate(inflater, container, false)
         return bindingParent.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        bindingParent.recyclerViewHorizontalSkill.layoutManager =
+        bindingParent.recyclerViewHorizontalCategory.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
 
-        bindingParent.recyclerViewHorizontal.layoutManager =
+        bindingParent.recyclerViewSubCategory.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        bindingParent.recyclerViewVertical.layoutManager =
+        bindingParent.recyclerViewVerticalItem.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
-        loadMasterSkill()
+        loadMasterSkillLocal()
     }
 
     private fun showLoading() {
@@ -85,17 +80,12 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         bindingParent.progressBar.visibility = View.GONE
     }
 
-    private fun loadMasterSkill() {
+    private fun loadMasterSkillLocal() {
 
-        val json = loadJSONFromAssets()
 
-        val gson = Gson()
-        val mainList = gson.fromJson(json, CategoryMasterResponse::class.java)
+        val mainList = Gson().fromJson(loadJSONFromAssets(), CategoryMasterResponse::class.java)
 
-        mainList.data.forEach {
-            println("PrintData" + it.categoryName + " -> " + it.categoryId)
-        }
-        bindingParent.recyclerViewHorizontalSkill.adapter =
+        bindingParent.recyclerViewHorizontalCategory.adapter =
             MyCategoryMainAdapter(mainList.data, this@CategoryMasterFragment)
 
     }
@@ -109,8 +99,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                 api.getAndroidMasterData(RequestAction(action, id))
             }.onSuccess { response ->
                 hideLoading()
-                if (response.status) {
-                    /* val adapter = MygrowthitemactionClickAdapter(
+                if (response.status) {/* val adapter = MygrowthitemactionClickAdapter(
                          response.data,
                          this@CategoryMasterFragment,
                          path
@@ -149,7 +138,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
 // ---------------- URL Handling ----------------
 
-    fun loadUrl(url: String, path: String) {
+    override fun loadUrl(url: String, path: String) {
         val finalUrl = if (url.contains(".pdf")) {
             buildSafeUrl(DOMAIN, path, url)
         } else {
@@ -177,13 +166,9 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
     }
 
     fun buildSafeUrl(domain: String, path: String, fileName: String): String {
-        val encodedFileName = URLEncoder.encode(fileName, "UTF-8")
-            .replace("+", "%20")
-            .replace("%28", "(")
-            .replace("%29", ")")
-            .replace("%2C", ",")
-            .replace("%26", "&")
-            .replace("%27", "'")
+        val encodedFileName =
+            URLEncoder.encode(fileName, "UTF-8").replace("+", "%20").replace("%28", "(")
+                .replace("%29", ")").replace("%2C", ",").replace("%26", "&").replace("%27", "'")
 
         return domain.trimEnd('/') + "/" + path.trim('/') + "/" + encodedFileName
     }
@@ -207,8 +192,8 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         if (list.size == 1) clickUrl(list[0]) else dialog(list, "")
     }
 
-    fun callIntent(list: List<String>, path: String) {
-        if (list.size == 1) loadUrl(list[0], path) else dialog(list, path)
+    override fun callIntent(list: List<String>, folderName: String, fileType: String) {
+        if (list.size == 1) loadUrl(list[0], folderName) else dialog(list, folderName)
     }
 
     fun checkCompleted(id: String) {}
@@ -239,30 +224,26 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.rvDialog)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        //   rvDialog?.adapter = DialogAdapterGenericAdapter(list, this, path)
+        rvDialog?.adapter = DialogAdapterGenericAdapter(list, this, path)
 
         dialog.show()
     }
 
 
     fun loadJSONFromAssets(): String {
-        return requireContext().assets.open("main.json")
-            .bufferedReader()
-            .use { it.readText() }
+        return requireContext().assets.open("main.json").bufferedReader().use { it.readText() }
     }
 
     override fun clickSubCategory(list: List<SubCategory>) {
-        this.bindingParent.recyclerViewHorizontal.adapter =
+        this.bindingParent.recyclerViewSubCategory.adapter =
             MySubCategoryAdapter(list, this@CategoryMasterFragment)
     }
 
-    override fun clickItem(list: List<Item>) {
+    override fun clickItem(list: List<Item>, folderName: String, fileType: String) {
         val adapter = MasterItemAdapter(
-            list,
-            this@CategoryMasterFragment,
-            ""
+            list, this@CategoryMasterFragment, folderName, fileType
         )
-        bindingParent.recyclerViewVertical.adapter = adapter
+        bindingParent.recyclerViewVerticalItem.adapter = adapter
         setupSearch(adapter)
     }
 
@@ -287,8 +268,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         override fun getItemCount() = list.size
 
         override fun onBindViewHolder(
-            holder: ViewHolder,
-            @SuppressLint("RecyclerView") position: Int
+            holder: ViewHolder, @SuppressLint("RecyclerView") position: Int
         ) {
             val item = list[position]
             if (position == selectedPosition) {
@@ -333,8 +313,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         override fun getItemCount() = list.size
 
         override fun onBindViewHolder(
-            holder: ViewHolder,
-            @SuppressLint("RecyclerView") position: Int
+            holder: ViewHolder, @SuppressLint("RecyclerView") position: Int
         ) {
             val item = list[position]
             if (position == selectedPosition) {
@@ -350,7 +329,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                     notifyItemChanged(previous)
                 }
                 notifyItemChanged(selectedPosition)
-                click.clickItem(item.itemList)
+                click.clickItem(item.itemList, item.folderName, item.filetype)
             }
             holder.binding.executePendingBindings()
         }
@@ -360,13 +339,15 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
     class MasterItemAdapter(
         private val originalList: List<Item>,
         click_: MasterInterFace,
-        path_: String
+        folderName_: String,
+        fileType_: String
     ) : RecyclerView.Adapter<MasterItemAdapter.ViewHolder>(), Filterable {
 
         private var filteredList = originalList.toMutableList()
 
         var click = click_
-        var path = path_
+        var folderName = folderName_
+        var fileType = fileType_
 
         class ViewHolder(val binding: MasterItemAdapterBinding) :
             RecyclerView.ViewHolder(binding.root)
@@ -384,14 +365,12 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
             val item = filteredList[position]
 
             //holder.binding.tvName.text = item.name
-            holder.binding.tvName.text =
-                HtmlCompat.fromHtml(
-                    item.id + "\t\t" + item.name,
-                    HtmlCompat.FROM_HTML_MODE_LEGACY
-                )
+            holder.binding.tvName.text = HtmlCompat.fromHtml(
+                item.id + "\t\t" + item.name, HtmlCompat.FROM_HTML_MODE_LEGACY
+            )
 
             holder.binding.root.setOnClickListener {
-                // item.links?.let { click.callIntent(it, path) }
+                item.links?.let { click.callIntent(it, folderName, fileType) }
             }
 
             holder.binding.executePendingBindings()
@@ -406,8 +385,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                         originalList
                     } else {
                         originalList.filter {
-                            it.name.lowercase().contains(query)
-                            //|| it.id.contains(query)
+                            it.name.lowercase().contains(query) || it.id.contains(query)
                         }
                     }
 
@@ -426,4 +404,54 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
         }
     }
 
+
+    private fun loadMasterSkill() {
+        showLoading()
+        bindingParent.searchView.visibility = View.GONE
+        lifecycleScope.launch {
+            runCatching {
+                api.getMaster()
+            }.onSuccess { response ->
+                hideLoading()
+                if (response.status) {
+                    bindingParent.recyclerViewHorizontalCategory.adapter =
+                        MyCategoryMainAdapter(response.data, this@CategoryMasterFragment)
+                }
+            }.onFailure {
+                hideLoading()
+                showError(it)
+            }
+        }
+    }
+
+
+    class DialogAdapterGenericAdapter(
+        private val list: List<String>,
+        click_: MasterInterFace,
+        path_: String = ""
+    ) : RecyclerView.Adapter<DialogAdapterGenericAdapter.ViewHolder>() {
+        var click = click_
+        var path = path_
+
+        class ViewHolder(val binding: DialogItemAdapterBinding) :
+            RecyclerView.ViewHolder(binding.root)
+
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+            val binding = DialogItemAdapterBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
+            return ViewHolder(binding)
+        }
+
+        override fun getItemCount() = list.size
+
+        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+            val item = list[position]
+            holder.binding.tvName.text = item
+            holder.binding.root.setOnClickListener {
+                click.loadUrl(item, path)
+            }
+            holder.binding.executePendingBindings()
+        }
+    }
 }

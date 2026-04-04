@@ -1,5 +1,6 @@
 package com.raj.mygrowth.networkUtility
 
+import com.raj.mygrowth.domain.CategoryMasterResponse
 import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
@@ -16,11 +17,10 @@ import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSelfImprovement
 import com.raj.mygrowth.domain.ResponseSimple
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface ApiService {
-
-
     @POST("getmydata.php")
     suspend fun getPassword(
         @Body request: RequestAction
@@ -92,4 +92,8 @@ interface ApiService {
         @Body request: RequestAction
     ): ResponseGeneric
 
+    @GET("main.json")
+    suspend fun getMaster(
+
+    ): CategoryMasterResponse
 }
