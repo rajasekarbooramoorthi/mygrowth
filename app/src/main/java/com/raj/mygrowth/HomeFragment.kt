@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.BottomDialogAddTaskBinding
 import com.raj.mygrowth.databinding.FragmentHomeBinding
@@ -90,6 +92,7 @@ class HomeFragment : Fragment(), SimpleClick {
         _binding = null
     }
 
+    @SuppressLint("DefaultLocale")
     fun showNormalDatePicker(onDateSelected: (String) -> Unit) {
 
         val calendar = Calendar.getInstance()
@@ -131,6 +134,7 @@ class HomeFragment : Fragment(), SimpleClick {
             }
         }
     }
+
     fun dialog() {
         var priority: String
         val binding = BottomDialogAddTaskBinding.inflate(layoutInflater)
@@ -141,10 +145,25 @@ class HomeFragment : Fragment(), SimpleClick {
                 dueDate = date
             }
         }
+
+        dialogBottomSheetDialog.setOnShowListener {
+            val bottomSheet =
+                (it as BottomSheetDialog).findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+            bottomSheet?.let { sheet ->
+                BottomSheetBehavior.from(sheet).apply {
+                    state = BottomSheetBehavior.STATE_HALF_EXPANDED
+                    skipCollapsed = true
+                }
+                sheet.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            }
+        }
+        dialogBottomSheetDialog.show()
+
         binding.btnSubmit.setOnClickListener {
 
             val taskName = binding.editTextName.text
-            if (taskName?.isEmpty() != true && dueDate != null) {
+            val taskDescription = binding.editTextNameDescription.text
+            if (!taskDescription.isNullOrEmpty() && !taskName.isNullOrEmpty() && dueDate != null) {
                 priority = if (binding.cbPriority.isChecked) {
                     "1"
                 } else {
@@ -153,32 +172,42 @@ class HomeFragment : Fragment(), SimpleClick {
 
                 val requestAction = RequestActionAddTask(
                     taskName = taskName.toString(),
+                    description = taskDescription.toString(),
                     priority = priority,
                     dueDate = dueDate.toString(),
-                    description = "",
                     action = "insert_daily_task"
                 )
                 lifecycleScope.launch {
-                        if (api.addTask(requestAction).status) {
-                            binding.editTextName.text = null
-                            lifecycleScope.launch {
-                                Toast.makeText(
-                                    requireContext(),
-                                    "Task added successfully",
-                                    Toast.LENGTH_SHORT
-                                ).show()
-                                delay(1000) // 2 seconds
-                                dialogBottomSheetDialog.dismiss()
-                                dueDate = null
-
-                            }
+                    if (api.addTask(requestAction).status) {
+                        binding.editTextName.text = null
+                        binding.editTextNameDescription.text = null
+                        binding.textDate.error = null
+                        dueDate = null
+                        lifecycleScope.launch {
+                            Toast.makeText(
+                                requireContext(),
+                                "Task added successfully",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            delay(3000) // 2 seconds
+                            dialogBottomSheetDialog.dismiss()
                         }
+                    }
                 }
                 loadDailyTasks()
+            } else {
+                if (binding.editTextNameDescription.text.isNullOrEmpty()) {
+                    binding.editTextNameDescription.error = "should not Empty"
+                }
+                if (binding.editTextName.text.isNullOrEmpty()) {
+                    binding.editTextName.error = "should not Empty"
+                }
+                if (dueDate.isNullOrEmpty()) {
+                    binding.textDate.error = "should select"
+                }
             }
         }
 
-        dialogBottomSheetDialog.show()
     }
 
     override fun click(id: String, path: String, type: String) {
@@ -198,3 +227,5 @@ class HomeFragment : Fragment(), SimpleClick {
     }
 
 }
+
+

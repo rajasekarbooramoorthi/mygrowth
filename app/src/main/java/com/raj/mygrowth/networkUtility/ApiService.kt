@@ -16,6 +16,7 @@ import com.raj.mygrowth.domain.ResponseGeneric
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSelfImprovement
 import com.raj.mygrowth.domain.ResponseSimple
+import com.raj.mygrowth.domain.ThirukuralResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -96,4 +97,9 @@ interface ApiService {
     suspend fun getMaster(
 
     ): CategoryMasterResponse
+
+    @GET("kural.json")
+    suspend fun getThirukural(
+
+    ): ThirukuralResponse
 }

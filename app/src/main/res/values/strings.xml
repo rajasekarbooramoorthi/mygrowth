@@ -23,5 +23,12 @@
     <string name="toolbar_title_settings">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="name_of_the_task">Name of the task</string>
+    <string name="date">Date\t\t</string>
+    <string name="priority">Priority</string>
+    <string name="submit">Submit</string>
+    <string name="due_date">Due Date</string>
 
 </resources>

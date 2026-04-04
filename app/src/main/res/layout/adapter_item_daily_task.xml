@@ -2,24 +2,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-        <variable
-            name="title"
-            type="String" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:paddingStart="@dimen/_7sdp"
-        android:paddingEnd="@dimen/_7sdp"
-        android:layout_height="wrap_content">
+        android:paddingEnd="@dimen/_7sdp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-             android:foreground="?attr/selectableItemBackground"
-            app:cardCornerRadius="@dimen/_6sdp"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/_3sdp"
             app:cardElevation="5dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -34,7 +27,8 @@
                 android:layout_height="wrap_content"
                 android:background="#FAFAFA"
                 android:orientation="vertical"
-                android:padding="@dimen/_8sdp">
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_1sdp">
 
                 <!-- Title + Checkbox Row -->
                 <LinearLayout
@@ -49,24 +43,40 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.9"
-                        android:text="@{title}"
                         android:fontFamily="@font/sans_bold"
-                        android:textSize="@dimen/_12ssp" />
+                        android:gravity="top|start"
+                        android:paddingStart="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:textSize="@dimen/_10ssp" />
 
                     <CheckBox
                         android:id="@+id/chk"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.1" />
+                        android:layout_weight="0.1"
+                        android:gravity="top|start" />
                 </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTaskDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_regular"
+                    android:gravity="top|start"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_1sdp"
+                    android:textSize="@dimen/_9ssp" />
 
                 <TextView
                     android:id="@+id/tvDueDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/_3sdp"
-                    android:text="Due Date "
                     android:fontFamily="@font/sans_regular"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/due_date"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="@dimen/_7sdp" />
 

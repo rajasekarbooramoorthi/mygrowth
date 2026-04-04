@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/androidMaster"
-        android:name="com.raj.mygrowth.SinglePageMasterFragment"
+        android:name="com.raj.mygrowth.ThirukuralFragment"
         android:label="Android Master Skill" />
 
     <fragment

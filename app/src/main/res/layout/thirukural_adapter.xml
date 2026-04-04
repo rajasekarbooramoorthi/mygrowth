@@ -1,0 +1,75 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            card_view:cardCornerRadius="3dp"
+            card_view:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/tvAdhikaram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_bold"
+                    android:text="கடவுள் வாழ்த்து"
+                    android:textColor="@color/kural_header"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvIyal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="பாயிரவியல்"
+                    android:textColor="@color/kural_sub_header"
+                    android:textSize="@dimen/_5ssp" />
+
+                <TextView
+                    android:id="@+id/tvKuralTamil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sans_regular"
+                    android:lineSpacingExtra="@dimen/_1sdp"
+                    android:text="அகர முதல எழுத்தெல்லாம் ஆதி\nபகவன் முதற்றே உலகு"
+                    android:textColor="@color/kural"
+                    android:textSize="@dimen/_9ssp" />
+
+                <TextView
+                    android:id="@+id/tvExplanationTamil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sans_regular"
+                    android:text="எழுத்துக்கள் எல்லாம் அகரத்தை..."
+                    android:textColor="@color/kural_sub_description_gray"
+                    android:textSize="@dimen/_7ssp" />
+
+                <TextView
+                    android:id="@+id/tvExplanationEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/sans_regular"
+                    android:text="எழுத்துக்கள் எல்லாம் அகரத்தை..."
+                    android:textColor="@color/kural_sub_description_gray"
+                    android:textSize="@dimen/_7ssp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

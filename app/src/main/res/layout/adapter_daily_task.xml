@@ -19,11 +19,12 @@
             android:layout_height="wrap_content"
             android:background="@color/background_gray"
             android:fontFamily="@font/sans_bold"
+            android:gravity="center_vertical"
             android:paddingStart="@dimen/_12sdp"
             android:paddingTop="@dimen/_7sdp"
-            android:gravity="center_vertical"
-            android:textSize="@dimen/_14ssp"
-            android:paddingBottom="@dimen/_10sdp" />
+            android:paddingEnd="@dimen/_1sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_9ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDailyTask"

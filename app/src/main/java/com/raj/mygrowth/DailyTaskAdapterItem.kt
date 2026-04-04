@@ -14,8 +14,10 @@ class DailyTaskAdapterItem(
 ) : RecyclerView.Adapter<DailyTaskAdapterItem.ViewHolder>() {
 
     val listener = listener_
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTaskName: TextView = view.findViewById(R.id.tvTaskName)
+        val tvTaskDescription: TextView = view.findViewById(R.id.tvTaskDescription)
         val tvDueDate: TextView = view.findViewById(R.id.tvDueDate)
         val checkBox: TextView = view.findViewById(R.id.chk)
     }
@@ -30,7 +32,20 @@ class DailyTaskAdapterItem(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
-        holder.tvTaskName.text = item.dt_name
+
+        fun String.capitalizeWords(): String {
+            return this.split(" ")
+                .joinToString(" ") { word ->
+                    word.replaceFirstChar {
+                        if (it.isLowerCase()) it.titlecase() else it.toString()
+                    }
+                }
+        }
+        val name = item.dt_name.capitalizeWords()
+        val description = item.dt_description.capitalizeWords()
+
+        holder.tvTaskName.text = name
+        holder.tvTaskDescription.text = description
         holder.tvDueDate.text = "Due: ${item.dt_due_date}"
         holder.checkBox.setOnClickListener {
             listener.checkCompleted(item.dt_sno)

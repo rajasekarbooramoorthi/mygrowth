@@ -6,99 +6,131 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_7sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_14sdp"
-                android:fontFamily="@font/sans_regular"
-                android:padding="@dimen/_5sdp"
-                android:text="Name of the task "
-                android:textSize="@dimen/_18sdp" />
-
-            <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/editTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_7sdp"
-                android:layout_marginEnd="@dimen/_5sdp"
-                android:layout_marginBottom="@dimen/_24sdp"
-                android:textSize="@dimen/_18sdp"
-                android:background="@drawable/edt_rounded_fin"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:padding="@dimen/_15sdp"
-                android:singleLine="false" />
-
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_24sdp"
-                android:layout_marginBottom="@dimen/_100sdp"
-                android:orientation="horizontal">
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
                     android:fontFamily="@font/sans_regular"
-                    android:padding="@dimen/_5sdp"
-                    android:text="Priority "
-                    android:textSize="@dimen/_18sdp" />
+                    android:text="@string/name_of_the_task"
+                    android:textSize="@dimen/_10sdp" />
 
-                <CheckBox
-                    android:id="@+id/cbPriority"
-                    android:layout_width="wrap_content"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextName"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/_5sdp" />
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_14sdp"
+                    android:background="@drawable/edt_rounded_fin"
+                    android:gravity="start|top"
+                    android:hint="@string/name"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/_30sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:singleLine="false"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/_10sdp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editTextNameDescription"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/sans_regular"
-                    android:padding="@dimen/_5sdp"
-                    android:text="Date "
-                    android:textSize="@dimen/_18sdp" />
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/edt_rounded_fin"
+                    android:gravity="start|top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/_40sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_1sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:singleLine="false"
+                    android:textColorHint="@color/hint_color"
+                    android:textSize="@dimen/_10sdp" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/icDate"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sans_regular"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/priority"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <CheckBox
+                        android:id="@+id/cbPriority"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp" />
+
+                    <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sans_regular"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/date"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/icDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_date" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/ThemeOverlay.Material3.FloatingActionButton.Primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:layout_marginBottom="@dimen/_30sdp"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/sans_regular"
+                    android:minWidth="@dimen/_100sdp"
                     android:padding="@dimen/_5sdp"
-                    app:srcCompat="@drawable/ic_date" />
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnSubmit"
-                style="@style/ThemeOverlay.Material3.FloatingActionButton.Primary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="@dimen/_24sdp"
-                android:layout_marginEnd="@dimen/_24sdp"
-                android:layout_marginBottom="@dimen/_50sdp"
-                android:background="@drawable/btn_rounded"
-                android:fontFamily="@font/sans_regular"
-                android:padding="@dimen/_5sdp"
-                android:text="Submit"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_18sdp" />
-
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </layout>
