@@ -40,13 +40,9 @@
     <color name="hint_color">#6E757575</color>
     <color name="view_divider_main">#F44336</color>
     <color name="button_background">#9C27B0</color>
-
-
     <color name="kural_header">#9C27B0</color>
-    <color name="kural">#D500F9</color>
+    <color name="kural">#BA68C8</color>
     <color name="kural_sub_header">#FFBB86FC</color>
     <color name="kural_sub_header_gray">#6E757575</color>
     <color name="kural_sub_description_gray">#C5757575</color>
-
-
 </resources>
