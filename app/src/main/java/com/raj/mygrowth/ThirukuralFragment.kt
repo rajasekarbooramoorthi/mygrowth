@@ -6,7 +6,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Filter
+import android.widget.Filter.FilterResults
+import android.widget.Filterable
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -14,9 +18,11 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
+import com.raj.mygrowth.adapter.MasterItemAdapter
 import com.raj.mygrowth.databinding.ThirukuralAdapterBinding
 import com.raj.mygrowth.databinding.ThirukuralFragmentBinding
 import com.raj.mygrowth.domain.Feature
+import com.raj.mygrowth.domain.Item
 import com.raj.mygrowth.domain.Properties
 import com.raj.mygrowth.domain.ThirukuralResponse
 import com.raj.mygrowth.networkUtility.ApiService
@@ -93,16 +99,16 @@ class ThirukuralFragment : Fragment() {
                         ?.features
                         .orEmpty()
                 }
+                val adapterKural = KuralAdapter(list)
+                hideLoading()
                 binding.recyclerViewVertical.apply {
                     layoutManager = LinearLayoutManager(requireContext())
                     itemAnimator = null   // 🚀 removes lag
-                    this.adapter = KuralAdapter(list.take(300))
+                    this.adapter = adapterKural
                 }
-                //adapterKural.submitList(list)
+                setupSearch(adapterKural)
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Failed to load data", Toast.LENGTH_SHORT).show()
-            } finally {
-                hideLoading()
             }
         }
     }
@@ -155,8 +161,10 @@ class ThirukuralFragment : Fragment() {
 
 
     class KuralAdapter(
-        private val list: List<Feature>
-    ) : RecyclerView.Adapter<KuralAdapter.ViewHolder>() {
+        private val originalList: List<Feature>
+    ) : RecyclerView.Adapter<KuralAdapter.ViewHolder>(), Filterable {
+
+        private var filteredList = originalList.toMutableList()
 
         class ViewHolder(val binding: ThirukuralAdapterBinding) :
             RecyclerView.ViewHolder(binding.root)
@@ -168,13 +176,41 @@ class ThirukuralFragment : Fragment() {
             return ViewHolder(binding)
         }
 
-        override fun getItemCount() = list.size
+        override fun getItemCount() = filteredList.size
 
         override fun onBindViewHolder(
             holder: ViewHolder, @SuppressLint("RecyclerView") position: Int
         ) {
-            val item = list[position]
+            val item = filteredList[position]
             bind(holder.binding, item.properties)
+        }
+
+        override fun getFilter(): Filter {
+            return object : Filter() {
+                override fun performFiltering(constraint: CharSequence?): FilterResults {
+                    val query = constraint?.toString()?.lowercase()?.trim() ?: ""
+
+                    val result = if (query.isEmpty()) {
+                        originalList
+                    } else {
+                        originalList.filter {
+                            it.properties.kural_thanglish1.lowercase().contains(query) ||
+                                    it.properties.kural_thanglish2.lowercase().contains(query)
+                        }
+                    }
+
+                    return FilterResults().apply {
+                        values = result
+                    }
+                }
+
+                @Suppress("UNCHECKED_CAST")
+                override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
+                    filteredList.clear()
+                    filteredList.addAll(results?.values as List<Feature>)
+                    notifyDataSetChanged()
+                }
+            }
         }
 
         private fun bind(binding: ThirukuralAdapterBinding, item: Properties) {
@@ -186,6 +222,21 @@ class ThirukuralFragment : Fragment() {
                 tvExplanationEnglish.text = item.kuralvilakam_english
             }
         }
+    }
+
+    private fun setupSearch(adapter: KuralAdapter) {
+        binding.searchView.visibility = View.VISIBLE
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                adapter.filter.filter(query)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filter.filter(newText)
+                return true
+            }
+        })
     }
 
 }

@@ -27,7 +27,7 @@
                 android:fontFamily="@font/font_family"
                 android:minWidth="@dimen/_70sdp"
                 android:textColor="@color/sub_category_text"
-                android:textSize="@dimen/_11ssp" />
+                android:textSize="@dimen/_9ssp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

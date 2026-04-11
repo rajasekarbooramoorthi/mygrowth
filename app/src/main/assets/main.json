@@ -8,8 +8,8 @@
       "subcategoryList": [
         {
           "subCategoryId": 101,
-          "subcategoryName": "Android InterView",
-          "folderName": "Android InterViewQuestion",
+          "subcategoryName": "IV Question",
+          "folderName": "Question's",
           "filetype": "pdf",
           "itemList": [
             {
@@ -602,7 +602,7 @@
         },
         {
           "subCategoryId": 101,
-          "subcategoryName": "Android Master",
+          "subcategoryName": "Concepts",
           "folderName": "",
           "filetype": "url",
           "itemList": [
@@ -8705,7 +8705,7 @@
         },
         {
           "subCategoryId": 101,
-          "subcategoryName": "Compose Question",
+          "subcategoryName": "Compose UI",
           "folderName": "",
           "filetype": "",
           "itemList": [
@@ -15154,7 +15154,7 @@
         },
         {
           "subCategoryId": 101,
-          "subcategoryName": "Company InterView",
+          "subcategoryName": "IV Prepare",
           "folderName": "Company Interview",
           "filetype": "pdf",
           "itemList": [
@@ -15597,6 +15597,13 @@
               ]
             }
           ]
+        },
+        {
+          "subCategoryId": 101,
+          "subcategoryName": "Full Stack",
+          "folderName": "RoadMaps",
+          "filetype": "pdf",
+          "itemList": []
         }
       ]
     },
@@ -16062,6 +16069,188 @@
             {
               "id": 48,
               "name": "Build Consistent Routine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": 103,
+      "categoryName": "Full Stack",
+      "categoryTag": "get_master_skills",
+      "subcategoryList": [
+        {
+          "subCategoryId": 1,
+          "subcategoryName": "PHASE 0 — FOUNDATION",
+          "folderName": "Web Basics",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "1",
+              "name": "HTTP & Networking Protocols",
+              "links": [
+                "https://www.google.com/search?q=HTTP+%26+Networking+Protocols+tutorial+documentation"
+              ]
+            },
+            {
+              "id": "2",
+              "name": "DNS, IP, and ISP Workflows",
+              "links": [
+                "https://www.google.com/search?q=DNS+IP+and+ISP+Workflows+explained"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 2,
+          "subcategoryName": "PHASE 1 — FRONTEND",
+          "folderName": "TypeScript & React",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "5",
+              "name": "TypeScript Interfaces and Enums",
+              "links": [
+                "https://www.google.com/search?q=TypeScript+Interfaces+and+Enums+best+practices"
+              ]
+            },
+            {
+              "id": "7",
+              "name": "React Hooks: useState and useEffect",
+              "links": [
+                "https://www.google.com/search?q=React+Hooks+useState+useEffect+guide"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 3,
+          "subcategoryName": "PHASE 2 — BACKEND",
+          "folderName": "Node & API",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "10",
+              "name": "Node.js Event Loop and Async I/O",
+              "links": [
+                "https://www.google.com/search?q=Node.js+Event+Loop+and+Async+I/O+deep+dive"
+              ]
+            },
+            {
+              "id": "13",
+              "name": "JWT and OAuth Authentication",
+              "links": [
+                "https://www.google.com/search?q=JWT+and+OAuth+Authentication+Nodejs+tutorial"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 4,
+          "subcategoryName": "PHASE 3 — DEVOPS CORE",
+          "folderName": "Automation & CI/CD",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "14",
+              "name": "Docker Containerization",
+              "links": [
+                "https://www.google.com/search?q=Docker+Containerization+tutorial+for+developers"
+              ]
+            },
+            {
+              "id": "15",
+              "name": "GitHub Actions CI/CD Pipelines",
+              "links": [
+                "https://www.google.com/search?q=GitHub+Actions+CICD+Pipelines+guide"
+              ]
+            },
+            {
+              "id": "16",
+              "name": "Kubernetes Pods & Services",
+              "links": [
+                "https://www.google.com/search?q=Kubernetes+Pods+and+Services+architecture"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 5,
+          "subcategoryName": "PHASE 4 — MICROSERVICES",
+          "folderName": "System Design",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "17",
+              "name": "Kafka Message Brokers",
+              "links": [
+                "https://www.google.com/search?q=Kafka+Message+Brokers+tutorial+documentation"
+              ]
+            },
+            {
+              "id": "18",
+              "name": "Saga Pattern for Transactions",
+              "links": [
+                "https://www.google.com/search?q=Saga+Pattern+Microservices+distributed+transactions"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 6,
+          "subcategoryName": "PHASE 5 — AWS CLOUD OPS",
+          "folderName": "AWS Infrastructure",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "19",
+              "name": "AWS EC2, S3, and IAM",
+              "links": [
+                "https://www.google.com/search?q=AWS+EC2+S3+IAM+documentation+guide"
+              ]
+            },
+            {
+              "id": "20",
+              "name": "VPC Networking & Subnets",
+              "links": [
+                "https://www.google.com/search?q=AWS+VPC+Networking+and+Subnets+tutorial"
+              ]
+            },
+            {
+              "id": "21",
+              "name": "Terraform (IaC) for AWS",
+              "links": [
+                "https://www.google.com/search?q=Terraform+IaC+for+AWS+getting+started"
+              ]
+            },
+            {
+              "id": "22",
+              "name": "AWS Lambda & Serverless",
+              "links": [
+                "https://www.google.com/search?q=AWS+Lambda+and+Serverless+architecture"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 7,
+          "subcategoryName": "PHASE 6 — MOBILE INTEGRATION",
+          "folderName": "KMP & Android",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "23",
+              "name": "Jetpack Compose UI Patterns",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+UI+Patterns+tutorial"
+              ]
+            },
+            {
+              "id": "24",
+              "name": "KMP Shared Logic Architecture",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Multiplatform+Shared+Logic+Architecture"
+              ]
             }
           ]
         }

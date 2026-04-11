@@ -4,7 +4,6 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/homeFragment">
 
-
     <activity
         android:id="@+id/mainActivity"
         android:name="com.raj.mygrowth.MainActivity"
@@ -21,13 +20,8 @@
         android:label="Password" />
 
     <fragment
-        android:id="@+id/androidInterviewFragment"
-        android:name="com.raj.mygrowth.AndroidInterviewQuestionsFragment"
-        android:label="Interview Question" />
-
-    <fragment
         android:id="@+id/androidMaster"
-        android:name="com.raj.mygrowth.ThirukuralFragment"
+        android:name="com.raj.mygrowth.FullStackMasterFragment"
         android:label="Android Master Skill" />
 
     <fragment
