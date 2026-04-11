@@ -2,9 +2,7 @@
 
     <data>
 
-        <variable
-            name="item"
-            type="com.raj.mygrowth.domain.CareerItem" />
+
 
         <variable
             name="isSelected"
