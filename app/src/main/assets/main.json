@@ -9,7 +9,7 @@
         {
           "subCategoryId": 101,
           "subcategoryName": "IV Question",
-          "folderName": "Question's",
+          "folderName": "Android InterViewQuestion",
           "filetype": "pdf",
           "itemList": [
             {
@@ -15597,13 +15597,6 @@
               ]
             }
           ]
-        },
-        {
-          "subCategoryId": 101,
-          "subcategoryName": "Full Stack",
-          "folderName": "RoadMaps",
-          "filetype": "pdf",
-          "itemList": []
         }
       ]
     },
@@ -16076,180 +16069,557 @@
     },
     {
       "categoryId": 103,
-      "categoryName": "Full Stack",
+      "categoryName": "Full Stack Master",
       "categoryTag": "get_master_skills",
       "subcategoryList": [
         {
           "subCategoryId": 1,
-          "subcategoryName": "PHASE 0 — FOUNDATION",
-          "folderName": "Web Basics",
+          "subcategoryName": "Core Foundation",
+          "folderName": "Web & OS",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "1",
-              "name": "HTTP & Networking Protocols",
+              "id": "1.1",
+              "name": "HTTP/2 vs HTTP/3 (QUIC): Multiplexing & Head-of-Line Blocking",
               "links": [
-                "https://www.google.com/search?q=HTTP+%26+Networking+Protocols+tutorial+documentation"
+                "https://www.google.com/search?q=HTTP2+vs+HTTP3+QUIC+multiplexing+and+HOL+blocking+explained"
               ]
             },
             {
-              "id": "2",
-              "name": "DNS, IP, and ISP Workflows",
+              "id": "1.2",
+              "name": "OSI Model: L4 (TCP/UDP) vs L7 (HTTP/FTP) Deep Dive",
               "links": [
-                "https://www.google.com/search?q=DNS+IP+and+ISP+Workflows+explained"
+                "https://www.google.com/search?q=OSI+Model+Layer+4+vs+Layer+7+switching+and+load+balancing"
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "TCP 3-Way Handshake, TLS 1.3 & Certificate Chaining",
+              "links": [
+                "https://www.google.com/search?q=TCP+handshake+and+TLS+1.3+termination+process+step+by+step"
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "Browser CRP: DOM, CSSOM, Layout, and Paint Cycles",
+              "links": [
+                "https://www.google.com/search?q=Critical+Rendering+Path+DOM+CSSOM+Layout+Paint+optimization"
+              ]
+            },
+            {
+              "id": "1.5",
+              "name": "The V8 Engine: JIT Compilation, Call Stack & Task Queues",
+              "links": [
+                "https://www.google.com/search?q=How+V8+Engine+works+JIT+compilation+and+Call+Stack"
+              ]
+            },
+            {
+              "id": "1.6",
+              "name": "JavaScript Event Loop: Microtasks, Macrotasks & Animation Frames",
+              "links": [
+                "https://www.google.com/search?q=JS+Event+Loop+Microtasks+vs+Macrotasks+vs+requestAnimationFrame"
+              ]
+            },
+            {
+              "id": "1.7",
+              "name": "Linux Processes vs Threads: PCB, Context Switching & IPC",
+              "links": [
+                "https://www.google.com/search?q=Linux+Process+vs+Thread+Context+Switching+and+Inter-process+communication"
+              ]
+            },
+            {
+              "id": "1.8",
+              "name": "Memory Management: Stack vs Heap Allocation & Pointers",
+              "links": [
+                "https://www.google.com/search?q=Memory+Management+Stack+vs+Heap+allocation+deep+dive"
+              ]
+            },
+            {
+              "id": "1.9",
+              "name": "Garbage Collection: Mark-and-Sweep vs Generational GC",
+              "links": [
+                "https://www.google.com/search?q=Garbage+Collection+algorithms+Mark+and+Sweep+vs+Generational"
+              ]
+            },
+            {
+              "id": "1.10",
+              "name": "File Systems: Inodes, Buffers, and Synchronous I/O",
+              "links": [
+                "https://www.google.com/search?q=Linux+File+System+Inodes+and+Blocking+vs+Non-blocking+IO"
+              ]
+            },
+            {
+              "id": "1.11",
+              "name": "DNS Architecture: Root Servers, TLDs, and Recursive Resolvers",
+              "links": [
+                "https://www.google.com/search?q=How+DNS+works+Root+Servers+TLD+and+Recursive+lookup"
+              ]
+            },
+            {
+              "id": "1.12",
+              "name": "Web Security Fundamentals: XSS, CSRF, and SQL Injection",
+              "links": [
+                "https://www.google.com/search?q=Web+Security+Top+vulnerabilities+XSS+CSRF+SQL+Injection+mitigation"
               ]
             }
           ]
         },
         {
           "subCategoryId": 2,
-          "subcategoryName": "PHASE 1 — FRONTEND",
+          "subcategoryName": "Advanced FrontEnd",
           "folderName": "TypeScript & React",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "5",
-              "name": "TypeScript Interfaces and Enums",
+              "id": "2.1",
+              "name": "TS: Advanced Mapped Types & Recursive Type Aliases",
               "links": [
-                "https://www.google.com/search?q=TypeScript+Interfaces+and+Enums+best+practices"
+                "https://www.google.com/search?q=TypeScript+Advanced+Mapped+Types+and+Recursive+Type+Aliases"
               ]
             },
             {
-              "id": "7",
-              "name": "React Hooks: useState and useEffect",
+              "id": "2.2",
+              "name": "TS: Variance (Covariance/Contravariance) & Type Soundness",
               "links": [
-                "https://www.google.com/search?q=React+Hooks+useState+useEffect+guide"
+                "https://www.google.com/search?q=TypeScript+Variance+Covariance+Contravariance+explained"
+              ]
+            },
+            {
+              "id": "2.3",
+              "name": "React Internals: Fiber Architecture & Work Loops",
+              "links": [
+                "https://www.google.com/search?q=React+Fiber+Architecture+internals+and+Work+Loop"
+              ]
+            },
+            {
+              "id": "2.4",
+              "name": "React: Lane-based Prioritization & Concurrent Rendering",
+              "links": [
+                "https://www.google.com/search?q=React+Concurrent+Mode+Lane+Prioritization+explained"
+              ]
+            },
+            {
+              "id": "2.5",
+              "name": "Advanced Patterns: HOCs vs Render Props vs Compound Components",
+              "links": [
+                "https://www.google.com/search?q=React+Advanced+Patterns+HOC+vs+Render+Props+vs+Compound+Components"
+              ]
+            },
+            {
+              "id": "2.6",
+              "name": "State Management: Normalization & Derived State Patterns",
+              "links": [
+                "https://www.google.com/search?q=Redux+Zustand+State+Normalization+and+Selector+optimization"
+              ]
+            },
+            {
+              "id": "2.7",
+              "name": "Next.js: Streaming Metadata & Edge Runtime Execution",
+              "links": [
+                "https://www.google.com/search?q=Next.js+Streaming+SSR+and+Edge+Runtime+benefits"
+              ]
+            },
+            {
+              "id": "2.8",
+              "name": "Micro-Frontends: Module Federation & Iframe Communication",
+              "links": [
+                "https://www.google.com/search?q=Webpack+Module+Federation+and+Micro-Frontend+Architecture"
+              ]
+            },
+            {
+              "id": "2.9",
+              "name": "Web Workers: Off-Main-Thread Architecture & Comlink",
+              "links": [
+                "https://www.google.com/search?q=Web+Workers+Off-Main-Thread+Architecture+Comlink+library"
+              ]
+            },
+            {
+              "id": "2.10",
+              "name": "Performance: Cumulative Layout Shift (CLS) & Largest Contentful Paint (LCP)",
+              "links": [
+                "https://www.google.com/search?q=Core+Web+Vitals+CLS+LCP+FID+optimization+guide"
+              ]
+            },
+            {
+              "id": "2.11",
+              "name": "Web Components: Shadow DOM, Slots, and Custom Elements",
+              "links": [
+                "https://www.google.com/search?q=Web+Components+Shadow+DOM+and+Custom+Elements+tutorial"
+              ]
+            },
+            {
+              "id": "2.12",
+              "name": "Testing: Kent C. Dodds' Testing Trophy & Mocking Strategy",
+              "links": [
+                "https://www.google.com/search?q=The+Testing+Trophy+Integration+vs+Unit+vs+E2E+testing"
               ]
             }
           ]
         },
         {
           "subCategoryId": 3,
-          "subcategoryName": "PHASE 2 — BACKEND",
-          "folderName": "Node & API",
+          "subcategoryName": "BackEnd Engineering",
+          "folderName": "Node, API & DB",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "10",
-              "name": "Node.js Event Loop and Async I/O",
+              "id": "3.1",
+              "name": "Node.js: Libuv Thread Pool & Asynchronous I/O Steering",
               "links": [
-                "https://www.google.com/search?q=Node.js+Event+Loop+and+Async+I/O+deep+dive"
+                "https://www.google.com/search?q=Node.js+Libuv+Thread+Pool+and+Non-blocking+IO+explained"
               ]
             },
             {
-              "id": "13",
-              "name": "JWT and OAuth Authentication",
+              "id": "3.2",
+              "name": "Streams API: Writable, Readable, and Transform Stream Internals",
               "links": [
-                "https://www.google.com/search?q=JWT+and+OAuth+Authentication+Nodejs+tutorial"
+                "https://www.google.com/search?q=Node.js+Streams+API+Backpressure+and+Piping+data"
+              ]
+            },
+            {
+              "id": "3.3",
+              "name": "Advanced Auth: OAuth2 Grant Types & PKCE Flow",
+              "links": [
+                "https://www.google.com/search?q=OAuth2+Grant+Types+and+PKCE+Flow+for+Single+Page+Apps"
+              ]
+            },
+            {
+              "id": "3.4",
+              "name": "Database: SQL Indexing (B-Trees vs Hash Indexes) Optimization",
+              "links": [
+                "https://www.google.com/search?q=PostgreSQL+B-Tree+vs+Hash+Indexing+performance+tuning"
+              ]
+            },
+            {
+              "id": "3.5",
+              "name": "PostgreSQL: MVCC (Multi-Version Concurrency Control) & Vacuuming",
+              "links": [
+                "https://www.google.com/search?q=PostgreSQL+MVCC+internals+and+Auto-Vacuum+process"
+              ]
+            },
+            {
+              "id": "3.6",
+              "name": "NoSQL: Document vs Wide-Column vs Key-Value Use Cases",
+              "links": [
+                "https://www.google.com/search?q=NoSQL+Database+Types+Document+vs+Wide+Column+vs+Key+Value"
+              ]
+            },
+            {
+              "id": "3.7",
+              "name": "Caching: Cache Aside, Write-Through, and Write-Behind Patterns",
+              "links": [
+                "https://www.google.com/search?q=Caching+Strategies+Cache+Aside+vs+Write+Through+vs+Write+Behind"
+              ]
+            },
+            {
+              "id": "3.8",
+              "name": "Message Queues: RabbitMQ Exchanges (Direct, Fanout, Topic, Headers)",
+              "links": [
+                "https://www.google.com/search?q=RabbitMQ+Exchanges+Direct+Fanout+Topic+and+Headers+explained"
+              ]
+            },
+            {
+              "id": "3.9",
+              "name": "API Patterns: REST vs GraphQL (N+1 Problem & Dataloaders)",
+              "links": [
+                "https://www.google.com/search?q=GraphQL+N+plus+1+problem+and+DataLoader+pattern+solution"
+              ]
+            },
+            {
+              "id": "3.10",
+              "name": "Serialization: Protocol Buffers (gRPC) vs MessagePack vs JSON",
+              "links": [
+                "https://www.google.com/search?q=Protocol+Buffers+vs+MessagePack+vs+JSON+performance+comparison"
+              ]
+            },
+            {
+              "id": "3.11",
+              "name": "Transaction Management: ACID Properties & Isolation Levels",
+              "links": [
+                "https://www.google.com/search?q=Database+Isolation+Levels+Read+Uncommitted+to+Serializable"
+              ]
+            },
+            {
+              "id": "3.12",
+              "name": "WebSockets: Sticky Sessions, Horizontal Scaling & Redis Adapters",
+              "links": [
+                "https://www.google.com/search?q=Scaling+WebSockets+horizontally+with+Redis+Adapter+and+Sticky+Sessions"
               ]
             }
           ]
         },
         {
           "subCategoryId": 4,
-          "subcategoryName": "PHASE 3 — DEVOPS CORE",
-          "folderName": "Automation & CI/CD",
+          "subcategoryName": "Cloud & DevOps",
+          "folderName": "Infrastructure",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "14",
-              "name": "Docker Containerization",
+              "id": "4.1",
+              "name": "Docker Internals: Namespaces, Cgroups, and UnionFS",
               "links": [
-                "https://www.google.com/search?q=Docker+Containerization+tutorial+for+developers"
+                "https://www.google.com/search?q=Docker+internals+namespaces+cgroups+and+union+file+system"
               ]
             },
             {
-              "id": "15",
-              "name": "GitHub Actions CI/CD Pipelines",
+              "id": "4.2",
+              "name": "Container Security: Rootless Docker & Image Scanning (Trivy)",
               "links": [
-                "https://www.google.com/search?q=GitHub+Actions+CICD+Pipelines+guide"
+                "https://www.google.com/search?q=Docker+security+rootless+mode+and+vulnerability+scanning"
               ]
             },
             {
-              "id": "16",
-              "name": "Kubernetes Pods & Services",
+              "id": "4.3",
+              "name": "Kubernetes Architecture: Control Plane vs Worker Node Components",
               "links": [
-                "https://www.google.com/search?q=Kubernetes+Pods+and+Services+architecture"
+                "https://www.google.com/search?q=Kubernetes+architecture+etcd+scheduler+kube-apiserver+kubelet"
+              ]
+            },
+            {
+              "id": "4.4",
+              "name": "K8s Networking: Pod-to-Pod Communication & CNI Plugins",
+              "links": [
+                "https://www.google.com/search?q=Kubernetes+networking+model+and+CNI+plugins+Calico+Flannel"
+              ]
+            },
+            {
+              "id": "4.5",
+              "name": "K8s Objects: Replicasets, Deployments, and StatefulSets",
+              "links": [
+                "https://www.google.com/search?q=Kubernetes+Deployment+vs+StatefulSet+vs+DaemonSet"
+              ]
+            },
+            {
+              "id": "4.6",
+              "name": "Service Mesh: Istio/Linkerd Traffic Management & mTLS",
+              "links": [
+                "https://www.google.com/search?q=Istio+Service+Mesh+traffic+shifting+and+mTLS+explained"
+              ]
+            },
+            {
+              "id": "4.7",
+              "name": "CI/CD Patterns: GitOps with ArgoCD & Flux",
+              "links": [
+                "https://www.google.com/search?q=GitOps+workflow+with+ArgoCD+and+FluxCD+tutorial"
+              ]
+            },
+            {
+              "id": "4.8",
+              "name": "IaC: Terraform State Management, Locks, and Backends",
+              "links": [
+                "https://www.google.com/search?q=Terraform+remote+state+management+locking+and+S3+backend"
+              ]
+            },
+            {
+              "id": "4.9",
+              "name": "AWS Networking: VPC, Subnets, Route Tables, and NAT Gateways",
+              "links": [
+                "https://www.google.com/search?q=AWS+VPC+Networking+Subnets+Route+Tables+and+Internet+Gateway"
+              ]
+            },
+            {
+              "id": "4.10",
+              "name": "High Availability: Multi-AZ vs Multi-Region Architectures",
+              "links": [
+                "https://www.google.com/search?q=AWS+Multi-AZ+vs+Multi-Region+deployment+strategies"
+              ]
+            },
+            {
+              "id": "4.11",
+              "name": "Monitoring: Prometheus Metrics, Exporters, and PromQL",
+              "links": [
+                "https://www.google.com/search?q=Prometheus+monitoring+architecture+exporters+and+PromQL+guide"
+              ]
+            },
+            {
+              "id": "4.12",
+              "name": "Log Aggregation: ELK Stack vs Grafana Loki vs Datadog",
+              "links": [
+                "https://www.google.com/search?q=ELK+stack+vs+Grafana+Loki+for+log+aggregation"
               ]
             }
           ]
         },
         {
           "subCategoryId": 5,
-          "subcategoryName": "PHASE 4 — MICROSERVICES",
-          "folderName": "System Design",
+          "subcategoryName": "System Design",
+          "folderName": "Architecture",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "17",
-              "name": "Kafka Message Brokers",
+              "id": "5.1",
+              "name": "The CAP Theorem: Consistency, Availability, and Partition Tolerance",
               "links": [
-                "https://www.google.com/search?q=Kafka+Message+Brokers+tutorial+documentation"
+                "https://www.google.com/search?q=CAP+Theorem+explained+with+real+world+database+examples"
               ]
             },
             {
-              "id": "18",
-              "name": "Saga Pattern for Transactions",
+              "id": "5.2",
+              "name": "PACELC Theorem: Trade-offs in Distributed Systems Latency",
               "links": [
-                "https://www.google.com/search?q=Saga+Pattern+Microservices+distributed+transactions"
+                "https://www.google.com/search?q=PACELC+theorem+vs+CAP+theorem+differences"
+              ]
+            },
+            {
+              "id": "5.3",
+              "name": "Load Balancing: Weighted Round Robin vs Least Connections vs IP Hash",
+              "links": [
+                "https://www.google.com/search?q=Load+balancing+algorithms+L4+vs+L7+comparison"
+              ]
+            },
+            {
+              "id": "5.4",
+              "name": "Consistent Hashing: Resizing Cache Clusters without Data Loss",
+              "links": [
+                "https://www.google.com/search?q=Consistent+Hashing+algorithm+explained+for+system+design"
+              ]
+            },
+            {
+              "id": "5.5",
+              "name": "Microservices: Saga Pattern (Choreography vs Orchestration)",
+              "links": [
+                "https://www.google.com/search?q=Saga+Pattern+Microservices+Choreography+vs+Orchestration"
+              ]
+            },
+            {
+              "id": "5.6",
+              "name": "Database Sharding: Key-Based, Range-Based, and Directory-Based",
+              "links": [
+                "https://www.google.com/search?q=Database+Sharding+strategies+Key+vs+Range+vs+Directory"
+              ]
+            },
+            {
+              "id": "5.7",
+              "name": "Message Queues: Kafka Architecture (Partitions, ISR, and Offsets)",
+              "links": [
+                "https://www.google.com/search?q=Kafka+Architecture+Partitions+Consumer+Groups+and+Offsets"
+              ]
+            },
+            {
+              "id": "5.8",
+              "name": "Caching Strategies: Write-Through vs Write-Back vs Refresh-Ahead",
+              "links": [
+                "https://www.google.com/search?q=System+Design+Caching+Write+Through+Write+Back+Refresh+Ahead"
+              ]
+            },
+            {
+              "id": "5.9",
+              "name": "API Gateway: Rate Limiting, Request Collapsing, and mTLS",
+              "links": [
+                "https://www.google.com/search?q=API+Gateway+patterns+Rate+Limiting+and+Request+Collapsing"
+              ]
+            },
+            {
+              "id": "5.10",
+              "name": "Reliability: Circuit Breaker, Retries with Exponential Backoff",
+              "links": [
+                "https://www.google.com/search?q=Circuit+Breaker+pattern+and+Exponential+Backoff+explained"
+              ]
+            },
+            {
+              "id": "5.11",
+              "name": "Distributed ID Generation: Snowflake ID vs UUID v4 vs v7",
+              "links": [
+                "https://www.google.com/search?q=Distributed+ID+generation+Snowflake+algorithm+explained"
+              ]
+            },
+            {
+              "id": "5.12",
+              "name": "Observability: Distributed Tracing with Jaeger and OpenTelemetry",
+              "links": [
+                "https://www.google.com/search?q=Distributed+Tracing+with+OpenTelemetry+and+Jaeger+guide"
               ]
             }
           ]
         },
         {
           "subCategoryId": 6,
-          "subcategoryName": "PHASE 5 — AWS CLOUD OPS",
-          "folderName": "AWS Infrastructure",
+          "subcategoryName": "Mobile & KMP KMP",
+          "folderName": "Advanced Mobile",
           "filetype": "learning_path",
           "itemList": [
             {
-              "id": "19",
-              "name": "AWS EC2, S3, and IAM",
+              "id": "6.1",
+              "name": "KMP Architecture: Expect/Actual vs Interface Injection",
               "links": [
-                "https://www.google.com/search?q=AWS+EC2+S3+IAM+documentation+guide"
+                "https://www.google.com/search?q=Kotlin+Multiplatform+Expect+Actual+vs+Interface+Injection+patterns"
               ]
             },
             {
-              "id": "20",
-              "name": "VPC Networking & Subnets",
+              "id": "6.2",
+              "name": "Kotlin/Native Memory Management: Garbage Collection & Reference Counting",
               "links": [
-                "https://www.google.com/search?q=AWS+VPC+Networking+and+Subnets+tutorial"
+                "https://www.google.com/search?q=Kotlin+Native+Memory+Management+and+Garbage+Collection+explained"
               ]
             },
             {
-              "id": "21",
-              "name": "Terraform (IaC) for AWS",
+              "id": "6.3",
+              "name": "Compose Multiplatform: Skia Rendering & Component Sharing",
               "links": [
-                "https://www.google.com/search?q=Terraform+IaC+for+AWS+getting+started"
+                "https://www.google.com/search?q=Compose+Multiplatform+Skia+rendering+engine+for+iOS+and+Desktop"
               ]
             },
             {
-              "id": "22",
-              "name": "AWS Lambda & Serverless",
+              "id": "6.4",
+              "name": "Coroutines: Structured Concurrency & Dispatchers (Main, IO, Default)",
               "links": [
-                "https://www.google.com/search?q=AWS+Lambda+and+Serverless+architecture"
-              ]
-            }
-          ]
-        },
-        {
-          "subCategoryId": 7,
-          "subcategoryName": "PHASE 6 — MOBILE INTEGRATION",
-          "folderName": "KMP & Android",
-          "filetype": "learning_path",
-          "itemList": [
-            {
-              "id": "23",
-              "name": "Jetpack Compose UI Patterns",
-              "links": [
-                "https://www.google.com/search?q=Jetpack+Compose+UI+Patterns+tutorial"
+                "https://www.google.com/search?q=Kotlin+Coroutines+Structured+Concurrency+and+Dispatchers+guide"
               ]
             },
             {
-              "id": "24",
-              "name": "KMP Shared Logic Architecture",
+              "id": "6.5",
+              "name": "Flow: Hot Flows (StateFlow/SharedFlow) vs Cold Flows",
               "links": [
-                "https://www.google.com/search?q=Kotlin+Multiplatform+Shared+Logic+Architecture"
+                "https://www.google.com/search?q=Kotlin+Flow+Cold+vs+Hot+StateFlow+and+SharedFlow+comparison"
+              ]
+            },
+            {
+              "id": "6.6",
+              "name": "MVI Pattern: Intent, State, and Side-Effect Management",
+              "links": [
+                "https://www.google.com/search?q=MVI+Architecture+Pattern+Android+KMP+Orbit+MVI+Decompose"
+              ]
+            },
+            {
+              "id": "6.7",
+              "name": "Dependency Injection: Koin vs Hilt (JVM) vs Kodein",
+              "links": [
+                "https://www.google.com/search?q=KMP+Dependency+Injection+Koin+vs+Hilt+internals"
+              ]
+            },
+            {
+              "id": "6.8",
+              "name": "KMP Networking: Ktor Client, Serialization, and Interceptors",
+              "links": [
+                "https://www.google.com/search?q=Ktor+Client+KMP+setup+with+Kotlinx+Serialization"
+              ]
+            },
+            {
+              "id": "6.9",
+              "name": "Local Persistence: SQLDelight & Room Multiplatform",
+              "links": [
+                "https://www.google.com/search?q=SQLDelight+KMP+tutorial+and+Room+Multiplatform+migration"
+              ]
+            },
+            {
+              "id": "6.10",
+              "name": "Binary Compatibility: Swift Interop & Objective-C Frameworks",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Multiplatform+Swift+Interop+and+ObjC+Export+restrictions"
+              ]
+            },
+            {
+              "id": "6.11",
+              "name": "Jetpack Compose: Recomposition Optimization & Stability",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+Recomposition+Optimization+and+Stability+rules"
+              ]
+            },
+            {
+              "id": "6.12",
+              "name": "Mobile CI/CD: Fastlane, Bitrise, and Firebase Distribution",
+              "links": [
+                "https://www.google.com/search?q=Mobile+CICD+Fastlane+Bitrise+and+Firebase+App+Distribution"
               ]
             }
           ]

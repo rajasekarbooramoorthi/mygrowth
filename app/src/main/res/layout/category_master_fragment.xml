@@ -8,6 +8,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_horizontal_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <LinearLayout
             android:id="@+id/leftContainer"
             android:layout_width="0dp"
@@ -16,22 +25,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/rightContainer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_horizontal_category"
             app:layout_constraintWidth_percent="0.30">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_horizontal_category"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:clipToPadding="false"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
-
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="0.5dp"
-                android:layout_marginTop="@dimen/_2sdp"
-                android:background="@color/view_divider_main" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_subCategory"
@@ -53,7 +48,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/leftContainer"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_horizontal_category"
             app:layout_constraintWidth_percent="0.70">
 
             <androidx.appcompat.widget.SearchView
