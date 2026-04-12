@@ -16069,7 +16069,7 @@
     },
     {
       "categoryId": 103,
-      "categoryName": "Full Stack Master",
+      "categoryName": "Full Stack",
       "categoryTag": "get_master_skills",
       "subcategoryList": [
         {
@@ -16258,7 +16258,7 @@
         },
         {
           "subCategoryId": 3,
-          "subcategoryName": "BackEnd Engineering",
+          "subcategoryName": "BackEnd",
           "folderName": "Node, API & DB",
           "filetype": "learning_path",
           "itemList": [
