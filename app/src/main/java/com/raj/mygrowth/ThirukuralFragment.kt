@@ -18,18 +18,16 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import com.raj.mygrowth.adapter.MasterItemAdapter
 import com.raj.mygrowth.databinding.ThirukuralAdapterBinding
 import com.raj.mygrowth.databinding.ThirukuralFragmentBinding
-import com.raj.mygrowth.domain.Feature
-import com.raj.mygrowth.domain.Item
-import com.raj.mygrowth.domain.Properties
-import com.raj.mygrowth.domain.ThirukuralResponse
+ import com.raj.mygrowth.domain.ThirukuralResponseLatest
+import com.raj.mygrowth.domain.kural
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.collections.filter
 
 class ThirukuralFragment : Fragment() {
 
@@ -92,11 +90,11 @@ class ThirukuralFragment : Fragment() {
             try {
                 val list = withContext(Dispatchers.IO) {
                     val json = requireContext().assets
-                        .open("kural.json")
+                        .open("thirukural.json")
                         .bufferedReader()
                         .use { it.readText() }
-                    gson.fromJson(json, ThirukuralResponse::class.java)
-                        ?.features
+                    gson.fromJson(json, ThirukuralResponseLatest::class.java)
+                        ?.kural
                         .orEmpty()
                 }
                 val adapterKural = KuralAdapter(list)
@@ -147,7 +145,7 @@ class ThirukuralFragment : Fragment() {
                 binding.recyclerViewVertical.apply {
                     layoutManager = LinearLayoutManager(requireContext())
                     itemAnimator = null   // 🚀 removes lag
-                    this.adapter = KuralAdapter(list)
+                    //this.adapter = KuralAdapter(list)
                 }
 
             } catch (e: Exception) {
@@ -161,7 +159,7 @@ class ThirukuralFragment : Fragment() {
 
 
     class KuralAdapter(
-        private val originalList: List<Feature>
+        private val originalList: List<kural>
     ) : RecyclerView.Adapter<KuralAdapter.ViewHolder>(), Filterable {
 
         private var filteredList = originalList.toMutableList()
@@ -182,7 +180,7 @@ class ThirukuralFragment : Fragment() {
             holder: ViewHolder, @SuppressLint("RecyclerView") position: Int
         ) {
             val item = filteredList[position]
-            bind(holder.binding, item.properties)
+            bind(holder.binding, item)
         }
 
         override fun getFilter(): Filter {
@@ -194,8 +192,8 @@ class ThirukuralFragment : Fragment() {
                         originalList
                     } else {
                         originalList.filter {
-                            it.properties.kural_thanglish1.lowercase().contains(query) ||
-                                    it.properties.kural_thanglish2.lowercase().contains(query)
+                            it.Line1.lowercase().contains(query) ||
+                                    it.Line2.lowercase().contains(query)
                         }
                     }
 
@@ -207,19 +205,23 @@ class ThirukuralFragment : Fragment() {
                 @Suppress("UNCHECKED_CAST")
                 override fun publishResults(constraint: CharSequence?, results: FilterResults?) {
                     filteredList.clear()
-                    filteredList.addAll(results?.values as List<Feature>)
+                    filteredList.addAll(results?.values as List<kural>)
                     notifyDataSetChanged()
                 }
             }
         }
 
-        private fun bind(binding: ThirukuralAdapterBinding, item: Properties) {
+        private fun bind(binding: ThirukuralAdapterBinding, item: kural) {
             binding.apply {
-                tvAdhikaram.text = "${item.kural_no}.${item.pal_tamil} "
-                tvIyal.text = item.iyal_tamil
-                tvKuralTamil.text = item.kural_tamil1
-                tvExplanationTamil.text = item.kuralvilakam_tamil
-                tvExplanationEnglish.text = item.kuralvilakam_english
+                // tvAdhikaram.text = "${item.kural_no}.${item.pal_tamil} "
+                // tvIyal.text = item.iyal_tamil
+                tvKuralTamil.text = buildString {
+                    append(item.Line1)
+                    append("\n")
+                    append(item.Line2)
+                }
+                tvExplanationTamil.text = item.mk
+                tvExplanationEnglish.text = item.explanation
             }
         }
     }

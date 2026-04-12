@@ -16161,6 +16161,30 @@
               "links": [
                 "https://www.google.com/search?q=Web+Security+Top+vulnerabilities+XSS+CSRF+SQL+Injection+mitigation"
               ]
+            },
+            {
+              "id": "1.13",
+              "name": "CORS & Preflight: Origin Policy, Headers, and Credentialed Requests",
+              "links": [
+                "https://www.google.com/search?q=CORS+preflight+request+Access-Control-Allow-Origin+explained"
+              ],
+              "added": true
+            },
+            {
+              "id": "1.14",
+              "name": "CDN Internals: Edge Caching, Cache-Control Headers, and Invalidation",
+              "links": [
+                "https://www.google.com/search?q=CDN+edge+caching+Cache-Control+headers+and+cache+invalidation"
+              ],
+              "added": true
+            },
+            {
+              "id": "1.15",
+              "name": "WebAssembly (WASM): Compilation Pipeline & JS Interop",
+              "links": [
+                "https://www.google.com/search?q=WebAssembly+WASM+compilation+and+JavaScript+interop+guide"
+              ],
+              "added": true
             }
           ]
         },
@@ -16253,6 +16277,30 @@
               "links": [
                 "https://www.google.com/search?q=The+Testing+Trophy+Integration+vs+Unit+vs+E2E+testing"
               ]
+            },
+            {
+              "id": "2.13",
+              "name": "CSS Architecture: CSS Modules vs Tailwind vs CSS-in-JS Trade-offs",
+              "links": [
+                "https://www.google.com/search?q=CSS+Modules+vs+Tailwind+vs+CSS-in-JS+performance+and+DX+comparison"
+              ],
+              "added": true
+            },
+            {
+              "id": "2.14",
+              "name": "Accessibility (a11y): ARIA Roles, Focus Management & Screen Reader Audit",
+              "links": [
+                "https://www.google.com/search?q=Web+Accessibility+ARIA+roles+focus+management+axe+audit"
+              ],
+              "added": true
+            },
+            {
+              "id": "2.15",
+              "name": "Bundle Optimization: Tree Shaking, Code Splitting & Dynamic Imports",
+              "links": [
+                "https://www.google.com/search?q=Webpack+Vite+tree+shaking+code+splitting+dynamic+imports+optimization"
+              ],
+              "added": true
             }
           ]
         },
@@ -16345,6 +16393,30 @@
               "links": [
                 "https://www.google.com/search?q=Scaling+WebSockets+horizontally+with+Redis+Adapter+and+Sticky+Sessions"
               ]
+            },
+            {
+              "id": "3.13",
+              "name": "Rate Limiting Algorithms: Token Bucket vs Leaky Bucket vs Sliding Window",
+              "links": [
+                "https://www.google.com/search?q=Rate+limiting+algorithms+token+bucket+vs+leaky+bucket+vs+sliding+window"
+              ],
+              "added": true
+            },
+            {
+              "id": "3.14",
+              "name": "API Versioning Strategies: URI, Header, and Content Negotiation",
+              "links": [
+                "https://www.google.com/search?q=REST+API+versioning+strategies+URI+vs+header+vs+content+negotiation"
+              ],
+              "added": true
+            },
+            {
+              "id": "3.15",
+              "name": "Background Jobs: BullMQ, Cron Scheduling & Worker Queue Patterns",
+              "links": [
+                "https://www.google.com/search?q=BullMQ+Node.js+background+job+queue+and+cron+scheduling"
+              ],
+              "added": true
             }
           ]
         },
@@ -16437,6 +16509,30 @@
               "links": [
                 "https://www.google.com/search?q=ELK+stack+vs+Grafana+Loki+for+log+aggregation"
               ]
+            },
+            {
+              "id": "4.13",
+              "name": "AWS IAM Deep Dive: Roles, Policies, Least Privilege & Permission Boundaries",
+              "links": [
+                "https://www.google.com/search?q=AWS+IAM+roles+policies+least+privilege+and+permission+boundaries"
+              ],
+              "added": true
+            },
+            {
+              "id": "4.14",
+              "name": "AWS Cost Optimization: Savings Plans, Spot Instances & Rightsizing",
+              "links": [
+                "https://www.google.com/search?q=AWS+cost+optimization+Savings+Plans+Spot+instances+rightsizing"
+              ],
+              "added": true
+            },
+            {
+              "id": "4.15",
+              "name": "Secrets Management: AWS Secrets Manager, Rotation & Env Hygiene",
+              "links": [
+                "https://www.google.com/search?q=AWS+Secrets+Manager+rotation+and+environment+variable+hygiene"
+              ],
+              "added": true
             }
           ]
         },
@@ -16529,12 +16625,36 @@
               "links": [
                 "https://www.google.com/search?q=Distributed+Tracing+with+OpenTelemetry+and+Jaeger+guide"
               ]
+            },
+            {
+              "id": "5.13",
+              "name": "Event Sourcing & CQRS: Immutable Event Logs and Read/Write Model Separation",
+              "links": [
+                "https://www.google.com/search?q=Event+Sourcing+and+CQRS+pattern+explained+with+examples"
+              ],
+              "added": true
+            },
+            {
+              "id": "5.14",
+              "name": "Multi-Tenancy Architecture: Shared vs Siloed DB, Row-Level Security",
+              "links": [
+                "https://www.google.com/search?q=Multi-tenancy+architecture+patterns+shared+vs+silo+database"
+              ],
+              "added": true
+            },
+            {
+              "id": "5.15",
+              "name": "Feature Flags & Progressive Delivery: LaunchDarkly, Canary & A/B Patterns",
+              "links": [
+                "https://www.google.com/search?q=Feature+flags+progressive+delivery+canary+releases+LaunchDarkly"
+              ],
+              "added": true
             }
           ]
         },
         {
           "subCategoryId": 6,
-          "subcategoryName": "Mobile & KMP KMP",
+          "subcategoryName": "Mobile & KMP",
           "folderName": "Advanced Mobile",
           "filetype": "learning_path",
           "itemList": [
@@ -16620,6 +16740,136 @@
               "name": "Mobile CI/CD: Fastlane, Bitrise, and Firebase Distribution",
               "links": [
                 "https://www.google.com/search?q=Mobile+CICD+Fastlane+Bitrise+and+Firebase+App+Distribution"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 7,
+          "subcategoryName": "Design System",
+          "folderName": "UI Platform",
+          "filetype": "learning_path",
+          "added": true,
+          "itemList": [
+            {
+              "id": "7.1",
+              "name": "Design Tokens: Color, Spacing, Typography & Semantic Naming Systems",
+              "links": [
+                "https://www.google.com/search?q=Design+tokens+color+spacing+typography+naming+system+tutorial"
+              ]
+            },
+            {
+              "id": "7.2",
+              "name": "Component API Design: Props Contract, Polymorphism & Slot Patterns",
+              "links": [
+                "https://www.google.com/search?q=React+component+API+design+props+polymorphism+and+slot+patterns"
+              ]
+            },
+            {
+              "id": "7.3",
+              "name": "Storybook-Driven Development: Stories, Controls & Interaction Tests",
+              "links": [
+                "https://www.google.com/search?q=Storybook+driven+development+controls+and+interaction+testing"
+              ]
+            },
+            {
+              "id": "7.4",
+              "name": "Accessible Components: ARIA Patterns, Keyboard Navigation & Focus Traps",
+              "links": [
+                "https://www.google.com/search?q=Accessible+React+components+ARIA+keyboard+navigation+focus+trap"
+              ]
+            },
+            {
+              "id": "7.5",
+              "name": "Theming Architecture: CSS Variables, Dark Mode & White-Labeling",
+              "links": [
+                "https://www.google.com/search?q=CSS+variables+theming+dark+mode+and+white+labeling+design+system"
+              ]
+            },
+            {
+              "id": "7.6",
+              "name": "Radix UI & Headless Components: Unstyled Primitives & Composition",
+              "links": [
+                "https://www.google.com/search?q=Radix+UI+headless+components+and+composition+patterns"
+              ]
+            },
+            {
+              "id": "7.7",
+              "name": "Publishing a Component Library: NPM, Versioning, Changelogs & Bundling",
+              "links": [
+                "https://www.google.com/search?q=Publishing+React+component+library+npm+versioning+rollup+tsup"
+              ]
+            },
+            {
+              "id": "7.8",
+              "name": "Visual Regression Testing: Chromatic, Percy & Snapshot Strategies",
+              "links": [
+                "https://www.google.com/search?q=Visual+regression+testing+Chromatic+Percy+Storybook+snapshots"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 8,
+          "subcategoryName": "Architect Practices",
+          "folderName": "Tech Leadership",
+          "filetype": "learning_path",
+          "added": true,
+          "itemList": [
+            {
+              "id": "8.1",
+              "name": "Architecture Decision Records (ADRs): Format, Lifecycle & Tooling",
+              "links": [
+                "https://www.google.com/search?q=Architecture+Decision+Records+ADR+format+and+examples"
+              ]
+            },
+            {
+              "id": "8.2",
+              "name": "RFC & Tech Proposal Process: Writing, Review & Consensus Building",
+              "links": [
+                "https://www.google.com/search?q=RFC+process+technical+proposal+writing+engineering+teams"
+              ]
+            },
+            {
+              "id": "8.3",
+              "name": "Threat Modeling: STRIDE Framework & Attack Surface Analysis",
+              "links": [
+                "https://www.google.com/search?q=Threat+modeling+STRIDE+framework+attack+surface+analysis"
+              ]
+            },
+            {
+              "id": "8.4",
+              "name": "AWS Well-Architected Framework: 6 Pillars & Review Process",
+              "links": [
+                "https://www.google.com/search?q=AWS+Well-Architected+Framework+six+pillars+review+process"
+              ]
+            },
+            {
+              "id": "8.5",
+              "name": "Technical Roadmapping: Trade-off Documentation & Stakeholder Communication",
+              "links": [
+                "https://www.google.com/search?q=Technical+roadmap+trade-off+documentation+and+stakeholder+alignment"
+              ]
+            },
+            {
+              "id": "8.6",
+              "name": "Domain-Driven Design (DDD): Bounded Contexts, Aggregates & Ubiquitous Language",
+              "links": [
+                "https://www.google.com/search?q=Domain+Driven+Design+bounded+contexts+aggregates+ubiquitous+language"
+              ]
+            },
+            {
+              "id": "8.7",
+              "name": "Engineering Onboarding & Runbooks: Team Knowledge Transfer Systems",
+              "links": [
+                "https://www.google.com/search?q=Engineering+onboarding+runbooks+knowledge+transfer+documentation"
+              ]
+            },
+            {
+              "id": "8.8",
+              "name": "SLA, SLO & SLI: Defining Reliability Targets and Error Budgets",
+              "links": [
+                "https://www.google.com/search?q=SLA+SLO+SLI+error+budget+site+reliability+engineering+explained"
               ]
             }
           ]
