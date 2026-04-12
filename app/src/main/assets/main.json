@@ -15598,6 +15598,7 @@
             }
           ]
         }
+
       ]
     },
     {
@@ -16870,6 +16871,842 @@
               "name": "SLA, SLO & SLI: Defining Reliability Targets and Error Budgets",
               "links": [
                 "https://www.google.com/search?q=SLA+SLO+SLI+error+budget+site+reliability+engineering+explained"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": 104,
+      "categoryName": "KMM",
+      "categoryTag": "get_master_skills",
+      "filetype": "",
+      "subcategoryList": [
+        {
+          "subCategoryId": 1,
+          "subcategoryName": "Kotlin Language Internals",
+          "folderName": "Kotlin Deep Dive",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "1.1",
+              "name": "Kotlin Compiler Pipeline: Frontend, IR Backend & K2 Architecture",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+K2+compiler+IR+backend+pipeline+architecture+explained"
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "Inline Functions & Reified Generics: Bytecode-Level Behavior",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+inline+functions+reified+generics+bytecode+explained"
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "Delegation: Property Delegates, by lazy, Observable & Custom Delegates",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+property+delegation+by+lazy+observable+custom+delegate"
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "Sealed Classes vs Sealed Interfaces: Exhaustiveness & KMP Usage",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+sealed+classes+vs+sealed+interfaces+KMP+exhaustiveness"
+              ]
+            },
+            {
+              "id": "1.5",
+              "name": "Value Classes (inline classes): Memory Layout & Boxing Overhead",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+value+class+inline+class+memory+layout+boxing+overhead"
+              ]
+            },
+            {
+              "id": "1.6",
+              "name": "Contracts API: Kotlin compiler hints for smart cast & initialization",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+contracts+API+compiler+hints+smart+cast+initialization"
+              ]
+            },
+            {
+              "id": "1.7",
+              "name": "Type System: Variance (in/out), Star Projection & Type Erasure",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+type+variance+in+out+star+projection+type+erasure"
+              ]
+            },
+            {
+              "id": "1.8",
+              "name": "Context Receivers & Extension Functions: Scoped API Design",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+context+receivers+extension+functions+scoped+API+design"
+              ]
+            },
+            {
+              "id": "1.9",
+              "name": "Operator Overloading & DSL Building: invoke, get, set, provideDelegate",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+operator+overloading+DSL+building+invoke+provideDelegate"
+              ]
+            },
+            {
+              "id": "1.10",
+              "name": "Reflection in Kotlin: KClass, KProperty, KFunction & Multiplatform Limits",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+reflection+KClass+KProperty+KFunction+multiplatform+limits"
+              ]
+            },
+            {
+              "id": "1.11",
+              "name": "Annotations & KSP (Kotlin Symbol Processing): Code Generation Pipeline",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Symbol+Processing+KSP+annotation+processor+code+generation"
+              ]
+            },
+            {
+              "id": "1.12",
+              "name": "Destructuring, Component Functions & Data Class Internals",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+destructuring+component+functions+data+class+internals"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 2,
+          "subcategoryName": "KMP Architecture & Project Setup",
+          "folderName": "KMP Structure",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "2.1",
+              "name": "KMP Project Structure: commonMain, androidMain, iosMain & Intermediate Source Sets",
+              "links": [
+                "https://www.google.com/search?q=KMP+project+structure+commonMain+androidMain+iosMain+source+sets"
+              ]
+            },
+            {
+              "id": "2.2",
+              "name": "expect/actual Mechanism: Compiler Resolution & Exhaustive Actuals",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Multiplatform+expect+actual+compiler+resolution+exhaustive"
+              ]
+            },
+            {
+              "id": "2.3",
+              "name": "Gradle Multiplatform Plugin: Targets, Compilations & Dependency Blocks",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Multiplatform+Gradle+plugin+targets+compilations+dependencies"
+              ]
+            },
+            {
+              "id": "2.4",
+              "name": "KMP Targets: JVM, Android, iOS (arm64/x64/simulator), JS, WASM",
+              "links": [
+                "https://www.google.com/search?q=KMP+compilation+targets+JVM+Android+iOS+arm64+JavaScript+WASM"
+              ]
+            },
+            {
+              "id": "2.5",
+              "name": "Shared Module Design: API Surface, Internal vs Public & Module Boundaries",
+              "links": [
+                "https://www.google.com/search?q=KMP+shared+module+design+API+surface+internal+visibility+boundaries"
+              ]
+            },
+            {
+              "id": "2.6",
+              "name": "Interface Injection Pattern vs expect/actual: Trade-off Analysis",
+              "links": [
+                "https://www.google.com/search?q=KMP+interface+injection+vs+expect+actual+pattern+comparison"
+              ]
+            },
+            {
+              "id": "2.7",
+              "name": "Version Catalogs & Dependency Management in KMP Monorepos",
+              "links": [
+                "https://www.google.com/search?q=Gradle+version+catalogs+KMP+monorepo+dependency+management"
+              ]
+            },
+            {
+              "id": "2.8",
+              "name": "KMM (Kotlin Mobile Multiplatform): Android + iOS Shared Business Logic",
+              "links": [
+                "https://www.google.com/search?q=KMM+Kotlin+Mobile+Multiplatform+Android+iOS+shared+business+logic"
+              ]
+            },
+            {
+              "id": "2.9",
+              "name": "Modularization Strategy: Feature Modules, Core Modules & Shared Data Layer",
+              "links": [
+                "https://www.google.com/search?q=KMP+modularization+feature+modules+core+shared+data+layer"
+              ]
+            },
+            {
+              "id": "2.10",
+              "name": "Multi-Module Build Performance: Build Caching, Parallelism & Incremental Compilation",
+              "links": [
+                "https://www.google.com/search?q=KMP+multi-module+build+caching+parallelism+incremental+compilation"
+              ]
+            },
+            {
+              "id": "2.11",
+              "name": "XCFramework & CocoaPods Integration: Publishing KMP as iOS Framework",
+              "links": [
+                "https://www.google.com/search?q=KMP+XCFramework+CocoaPods+integration+publishing+iOS+framework"
+              ]
+            },
+            {
+              "id": "2.12",
+              "name": "KMP with Swift Package Manager (SPM): Direct Integration & Toolchain",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Multiplatform+Swift+Package+Manager+SPM+integration"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 3,
+          "subcategoryName": "Coroutines & Concurrency",
+          "folderName": "Async & Concurrency",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "3.1",
+              "name": "Coroutine Internals: Continuation Passing Style (CPS) & State Machine Transformation",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+coroutine+internals+continuation+passing+style+state+machine"
+              ]
+            },
+            {
+              "id": "3.2",
+              "name": "CoroutineScope & Structured Concurrency: Job Hierarchy & Cancellation Propagation",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+CoroutineScope+structured+concurrency+job+hierarchy+cancellation"
+              ]
+            },
+            {
+              "id": "3.3",
+              "name": "Dispatchers Deep Dive: Main, IO, Default, Unconfined & Custom Dispatchers",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Dispatchers+Main+IO+Default+Unconfined+custom+dispatcher"
+              ]
+            },
+            {
+              "id": "3.4",
+              "name": "Coroutine Context: Elements, Inheritance & withContext Semantics",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+CoroutineContext+elements+inheritance+withContext+semantics"
+              ]
+            },
+            {
+              "id": "3.5",
+              "name": "Exception Handling: SupervisorJob, CoroutineExceptionHandler & Failure Isolation",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+coroutine+exception+handling+SupervisorJob+CoroutineExceptionHandler"
+              ]
+            },
+            {
+              "id": "3.6",
+              "name": "Flow Internals: Cold vs Hot, Backpressure & Buffer Strategies",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Flow+internals+cold+hot+backpressure+buffer+strategies"
+              ]
+            },
+            {
+              "id": "3.7",
+              "name": "StateFlow & SharedFlow: Replay Cache, Subscription Semantics & Lifecycle",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+StateFlow+SharedFlow+replay+cache+subscription+lifecycle"
+              ]
+            },
+            {
+              "id": "3.8",
+              "name": "Flow Operators: flatMapLatest, combine, zip, merge & Custom Operators",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Flow+operators+flatMapLatest+combine+zip+merge+custom"
+              ]
+            },
+            {
+              "id": "3.9",
+              "name": "Channels: Rendezvous, Buffered, Conflated & Select Expressions",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Channels+rendezvous+buffered+conflated+select+expressions"
+              ]
+            },
+            {
+              "id": "3.10",
+              "name": "Mutex, Semaphore & Atomic Operations: Thread-Safe State in KMP",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Mutex+Semaphore+Atomic+thread-safe+state+KMP"
+              ]
+            },
+            {
+              "id": "3.11",
+              "name": "Coroutines on iOS: MainScope, Freezing & Native Coroutine Libraries",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+coroutines+iOS+MainScope+freezing+native+coroutine+libraries"
+              ]
+            },
+            {
+              "id": "3.12",
+              "name": "Testing Coroutines: TestCoroutineScheduler, runTest & Turbine for Flows",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+testing+coroutines+TestCoroutineScheduler+runTest+Turbine+Flow"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 4,
+          "subcategoryName": "Kotlin/Native & Memory",
+          "folderName": "Native & Memory",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "4.1",
+              "name": "Kotlin/Native Compilation: LLVM Backend, Bitcode & Native Binaries",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+LLVM+backend+bitcode+native+binary+compilation"
+              ]
+            },
+            {
+              "id": "4.2",
+              "name": "New K/N Memory Model: GC-based Model vs Legacy Frozen State",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+new+memory+model+GC+vs+legacy+frozen+state"
+              ]
+            },
+            {
+              "id": "4.3",
+              "name": "Kotlin/Native GC: Tracing GC, Stop-the-World Phases & Tuning",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+garbage+collector+tracing+stop-the-world+tuning"
+              ]
+            },
+            {
+              "id": "4.4",
+              "name": "Object Freezing (Legacy): freeze(), isFrozen & Immutable Shared State",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+freeze+isFrozen+immutable+shared+state+legacy"
+              ]
+            },
+            {
+              "id": "4.5",
+              "name": "Atomicfu: Cross-Platform Atomic Operations & Lock-Free Data Structures",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+atomicfu+cross-platform+atomic+operations+lock-free"
+              ]
+            },
+            {
+              "id": "4.6",
+              "name": "C Interop (cinterop): Calling C Libraries from Kotlin/Native",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+cinterop+calling+C+libraries+from+Kotlin"
+              ]
+            },
+            {
+              "id": "4.7",
+              "name": "Objective-C & Swift Interop: Mappings, Nullability & Name Mangling",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+Objective-C+Swift+interop+nullability+name+mangling"
+              ]
+            },
+            {
+              "id": "4.8",
+              "name": "Memory Leaks in K/N: Retain Cycles, Weak References & Leak Detection",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+memory+leaks+retain+cycles+weak+references+detection"
+              ]
+            },
+            {
+              "id": "4.9",
+              "name": "Kotlin/Native Performance: Benchmarking, Profiling & LLVM Optimizations",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+performance+benchmarking+profiling+LLVM+optimization"
+              ]
+            },
+            {
+              "id": "4.10",
+              "name": "Worker API (Legacy): Background Threads & Detached Object Graphs",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+Worker+API+background+threads+detached+object+graph"
+              ]
+            },
+            {
+              "id": "4.11",
+              "name": "Kotlin/Native on Linux & Embedded: IoT and Server-side Native Targets",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+Linux+embedded+IoT+server-side+native+targets"
+              ]
+            },
+            {
+              "id": "4.12",
+              "name": "Binary Size Optimization: Dead Code Elimination, Stripping & Bitcode",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+binary+size+optimization+dead+code+elimination+stripping"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 5,
+          "subcategoryName": "Compose Multiplatform (CMP)",
+          "folderName": "CMP & UI",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "5.1",
+              "name": "Compose Multiplatform Architecture: Skia/Skiko Rendering Engine & Platform Canvases",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+Skia+Skiko+rendering+engine+platform+canvas"
+              ]
+            },
+            {
+              "id": "5.2",
+              "name": "Compose Internals: Composition, Recomposition & Slot Table Mechanism",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+internals+composition+recomposition+slot+table"
+              ]
+            },
+            {
+              "id": "5.3",
+              "name": "Stability & Skippability: @Stable, @Immutable & Compiler Reports",
+              "links": [
+                "https://www.google.com/search?q=Compose+stability+skippability+Stable+Immutable+compiler+reports"
+              ]
+            },
+            {
+              "id": "5.4",
+              "name": "Compose Phases: Composition, Layout & Drawing Pipeline",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+phases+composition+layout+drawing+pipeline"
+              ]
+            },
+            {
+              "id": "5.5",
+              "name": "State Hoisting, Derived State & snapshotFlow Patterns",
+              "links": [
+                "https://www.google.com/search?q=Compose+state+hoisting+derivedStateOf+snapshotFlow+patterns"
+              ]
+            },
+            {
+              "id": "5.6",
+              "name": "Custom Layouts: MeasurePolicy, IntrinsicSize & SubcomposeLayout",
+              "links": [
+                "https://www.google.com/search?q=Compose+custom+layout+MeasurePolicy+IntrinsicSize+SubcomposeLayout"
+              ]
+            },
+            {
+              "id": "5.7",
+              "name": "Canvas & Graphics: DrawScope, Path, Shader & Custom Drawing",
+              "links": [
+                "https://www.google.com/search?q=Compose+Canvas+DrawScope+Path+Shader+custom+drawing"
+              ]
+            },
+            {
+              "id": "5.8",
+              "name": "Animations Deep Dive: Animatable, AnimationSpec, Transition & Infinite Animations",
+              "links": [
+                "https://www.google.com/search?q=Compose+animations+Animatable+AnimationSpec+Transition+infinite"
+              ]
+            },
+            {
+              "id": "5.9",
+              "name": "Navigation in CMP: Navigation-Compose, Decompose & Voyager Comparison",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+navigation+Decompose+Voyager+comparison"
+              ]
+            },
+            {
+              "id": "5.10",
+              "name": "Platform-Specific UI: expect/actual Composables & UIKitView Interop",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+expect+actual+composables+UIKitView+interop"
+              ]
+            },
+            {
+              "id": "5.11",
+              "name": "Accessibility in CMP: Semantics, ContentDescription & TalkBack/VoiceOver",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+accessibility+semantics+TalkBack+VoiceOver"
+              ]
+            },
+            {
+              "id": "5.12",
+              "name": "CMP Performance: Recomposition Tracing, Layout Inspector & Baseline Profiles",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+performance+recomposition+tracing+baseline+profiles"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 6,
+          "subcategoryName": "Networking, Data & Persistence",
+          "folderName": "Data Layer",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "6.1",
+              "name": "Ktor Client Architecture: HttpClient Engine, Plugins & Request Pipeline",
+              "links": [
+                "https://www.google.com/search?q=Ktor+client+HttpClient+engine+plugins+request+pipeline+KMP"
+              ]
+            },
+            {
+              "id": "6.2",
+              "name": "Ktor Client Plugins: Auth, Logging, ContentNegotiation & Retry",
+              "links": [
+                "https://www.google.com/search?q=Ktor+client+plugins+auth+logging+ContentNegotiation+retry"
+              ]
+            },
+            {
+              "id": "6.3",
+              "name": "kotlinx.serialization: Polymorphism, Custom Serializers & SerialDescriptor",
+              "links": [
+                "https://www.google.com/search?q=kotlinx+serialization+polymorphism+custom+serializers+SerialDescriptor"
+              ]
+            },
+            {
+              "id": "6.4",
+              "name": "Multiplatform Pagination: Paging 3 Multiplatform & Custom Paging Logic",
+              "links": [
+                "https://www.google.com/search?q=KMP+pagination+Paging+3+multiplatform+custom+paging+logic"
+              ]
+            },
+            {
+              "id": "6.5",
+              "name": "SQLDelight: Schema Definition, Migrations, Type Adapters & Reactive Queries",
+              "links": [
+                "https://www.google.com/search?q=SQLDelight+schema+migrations+type+adapters+reactive+queries+KMP"
+              ]
+            },
+            {
+              "id": "6.6",
+              "name": "Room Multiplatform: KMP Support, DAOs & Migration Strategies",
+              "links": [
+                "https://www.google.com/search?q=Room+database+multiplatform+KMP+DAO+migration+strategies"
+              ]
+            },
+            {
+              "id": "6.7",
+              "name": "Settings & Preferences: multiplatform-settings, DataStore KMP & Encrypted Storage",
+              "links": [
+                "https://www.google.com/search?q=KMP+multiplatform+settings+DataStore+encrypted+preferences"
+              ]
+            },
+            {
+              "id": "6.8",
+              "name": "Offline-First Architecture: Repository Pattern, Sync Strategies & Conflict Resolution",
+              "links": [
+                "https://www.google.com/search?q=KMP+offline+first+repository+pattern+sync+conflict+resolution"
+              ]
+            },
+            {
+              "id": "6.9",
+              "name": "GraphQL on KMP: Apollo Kotlin, Cache Policies & Subscriptions",
+              "links": [
+                "https://www.google.com/search?q=Apollo+Kotlin+KMP+GraphQL+cache+policies+subscriptions"
+              ]
+            },
+            {
+              "id": "6.10",
+              "name": "WebSocket & SSE in KMP: Ktor WebSocket, Reconnection & Flow Integration",
+              "links": [
+                "https://www.google.com/search?q=Ktor+WebSocket+SSE+KMP+reconnection+Flow+integration"
+              ]
+            },
+            {
+              "id": "6.11",
+              "name": "File I/O in KMP: okio Multiplatform, Paths & Streaming File Operations",
+              "links": [
+                "https://www.google.com/search?q=KMP+file+IO+okio+multiplatform+paths+streaming+operations"
+              ]
+            },
+            {
+              "id": "6.12",
+              "name": "Caching Strategies in KMP: In-Memory Cache, Disk Cache & TTL Policies",
+              "links": [
+                "https://www.google.com/search?q=KMP+caching+strategies+in-memory+disk+cache+TTL+policies"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 7,
+          "subcategoryName": "Platform Integration & Interop",
+          "folderName": "Platform APIs",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "7.1",
+              "name": "Android-Specific APIs from KMP: Context, Lifecycle & Activity Results",
+              "links": [
+                "https://www.google.com/search?q=KMP+Android+specific+APIs+Context+Lifecycle+ActivityResult"
+              ]
+            },
+            {
+              "id": "7.2",
+              "name": "iOS-Specific APIs from KMP: UIKit Delegates, NotificationCenter & AppDelegate",
+              "links": [
+                "https://www.google.com/search?q=KMP+iOS+UIKit+delegates+NotificationCenter+AppDelegate+interop"
+              ]
+            },
+            {
+              "id": "7.3",
+              "name": "Swift/Obj-C Export Rules: Name Mangling, Nullability & Generics Limitations",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+Native+Swift+export+name+mangling+generics+nullability+limits"
+              ]
+            },
+            {
+              "id": "7.4",
+              "name": "SKIE Library: Sealed Classes, Flows & Coroutines as Native Swift APIs",
+              "links": [
+                "https://www.google.com/search?q=SKIE+Kotlin+Swift+interop+sealed+classes+flows+coroutines+native"
+              ]
+            },
+            {
+              "id": "7.5",
+              "name": "KMP-NativeCoroutines: Exposing Suspend Functions & Flows to Swift/RxSwift",
+              "links": [
+                "https://www.google.com/search?q=KMP-NativeCoroutines+suspend+functions+Flow+Swift+RxSwift"
+              ]
+            },
+            {
+              "id": "7.6",
+              "name": "Push Notifications in KMP: FCM + APNs via expect/actual",
+              "links": [
+                "https://www.google.com/search?q=KMP+push+notifications+FCM+APNs+expect+actual+implementation"
+              ]
+            },
+            {
+              "id": "7.7",
+              "name": "Biometrics & Security: Keychain (iOS) vs Keystore (Android) via KMP",
+              "links": [
+                "https://www.google.com/search?q=KMP+biometrics+Keychain+iOS+Keystore+Android+secure+storage"
+              ]
+            },
+            {
+              "id": "7.8",
+              "name": "Camera, Maps & Sensors: Platform View Interop in Compose Multiplatform",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+camera+maps+sensors+platform+view+interop"
+              ]
+            },
+            {
+              "id": "7.9",
+              "name": "Deep Linking & URL Schemes: Unified Handling in KMP",
+              "links": [
+                "https://www.google.com/search?q=KMP+deep+linking+URL+schemes+unified+handling+Android+iOS"
+              ]
+            },
+            {
+              "id": "7.10",
+              "name": "Permissions Handling: Moko-Permissions & Custom expect/actual Flows",
+              "links": [
+                "https://www.google.com/search?q=KMP+permissions+moko-permissions+expect+actual+Android+iOS"
+              ]
+            },
+            {
+              "id": "7.11",
+              "name": "Kotlin/JS: DOM Manipulation, TypeScript Declarations & Webpack Integration",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+JS+DOM+manipulation+TypeScript+declarations+Webpack"
+              ]
+            },
+            {
+              "id": "7.12",
+              "name": "Kotlin/WASM: Browser Target, Garbage Collector Integration & JS Interop",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+WASM+browser+target+GC+integration+JavaScript+interop"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 8,
+          "subcategoryName": "Testing, DI & Architecture Patterns",
+          "folderName": "Quality & Architecture",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "8.1",
+              "name": "MVI Architecture in KMP: Intent, State, Effect & Unidirectional Data Flow",
+              "links": [
+                "https://www.google.com/search?q=MVI+architecture+KMP+Intent+State+Effect+unidirectional+data+flow"
+              ]
+            },
+            {
+              "id": "8.2",
+              "name": "Clean Architecture in KMP: Domain, Data & Presentation Layer Separation",
+              "links": [
+                "https://www.google.com/search?q=Clean+architecture+KMP+domain+data+presentation+layer+separation"
+              ]
+            },
+            {
+              "id": "8.3",
+              "name": "Decompose Library: Component-Based Navigation, Lifecycle & Back Stack",
+              "links": [
+                "https://www.google.com/search?q=Decompose+library+KMP+component+navigation+lifecycle+back+stack"
+              ]
+            },
+            {
+              "id": "8.4",
+              "name": "Koin Multiplatform: Module Definition, Scopes & KMP-Specific DSL",
+              "links": [
+                "https://www.google.com/search?q=Koin+multiplatform+module+definition+scopes+KMP+DSL"
+              ]
+            },
+            {
+              "id": "8.5",
+              "name": "Kodein-DI: Multiplatform DI, Erasure-Based Binding & Factory Patterns",
+              "links": [
+                "https://www.google.com/search?q=Kodein+DI+multiplatform+erasure+binding+factory+patterns"
+              ]
+            },
+            {
+              "id": "8.6",
+              "name": "Unit Testing in KMP: kotlin.test, Assertions & Platform-Specific Runners",
+              "links": [
+                "https://www.google.com/search?q=KMP+unit+testing+kotlin.test+assertions+platform+specific+runners"
+              ]
+            },
+            {
+              "id": "8.7",
+              "name": "Mocking in KMP: MockK Multiplatform, Mokkery & Interface-Based Fakes",
+              "links": [
+                "https://www.google.com/search?q=KMP+mocking+MockK+multiplatform+Mokkery+interface+fakes"
+              ]
+            },
+            {
+              "id": "8.8",
+              "name": "Integration Testing: Shared Test Fixtures, In-Memory DBs & Fake Network",
+              "links": [
+                "https://www.google.com/search?q=KMP+integration+testing+shared+fixtures+in-memory+DB+fake+network"
+              ]
+            },
+            {
+              "id": "8.9",
+              "name": "UI Testing CMP: Compose Test Rules, Semantics & Screenshot Testing",
+              "links": [
+                "https://www.google.com/search?q=Compose+Multiplatform+UI+testing+test+rules+semantics+screenshot"
+              ]
+            },
+            {
+              "id": "8.10",
+              "name": "Turbine: Testing Kotlin Flows — Emissions, Errors & Completion Events",
+              "links": [
+                "https://www.google.com/search?q=Turbine+library+testing+Kotlin+Flow+emissions+errors+completion"
+              ]
+            },
+            {
+              "id": "8.11",
+              "name": "Error Handling Patterns: Result, Either (Arrow-kt) & Railway-Oriented Programming",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+error+handling+Result+Arrow-kt+Either+railway+oriented"
+              ]
+            },
+            {
+              "id": "8.12",
+              "name": "Arrow-kt in KMP: Functional Programming, Option, Validated & Resource",
+              "links": [
+                "https://www.google.com/search?q=Arrow-kt+KMP+functional+programming+Option+Validated+Resource"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 9,
+          "subcategoryName": "CI/CD, Publishing & Production",
+          "folderName": "DevOps & Release",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "9.1",
+              "name": "KMP CI/CD: GitHub Actions for Android + iOS Parallel Builds",
+              "links": [
+                "https://www.google.com/search?q=KMP+CI+CD+GitHub+Actions+Android+iOS+parallel+builds"
+              ]
+            },
+            {
+              "id": "9.2",
+              "name": "Fastlane for KMP: match, gym, deliver & Cross-Platform Lane Strategies",
+              "links": [
+                "https://www.google.com/search?q=Fastlane+KMP+match+gym+deliver+cross-platform+lanes"
+              ]
+            },
+            {
+              "id": "9.3",
+              "name": "Publishing KMP Libraries to Maven Central: Signing, Staging & Automation",
+              "links": [
+                "https://www.google.com/search?q=KMP+library+publish+Maven+Central+signing+staging+automation"
+              ]
+            },
+            {
+              "id": "9.4",
+              "name": "API Compatibility: Binary Compatibility Validator & Public API Dumps",
+              "links": [
+                "https://www.google.com/search?q=Kotlin+binary+compatibility+validator+public+API+dump+KMP"
+              ]
+            },
+            {
+              "id": "9.5",
+              "name": "Versioning Strategy: Semantic Versioning, SNAPSHOT Builds & Changelog Automation",
+              "links": [
+                "https://www.google.com/search?q=KMP+semantic+versioning+SNAPSHOT+builds+changelog+automation"
+              ]
+            },
+            {
+              "id": "9.6",
+              "name": "Crashlytics & Error Monitoring: Firebase KMP SDK & Custom Crash Reporters",
+              "links": [
+                "https://www.google.com/search?q=Firebase+Crashlytics+KMP+SDK+custom+crash+reporter+multiplatform"
+              ]
+            },
+            {
+              "id": "9.7",
+              "name": "Analytics in KMP: Firebase Analytics, Mixpanel & Custom Event Pipelines",
+              "links": [
+                "https://www.google.com/search?q=KMP+analytics+Firebase+Mixpanel+custom+event+pipeline"
+              ]
+            },
+            {
+              "id": "9.8",
+              "name": "Performance Monitoring: Slow Frame Detection, ANR Tracking & Profiling KMP",
+              "links": [
+                "https://www.google.com/search?q=KMP+performance+monitoring+slow+frames+ANR+profiling"
+              ]
+            },
+            {
+              "id": "9.9",
+              "name": "App Size Optimization: R8/ProGuard for Android & Bitcode Stripping for iOS",
+              "links": [
+                "https://www.google.com/search?q=KMP+app+size+optimization+R8+ProGuard+Android+bitcode+iOS"
+              ]
+            },
+            {
+              "id": "9.10",
+              "name": "Feature Flags in KMP: Remote Config, Gradual Rollout & A/B Testing",
+              "links": [
+                "https://www.google.com/search?q=KMP+feature+flags+Firebase+Remote+Config+gradual+rollout+AB+testing"
+              ]
+            },
+            {
+              "id": "9.11",
+              "name": "Obfuscation & Security: KMP Code Hardening, SSL Pinning & Root Detection",
+              "links": [
+                "https://www.google.com/search?q=KMP+obfuscation+security+hardening+SSL+pinning+root+detection"
+              ]
+            },
+            {
+              "id": "9.12",
+              "name": "Migration Strategy: Moving Existing Android App to KMP Incrementally",
+              "links": [
+                "https://www.google.com/search?q=migrating+existing+Android+app+to+KMP+incrementally+strategy"
               ]
             }
           ]
