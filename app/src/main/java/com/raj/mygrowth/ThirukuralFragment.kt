@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Filter
-import android.widget.Filter.FilterResults
 import android.widget.Filterable
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
@@ -20,14 +19,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.raj.mygrowth.databinding.ThirukuralAdapterBinding
 import com.raj.mygrowth.databinding.ThirukuralFragmentBinding
- import com.raj.mygrowth.domain.ThirukuralResponseLatest
+import com.raj.mygrowth.domain.ThirukuralResponseLatest
 import com.raj.mygrowth.domain.kural
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.collections.filter
 
 class ThirukuralFragment : Fragment() {
 
@@ -35,6 +33,12 @@ class ThirukuralFragment : Fragment() {
     private val binding get() = _binding!!
     private val api by lazy { RetrofitClient.instance.create(ApiService::class.java) }
     private val gson by lazy { Gson() }
+
+    private var fullList: List<kural> = emptyList()
+    private var currentIndex = 0
+    private val pageSize = 20
+    private var isLoading = false
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -84,31 +88,76 @@ class ThirukuralFragment : Fragment() {
     }
 
     private fun loadData() {
-        showLoading()
-
+        //showLoading()
         viewLifecycleOwner.lifecycleScope.launch {
             try {
-                val list = withContext(Dispatchers.IO) {
-                    val json = requireContext().assets
+                fullList = withContext(Dispatchers.IO) {
+                    requireContext().assets
                         .open("thirukural.json")
                         .bufferedReader()
-                        .use { it.readText() }
-                    gson.fromJson(json, ThirukuralResponseLatest::class.java)
-                        ?.kural
-                        .orEmpty()
+                        .use { reader ->
+                            gson.fromJson(
+                                reader,
+                                ThirukuralResponseLatest::class.java
+                            )?.kural.orEmpty()
+                        }
                 }
-                val adapterKural = KuralAdapter(list)
-                hideLoading()
+
+                val adapter = KuralAdapter()
+
                 binding.recyclerViewVertical.apply {
-                    layoutManager = LinearLayoutManager(requireContext())
-                    itemAnimator = null   // 🚀 removes lag
-                    this.adapter = adapterKural
+                    layoutManager = LinearLayoutManager(context)
+                    itemAnimator = null
+                    this.adapter = adapter
                 }
-                setupSearch(adapterKural)
+
+                // Load first page
+                loadNextPage(adapter)
+
+                // Scroll listener
+                setupPagination(adapter)
+
+                setupSearch(adapter)
+
             } catch (e: Exception) {
                 Toast.makeText(requireContext(), "Failed to load data", Toast.LENGTH_SHORT).show()
+            } finally {
+                hideLoading()
             }
         }
+    }
+
+    private fun loadNextPage(adapter: KuralAdapter) {
+        if (isLoading) return
+
+        isLoading = true
+
+        val nextIndex = (currentIndex + pageSize).coerceAtMost(fullList.size)
+        val subList = fullList.subList(currentIndex, nextIndex)
+
+        adapter.addData(subList)
+        //println("Scroll---> valll-->" + "fullList:" + fullList.size + ":subList" + subList.size)
+
+        currentIndex = nextIndex
+        isLoading = false
+    }
+
+    private fun setupPagination(adapter: KuralAdapter) {
+        val layoutManager = binding.recyclerViewVertical.layoutManager as LinearLayoutManager
+
+        binding.recyclerViewVertical.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+
+                val totalItemCount = layoutManager.itemCount
+                val lastVisibleItem = layoutManager.findLastVisibleItemPosition()
+
+                if (!isLoading && lastVisibleItem >= totalItemCount - 5) {
+                    loadNextPage(adapter)
+                }
+                //println("Scroll--->" + "lastVisibleItem:" + lastVisibleItem + ":totalItemCount" + totalItemCount)
+            }
+        })
     }
 
     // ---------------- UI Helpers ----------------
@@ -159,7 +208,7 @@ class ThirukuralFragment : Fragment() {
 
 
     class KuralAdapter(
-        private val originalList: List<kural>
+        private val originalList: List<kural> = listOf()
     ) : RecyclerView.Adapter<KuralAdapter.ViewHolder>(), Filterable {
 
         private var filteredList = originalList.toMutableList()
@@ -172,6 +221,12 @@ class ThirukuralFragment : Fragment() {
                 LayoutInflater.from(parent.context), parent, false
             )
             return ViewHolder(binding)
+        }
+
+        @SuppressLint("NotifyDataSetChanged")
+        fun addData(list: List<kural>) {
+            filteredList.addAll(list)
+            notifyDataSetChanged()
         }
 
         override fun getItemCount() = filteredList.size
