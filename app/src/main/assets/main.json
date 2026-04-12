@@ -15598,7 +15598,6 @@
             }
           ]
         }
-
       ]
     },
     {
@@ -17707,6 +17706,841 @@
               "name": "Migration Strategy: Moving Existing Android App to KMP Incrementally",
               "links": [
                 "https://www.google.com/search?q=migrating+existing+Android+app+to+KMP+incrementally+strategy"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "categoryId": 105,
+      "categoryName": "Kotlin Compose UI",
+      "categoryTag": "get_master_skills",
+      "subcategoryList": [
+        {
+          "subCategoryId": 1,
+          "subcategoryName": "Compose Internals",
+          "folderName": "How Compose Works",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "1.1",
+              "name": "Compose Compiler Plugin: @Composable Transformation & Restart Lambda Generation",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+compiler+plugin+composable+transformation+restart+lambda"
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "Slot Table & Gap Buffer: How Compose Stores Composition State",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+slot+table+gap+buffer+composition+state+storage"
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "Composition, Recomposition & Commit Phase: Full Lifecycle Explained",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+composition+recomposition+commit+phase+lifecycle"
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "Positional Memoization: How Compose Identifies Composable Call Sites",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+positional+memoization+call+site+identification"
+              ]
+            },
+            {
+              "id": "1.5",
+              "name": "Recomposition Scope: What Triggers It, Skipping & Scope Minimization",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+recomposition+scope+triggers+skipping+minimization"
+              ]
+            },
+            {
+              "id": "1.6",
+              "name": "Stability System: @Stable, @Immutable, Unstable Classes & Compiler Reports",
+              "links": [
+                "https://www.google.com/search?q=Compose+stability+system+Stable+Immutable+unstable+compiler+reports"
+              ]
+            },
+            {
+              "id": "1.7",
+              "name": "remember & rememberSaveable: Internals, Keys & SaveableStateHolder",
+              "links": [
+                "https://www.google.com/search?q=Compose+remember+rememberSaveable+internals+keys+SaveableStateHolder"
+              ]
+            },
+            {
+              "id": "1.8",
+              "name": "CompositionLocal: Implicit Data Passing, staticCompositionLocalOf vs compositionLocalOf",
+              "links": [
+                "https://www.google.com/search?q=Compose+CompositionLocal+implicit+data+staticCompositionLocalOf+vs+compositionLocalOf"
+              ]
+            },
+            {
+              "id": "1.9",
+              "name": "Side Effects: LaunchedEffect, SideEffect, DisposableEffect & rememberCoroutineScope",
+              "links": [
+                "https://www.google.com/search?q=Compose+side+effects+LaunchedEffect+SideEffect+DisposableEffect+rememberCoroutineScope"
+              ]
+            },
+            {
+              "id": "1.10",
+              "name": "Compose Runtime vs Compose UI: Separation of Concerns & Custom Appliers",
+              "links": [
+                "https://www.google.com/search?q=Compose+runtime+vs+Compose+UI+custom+applier+separation+of+concerns"
+              ]
+            },
+            {
+              "id": "1.11",
+              "name": "Compose Phases: Composition → Layout → Drawing & Phase Optimization",
+              "links": [
+                "https://www.google.com/search?q=Jetpack+Compose+three+phases+composition+layout+drawing+optimization"
+              ]
+            },
+            {
+              "id": "1.12",
+              "name": "Compose Compiler Metrics: Skippable, Restartable & Inferred Stability Reports",
+              "links": [
+                "https://www.google.com/search?q=Compose+compiler+metrics+skippable+restartable+inferred+stability+report"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 2,
+          "subcategoryName": "State & Architecture",
+          "folderName": "State Management",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "2.1",
+              "name": "Unidirectional Data Flow (UDF): State Hoisting, Events & Single Source of Truth",
+              "links": [
+                "https://www.google.com/search?q=Compose+unidirectional+data+flow+state+hoisting+single+source+of+truth"
+              ]
+            },
+            {
+              "id": "2.2",
+              "name": "ViewModel + StateFlow: collectAsStateWithLifecycle & Lifecycle-Aware Collection",
+              "links": [
+                "https://www.google.com/search?q=Compose+ViewModel+StateFlow+collectAsStateWithLifecycle+lifecycle+aware"
+              ]
+            },
+            {
+              "id": "2.3",
+              "name": "derivedStateOf: Derived Computations, Thresholds & Avoiding Over-recomposition",
+              "links": [
+                "https://www.google.com/search?q=Compose+derivedStateOf+derived+computations+avoid+over+recomposition"
+              ]
+            },
+            {
+              "id": "2.4",
+              "name": "snapshotFlow: Bridging Compose State to Kotlin Flow",
+              "links": [
+                "https://www.google.com/search?q=Compose+snapshotFlow+bridge+state+Kotlin+Flow+coroutine"
+              ]
+            },
+            {
+              "id": "2.5",
+              "name": "MVI in Compose: Intent, UiState, UiEffect & ViewModel Contract Pattern",
+              "links": [
+                "https://www.google.com/search?q=MVI+pattern+Jetpack+Compose+Intent+UiState+UiEffect+ViewModel"
+              ]
+            },
+            {
+              "id": "2.6",
+              "name": "Molecule Library: Compose-Driven StateFlow & Presenter Pattern",
+              "links": [
+                "https://www.google.com/search?q=Molecule+library+Compose+StateFlow+presenter+pattern+Cash+App"
+              ]
+            },
+            {
+              "id": "2.7",
+              "name": "SavedStateHandle in Compose: Process Death, ViewModel & Navigation Args",
+              "links": [
+                "https://www.google.com/search?q=SavedStateHandle+Compose+process+death+ViewModel+navigation+args"
+              ]
+            },
+            {
+              "id": "2.8",
+              "name": "Compose State Snapshot System: MutableState, SnapshotMutationPolicy & Transactions",
+              "links": [
+                "https://www.google.com/search?q=Compose+snapshot+system+MutableState+SnapshotMutationPolicy+transactions"
+              ]
+            },
+            {
+              "id": "2.9",
+              "name": "produceState & collectAsState: Bridging Non-Compose Data Sources",
+              "links": [
+                "https://www.google.com/search?q=Compose+produceState+collectAsState+bridge+non-compose+data+sources"
+              ]
+            },
+            {
+              "id": "2.10",
+              "name": "Complex UI State: Sealed Classes, Loading/Error/Success Patterns",
+              "links": [
+                "https://www.google.com/search?q=Compose+complex+UI+state+sealed+classes+loading+error+success"
+              ]
+            },
+            {
+              "id": "2.11",
+              "name": "Paging 3 with Compose: LazyPagingItems, Load States & Error Handling",
+              "links": [
+                "https://www.google.com/search?q=Paging+3+Jetpack+Compose+LazyPagingItems+load+states+error+handling"
+              ]
+            },
+            {
+              "id": "2.12",
+              "name": "Global State vs Local State: When to Hoist, When to Keep Local",
+              "links": [
+                "https://www.google.com/search?q=Compose+global+vs+local+state+when+to+hoist+state+best+practices"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 3,
+          "subcategoryName": "Layout System",
+          "folderName": "Layouts & Constraints",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "3.1",
+              "name": "Compose Layout Model: Constraints, MeasurePolicy & Single-Pass Measurement",
+              "links": [
+                "https://www.google.com/search?q=Compose+layout+model+constraints+MeasurePolicy+single+pass+measurement"
+              ]
+            },
+            {
+              "id": "3.2",
+              "name": "Box, Row, Column Internals: Arrangement, Alignment & Weight Modifier",
+              "links": [
+                "https://www.google.com/search?q=Compose+Box+Row+Column+internals+Arrangement+Alignment+weight+modifier"
+              ]
+            },
+            {
+              "id": "3.3",
+              "name": "Custom Layout with Layout Composable: MeasureScope & Placeable",
+              "links": [
+                "https://www.google.com/search?q=Compose+custom+layout+Layout+composable+MeasureScope+Placeable"
+              ]
+            },
+            {
+              "id": "3.4",
+              "name": "SubcomposeLayout: Deferred Measurement, AdaptiveLayout & SizeClass",
+              "links": [
+                "https://www.google.com/search?q=Compose+SubcomposeLayout+deferred+measurement+AdaptiveLayout"
+              ]
+            },
+            {
+              "id": "3.5",
+              "name": "IntrinsicSize: Min/Max Intrinsics & Resolving Size Dependencies",
+              "links": [
+                "https://www.google.com/search?q=Compose+IntrinsicSize+min+max+intrinsics+size+dependencies"
+              ]
+            },
+            {
+              "id": "3.6",
+              "name": "ConstraintLayout in Compose: Chains, Barriers, Guidelines & Bias",
+              "links": [
+                "https://www.google.com/search?q=ConstraintLayout+Jetpack+Compose+chains+barriers+guidelines+bias"
+              ]
+            },
+            {
+              "id": "3.7",
+              "name": "LazyColumn & LazyRow Internals: Recycling, Keys & Item Animations",
+              "links": [
+                "https://www.google.com/search?q=Compose+LazyColumn+LazyRow+internals+recycling+keys+item+animations"
+              ]
+            },
+            {
+              "id": "3.8",
+              "name": "LazyGrid & LazyStaggeredGrid: Span Strategy & Content Padding",
+              "links": [
+                "https://www.google.com/search?q=Compose+LazyGrid+LazyStaggeredGrid+span+strategy+content+padding"
+              ]
+            },
+            {
+              "id": "3.9",
+              "name": "Pager: HorizontalPager, VerticalPager, PageSize & Snap Behavior",
+              "links": [
+                "https://www.google.com/search?q=Compose+HorizontalPager+VerticalPager+PageSize+snap+behavior"
+              ]
+            },
+            {
+              "id": "3.10",
+              "name": "Adaptive Layouts: WindowSizeClass, Foldables & Two-Pane Layouts",
+              "links": [
+                "https://www.google.com/search?q=Compose+adaptive+layouts+WindowSizeClass+foldables+two+pane"
+              ]
+            },
+            {
+              "id": "3.11",
+              "name": "Modifier System Internals: Modifier.Node, Chain Architecture & Performance",
+              "links": [
+                "https://www.google.com/search?q=Compose+Modifier+Node+chain+architecture+performance+internals"
+              ]
+            },
+            {
+              "id": "3.12",
+              "name": "Custom Modifiers: DrawModifier, LayoutModifier & PointerInputModifier",
+              "links": [
+                "https://www.google.com/search?q=Compose+custom+modifiers+DrawModifier+LayoutModifier+PointerInputModifier"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 4,
+          "subcategoryName": "Animations",
+          "folderName": "Motion & Transitions",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "4.1",
+              "name": "Animation APIs Overview: animate*AsState, Animatable, updateTransition & AnimatedContent",
+              "links": [
+                "https://www.google.com/search?q=Compose+animation+APIs+animateAsState+Animatable+updateTransition+AnimatedContent"
+              ]
+            },
+            {
+              "id": "4.2",
+              "name": "AnimationSpec Deep Dive: TweenSpec, SpringSpec, KeyframesSpec & SnapSpec",
+              "links": [
+                "https://www.google.com/search?q=Compose+AnimationSpec+TweenSpec+SpringSpec+KeyframesSpec+SnapSpec"
+              ]
+            },
+            {
+              "id": "4.3",
+              "name": "Transition API: Multi-Property Animations, Child Transitions & States",
+              "links": [
+                "https://www.google.com/search?q=Compose+Transition+API+multi+property+animations+child+transitions"
+              ]
+            },
+            {
+              "id": "4.4",
+              "name": "AnimatedVisibility: EnterTransition, ExitTransition & Custom Transitions",
+              "links": [
+                "https://www.google.com/search?q=Compose+AnimatedVisibility+EnterTransition+ExitTransition+custom"
+              ]
+            },
+            {
+              "id": "4.5",
+              "name": "AnimatedContent: ContentTransform, SizeTransform & Crossfade Internals",
+              "links": [
+                "https://www.google.com/search?q=Compose+AnimatedContent+ContentTransform+SizeTransform+Crossfade"
+              ]
+            },
+            {
+              "id": "4.6",
+              "name": "Infinite Animations: rememberInfiniteTransition, Pulse & Shimmer Effects",
+              "links": [
+                "https://www.google.com/search?q=Compose+rememberInfiniteTransition+pulse+shimmer+infinite+animation"
+              ]
+            },
+            {
+              "id": "4.7",
+              "name": "Shared Element Transitions: sharedElement, sharedBounds & Navigation Animations",
+              "links": [
+                "https://www.google.com/search?q=Compose+shared+element+transition+sharedElement+sharedBounds+navigation"
+              ]
+            },
+            {
+              "id": "4.8",
+              "name": "Gesture-Driven Animations: Draggable, Swipeable & AnchoredDraggable",
+              "links": [
+                "https://www.google.com/search?q=Compose+gesture+driven+animation+Draggable+Swipeable+AnchoredDraggable"
+              ]
+            },
+            {
+              "id": "4.9",
+              "name": "Physics-Based Animations: Spring, Decay & Fling Behavior",
+              "links": [
+                "https://www.google.com/search?q=Compose+physics+animations+Spring+Decay+fling+behavior"
+              ]
+            },
+            {
+              "id": "4.10",
+              "name": "Lottie in Compose: LottieAnimation, LottieCompositionSpec & Dynamic Properties",
+              "links": [
+                "https://www.google.com/search?q=Lottie+Jetpack+Compose+LottieAnimation+LottieCompositionSpec+dynamic"
+              ]
+            },
+            {
+              "id": "4.11",
+              "name": "Predictive Back Animation: BackHandler, SeekableTransitionState & Android 14",
+              "links": [
+                "https://www.google.com/search?q=Compose+predictive+back+animation+BackHandler+SeekableTransitionState"
+              ]
+            },
+            {
+              "id": "4.12",
+              "name": "Animation Debugging: Layout Inspector Animation Preview & Slow Animation Mode",
+              "links": [
+                "https://www.google.com/search?q=Compose+animation+debugging+Layout+Inspector+slow+animation+mode"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 5,
+          "subcategoryName": "Graphics & Drawing",
+          "folderName": "Canvas & Rendering",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "5.1",
+              "name": "Canvas & DrawScope: Coordinate System, Transformations & ClipRect",
+              "links": [
+                "https://www.google.com/search?q=Compose+Canvas+DrawScope+coordinate+system+transformations+ClipRect"
+              ]
+            },
+            {
+              "id": "5.2",
+              "name": "Path API: Bezier Curves, arcTo, PathEffect & Complex Shape Drawing",
+              "links": [
+                "https://www.google.com/search?q=Compose+Path+API+bezier+curves+arcTo+PathEffect+shape+drawing"
+              ]
+            },
+            {
+              "id": "5.3",
+              "name": "Paint & Brush: Solid, LinearGradient, RadialGradient & Shader Brushes",
+              "links": [
+                "https://www.google.com/search?q=Compose+Paint+Brush+LinearGradient+RadialGradient+Shader+brushes"
+              ]
+            },
+            {
+              "id": "5.4",
+              "name": "BlendMode & ColorFilter: Porter-Duff Compositing & Image Tinting",
+              "links": [
+                "https://www.google.com/search?q=Compose+BlendMode+ColorFilter+Porter-Duff+compositing+image+tinting"
+              ]
+            },
+            {
+              "id": "5.5",
+              "name": "RenderEffect & GraphicsLayer: Blur, Saturation & Hardware Acceleration",
+              "links": [
+                "https://www.google.com/search?q=Compose+RenderEffect+GraphicsLayer+blur+saturation+hardware+acceleration"
+              ]
+            },
+            {
+              "id": "5.6",
+              "name": "Custom Shape: Shape Interface, GenericShape & Outline Drawing",
+              "links": [
+                "https://www.google.com/search?q=Compose+custom+Shape+interface+GenericShape+Outline+drawing"
+              ]
+            },
+            {
+              "id": "5.7",
+              "name": "Image Loading: Coil 3, Glide Compose, Painter & AsyncImage Internals",
+              "links": [
+                "https://www.google.com/search?q=Compose+image+loading+Coil+3+Glide+Compose+Painter+AsyncImage"
+              ]
+            },
+            {
+              "id": "5.8",
+              "name": "Text on Canvas: TextMeasurer, drawText & Custom Text Rendering",
+              "links": [
+                "https://www.google.com/search?q=Compose+TextMeasurer+drawText+custom+text+rendering+Canvas"
+              ]
+            },
+            {
+              "id": "5.9",
+              "name": "Vector Graphics: ImageVector, VectorPainter & Animated Vector Drawables",
+              "links": [
+                "https://www.google.com/search?q=Compose+ImageVector+VectorPainter+animated+vector+drawable"
+              ]
+            },
+            {
+              "id": "5.10",
+              "name": "OpenGL & Vulkan Interop: AndroidExternalSurface & GPU Rendering in Compose",
+              "links": [
+                "https://www.google.com/search?q=Compose+AndroidExternalSurface+OpenGL+Vulkan+GPU+rendering+interop"
+              ]
+            },
+            {
+              "id": "5.11",
+              "name": "Compose with Camera2 & CameraX: PreviewView, SurfaceRequest & Viewfinder",
+              "links": [
+                "https://www.google.com/search?q=Compose+CameraX+Camera2+PreviewView+SurfaceRequest+Viewfinder"
+              ]
+            },
+            {
+              "id": "5.12",
+              "name": "Charts & Data Visualization: Vico, MPAndroidChart in Compose & Custom Canvas Charts",
+              "links": [
+                "https://www.google.com/search?q=Compose+charts+Vico+MPAndroidChart+custom+canvas+data+visualization"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 6,
+          "subcategoryName": "Navigation & Deep Linking",
+          "folderName": "Navigation",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "6.1",
+              "name": "Navigation Component Internals: NavController, NavBackStackEntry & NavGraph",
+              "links": [
+                "https://www.google.com/search?q=Compose+Navigation+NavController+NavBackStackEntry+NavGraph+internals"
+              ]
+            },
+            {
+              "id": "6.2",
+              "name": "Type-Safe Navigation: NavType, Custom NavType & Serializable Args",
+              "links": [
+                "https://www.google.com/search?q=Compose+type-safe+navigation+NavType+custom+NavType+serializable+args"
+              ]
+            },
+            {
+              "id": "6.3",
+              "name": "Nested Navigation Graphs: Feature Modules, Start Destinations & Encapsulation",
+              "links": [
+                "https://www.google.com/search?q=Compose+nested+navigation+graphs+feature+modules+start+destinations"
+              ]
+            },
+            {
+              "id": "6.4",
+              "name": "Bottom Navigation & NavigationDrawer: Multi-Back-Stack & State Restoration",
+              "links": [
+                "https://www.google.com/search?q=Compose+bottom+navigation+NavigationDrawer+multi+back+stack+state+restoration"
+              ]
+            },
+            {
+              "id": "6.5",
+              "name": "Deep Links: URI Patterns, Implicit Intents & NavDeepLink in Compose",
+              "links": [
+                "https://www.google.com/search?q=Compose+navigation+deep+links+URI+patterns+implicit+intents+NavDeepLink"
+              ]
+            },
+            {
+              "id": "6.6",
+              "name": "Navigation Transitions: Animated NavHost, Enter/Exit & Shared Element",
+              "links": [
+                "https://www.google.com/search?q=Compose+navigation+transitions+animated+NavHost+enter+exit+shared+element"
+              ]
+            },
+            {
+              "id": "6.7",
+              "name": "Back Stack Management: popUpTo, inclusive, launchSingleTop & SaveState",
+              "links": [
+                "https://www.google.com/search?q=Compose+navigation+back+stack+popUpTo+inclusive+launchSingleTop+saveState"
+              ]
+            },
+            {
+              "id": "6.8",
+              "name": "Navigation with ViewModel: scoped ViewModels, hiltViewModel & navGraphViewModel",
+              "links": [
+                "https://www.google.com/search?q=Compose+navigation+ViewModel+scoped+hiltViewModel+navGraphViewModel"
+              ]
+            },
+            {
+              "id": "6.9",
+              "name": "Destination Result Passing: savedStateHandle, BackStack Result & SetResult",
+              "links": [
+                "https://www.google.com/search?q=Compose+navigation+result+passing+savedStateHandle+back+stack+result"
+              ]
+            },
+            {
+              "id": "6.10",
+              "name": "Adaptive Navigation: NavigationSuiteScaffold & Rail/Drawer/Bar Strategy",
+              "links": [
+                "https://www.google.com/search?q=Compose+adaptive+navigation+NavigationSuiteScaffold+rail+drawer"
+              ]
+            },
+            {
+              "id": "6.11",
+              "name": "Voyager Navigation Library: Tab, Stack, BottomSheet & Koin Integration",
+              "links": [
+                "https://www.google.com/search?q=Voyager+navigation+library+Compose+Tab+Stack+BottomSheet+Koin"
+              ]
+            },
+            {
+              "id": "6.12",
+              "name": "Decompose Navigation: ComponentContext, Back Handling & Lifecycle Ownership",
+              "links": [
+                "https://www.google.com/search?q=Decompose+navigation+ComponentContext+back+handling+lifecycle+KMP"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 7,
+          "subcategoryName": "Design System & Theming",
+          "folderName": "Material & Tokens",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "7.1",
+              "name": "Material 3 Architecture: ColorScheme, Typography, Shapes & MaterialTheme",
+              "links": [
+                "https://www.google.com/search?q=Material+3+Compose+ColorScheme+Typography+Shapes+MaterialTheme"
+              ]
+            },
+            {
+              "id": "7.2",
+              "name": "Dynamic Color: wallpaperColors, Material You & per-device Theming",
+              "links": [
+                "https://www.google.com/search?q=Compose+Material+3+dynamic+color+wallpaperColors+Material+You"
+              ]
+            },
+            {
+              "id": "7.3",
+              "name": "Custom Design Tokens: Extending MaterialTheme with CompositionLocal",
+              "links": [
+                "https://www.google.com/search?q=Compose+custom+design+tokens+extend+MaterialTheme+CompositionLocal"
+              ]
+            },
+            {
+              "id": "7.4",
+              "name": "Dark Mode: isSystemInDarkTheme, DynamicColorScheme & Manual Override",
+              "links": [
+                "https://www.google.com/search?q=Compose+dark+mode+isSystemInDarkTheme+DynamicColorScheme+manual+override"
+              ]
+            },
+            {
+              "id": "7.5",
+              "name": "Typography System: TextStyle, FontFamily, Variable Fonts & Downloadable Fonts",
+              "links": [
+                "https://www.google.com/search?q=Compose+typography+TextStyle+FontFamily+variable+fonts+downloadable"
+              ]
+            },
+            {
+              "id": "7.6",
+              "name": "Building a Component Library: Slot APIs, Default Params & Component Variants",
+              "links": [
+                "https://www.google.com/search?q=Compose+component+library+slot+APIs+default+params+variants"
+              ]
+            },
+            {
+              "id": "7.7",
+              "name": "Scaffold & Surface: Elevation, TonalElevation & Overlay System",
+              "links": [
+                "https://www.google.com/search?q=Compose+Scaffold+Surface+elevation+tonalElevation+overlay+system"
+              ]
+            },
+            {
+              "id": "7.8",
+              "name": "Icon System: Material Icons Extended, Custom Icons & IconButton Sizes",
+              "links": [
+                "https://www.google.com/search?q=Compose+Material+Icons+Extended+custom+icons+IconButton+sizes"
+              ]
+            },
+            {
+              "id": "7.9",
+              "name": "Motion & Transitions in M3: Motion Tokens, Easing & Duration Tokens",
+              "links": [
+                "https://www.google.com/search?q=Material+3+Compose+motion+tokens+easing+duration+animation+tokens"
+              ]
+            },
+            {
+              "id": "7.10",
+              "name": "Storybook-Style Previews: @Preview Variants, PreviewParameter & Device Specs",
+              "links": [
+                "https://www.google.com/search?q=Compose+Preview+variants+PreviewParameter+device+specs+storybook"
+              ]
+            },
+            {
+              "id": "7.11",
+              "name": "Multi-Brand Theming: Theme Switching, White-Label Apps & Token Overrides",
+              "links": [
+                "https://www.google.com/search?q=Compose+multi-brand+theming+white+label+app+token+overrides+switch"
+              ]
+            },
+            {
+              "id": "7.12",
+              "name": "Wear OS & TV Compose Theming: MaterialTheme for Wear, TV & Adaptive Surfaces",
+              "links": [
+                "https://www.google.com/search?q=Compose+Wear+OS+TV+MaterialTheme+adaptive+surfaces+theming"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 8,
+          "subcategoryName": "Gestures, Input & Accessibility",
+          "folderName": "Interaction & a11y",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "8.1",
+              "name": "Pointer Input System: PointerInputScope, detectTapGestures & awaitPointerEventScope",
+              "links": [
+                "https://www.google.com/search?q=Compose+PointerInputScope+detectTapGestures+awaitPointerEventScope"
+              ]
+            },
+            {
+              "id": "8.2",
+              "name": "Drag, Swipe & Pan: detectDragGestures, transformable & Multi-Touch",
+              "links": [
+                "https://www.google.com/search?q=Compose+drag+swipe+pan+detectDragGestures+transformable+multi-touch"
+              ]
+            },
+            {
+              "id": "8.3",
+              "name": "AnchoredDraggable & SwipeToDismiss: State Machine & Velocity Thresholds",
+              "links": [
+                "https://www.google.com/search?q=Compose+AnchoredDraggable+SwipeToDismiss+state+machine+velocity+threshold"
+              ]
+            },
+            {
+              "id": "8.4",
+              "name": "Nestedscroll: NestedScrollConnection, NestedScrollDispatcher & Collapsing Toolbar",
+              "links": [
+                "https://www.google.com/search?q=Compose+NestedScrollConnection+NestedScrollDispatcher+collapsing+toolbar"
+              ]
+            },
+            {
+              "id": "8.5",
+              "name": "Focus System: FocusRequester, FocusManager, FocusDirection & FocusProperties",
+              "links": [
+                "https://www.google.com/search?q=Compose+FocusRequester+FocusManager+FocusDirection+FocusProperties"
+              ]
+            },
+            {
+              "id": "8.6",
+              "name": "Keyboard Handling: ImeAction, KeyboardOptions, WindowInsets & ime Padding",
+              "links": [
+                "https://www.google.com/search?q=Compose+keyboard+ImeAction+KeyboardOptions+WindowInsets+imePadding"
+              ]
+            },
+            {
+              "id": "8.7",
+              "name": "WindowInsets: systemBars, navigationBars, statusBars & Edge-to-Edge UI",
+              "links": [
+                "https://www.google.com/search?q=Compose+WindowInsets+systemBars+navigationBars+edge-to-edge+UI"
+              ]
+            },
+            {
+              "id": "8.8",
+              "name": "Semantics & Accessibility: SemanticsModifier, mergeDescendants & CustomActions",
+              "links": [
+                "https://www.google.com/search?q=Compose+Semantics+accessibility+SemanticsModifier+mergeDescendants+customActions"
+              ]
+            },
+            {
+              "id": "8.9",
+              "name": "TalkBack & Screen Reader Support: ContentDescription, Roles & LiveRegion",
+              "links": [
+                "https://www.google.com/search?q=Compose+TalkBack+screen+reader+ContentDescription+Role+LiveRegion"
+              ]
+            },
+            {
+              "id": "8.10",
+              "name": "Text Input & TextField Internals: TextFieldState, Selection & InputTransformation",
+              "links": [
+                "https://www.google.com/search?q=Compose+TextField+TextFieldState+selection+InputTransformation+internals"
+              ]
+            },
+            {
+              "id": "8.11",
+              "name": "Haptic Feedback & Accessibility Services: HapticFeedbackType & Custom a11y Actions",
+              "links": [
+                "https://www.google.com/search?q=Compose+haptic+feedback+HapticFeedbackType+accessibility+custom+actions"
+              ]
+            },
+            {
+              "id": "8.12",
+              "name": "Right-to-Left (RTL) & Localization: LayoutDirection, Mirrors & BiDi Text",
+              "links": [
+                "https://www.google.com/search?q=Compose+RTL+layout+direction+mirroring+BiDi+text+localization"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 9,
+          "subcategoryName": "Performance, Testing & Tooling",
+          "folderName": "Quality & Profiling",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "9.1",
+              "name": "Compose Performance Debugging: Layout Inspector, Recomposition Counts & Highlights",
+              "links": [
+                "https://www.google.com/search?q=Compose+performance+debugging+Layout+Inspector+recomposition+counts"
+              ]
+            },
+            {
+              "id": "9.2",
+              "name": "Baseline Profiles: Compose Startup, ProfileInstaller & Macrobenchmark",
+              "links": [
+                "https://www.google.com/search?q=Compose+Baseline+Profiles+ProfileInstaller+Macrobenchmark+startup"
+              ]
+            },
+            {
+              "id": "9.3",
+              "name": "Systrace & Perfetto: Compose Frame Tracing & Jank Detection",
+              "links": [
+                "https://www.google.com/search?q=Compose+Systrace+Perfetto+frame+tracing+jank+detection"
+              ]
+            },
+            {
+              "id": "9.4",
+              "name": "Avoiding Common Pitfalls: Unstable Lambdas, Reading State Too High & Key Misuse",
+              "links": [
+                "https://www.google.com/search?q=Compose+performance+pitfalls+unstable+lambdas+state+reading+key+misuse"
+              ]
+            },
+            {
+              "id": "9.5",
+              "name": "Strong Skipping Mode: New Compose Compiler Default & Migration Guide",
+              "links": [
+                "https://www.google.com/search?q=Compose+strong+skipping+mode+compiler+default+migration+guide"
+              ]
+            },
+            {
+              "id": "9.6",
+              "name": "Compose UI Testing: createComposeRule, onNode, Actions & Assertions",
+              "links": [
+                "https://www.google.com/search?q=Compose+UI+testing+createComposeRule+onNode+actions+assertions"
+              ]
+            },
+            {
+              "id": "9.7",
+              "name": "Semantics-Based Testing: SemanticsNodeInteraction, Matchers & Custom Finders",
+              "links": [
+                "https://www.google.com/search?q=Compose+semantics+testing+SemanticsNodeInteraction+matchers+custom+finders"
+              ]
+            },
+            {
+              "id": "9.8",
+              "name": "Screenshot Testing: Roborazzi, Paparazzi & Golden Image Workflows",
+              "links": [
+                "https://www.google.com/search?q=Compose+screenshot+testing+Roborazzi+Paparazzi+golden+image+workflow"
+              ]
+            },
+            {
+              "id": "9.9",
+              "name": "End-to-End Testing: Espresso + Compose Interop & UiAutomator Integration",
+              "links": [
+                "https://www.google.com/search?q=Compose+end+to+end+testing+Espresso+interop+UiAutomator"
+              ]
+            },
+            {
+              "id": "9.10",
+              "name": "Compose Previews: MultiPreview, PreviewParameter Providers & Preview in CI",
+              "links": [
+                "https://www.google.com/search?q=Compose+MultiPreview+PreviewParameter+providers+preview+CI+pipeline"
+              ]
+            },
+            {
+              "id": "9.11",
+              "name": "Compose Interop: AndroidView, AbstractComposeView & Hybrid Migration Strategy",
+              "links": [
+                "https://www.google.com/search?q=Compose+interop+AndroidView+AbstractComposeView+hybrid+migration"
+              ]
+            },
+            {
+              "id": "9.12",
+              "name": "R8 & Compose: ProGuard Rules, Reflection Keep Rules & Release Build Validation",
+              "links": [
+                "https://www.google.com/search?q=Compose+R8+ProGuard+rules+reflection+keep+rules+release+build"
               ]
             }
           ]
