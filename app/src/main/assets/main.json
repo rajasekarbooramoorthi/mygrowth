@@ -18546,6 +18546,841 @@
           ]
         }
       ]
+    },
+    {
+      "categoryId": 106,
+      "categoryName": "Play Store & App Publishing",
+      "categoryTag": "get_master_skills",
+      "subcategoryList": [
+        {
+          "subCategoryId": 1,
+          "subcategoryName": "Play Console Fundamentals",
+          "folderName": "Console & Account",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "1.1",
+              "name": "Google Play Console: Account Setup, Developer Identity & Policy Compliance",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+account+setup+developer+identity+policy+compliance"
+              ]
+            },
+            {
+              "id": "1.2",
+              "name": "App Dashboard: Key Metrics, Alerts & Health Indicators Overview",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+app+dashboard+metrics+alerts+health+indicators"
+              ]
+            },
+            {
+              "id": "1.3",
+              "name": "Organization Accounts: Teams, Permission Roles & Access Control",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+organization+teams+permission+roles+access+control"
+              ]
+            },
+            {
+              "id": "1.4",
+              "name": "App Signing: Play App Signing, Upload Key vs App Key & Key Migration",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+app+signing+upload+key+vs+app+signing+key+migration"
+              ]
+            },
+            {
+              "id": "1.5",
+              "name": "Play Console APIs: Developer API, Reviews API & Subscriptions API",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Developer+API+Reviews+API+Subscriptions+API+automation"
+              ]
+            },
+            {
+              "id": "1.6",
+              "name": "App Content Rating: IARC, Questionnaire & Regional Rating Requirements",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+IARC+content+rating+questionnaire+regional+requirements"
+              ]
+            },
+            {
+              "id": "1.7",
+              "name": "Data Safety Section: Data Types, Sharing Practices & Privacy Policy Requirements",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+data+safety+section+data+types+sharing+practices+privacy"
+              ]
+            },
+            {
+              "id": "1.8",
+              "name": "Target Audience & Content: Age Groups, Families Policy & COPPA Compliance",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+target+audience+families+policy+COPPA+compliance"
+              ]
+            },
+            {
+              "id": "1.9",
+              "name": "App Declarations: Ads, COVID-19 Apps, Government Apps & Sensitive Categories",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+app+declarations+ads+sensitive+categories+government"
+              ]
+            },
+            {
+              "id": "1.10",
+              "name": "Managed Google Play: Enterprise Distribution & Private App Publishing",
+              "links": [
+                "https://www.google.com/search?q=Managed+Google+Play+enterprise+distribution+private+app+publishing"
+              ]
+            },
+            {
+              "id": "1.11",
+              "name": "Play Console Inbox & Policy Actions: Warnings, Rejections & Appeal Process",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+policy+violations+warnings+rejections+appeal"
+              ]
+            },
+            {
+              "id": "1.12",
+              "name": "Google Play Billing Library: Integration, Testing & Real-Time Developer Notifications",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Billing+Library+integration+testing+RTDN+notifications"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 2,
+          "subcategoryName": "Build & Release Artifacts",
+          "folderName": "APK, AAB & Signing",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "2.1",
+              "name": "APK vs AAB (Android App Bundle): Structure, Dynamic Delivery & Size Benefits",
+              "links": [
+                "https://www.google.com/search?q=APK+vs+Android+App+Bundle+AAB+structure+dynamic+delivery+size"
+              ]
+            },
+            {
+              "id": "2.2",
+              "name": "AAB Internals: Base Module, Feature Modules & Asset Packs Structure",
+              "links": [
+                "https://www.google.com/search?q=Android+App+Bundle+AAB+internals+base+module+feature+asset+packs"
+              ]
+            },
+            {
+              "id": "2.3",
+              "name": "Keystore Management: keytool, Keystore Types (JKS vs PKCS12) & Backup Strategy",
+              "links": [
+                "https://www.google.com/search?q=Android+keystore+management+keytool+JKS+PKCS12+backup+strategy"
+              ]
+            },
+            {
+              "id": "2.4",
+              "name": "Release Build Configuration: Signing Configs, BuildTypes & Flavor Dimensions",
+              "links": [
+                "https://www.google.com/search?q=Android+release+build+signing+config+buildTypes+flavor+dimensions"
+              ]
+            },
+            {
+              "id": "2.5",
+              "name": "R8 & ProGuard: Shrinking, Obfuscation, Optimization & Keep Rules",
+              "links": [
+                "https://www.google.com/search?q=Android+R8+ProGuard+shrinking+obfuscation+optimization+keep+rules"
+              ]
+            },
+            {
+              "id": "2.6",
+              "name": "APK Analyzer: DEX Method Count, Resource Usage & Size Breakdown",
+              "links": [
+                "https://www.google.com/search?q=Android+APK+Analyzer+DEX+method+count+resource+size+breakdown"
+              ]
+            },
+            {
+              "id": "2.7",
+              "name": "Dynamic Feature Modules: on-demand, install-time & conditional Delivery",
+              "links": [
+                "https://www.google.com/search?q=Android+dynamic+feature+modules+on-demand+install-time+conditional"
+              ]
+            },
+            {
+              "id": "2.8",
+              "name": "Asset Packs: install-time, fast-follow & on-demand Asset Delivery",
+              "links": [
+                "https://www.google.com/search?q=Android+asset+packs+install-time+fast-follow+on-demand+delivery"
+              ]
+            },
+            {
+              "id": "2.9",
+              "name": "App Size Optimization: WebP, Resource Shrinking, ABI Splits & Language Splits",
+              "links": [
+                "https://www.google.com/search?q=Android+app+size+optimization+WebP+resource+shrinking+ABI+splits"
+              ]
+            },
+            {
+              "id": "2.10",
+              "name": "Build Variants for Distribution: Debug, Release, Staging & QA Flavors",
+              "links": [
+                "https://www.google.com/search?q=Android+build+variants+distribution+debug+release+staging+QA+flavors"
+              ]
+            },
+            {
+              "id": "2.11",
+              "name": "Reproducible Builds: Deterministic APKs, Build Provenance & SBOM",
+              "links": [
+                "https://www.google.com/search?q=Android+reproducible+builds+deterministic+APK+build+provenance+SBOM"
+              ]
+            },
+            {
+              "id": "2.12",
+              "name": "bundletool CLI: Local AAB Testing, Device Spec JSON & Extract APKs",
+              "links": [
+                "https://www.google.com/search?q=Android+bundletool+CLI+local+AAB+testing+device+spec+extract+APKs"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 3,
+          "subcategoryName": "Release Tracks & Rollout",
+          "folderName": "Tracks & Staged Rollout",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "3.1",
+              "name": "Release Tracks: Internal, Closed, Open Testing & Production Track Strategy",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+release+tracks+internal+closed+open+production+strategy"
+              ]
+            },
+            {
+              "id": "3.2",
+              "name": "Staged Rollout: Percentage Rollout, Halt, Resume & Full Rollout Decision",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+staged+rollout+percentage+halt+resume+full+rollout"
+              ]
+            },
+            {
+              "id": "3.3",
+              "name": "Internal App Sharing: Fast Iteration, QA Links & No Review Bypass",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+internal+app+sharing+QA+fast+iteration+no+review"
+              ]
+            },
+            {
+              "id": "3.4",
+              "name": "Testers Management: Closed Track Groups, Google Groups & Email Lists",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+testers+management+closed+track+groups+email+lists"
+              ]
+            },
+            {
+              "id": "3.5",
+              "name": "Pre-launch Reports: Automated Testing, Device Coverage & Accessibility Scans",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+pre-launch+reports+automated+testing+accessibility+scan"
+              ]
+            },
+            {
+              "id": "3.6",
+              "name": "Version Codes & Names: Version Strategy, Flavor-specific Codes & Automation",
+              "links": [
+                "https://www.google.com/search?q=Android+version+code+name+strategy+flavor+specific+CI+automation"
+              ]
+            },
+            {
+              "id": "3.7",
+              "name": "Release Notes: Multi-language What's New, Changelog Best Practices",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+release+notes+multi-language+whats+new+changelog"
+              ]
+            },
+            {
+              "id": "3.8",
+              "name": "Country Availability: Geographic Targeting, Exclusions & Market Expansion",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+country+availability+geographic+targeting+market+expansion"
+              ]
+            },
+            {
+              "id": "3.9",
+              "name": "Device Targeting: Device Catalog, Exclusions & Hardware Feature Filters",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+device+targeting+catalog+exclusions+hardware+feature+filters"
+              ]
+            },
+            {
+              "id": "3.10",
+              "name": "Rollback Strategy: Previous Release Promotion & Emergency Halt Playbook",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+rollback+strategy+previous+release+promotion+emergency+halt"
+              ]
+            },
+            {
+              "id": "3.11",
+              "name": "Play Auto Update: Update Priority, Flexible vs Immediate Updates (In-App Updates API)",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+in-app+updates+API+flexible+immediate+update+priority"
+              ]
+            },
+            {
+              "id": "3.12",
+              "name": "Release Automation: Play Publisher API, Fastlane supply & GitHub Actions",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Publisher+API+Fastlane+supply+GitHub+Actions+automation"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 4,
+          "subcategoryName": "Store Listing & ASO",
+          "folderName": "App Store Optimization",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "4.1",
+              "name": "ASO Fundamentals: Keyword Research, Ranking Factors & Search Algorithm",
+              "links": [
+                "https://www.google.com/search?q=App+Store+Optimization+ASO+keyword+research+ranking+factors+algorithm"
+              ]
+            },
+            {
+              "id": "4.2",
+              "name": "Title, Short & Long Description: Character Limits, Keyword Density & Indexing",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+store+listing+title+description+keyword+density+indexing"
+              ]
+            },
+            {
+              "id": "4.3",
+              "name": "Screenshots & Feature Graphic: Conversion Rate Optimization & A/B Testing",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+screenshots+feature+graphic+conversion+optimization+AB+test"
+              ]
+            },
+            {
+              "id": "4.4",
+              "name": "App Preview Video: Autoplay Rules, Aspect Ratios & Content Guidelines",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+app+preview+video+autoplay+aspect+ratio+content+guidelines"
+              ]
+            },
+            {
+              "id": "4.5",
+              "name": "Store Listing Experiments: A/B Testing Icon, Screenshots & Description",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+store+listing+experiments+AB+test+icon+screenshots"
+              ]
+            },
+            {
+              "id": "4.6",
+              "name": "Custom Store Listings: Audience Targeting, UTM Sources & Localization",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+custom+store+listings+audience+targeting+UTM+localization"
+              ]
+            },
+            {
+              "id": "4.7",
+              "name": "Localization Strategy: Translation, Cultural Adaptation & Priority Markets",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+app+localization+translation+cultural+adaptation+markets"
+              ]
+            },
+            {
+              "id": "4.8",
+              "name": "App Icon Design: Adaptive Icons, Monochrome & Theming for Android 12+",
+              "links": [
+                "https://www.google.com/search?q=Android+adaptive+icon+design+monochrome+theming+Android+12+Play+Store"
+              ]
+            },
+            {
+              "id": "4.9",
+              "name": "Ratings & Reviews: Reply Strategy, Review Management & Sentiment Analysis",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+ratings+reviews+reply+strategy+review+management+sentiment"
+              ]
+            },
+            {
+              "id": "4.10",
+              "name": "Category Selection: Primary & Secondary Categories & Impact on Discovery",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+category+selection+primary+secondary+discovery+impact"
+              ]
+            },
+            {
+              "id": "4.11",
+              "name": "Google Play Badges & Promo Codes: Linking, Deep Links & Promotional Campaigns",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+badges+promo+codes+deep+links+promotional+campaigns"
+              ]
+            },
+            {
+              "id": "4.12",
+              "name": "Competitive ASO Analysis: Competitor Keywords, Gaps & Market Positioning",
+              "links": [
+                "https://www.google.com/search?q=ASO+competitive+analysis+competitor+keywords+gap+market+positioning"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 5,
+          "subcategoryName": "Monetization",
+          "folderName": "Revenue & Billing",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "5.1",
+              "name": "Monetization Models: Free, Freemium, Paid, Subscription & Hybrid Strategy",
+              "links": [
+                "https://www.google.com/search?q=Android+app+monetization+models+free+freemium+paid+subscription+hybrid"
+              ]
+            },
+            {
+              "id": "5.2",
+              "name": "Play Billing Library 6+: PurchasesUpdatedListener, BillingClient & Connection Lifecycle",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Billing+Library+6+PurchasesUpdatedListener+BillingClient"
+              ]
+            },
+            {
+              "id": "5.3",
+              "name": "In-App Products: One-time Products, Consumables vs Non-consumables & SKU Setup",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+in-app+products+consumable+non-consumable+SKU+setup"
+              ]
+            },
+            {
+              "id": "5.4",
+              "name": "Subscriptions: Base Plans, Offers, Free Trials & Backward Compatibility",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+subscriptions+base+plans+offers+free+trials+backward+compat"
+              ]
+            },
+            {
+              "id": "5.5",
+              "name": "Purchase Verification: Server-side Token Validation, Fraud Prevention & RTDN",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+purchase+verification+server-side+token+validation+fraud+RTDN"
+              ]
+            },
+            {
+              "id": "5.6",
+              "name": "Subscription Lifecycle: Grace Period, Account Hold, Pause & Cancellation Flows",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+subscription+lifecycle+grace+period+account+hold+pause"
+              ]
+            },
+            {
+              "id": "5.7",
+              "name": "Promo Codes & Introductory Prices: Offer Types, Redemption & Eligibility Rules",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+promo+codes+introductory+prices+offer+redemption+eligibility"
+              ]
+            },
+            {
+              "id": "5.8",
+              "name": "AdMob Integration: Banner, Interstitial, Rewarded & Native Ads in Compose",
+              "links": [
+                "https://www.google.com/search?q=AdMob+Android+banner+interstitial+rewarded+native+ads+Compose"
+              ]
+            },
+            {
+              "id": "5.9",
+              "name": "Play Pass & Play Points: Eligibility, Integration & Discovery Benefits",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Pass+Play+Points+eligibility+integration+discovery+benefits"
+              ]
+            },
+            {
+              "id": "5.10",
+              "name": "Financial Reports: Revenue Dashboard, Estimated Sales & Tax Withholding",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+financial+reports+revenue+dashboard+tax+withholding"
+              ]
+            },
+            {
+              "id": "5.11",
+              "name": "Alternative Billing: User Choice Billing & External Offers Policy",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+alternative+billing+user+choice+billing+external+offers"
+              ]
+            },
+            {
+              "id": "5.12",
+              "name": "LTV & Monetization Metrics: ARPPU, Conversion Rate, Churn & Cohort Analysis",
+              "links": [
+                "https://www.google.com/search?q=Android+app+LTV+ARPPU+conversion+rate+churn+cohort+monetization+metrics"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 6,
+          "subcategoryName": "Analytics & User Acquisition",
+          "folderName": "Growth & Analytics",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "6.1",
+              "name": "Play Console Statistics: Installs, Ratings, Crashes & ANR Trends",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Console+statistics+installs+ratings+crashes+ANR+trends"
+              ]
+            },
+            {
+              "id": "6.2",
+              "name": "Firebase Analytics: Events, User Properties, Funnels & Audiences",
+              "links": [
+                "https://www.google.com/search?q=Firebase+Analytics+events+user+properties+funnels+audiences+Android"
+              ]
+            },
+            {
+              "id": "6.3",
+              "name": "Acquisition Reports: UTM Tracking, Referrer API & Campaign Attribution",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+acquisition+UTM+tracking+Install+Referrer+API+attribution"
+              ]
+            },
+            {
+              "id": "6.4",
+              "name": "Google Play Store Experiments: Conversion Experiments & Statistical Significance",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+store+experiments+conversion+statistical+significance"
+              ]
+            },
+            {
+              "id": "6.5",
+              "name": "Retention & Engagement: D1/D7/D30 Retention, DAU/MAU & Session Analysis",
+              "links": [
+                "https://www.google.com/search?q=Android+app+retention+D1+D7+D30+DAU+MAU+session+analysis"
+              ]
+            },
+            {
+              "id": "6.6",
+              "name": "Firebase Remote Config: Feature Flags, A/B Testing & Personalization",
+              "links": [
+                "https://www.google.com/search?q=Firebase+Remote+Config+feature+flags+AB+testing+personalization"
+              ]
+            },
+            {
+              "id": "6.7",
+              "name": "Google Ads & UAC: Universal App Campaigns, Bidding & Creative Best Practices",
+              "links": [
+                "https://www.google.com/search?q=Google+Ads+Universal+App+Campaigns+UAC+bidding+creative+best+practices"
+              ]
+            },
+            {
+              "id": "6.8",
+              "name": "MMP Integration: Adjust, AppsFlyer & Attribution Modeling for Android",
+              "links": [
+                "https://www.google.com/search?q=MMP+Adjust+AppsFlyer+attribution+modeling+Android+integration"
+              ]
+            },
+            {
+              "id": "6.9",
+              "name": "App Indexing & Google Search: Deep Links, Firebase App Indexing & SEO",
+              "links": [
+                "https://www.google.com/search?q=Android+app+indexing+Google+Search+deep+links+Firebase+App+Indexing"
+              ]
+            },
+            {
+              "id": "6.10",
+              "name": "Play Explore & Recommendations: Algorithmic Discovery, Viral Loops & Sharing",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Explore+recommendations+algorithmic+discovery+viral+loops"
+              ]
+            },
+            {
+              "id": "6.11",
+              "name": "BigQuery Export: Firebase + Play Data Pipeline, Custom Dashboards & SQL Queries",
+              "links": [
+                "https://www.google.com/search?q=Firebase+BigQuery+export+Play+data+pipeline+custom+dashboards+SQL"
+              ]
+            },
+            {
+              "id": "6.12",
+              "name": "Privacy-Preserving Analytics: Aggregated Reporting, PPAPI & SKAdNetwork Equiv.",
+              "links": [
+                "https://www.google.com/search?q=Android+privacy+preserving+analytics+aggregated+reporting+PPAPI"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 7,
+          "subcategoryName": "Quality, Crashes & Vitals",
+          "folderName": "App Quality",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "7.1",
+              "name": "Android Vitals: Core Vitals Thresholds, Bad Behavior & Play Store Impact",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+core+vitals+thresholds+bad+behavior+Play+Store+impact"
+              ]
+            },
+            {
+              "id": "7.2",
+              "name": "Crash Rate & ANR Rate: Acceptable Thresholds, Clustering & Priority Triage",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+crash+rate+ANR+rate+thresholds+clustering+triage"
+              ]
+            },
+            {
+              "id": "7.3",
+              "name": "Firebase Crashlytics: Crash Reports, Non-fatals, Custom Keys & Breadcrumbs",
+              "links": [
+                "https://www.google.com/search?q=Firebase+Crashlytics+crash+reports+non-fatal+custom+keys+breadcrumbs"
+              ]
+            },
+            {
+              "id": "7.4",
+              "name": "Excessive Wakeups & Wake Locks: Battery Vitals, WorkManager & Doze Mode",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+wakeups+wake+locks+battery+WorkManager+Doze+mode"
+              ]
+            },
+            {
+              "id": "7.5",
+              "name": "Render Time & Frozen Frames: Jank Detection, Systrace & Frame Pacing",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+render+time+frozen+frames+jank+Systrace+frame+pacing"
+              ]
+            },
+            {
+              "id": "7.6",
+              "name": "Startup Time: Cold, Warm & Hot Start Optimization, App Startup Library",
+              "links": [
+                "https://www.google.com/search?q=Android+app+startup+time+cold+warm+hot+start+optimization+App+Startup"
+              ]
+            },
+            {
+              "id": "7.7",
+              "name": "Pre-launch Report: Firebase Test Lab, Robo Tests & Accessibility Checks",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+pre-launch+report+Firebase+Test+Lab+Robo+tests+accessibility"
+              ]
+            },
+            {
+              "id": "7.8",
+              "name": "Excessive Permissions: Permission Audit, Minimum Necessary & Runtime Strategy",
+              "links": [
+                "https://www.google.com/search?q=Android+excessive+permissions+audit+minimum+necessary+runtime+strategy"
+              ]
+            },
+            {
+              "id": "7.9",
+              "name": "Memory Vitals: Excessive Memory Usage, OOM Crashes & Heap Profiling",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+memory+usage+OOM+crashes+heap+profiling+MAT"
+              ]
+            },
+            {
+              "id": "7.10",
+              "name": "Background Task Vitals: Stuck Background Wakelocks & Job Scheduler Abuse",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+stuck+background+wakelocks+JobScheduler+abuse"
+              ]
+            },
+            {
+              "id": "7.11",
+              "name": "Network Vitals: Excessive Network Usage, Data Saver & Background Network Policy",
+              "links": [
+                "https://www.google.com/search?q=Android+Vitals+network+usage+data+saver+background+network+policy"
+              ]
+            },
+            {
+              "id": "7.12",
+              "name": "Quality Tier Badges: Google Play Quality Guidelines, Large Screen & Wear OS",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+quality+tier+badges+large+screen+Wear+OS+guidelines"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 8,
+          "subcategoryName": "Policy, Security & Compliance",
+          "folderName": "Policy & Privacy",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "8.1",
+              "name": "Google Play Developer Policy: Enforcement, Strikes & Account Termination",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+developer+policy+enforcement+strikes+account+termination"
+              ]
+            },
+            {
+              "id": "8.2",
+              "name": "Deceptive Behavior Policy: Misleading Claims, Impersonation & Fake Reviews",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+deceptive+behavior+policy+misleading+impersonation+fake+reviews"
+              ]
+            },
+            {
+              "id": "8.3",
+              "name": "Malware & Unwanted Software: Play Protect, Code Scanning & Certification",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Protect+malware+unwanted+software+code+scanning+certification"
+              ]
+            },
+            {
+              "id": "8.4",
+              "name": "Privacy Policy Requirements: Minimum Requirements, Hosting & Linking in Console",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+privacy+policy+requirements+minimum+hosting+linking"
+              ]
+            },
+            {
+              "id": "8.5",
+              "name": "Sensitive Permissions: READ_CALL_LOG, SMS, Accessibility & Device Admin Policy",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+sensitive+permissions+READ_CALL_LOG+SMS+Accessibility+policy"
+              ]
+            },
+            {
+              "id": "8.6",
+              "name": "Target SDK Requirements: Annual SDK Updates, Deadline Policy & Exceptions",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+target+SDK+requirements+annual+update+deadline+exceptions"
+              ]
+            },
+            {
+              "id": "8.7",
+              "name": "GDPR & Global Privacy Laws: Consent Management, Data Deletion & User Rights",
+              "links": [
+                "https://www.google.com/search?q=Android+app+GDPR+global+privacy+laws+consent+management+data+deletion"
+              ]
+            },
+            {
+              "id": "8.8",
+              "name": "User Data Policy: Prominent Disclosure, Consent & Handling Sensitive Data",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+user+data+policy+prominent+disclosure+consent+sensitive+data"
+              ]
+            },
+            {
+              "id": "8.9",
+              "name": "Financial Services Policy: Regulated Apps, License Declaration & Requirements",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+financial+services+policy+regulated+apps+license+declaration"
+              ]
+            },
+            {
+              "id": "8.10",
+              "name": "App Security Best Practices: Certificate Pinning, Root Detection & Tampering",
+              "links": [
+                "https://www.google.com/search?q=Android+app+security+certificate+pinning+root+detection+tampering"
+              ]
+            },
+            {
+              "id": "8.11",
+              "name": "Play Integrity API: App Integrity, Device Integrity & Account Activity Signals",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Integrity+API+app+integrity+device+integrity+account+signals"
+              ]
+            },
+            {
+              "id": "8.12",
+              "name": "SafetyNet vs Play Integrity: Migration, Attestation & Server-Side Verification",
+              "links": [
+                "https://www.google.com/search?q=SafetyNet+vs+Play+Integrity+API+migration+attestation+server+verification"
+              ]
+            }
+          ]
+        },
+        {
+          "subCategoryId": 9,
+          "subcategoryName": "CI/CD & Release Automation",
+          "folderName": "Automation & DevOps",
+          "filetype": "learning_path",
+          "itemList": [
+            {
+              "id": "9.1",
+              "name": "Fastlane for Android: lanes, supply, screengrab & Automated Store Listing",
+              "links": [
+                "https://www.google.com/search?q=Fastlane+Android+lanes+supply+screengrab+automated+store+listing"
+              ]
+            },
+            {
+              "id": "9.2",
+              "name": "GitHub Actions for Android: Build, Sign, Test & Deploy to Play Workflow",
+              "links": [
+                "https://www.google.com/search?q=GitHub+Actions+Android+build+sign+test+deploy+Play+Store+workflow"
+              ]
+            },
+            {
+              "id": "9.3",
+              "name": "Secrets Management in CI: Keystore, Service Account JSON & Env Variables",
+              "links": [
+                "https://www.google.com/search?q=CI+CD+Android+secrets+management+keystore+service+account+JSON+env"
+              ]
+            },
+            {
+              "id": "9.4",
+              "name": "Play Publisher API: Service Account, OAuth2 & Automated Track Promotion",
+              "links": [
+                "https://www.google.com/search?q=Google+Play+Publisher+API+service+account+OAuth2+track+promotion"
+              ]
+            },
+            {
+              "id": "9.5",
+              "name": "Automated Version Bumping: Gradle Tasks, Git Tags & Changelog Generation",
+              "links": [
+                "https://www.google.com/search?q=Android+automated+version+bump+Gradle+tasks+git+tags+changelog+gen"
+              ]
+            },
+            {
+              "id": "9.6",
+              "name": "Firebase App Distribution: Tester Groups, Release Notes & Crashlytics Integration",
+              "links": [
+                "https://www.google.com/search?q=Firebase+App+Distribution+tester+groups+release+notes+Crashlytics"
+              ]
+            },
+            {
+              "id": "9.7",
+              "name": "Automated UI Testing in CI: Emulator, Firebase Test Lab & Flaky Test Management",
+              "links": [
+                "https://www.google.com/search?q=Android+automated+UI+testing+CI+emulator+Firebase+Test+Lab+flaky"
+              ]
+            },
+            {
+              "id": "9.8",
+              "name": "Gradle Play Publisher Plugin: Automated AAB Upload, Track Assignment & Rollout",
+              "links": [
+                "https://www.google.com/search?q=Gradle+Play+Publisher+plugin+AAB+upload+track+assignment+rollout"
+              ]
+            },
+            {
+              "id": "9.9",
+              "name": "Release Checklist Automation: Pre-release Gates, QA Sign-off & Go/No-Go",
+              "links": [
+                "https://www.google.com/search?q=Android+release+checklist+automation+pre-release+gates+QA+sign-off"
+              ]
+            },
+            {
+              "id": "9.10",
+              "name": "Multi-environment Strategy: Dev, Staging, Prod Firebase Projects & Configs",
+              "links": [
+                "https://www.google.com/search?q=Android+multi+environment+dev+staging+prod+Firebase+projects+config"
+              ]
+            },
+            {
+              "id": "9.11",
+              "name": "Post-release Monitoring: Crash Rate Alerts, ANR Alerts & Rollout Halt Triggers",
+              "links": [
+                "https://www.google.com/search?q=Android+post-release+monitoring+crash+rate+alerts+ANR+rollout+halt"
+              ]
+            },
+            {
+              "id": "9.12",
+              "name": "Release Train Model: Cadence Planning, Feature Freeze, RC & Hotfix Process",
+              "links": [
+                "https://www.google.com/search?q=Android+release+train+model+cadence+feature+freeze+RC+hotfix+process"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
