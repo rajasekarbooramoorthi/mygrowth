@@ -92,15 +92,20 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
     private fun loadMasterSkillLocal() {
         val mainList = Gson().fromJson(
-            loadJSONFromAssets(),
-            CategoryMasterResponse::class.java
+            loadJSONFromAssets(), CategoryMasterResponse::class.java
         )
-        bindingParent.recyclerViewHorizontalCategory.adapter =
-            MyCategoryMainAdapter(
-                mainList.data,
-                this@CategoryMasterFragment
-            )
+        bindingParent.recyclerViewHorizontalCategory.adapter = MyCategoryMainAdapter(
+            mainList.data, this@CategoryMasterFragment
+        )
         mainList.data.firstOrNull()?.subcategoryList?.let { clickSubCategory(it) }
+
+        val adapter = MasterItemAdapter(
+            mainList.data.first().subcategoryList.first().itemList,
+            this@CategoryMasterFragment,
+            mainList.data.first().subcategoryList.first().folderName ?: "",
+            mainList.data.first().subcategoryList.first().filetype ?: ""
+        )
+        bindingParent.recyclerViewVerticalItem.adapter = adapter
     }
 
     private fun setupSearch(adapter: MasterItemAdapter) {
