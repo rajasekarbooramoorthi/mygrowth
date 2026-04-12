@@ -14,7 +14,7 @@ class MySubCategoryAdapter(
     private val list: List<SubCategory>, click_: MasterInterFace
 ) : RecyclerView.Adapter<MySubCategoryAdapter.ViewHolder>() {
     var click = click_
-    private var selectedPosition = RecyclerView.NO_POSITION
+    private var selectedPosition = 0
 
     class ViewHolder(val binding: SubCategoryAdpterBinding) :
         RecyclerView.ViewHolder(binding.root)

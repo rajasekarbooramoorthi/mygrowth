@@ -82,9 +82,6 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
 
         bindingParent.recyclerViewSubCategory.addItemDecoration(divider)
 
-
-
-
         bindingParent.recyclerViewVerticalItem.layoutManager =
             LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
 
@@ -199,6 +196,11 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
     override fun clickSubCategory(list: List<SubCategory>) {
         this.bindingParent.recyclerViewSubCategory.adapter =
             MySubCategoryAdapter(list, this@CategoryMasterFragment)
+
+        val adapter = MasterItemAdapter(
+            listOf(), this@CategoryMasterFragment, "", ""
+        )
+        bindingParent.recyclerViewVerticalItem.adapter = adapter
     }
 
     override fun clickItem(list: List<Item>, folderName: String, fileType: String) {
