@@ -14,6 +14,8 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.BottomDialogAddTaskBinding
 import com.raj.mygrowth.databinding.FragmentHomeBinding
+import com.raj.mygrowth.domain.DailyTask
+import com.raj.mygrowth.domain.DailyTaskItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionTaskCompleted
@@ -63,7 +65,15 @@ class HomeFragment : Fragment(), SimpleClick {
                 binding.progressBar.visibility = View.GONE
 
                 if (response.status) {
-                    val adapter = DailyTaskAdapter(response.data, this@HomeFragment)
+
+                    val processedData = ArrayList<DailyTask>()
+
+                    response.data.forEach { task ->
+                        if (task.list.isNotEmpty()) {
+                            processedData.add(DailyTask(task.taskName, task.list))
+                        }
+                    }
+                    val adapter = DailyTaskAdapter(processedData, this@HomeFragment)
                     binding.rvDailyTask.adapter = adapter
                     var position = 0
                     response.data.forEachIndexed { index, item ->
@@ -189,7 +199,7 @@ class HomeFragment : Fragment(), SimpleClick {
                                 "Task added successfully",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            delay(3000) // 2 seconds
+                            delay(1000) // 2 seconds
                             dialogBottomSheetDialog.dismiss()
                         }
                     }

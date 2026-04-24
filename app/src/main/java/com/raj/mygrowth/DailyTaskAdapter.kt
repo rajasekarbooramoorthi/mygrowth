@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.domain.DailyTask
@@ -40,6 +41,9 @@ class DailyTaskAdapter(
             holder.recyclerView.layoutManager =
                 LinearLayoutManager(holder.itemView.context)
         }
+
+
+
 
         holder.tvTaskName
         // Set adapter only if not set already

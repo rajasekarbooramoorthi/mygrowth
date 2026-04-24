@@ -18,5 +18,6 @@ data class DailyTaskItem(
     val dt_date_created: String,
     val dt_date_updated: String,
     val dt_due_date: String,
+    val dt_priority: Int,
     val tag: String
 )

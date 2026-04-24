@@ -45,4 +45,7 @@
     <color name="kural_sub_header">#FFBB86FC</color>
     <color name="kural_sub_header_gray">#6E757575</color>
     <color name="kural_sub_description_gray">#C5757575</color>
+
+    <color name="tasktextbackground">#33E0E0E0</color>
+
 </resources>

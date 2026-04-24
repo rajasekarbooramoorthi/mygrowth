@@ -18,13 +18,14 @@
             android:id="@+id/tvTaskName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/tasktextbackground"
             android:fontFamily="@font/sans_bold"
             android:gravity="center_vertical"
             android:paddingStart="@dimen/_12sdp"
             android:paddingTop="@dimen/_7sdp"
             android:paddingEnd="@dimen/_1sdp"
-            android:paddingBottom="@dimen/_10sdp"
-            android:textSize="@dimen/_9ssp" />
+            android:paddingBottom="@dimen/_7sdp"
+            android:textSize="@dimen/_11ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDailyTask"

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.domain.DailyTaskItem
 import com.raj.mygrowth.interfaces.SimpleClick
@@ -18,6 +19,8 @@ class DailyTaskAdapterItem(
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTaskName: TextView = view.findViewById(R.id.tvTaskName)
         val tvTaskDescription: TextView = view.findViewById(R.id.tvTaskDescription)
+        val ivPriority: AppCompatImageView = view.findViewById(R.id.ivPriority)
+
         val tvDueDate: TextView = view.findViewById(R.id.tvDueDate)
         val checkBox: TextView = view.findViewById(R.id.chk)
     }
@@ -41,6 +44,7 @@ class DailyTaskAdapterItem(
                     }
                 }
         }
+
         val name = item.dt_name.capitalizeWords()
         val description = item.dt_description.capitalizeWords()
 
@@ -49,6 +53,11 @@ class DailyTaskAdapterItem(
         holder.tvDueDate.text = "Due: ${item.dt_due_date}"
         holder.checkBox.setOnClickListener {
             listener.checkCompleted(item.dt_sno)
+        }
+        if (item.dt_priority == 1) {
+            holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_high)
+        } else {
+            holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_low)
         }
     }
 }
