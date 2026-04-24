@@ -83,7 +83,7 @@
                         android:layout_marginStart="@dimen/_10sdp"
                         android:fontFamily="@font/sans_regular"
                         android:text="@string/due_date"
-                        android:textColor="@android:color/darker_gray"
+                        android:textColor="@color/due_date"
                         android:textSize="@dimen/_8sdp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"

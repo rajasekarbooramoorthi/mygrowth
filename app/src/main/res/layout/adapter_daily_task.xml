@@ -25,7 +25,7 @@
             android:paddingTop="@dimen/_7sdp"
             android:paddingEnd="@dimen/_1sdp"
             android:paddingBottom="@dimen/_7sdp"
-            android:textSize="@dimen/_11ssp" />
+            android:textSize="@dimen/_13ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDailyTask"
