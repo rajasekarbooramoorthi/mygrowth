@@ -12,13 +12,15 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
             android:fontFamily="@font/sans_regular"
-            android:textColor="@color/sub_item_text"
-            android:textSize="@dimen/_9ssp" />
+            android:textColor="@color/bottom_dialog_item"
+            android:textSize="@dimen/_11ssp" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="0.5dp"
             android:background="@color/grayline" />
 
     </LinearLayout>
