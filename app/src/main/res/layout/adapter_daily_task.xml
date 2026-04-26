@@ -22,10 +22,10 @@
             android:fontFamily="@font/sans_bold"
             android:gravity="center_vertical"
             android:paddingStart="@dimen/_12sdp"
-            android:paddingTop="@dimen/_7sdp"
+            android:paddingTop="@dimen/_5sdp"
             android:paddingEnd="@dimen/_1sdp"
-            android:paddingBottom="@dimen/_7sdp"
-            android:textSize="@dimen/_13ssp" />
+            android:paddingBottom="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDailyTask"

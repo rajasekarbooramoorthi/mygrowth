@@ -24,7 +24,7 @@ class DailyTaskAdapterItem(
     val listener = listener_
     val context = context_
 
-     private val colors = listOf(
+    private val colors = listOf(
         R.color.red_light,
         R.color.blue_light,
         R.color.green_light,
@@ -76,9 +76,7 @@ class DailyTaskAdapterItem(
         val index = abs(item.dt_sno.hashCode()) % colors.size
         val colorRes = colors[index]
 
-        holder.cardView.setCardBackgroundColor(
-            ContextCompat.getColor(context, colorRes)
-        )
+        // holder.cardView.setCardBackgroundColor( ContextCompat.getColor(context, colorRes) )
         if (item.dt_priority == 1) {
             holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_high)
         } else {

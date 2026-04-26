@@ -200,7 +200,6 @@ class HomeFragment : Fragment(), SimpleClick {
                                 "Task added successfully",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            delay(1000) // 2 seconds
                             dialogBottomSheetDialog.dismiss()
                         }
                     }
