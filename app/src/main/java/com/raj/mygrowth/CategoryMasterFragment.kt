@@ -92,7 +92,7 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
             loadJSONFromAssets(), CategoryMasterResponse::class.java
         )
         bindingParent.recyclerViewHorizontalCategory.adapter = MyCategoryMainAdapter(
-            mainList.data, this@CategoryMasterFragment
+            mainList.data, this@CategoryMasterFragment, requireContext()
         )
         mainList.data.firstOrNull()?.subcategoryList?.let { clickSubCategory(it) }
 
@@ -222,7 +222,11 @@ class CategoryMasterFragment : MasterInterFace, Fragment() {
                 hideLoading()
                 if (response.status) {
                     bindingParent.recyclerViewHorizontalCategory.adapter =
-                        MyCategoryMainAdapter(response.data, this@CategoryMasterFragment)
+                        MyCategoryMainAdapter(
+                            response.data,
+                            this@CategoryMasterFragment,
+                            requireContext()
+                        )
                 }
             }.onFailure {
                 hideLoading()

@@ -14,7 +14,7 @@ data class DailyTaskItem(
     val dt_id: String,
     val dt_name: String,
     val dt_description: String,
-    val dt_status: String,
+    val dt_status: Int,
     val dt_date_created: String,
     val dt_date_updated: String,
     val dt_due_date: String,

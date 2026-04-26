@@ -1,6 +1,7 @@
 package com.raj.mygrowth.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -11,9 +12,12 @@ import com.raj.mygrowth.interfaces.MasterInterFace
 
 
 class MyCategoryMainAdapter(
-    private val list: List<Category>, click_: MasterInterFace
+    private val list: List<Category>,
+    click_: MasterInterFace,
+    context_: Context,
 ) : RecyclerView.Adapter<MyCategoryMainAdapter.ViewHolder>() {
     var click = click_
+    var context = context_
 
     private var selectedPosition = 0
 

@@ -57,8 +57,8 @@ class FullStackMasterFragment : MasterInterFace, Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-       // setRecyclerView()
-       // loadMasterSkillLocal()
+        // setRecyclerView()
+        // loadMasterSkillLocal()
     }
 
     private fun showLoading() {
@@ -103,7 +103,7 @@ class FullStackMasterFragment : MasterInterFace, Fragment() {
         bindingParent.recyclerViewHorizontalCategory.adapter =
             MyCategoryMainAdapter(
                 mainList.data,
-                this@FullStackMasterFragment
+                this@FullStackMasterFragment, requireContext()
             )
         mainList.data.firstOrNull()?.subcategoryList?.let { clickSubCategory(it) }
     }
@@ -220,7 +220,11 @@ class FullStackMasterFragment : MasterInterFace, Fragment() {
                 hideLoading()
                 if (response.status) {
                     bindingParent.recyclerViewHorizontalCategory.adapter =
-                        MyCategoryMainAdapter(response.data, this@FullStackMasterFragment)
+                        MyCategoryMainAdapter(
+                            response.data,
+                            this@FullStackMasterFragment,
+                            requireContext()
+                        )
                 }
             }.onFailure {
                 hideLoading()

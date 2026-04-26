@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +12,14 @@ import com.raj.mygrowth.domain.DailyTask
 import com.raj.mygrowth.interfaces.SimpleClick
 
 class DailyTaskAdapter(
-    private val groups: List<DailyTask>, listener_: SimpleClick
+    private val groups: List<DailyTask>,
+    listener_: SimpleClick,
+    context_: Context
 ) : RecyclerView.Adapter<DailyTaskAdapter.ViewHolder>() {
 
     private val listener = listener_
+    private val context = context_
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTaskName: TextView = view.findViewById(R.id.tvTaskName)
         val recyclerView: RecyclerView = view.findViewById(R.id.rvDailyTask)
@@ -48,7 +53,7 @@ class DailyTaskAdapter(
         holder.tvTaskName
         // Set adapter only if not set already
         if (holder.recyclerView.adapter == null) {
-            holder.recyclerView.adapter = DailyTaskAdapterItem(item.list, listener)
+            holder.recyclerView.adapter = DailyTaskAdapterItem(item.list, listener, context)
         }
     }
 }

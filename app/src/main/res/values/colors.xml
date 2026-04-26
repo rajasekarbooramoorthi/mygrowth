@@ -52,4 +52,21 @@
 
     <color name="bottom_dialog_item">#E57373</color>
 
+    <color name="red_light">#FFCDD2</color>
+    <color name="pink_light">#F8BBD0</color>
+    <color name="deep_purple_light">#D1C4E9</color>
+    <color name="indigo_light">#C5CAE9</color>
+    <color name="blue_light">#BBDEFB</color>
+    <color name="light_blue_light">#B3E5FC</color>
+    <color name="cyan_light">#B2EBF2</color>
+    <color name="green_light">#C8E6C9</color>
+    <color name="light_green_light">#DCEDC8</color>
+    <color name="lime_light">#F0F4C3</color>
+    <color name="yellow_light">#FFF9C4</color>
+    <color name="amber_light">#FFECB3</color>
+    <color name="orange_light">#FFE0B2</color>
+    <color name="deep_orange_light">#FFCCBC</color>
+    <color name="purple_light">#E1BEE7</color>
+
+
 </resources>
