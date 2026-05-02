@@ -34,4 +34,9 @@
         android:name="com.raj.mygrowth.FinanceMasterFragment"
         android:label="Career" />
 
+
+    <fragment
+        android:id="@+id/workoutFragment"
+        android:name="com.raj.mygrowth.WorkoutFragment"
+        android:label="Workout" />
 </navigation>

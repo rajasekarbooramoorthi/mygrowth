@@ -38,7 +38,7 @@ fun Activity.setToolbarInsetsActivity() {
 
 fun Activity.setToolbarInsetsFullscreen() {
     val decorView = window.decorView as ViewGroup
-     val toolbar = decorView.findToolbar()
+    val toolbar = decorView.findToolbar()
     toolbar?.setInsets()
     findViewById<View?>(android.R.id.content)?.apply {
         applyBottomTopInsets()
@@ -69,7 +69,7 @@ fun View.applyBottomInsets() {
             view.paddingLeft,
             systemBars.top,
             view.paddingRight,
-            view.paddingBottom
+            systemBars.bottom
         )
         insets
     }

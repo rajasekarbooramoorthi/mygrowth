@@ -39,7 +39,6 @@ class HomeFragment : Fragment(), SimpleClick {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        requireActivity().setToolbarInsetsFragment()
         return binding.root
     }
 

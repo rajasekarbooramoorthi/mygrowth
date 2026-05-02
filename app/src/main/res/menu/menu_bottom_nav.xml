@@ -23,5 +23,9 @@
         android:id="@+id/androidCareer"
         android:icon="@drawable/ic_work"
         android:title="Career" />
+    <item
+        android:id="@+id/board"
+        android:icon="@drawable/ic_todo"
+        android:title="Board" />
 
 </menu>

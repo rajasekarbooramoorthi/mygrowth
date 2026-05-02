@@ -1,0 +1,130 @@
+{
+  "workoutPlan": [
+    {
+      "day": "Day 1 - Push",
+      "musclesWorked": ["Chest", "Shoulders", "Triceps"],
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Barbell Bench Press",
+          "sets": 4,
+          "reps": "6-8",
+          "rest": "90 sec",
+          "focus": "Primary compound",
+          "notes": "Lead every push day with this"
+        },
+        {
+          "id": 2,
+          "name": "Overhead Press",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": "90 sec",
+          "focus": "Shoulder mass",
+          "notes": "Control the eccentric phase"
+        },
+        {
+          "id": 3,
+          "name": "Incline Dumbbell Press",
+          "sets": 3,
+          "reps": "10",
+          "rest": "60 sec",
+          "focus": "Upper chest",
+          "notes": "Slight incline 30–45°"
+        },
+        {
+          "id": 4,
+          "name": "Dips (weighted if able)",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": "60 sec",
+          "focus": "Chest + triceps",
+          "notes": "Add weight belt when bodyweight is easy"
+        }
+      ]
+    },
+    {
+      "day": "Day 2 - Pull",
+      "musclesWorked": ["Back", "Biceps", "Rear Delts"],
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Deadlift",
+          "sets": 4,
+          "reps": "5-6",
+          "rest": "120 sec",
+          "focus": "King of mass builders",
+          "notes": "Focus on form; lower weight > bad form"
+        },
+        {
+          "id": 2,
+          "name": "Pull-ups / Lat Pulldown",
+          "sets": 4,
+          "reps": "6-10",
+          "rest": "90 sec",
+          "focus": "Width + lat activation",
+          "notes": "Use full range of motion"
+        },
+        {
+          "id": 3,
+          "name": "Barbell Bent-Over Row",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": "90 sec",
+          "focus": "Back thickness",
+          "notes": "Brace core, neutral spine"
+        },
+        {
+          "id": 4,
+          "name": "Seated Cable Row",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": "60 sec",
+          "focus": "Mid-back detail",
+          "notes": "Squeeze shoulder blades at top"
+        }
+      ]
+    },
+    {
+      "day": "Day 4 - Legs",
+      "musclesWorked": ["Quads", "Hamstrings", "Glutes", "Core"],
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Barbell Back Squat",
+          "sets": 4,
+          "reps": "6-8",
+          "rest": "120 sec",
+          "focus": "Foundation movement",
+          "notes": "Depth to parallel minimum"
+        },
+        {
+          "id": 2,
+          "name": "Romanian Deadlift",
+          "sets": 3,
+          "reps": "8-10",
+          "rest": "90 sec",
+          "focus": "Hamstrings + glutes",
+          "notes": "Feel the stretch at the bottom"
+        },
+        {
+          "id": 3,
+          "name": "Leg Press",
+          "sets": 3,
+          "reps": "10-12",
+          "rest": "60 sec",
+          "focus": "Volume builder",
+          "notes": "Don't lock knees at top"
+        },
+        {
+          "id": 4,
+          "name": "Farmer's Carry",
+          "sets": 3,
+          "reps": "30-40 m",
+          "rest": "90 sec",
+          "focus": "Full-body + core",
+          "notes": "Heavy dumbbells, walk slow & upright"
+        }
+      ]
+    }
+  ]
+}
