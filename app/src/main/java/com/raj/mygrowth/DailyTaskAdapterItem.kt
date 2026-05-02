@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.raj.mygrowth.ColorUtilities.colorsMulti
 import com.raj.mygrowth.domain.DailyTaskItem
 import com.raj.mygrowth.interfaces.SimpleClick
 import kotlin.math.abs
@@ -24,15 +25,6 @@ class DailyTaskAdapterItem(
     val listener = listener_
     val context = context_
 
-    private val colors = listOf(
-        R.color.red_light,
-        R.color.blue_light,
-        R.color.green_light,
-        R.color.yellow_light,
-        R.color.purple_light,
-        R.color.orange_light,
-        R.color.cyan_light
-    )
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvTaskName: TextView = view.findViewById(R.id.tvTaskName)
@@ -73,10 +65,10 @@ class DailyTaskAdapterItem(
         holder.checkBox.setOnClickListener {
             listener.checkCompleted(item.dt_sno)
         }
-        val index = abs(item.dt_sno.hashCode()) % colors.size
-        val colorRes = colors[index]
+        val index = abs(item.dt_sno.hashCode()) % colorsMulti.size
+        val colorRes = colorsMulti[index]
 
-        // holder.cardView.setCardBackgroundColor( ContextCompat.getColor(context, colorRes) )
+        holder.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
         if (item.dt_priority == 1) {
             holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_high)
         } else {

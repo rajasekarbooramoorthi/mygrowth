@@ -3,15 +3,19 @@ package com.raj.mygrowth
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.raj.mygrowth.ColorUtilities.colorsMulti
+import com.raj.mygrowth.ColorUtilities.colorsMultiText
 import com.raj.mygrowth.databinding.ItemDietHeaderBinding
 import com.raj.mygrowth.databinding.ItemDietMealBinding
 import com.raj.mygrowth.databinding.ItemDietRuleBinding
 import com.raj.mygrowth.domain.DietItem
 import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.uiState.DietListItem
+import kotlin.math.abs
 
-class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DietAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val items = mutableListOf<DietListItem>()
 
@@ -23,10 +27,7 @@ class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerV
 
     fun submitData(response: DietResponse) {
         items.clear()
-
-        // Header - Daily Target
-        items.add(DietListItem.Header("🔥 Daily Target"))
-
+        items.add(DietListItem.Header("Daily Target"))
         items.add(
             DietListItem.Rule("Calories: ${response.dailyTarget.calories}")
         )
@@ -36,21 +37,15 @@ class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerV
         items.add(
             DietListItem.Rule("Meal: ${response.dailyTarget.mealFrequency}")
         )
-
-        // Meals
-        items.add(DietListItem.Header("🍽️ Diet Plan"))
+        items.add(DietListItem.Header("Diet Plan"))
 
         response.dietPlan.forEach {
             items.add(DietListItem.Meal(it))
         }
-
-        // Rules
-        items.add(DietListItem.Header("⚡ Rules"))
-
+        items.add(DietListItem.Header("Rules"))
         response.rules.forEach {
             items.add(DietListItem.Rule(it))
         }
-
         notifyDataSetChanged()
     }
 
@@ -75,28 +70,27 @@ class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerV
 
             TYPE_MEAL -> {
                 val binding = ItemDietMealBinding.inflate(inflater, parent, false)
-                MealVH(binding)
+                MealVH(binding, context)
             }
 
             else -> {
                 val binding = ItemDietRuleBinding.inflate(inflater, parent, false)
-                RuleVH(binding)
+                RuleVH(binding, context)
             }
+
         }
     }
 
     override fun getItemCount() = items.size
 
+
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (val item = items[position]) {
-
             is DietListItem.Header -> (holder as HeaderVH).bind(item)
-            is DietListItem.Meal -> (holder as MealVH).bind(item.item)
-            is DietListItem.Rule -> (holder as RuleVH).bind(item.text)
+            is DietListItem.Meal -> (holder as MealVH).bind(item.item, position)
+            is DietListItem.Rule -> (holder as RuleVH).bind(item.text, position)
         }
     }
-
-    // ---------------- ViewHolders ----------------
 
     class HeaderVH(private val binding: ItemDietHeaderBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -106,19 +100,30 @@ class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerV
         }
     }
 
-    class MealVH(private val binding: ItemDietMealBinding) :
+    class MealVH(private val binding: ItemDietMealBinding, val context: Context) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: DietItem) {
-            binding.item = item
+
+        fun bind(item: DietItem, position: Int) {
+            binding.tvTime.text = item.time
+            binding.tvLabel.text = item.label
+            binding.tvFood.text = item.foods.joinToString(", ")
+            binding.tvNotes.text = item.note
+            val index = abs(position.hashCode()) % colorsMulti.size
+            val colorRes = colorsMulti[index]
+            binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
         }
     }
 
-    class RuleVH(private val binding: ItemDietRuleBinding) :
+    class RuleVH(private val binding: ItemDietRuleBinding, val context: Context) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(rule: String) {
+        fun bind(rule: String, position: Int) {
             binding.rule = rule
+            val index = abs((position).hashCode()) % colorsMultiText.size
+            val colorRes = colorsMultiText[index]
+            binding.tvName.setTextColor(ContextCompat.getColor(context, colorRes))
+            binding.tvName.text = "• $rule"
         }
     }
 }

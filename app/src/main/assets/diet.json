@@ -26,6 +26,7 @@
     },
     {
       "time": "Mid-Morning Snack",
+      "label": "Immediately after waking",
       "foods": [
         "Roasted chenna + peanuts (1 bowl)",
         "1 red banana"
@@ -34,6 +35,8 @@
     },
     {
       "time": "Lunch",
+      "label": "Immediately after waking",
+
       "foods": [
         "2-3 cups rice",
         "Moong dal (good quantity)",
@@ -54,6 +57,8 @@
     },
     {
       "time": "Dinner",
+      "label": "Immediately after waking",
+
       "foods": [
         "2 cups rice",
         "Moong dal or black chenna",
@@ -62,6 +67,8 @@
     },
     {
       "time": "Before Bed",
+      "label": "Immediately after waking",
+
       "foods": [
         "Peanut butter (1-2 tbsp) with bread",
         "OR Handful nuts with roasted chenna"
