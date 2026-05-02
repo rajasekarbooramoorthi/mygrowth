@@ -1,0 +1,79 @@
+{
+  "dailyTarget": {
+    "calories": "2800-3200+",
+    "protein": "90-110g",
+    "mealFrequency": "Every 2.5-3 hours"
+  },
+  "dietPlan": [
+    {
+      "time": "Morning",
+      "label": "Immediately after waking",
+      "foods": [
+        "2 whole eggs",
+        "2 slices sweet bread with peanut butter",
+        "1 red banana"
+      ],
+      "note": "Quick boost to start your metabolism"
+    },
+    {
+      "time": "Breakfast",
+      "label": "1-2 hours later",
+      "foods": [
+        "Bread omelet (3 eggs + 2 bread)",
+        "Handful of nuts"
+      ],
+      "note": "Protein + fats for workout energy"
+    },
+    {
+      "time": "Mid-Morning Snack",
+      "foods": [
+        "Roasted chenna + peanuts (1 bowl)",
+        "1 red banana"
+      ],
+      "note": "Cheap, calorie-dense snack"
+    },
+    {
+      "time": "Lunch",
+      "foods": [
+        "2-3 cups rice",
+        "Moong dal (good quantity)",
+        "Black chenna (1 bowl)"
+      ],
+      "note": "Main weight gain meal"
+    },
+    {
+      "time": "Evening",
+      "label": "Pre/Post Workout",
+      "foods": [
+        "Milk (optional)",
+        "1 banana",
+        "2 tbsp peanut butter",
+        "Handful peanuts"
+      ],
+      "note": "Weight gain shake (~500-800 calories)"
+    },
+    {
+      "time": "Dinner",
+      "foods": [
+        "2 cups rice",
+        "Moong dal or black chenna",
+        "2 eggs (boiled or omelet)"
+      ]
+    },
+    {
+      "time": "Before Bed",
+      "foods": [
+        "Peanut butter (1-2 tbsp) with bread",
+        "OR Handful nuts with roasted chenna"
+      ],
+      "note": "Prevents overnight muscle breakdown"
+    }
+  ],
+  "rules": [
+    "Eat even if not hungry",
+    "Aim for 4-6 eggs daily",
+    "Peanut butter is a high-calorie add-on",
+    "Rice is the main carb source",
+    "Consistency is key for weight gain"
+  ]
+}

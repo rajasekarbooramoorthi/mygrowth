@@ -5,7 +5,7 @@
         android:icon="@drawable/ic_home"/>
 
     <item
-        android:id="@+id/profileFragment"
-        android:title="Profile"
+        android:id="@+id/dietFragment"
+        android:title="Diet Plan"
         android:icon="@drawable/ic_profile"/>
 </menu>

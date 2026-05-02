@@ -39,4 +39,9 @@
         android:id="@+id/workoutFragment"
         android:name="com.raj.mygrowth.WorkoutFragment"
         android:label="Workout" />
+
+    <fragment
+        android:id="@+id/dietFragment"
+        android:name="com.raj.mygrowth.DietFragment"
+        android:label="Diet" />
 </navigation>

@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
-                R.id.profileFragment
+                R.id.dietFragment
             ),
             binding.drawerLayout
         )
