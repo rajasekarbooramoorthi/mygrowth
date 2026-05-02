@@ -5,6 +5,7 @@ import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionTaskCompleted
+import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponsePassword
@@ -53,4 +54,11 @@ interface ApiService {
     suspend fun getThirukural(
 
     ): ThirukuralResponse
+
+
+    @POST("getmydata.php")
+    suspend fun getAttendance(
+        @Body request: RequestAction
+    ): ResponseAttendance
+
 }

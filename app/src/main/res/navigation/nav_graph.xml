@@ -44,4 +44,10 @@
         android:id="@+id/dietFragment"
         android:name="com.raj.mygrowth.DietFragment"
         android:label="Diet" />
+
+
+    <fragment
+        android:id="@+id/toDoFragment"
+        android:name="com.raj.mygrowth.ToDoFragment"
+        android:label="ToDO" />
 </navigation>
