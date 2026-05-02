@@ -1,13 +1,18 @@
 package com.raj.mygrowth
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.WorkoutAdapterItemBinding
 import com.raj.mygrowth.domain.WorkoutPlanItem
+import kotlin.math.abs
 
 class WorkoutAdapterItem(
     private val list: List<WorkoutPlanItem>,
+    private val context: Context
+
 ) : RecyclerView.Adapter<WorkoutAdapterItem.ViewHolder>() {
 
     private val colors = listOf(
@@ -45,23 +50,24 @@ class WorkoutAdapterItem(
         }
 
         val name = item.name.capitalizeWords()
-        val description = item.notes.capitalizeWords()
         holder.binding.tvName.text = name
+
+
+
+
+
+        holder.binding.tvSets.text = item.sets + " Sets"
+        holder.binding.tvReps.text = item.reps + " Reps"
+        holder.binding.tvRest.text = item.rest + " Rest"
+        holder.binding.tvNotes.text = "Notes : " + item.notes
+
         //holder.tvTaskDescription.text = description
 
-        /*        val index = abs(item.dt_sno.hashCode()) % colors.size
-                val colorRes = colors[index]
+        val index = abs(item.id.hashCode()) % colors.size
+        val colorRes = colors[index]
 
-                // holder.cardView.setCardBackgroundColor( ContextCompat.getColor(context, colorRes) )
-                if (item.dt_priority == 1) {
-                    holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_high)
-                } else {
-                    holder.ivPriority.setBackgroundResource(R.drawable.ic_priority_low)
-                }
-                if (item.dt_status == 1) {
-                    holder.checkBox.visibility = GONE
-                } else {
-                    holder.checkBox.visibility = VISIBLE
-                }*/
+        holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
+
+
     }
 }

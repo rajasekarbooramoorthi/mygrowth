@@ -48,6 +48,7 @@
                 app:itemTextColor="@color/bottom_nav_text_color"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:labelVisibilityMode="labeled"
                 app:layout_constraintStart_toStartOf="parent"
                 app:menu="@menu/menu_bottom_nav" />
 

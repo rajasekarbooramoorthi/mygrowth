@@ -60,7 +60,7 @@ class WorkoutFragment : Fragment() {
 
                     is UiState.SuccessWorkout -> {
                         val data = state.data
-                        val adapter = WorkoutAdapter(data)
+                        val adapter = WorkoutAdapter(data.workoutPlan, requireContext())
                         binding.rvDailyTask.adapter = adapter
                     }
 

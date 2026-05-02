@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,7 +11,7 @@ import com.raj.mygrowth.domain.DietItem
 import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.uiState.DietListItem
 
-class DietAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DietAdapter(private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val items = mutableListOf<DietListItem>()
 

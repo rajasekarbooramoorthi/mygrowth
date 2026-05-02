@@ -55,7 +55,7 @@ class DietFragment : Fragment() {
 
                     is UiState.SuccessDiet -> {
 
-                        val adapter = DietAdapter()
+                        val adapter = DietAdapter(requireContext())
                         adapter.submitData(state.data)
                         binding.recyclerView.adapter = adapter
                     }

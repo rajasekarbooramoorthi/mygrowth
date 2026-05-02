@@ -3,6 +3,7 @@ package com.raj.mygrowth
 import android.os.Bundle
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -12,6 +13,7 @@ import com.raj.mygrowth.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,12 +21,8 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setSupportActionBar(binding.toolbar)
-
-        val navController = findNavController(R.id.nav_host_fragment)
-
-        // Top-level destinations (no back button, shows hamburger)
+        navController = findNavController(R.id.nav_host_fragment)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.homeFragment,
@@ -33,16 +31,12 @@ class MainActivity : AppCompatActivity() {
             binding.drawerLayout
         )
 
-        // Bottom navigation
-        binding.bottomNav.setupWithNavController(navController)
-
-        // Drawer navigation
-        binding.navigationView.setupWithNavController(navController)
-
-        // Toolbar + Navigation
         binding.toolbar.setupWithNavController(navController, appBarConfiguration)
 
-        // Drawer toggle (hamburger icon)
+        binding.bottomNav.setupWithNavController(navController)
+
+        binding.navigationView.setupWithNavController(navController)
+
         val toggle = ActionBarDrawerToggle(
             this,
             binding.drawerLayout,
@@ -55,9 +49,8 @@ class MainActivity : AppCompatActivity() {
         setToolbarInsetsActivity()
     }
 
-    // Handle Up button properly
+    // Handle Up button
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
