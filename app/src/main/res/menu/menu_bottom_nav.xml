@@ -5,11 +5,6 @@
         android:title="ToDo" />
 
     <item
-        android:id="@+id/androidMaster"
-        android:icon="@drawable/ic_skills"
-        android:title="Skill" />
-
-    <item
         android:id="@+id/credentialsFragment"
         android:icon="@drawable/ic_cred"
         android:title="Cred" />
@@ -23,5 +18,4 @@
         android:id="@+id/androidCareer"
         android:icon="@drawable/ic_work"
         android:title="Career" />
-
 </menu>

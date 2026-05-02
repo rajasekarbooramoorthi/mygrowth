@@ -20,7 +20,7 @@
         android:label="Password" />
 
     <fragment
-        android:id="@+id/androidMaster"
+        android:id="@+id/thirukuralFragment"
         android:name="com.raj.mygrowth.ThirukuralFragment"
         android:label="Android Master Skill" />
 
