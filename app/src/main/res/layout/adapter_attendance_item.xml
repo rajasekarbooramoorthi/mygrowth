@@ -22,14 +22,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_weight="1"
-                android:fontFamily="@font/sans_bold"
+                android:fontFamily="@font/sans_regular"
                 android:textSize="@dimen/_13ssp" />
 
-            <CheckBox
-                android:id="@+id/chkName"
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp" />
+                android:background="@drawable/ic_present"
+                />
         </LinearLayout>
     </LinearLayout>
 </layout>

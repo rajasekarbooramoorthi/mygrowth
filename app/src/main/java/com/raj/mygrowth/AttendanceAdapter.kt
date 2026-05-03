@@ -47,6 +47,6 @@ class AttendanceAdapter(
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
-        holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
+       // holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
     }
 }

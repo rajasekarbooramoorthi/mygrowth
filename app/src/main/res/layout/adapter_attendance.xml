@@ -16,7 +16,7 @@
             android:layout_marginTop="@dimen/_5sdp"
             android:layout_marginBottom="@dimen/_5sdp"
             android:fontFamily="@font/sans_bold"
-            android:textSize="@dimen/_13ssp" />
+            android:textSize="@dimen/_15ssp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"

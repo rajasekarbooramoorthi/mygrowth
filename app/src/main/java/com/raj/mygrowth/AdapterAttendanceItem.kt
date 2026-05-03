@@ -38,6 +38,6 @@ class AdapterAttendanceItem(
 
         val name = item.name.capitalizeWords()
         holder.binding.tvName.text = name
-        holder.binding.chkName.isChecked = item.status == 1
+        holder.binding.ivName.setBackgroundResource(if(item.status == 1) R.drawable.ic_present else R.drawable.ic_absent)
     }
 }
