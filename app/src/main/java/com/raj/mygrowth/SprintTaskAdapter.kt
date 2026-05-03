@@ -3,15 +3,17 @@ package com.raj.mygrowth
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.raj.mygrowth.ColorUtilities.colorsMulti
 import com.raj.mygrowth.databinding.AdapterTaskSprintBinding
 import com.raj.mygrowth.domain.SprintTaskItem
+import kotlin.math.abs
 
 class SprintTaskAdapter(
     private val list: List<SprintTaskItem>,
-    private val context: Context
+    private val context: Context,
 ) : RecyclerView.Adapter<SprintTaskAdapter.ViewHolder>() {
-
 
     class ViewHolder(val binding: AdapterTaskSprintBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -33,5 +35,10 @@ class SprintTaskAdapter(
         holder.binding.tvName.text = formattedTitle
         holder.binding.tvDescription.text = item.description.replaceFirstChar { it.uppercase() }
 
+        val index = abs(position.hashCode()) % colorsMulti.size
+        val colorRes = colorsMulti[index]
+
+
+        holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
     }
 }

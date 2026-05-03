@@ -6,12 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterMasterSprintBinding
 import com.raj.mygrowth.domain.SprintMasterItem
+import com.raj.mygrowth.interfaces.AdapterClick
 
 class SprintMasterAdapter(
     private val list: List<SprintMasterItem>,
-    private val context: Context
-) : RecyclerView.Adapter<SprintMasterAdapter.ViewHolder>() {
+    private val context: Context,
+    private val click_: AdapterClick,
 
+    ) : RecyclerView.Adapter<SprintMasterAdapter.ViewHolder>() {
+
+    val click = click_
 
     class ViewHolder(val binding: AdapterMasterSprintBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -33,5 +37,8 @@ class SprintMasterAdapter(
         holder.binding.tvName.text = formattedTitle
         holder.binding.tvDescription.text = item.description
 
+        holder.binding.root.setOnClickListener {
+            click.click(item.id)
+        }
     }
 }
