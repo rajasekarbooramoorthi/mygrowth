@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -54,16 +55,20 @@ class ToDoFragment : Fragment() {
                 when (state) {
                     is UiState.Loading -> {
                         // show loader
+                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+
                     }
 
                     is UiState.SuccessTodoAttendance -> {
-                        val data = state.data
-                        val adapter = AttendanceAdapter(data)
+                        val data = state.data.data
+                        val adapter = AttendanceAdapter(data, requireContext())
                         binding.recyclerView.adapter = adapter
                     }
 
                     is UiState.Error -> {
                         // show error
+                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+
                     }
 
                     else -> {}

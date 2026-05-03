@@ -1,32 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-    </data>
+    <data />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#EEEEEE"
-        android:orientation="vertical"
-        android:padding="12dp">
-
-        <TextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Day 1 - Push"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/tvDate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Chest, Shoulders, Triceps"
-            android:textColor="#666666"
-            android:textSize="14sp" />
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/sans_bold"
+            android:textSize="@dimen/_13ssp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?attr/selectableItemBackground"
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth="@dimen/_1sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.cardview.widget.CardView>
     </LinearLayout>
 </layout>

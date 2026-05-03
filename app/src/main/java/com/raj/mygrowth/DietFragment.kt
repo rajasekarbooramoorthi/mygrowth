@@ -9,7 +9,6 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.databinding.FragmentDietBinding
-import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
@@ -54,10 +53,9 @@ class DietFragment : Fragment() {
                     }
 
                     is UiState.SuccessDiet -> {
-
-                        val adapter = DietAdapter(requireContext())
-                        adapter.submitData(state.data)
-                        binding.recyclerView.adapter = adapter
+                        binding.recyclerView.adapter = DietAdapter(requireContext()).apply {
+                            submitData(state.data)
+                        }
                     }
 
                     is UiState.Error -> {
