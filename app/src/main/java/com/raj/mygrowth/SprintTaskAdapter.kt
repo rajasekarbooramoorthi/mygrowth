@@ -28,10 +28,10 @@ class SprintTaskAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
 
-        //val formattedTitle = item.date.replaceFirstChar { it.uppercase() }
+        val formattedTitle = item.name.replaceFirstChar { it.uppercase() }
 
-        holder.binding.tvName.text = item.name
-        holder.binding.tvDescription.text = item.description
+        holder.binding.tvName.text = formattedTitle
+        holder.binding.tvDescription.text = item.description.replaceFirstChar { it.uppercase() }
 
     }
 }

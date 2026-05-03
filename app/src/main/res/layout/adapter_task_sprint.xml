@@ -86,8 +86,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_7sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="sgdhfjgkhlj"
                     android:fontFamily="@font/sans_regular"
                     android:textSize="@dimen/_15ssp" />
 
@@ -95,12 +95,11 @@
                     android:id="@+id/tvDetail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_7sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:fontFamily="@font/sans_regular"
                     android:text="fdsgfhugdhfhgueg uyetfyuewg fyewgtyf dwyufreyugfuydsgfyusede fdsyufgydsufguydsg fyudsf yuds ufygsduyfgyuds yuf dsyfyu ewyfgew y fcuer gcergwrec cg er gder gfeuger"
-                    android:textSize="@dimen/_13ssp" />
+                    android:textSize="@dimen/_11ssp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
