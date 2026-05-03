@@ -10,6 +10,8 @@ import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSimple
+import com.raj.mygrowth.domain.SprintMasterResponse
+import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.domain.ThirukuralResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -60,5 +62,15 @@ interface ApiService {
     suspend fun getAttendance(
         @Body request: RequestAction
     ): ResponseAttendance
+
+    @POST("getmydata.php")
+    suspend fun getSprint(
+        @Body request: RequestAction
+    ): SprintMasterResponse
+
+    @POST("getmydata.php")
+    suspend fun getSprintTask(
+        @Body request: RequestAction
+    ): SprintTaskResponse
 
 }

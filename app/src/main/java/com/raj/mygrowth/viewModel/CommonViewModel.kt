@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.ResponseAttendance
+import com.raj.mygrowth.domain.SprintMasterResponse
+import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import com.raj.mygrowth.repository.Repository
@@ -58,6 +60,14 @@ class CommonViewModel(
         emit(api.getAttendance(request))
     }.flowOn(Dispatchers.IO)
 
+    fun getSprint(request: RequestAction): Flow<SprintMasterResponse> = flow {
+        emit(api.getSprint(request))
+    }.flowOn(Dispatchers.IO)
+
+    fun getSprintTask(request: RequestAction): Flow<SprintTaskResponse> = flow {
+        emit(api.getSprintTask(request))
+    }.flowOn(Dispatchers.IO)
+
     fun fetchAttendance(request: RequestAction) {
         viewModelScope.launch {
             getAttendance(request).onStart {
@@ -66,6 +76,30 @@ class CommonViewModel(
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
             }.collect { data ->
                 _uiState.value = UiState.SuccessTodoAttendance(data)
+            }
+        }
+    }
+
+    fun fetchSprint(request: RequestAction) {
+        viewModelScope.launch {
+            getSprint(request).onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessSprintMaster(data)
+            }
+        }
+    }
+
+    fun fetchSprintTask(request: RequestAction) {
+        viewModelScope.launch {
+            getSprintTask(request).onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessSprintTask(data)
             }
         }
     }
