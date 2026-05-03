@@ -19,7 +19,7 @@
             android:name=".ActivityRichWebview"
             android:exported="false" />
         <activity
-            android:name=".ActivityAddTask"
+            android:name=".AddSprintTaskActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityPdfView"

@@ -54,4 +54,9 @@
         android:id="@+id/sprintFragment"
         android:name="com.raj.mygrowth.SprintFragment"
         android:label="Sprint" />
+
+    <activity
+        android:id="@+id/addSprintTask"
+        android:name="com.raj.mygrowth.AddSprintTaskActivity"
+        android:label="Add Sprint Task" />
 </navigation>
