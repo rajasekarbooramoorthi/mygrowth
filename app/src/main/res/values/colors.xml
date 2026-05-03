@@ -89,4 +89,8 @@
     <color name="blue_dark_50">#1565C0</color>
     <color name="grey_dark_50">#616161</color>
     <color name="blue_grey_dark_50">#455A64</color>
+
+    <color name="green_present">#66BB6A</color>
+    <color name="red_absent">#EF5350</color>
+
 </resources>
