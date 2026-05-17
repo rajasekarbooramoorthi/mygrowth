@@ -34,6 +34,7 @@ class SprintTaskAdapter(
 
         holder.binding.tvName.text = formattedTitle
         holder.binding.tvDescription.text = item.description.replaceFirstChar { it.uppercase() }
+        holder.binding.tvDetail.text = item.detail?.let { it.replaceFirstChar { it.uppercase() } }
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]

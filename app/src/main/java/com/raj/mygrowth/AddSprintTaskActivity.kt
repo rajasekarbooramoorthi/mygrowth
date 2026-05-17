@@ -110,7 +110,6 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
 
         } else if (sprintID.isEmpty()) {
             binding.chkPriority.error = "sprint is not selected"
-
         } else {
             addTask(
                 RequestActionAddSprintTask(

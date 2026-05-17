@@ -6,6 +6,7 @@ data class SprintTaskItem(
     val id: String,
     val name: String,
     val description: String,
+    val detail: String?,
     val status: String,
-    val date: String
+    val date: String? = ""
 )
