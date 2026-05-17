@@ -114,7 +114,7 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
             addTask(
                 RequestActionAddSprintTask(
                     action = POST_ADD_TASK,
-                    taskName = binding.editTextName.text.toString().trim(),
+                    name = binding.editTextName.text.toString().trim(),
                     description = binding.editDescription.text.toString().trim(),
                     details = binding.editDetails.text.toString().trim(),
                     priority = binding.chkPriority.isChecked.toString(),

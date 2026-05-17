@@ -33,13 +33,11 @@ class SprintTaskAdapter(
         val formattedTitle = item.name.replaceFirstChar { it.uppercase() }
 
         holder.binding.tvName.text = formattedTitle
-        holder.binding.tvDescription.text = item.description.replaceFirstChar { it.uppercase() }
-        holder.binding.tvDetail.text = item.detail?.let { it.replaceFirstChar { it.uppercase() } }
+        holder.binding.tvDetail.text = item.details
+        holder.binding.tvDescription.text = item.description
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
-
-
         holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
     }
 }

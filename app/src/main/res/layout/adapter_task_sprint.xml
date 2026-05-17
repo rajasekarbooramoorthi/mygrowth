@@ -40,7 +40,7 @@
                         android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_weight="1.5"
                         android:fontFamily="@font/sans_bold"
-                        android:text="Development"
+                        android:text="Task Name"
                         android:textSize="@dimen/_15ssp" />
 
                     <TextView
