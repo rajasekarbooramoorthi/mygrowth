@@ -23,4 +23,9 @@
         android:id="@+id/addSprintTask"
         android:icon="@drawable/ic_profile"
         android:title="Add Task" />
+
+    <item
+        android:id="@+id/weightFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="Weight Gain" />
 </menu>
