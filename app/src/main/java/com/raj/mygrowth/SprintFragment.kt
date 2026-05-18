@@ -63,7 +63,7 @@ class SprintFragment : Fragment(), AdapterClick {
                 when (state) {
                     is UiState.Loading -> {
                         // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessSprintMaster -> {
@@ -91,7 +91,7 @@ class SprintFragment : Fragment(), AdapterClick {
                 when (state) {
                     is UiState.Loading -> {
                         // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessSprintTask -> {

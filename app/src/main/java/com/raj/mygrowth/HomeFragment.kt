@@ -15,14 +15,12 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.BottomDialogAddTaskBinding
 import com.raj.mygrowth.databinding.FragmentHomeBinding
 import com.raj.mygrowth.domain.DailyTask
-import com.raj.mygrowth.domain.DailyTaskItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.interfaces.SimpleClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.util.Calendar
 

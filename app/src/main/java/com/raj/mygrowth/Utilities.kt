@@ -7,6 +7,9 @@ import android.widget.Toast
 import com.raj.mygrowth.domain.ConceptModel
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class Utilities {
     private fun readCsvFile(uri: Uri, context: Context) {
@@ -67,5 +70,12 @@ class Utilities {
                 .show()
             Log.e("CSV_ERROR", e.toString())
         }
+    }
+
+    fun getCurrentDate() {
+        val currentDate = Date()
+        val formatter = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
+        val formattedDate = formatter.format(currentDate)
+        println(formattedDate)
     }
 }

@@ -80,7 +80,7 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
                     }
 
                     is UiState.SuccessSprintTaskAdd -> {
-                        Toast.makeText(context, "success", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(context, "success", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.Error -> {

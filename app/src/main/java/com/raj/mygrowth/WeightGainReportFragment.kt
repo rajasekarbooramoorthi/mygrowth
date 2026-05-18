@@ -240,3 +240,17 @@ class WeightGainReportFragment : Fragment() {
         _binding = null
     }
 }
+
+/*
+1.Communication
+2.Pronunciation
+3.Personal Development
+4.Posture
+5.Android Interview Question Phase 1
+6.Android Remining Compensation Phase 2
+7.Fullstack
+8.Data Structure
+9.IBM Goal Phase 1
+10.IBM Phase 2
+11.Music
+*/

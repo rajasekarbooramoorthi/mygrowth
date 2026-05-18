@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
+import com.raj.mygrowth.domain.RequestActionGetAttendance
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
@@ -62,6 +63,10 @@ class CommonViewModel(
         emit(api.getAttendance(request))
     }.flowOn(Dispatchers.IO)
 
+    fun getAddAttendance(request: RequestActionGetAttendance): Flow<ResponseAttendance> = flow {
+        emit(api.getaddAttendance(request))
+    }.flowOn(Dispatchers.IO)
+
     fun getSprint(request: RequestAction): Flow<SprintMasterResponse> = flow {
         emit(api.getSprint(request))
     }.flowOn(Dispatchers.IO)
@@ -82,6 +87,18 @@ class CommonViewModel(
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
             }.collect { data ->
                 _uiState.value = UiState.SuccessTodoAttendance(data)
+            }
+        }
+    }
+
+    fun fetchGetAttendance(request: RequestActionGetAttendance) {
+        viewModelScope.launch {
+            getAddAttendance(request).onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessGetAddAttendance(data)
             }
         }
     }

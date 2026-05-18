@@ -12,6 +12,7 @@ sealed class UiState {
     object Loading : UiState()
     data class SuccessWorkout(val data: WorkoutResponse) : UiState()
     data class SuccessTodoAttendance(val data: ResponseAttendance) : UiState()
+    data class SuccessGetAddAttendance(val data: ResponseAttendance) : UiState()
     data class SuccessSprintMaster(val data: SprintMasterResponse) : UiState()
     data class SuccessSprintTask(val data: SprintTaskResponse) : UiState()
     data class SuccessSprintTaskAdd(val data: ResponseSimple) : UiState()
