@@ -3,6 +3,7 @@ package com.raj.mygrowth.networkUtility
 import com.raj.mygrowth.domain.CategoryMasterResponse
 import com.raj.mygrowth.domain.DailyTaskResponse
 import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionGetAttendance
@@ -64,6 +65,7 @@ interface ApiService {
     suspend fun getAttendance(
         @Body request: RequestAction
     ): ResponseAttendance
+
     @POST("getmydata.php")
     suspend fun getaddAttendance(
         @Body request: RequestActionGetAttendance
@@ -82,6 +84,11 @@ interface ApiService {
     @POST("getmydata.php")
     suspend fun addSprintTask(
         @Body request: RequestActionAddSprintTask
+    ): ResponseSimple
+
+    @POST("getmydata.php")
+    suspend fun addAttendanceRequest(
+        @Body request: RequestActionAddAttendance
     ): ResponseSimple
 
 }

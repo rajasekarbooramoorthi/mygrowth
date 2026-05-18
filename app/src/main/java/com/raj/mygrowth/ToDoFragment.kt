@@ -20,13 +20,15 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentTodoBinding
 import com.raj.mygrowth.domain.AttendanceData
 import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionGetAttendance
+import com.raj.mygrowth.interfaces.ClickAttendance
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
 import kotlinx.coroutines.launch
 
-class ToDoFragment : Fragment() {
+class ToDoFragment : Fragment(), ClickAttendance {
     private var _binding: FragmentTodoBinding? = null
     private val binding get() = _binding!!
     private val viewModel: CommonViewModel by viewModels {
@@ -64,6 +66,34 @@ class ToDoFragment : Fragment() {
                         // show loader
                         //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
 
+                    }
+
+                    is UiState.SuccessTodoAttendance -> {
+                        val data = state.data.data
+                        val adapter = AttendanceReportAdapter(data, requireContext())
+                        binding.recyclerView.adapter = adapter
+                    }
+
+                    is UiState.Error -> {
+                        // show error
+                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+
+                    }
+
+                    else -> {}
+                }
+            }
+        }
+    }
+
+    fun callApiAdd() {
+        viewModel.addAttendance(RequestActionAddAttendance("get_habit_todo_attendance", "", "", ""))
+        lifecycleScope.launch {
+            viewModel.uiState.collect { state ->
+                when (state) {
+                    is UiState.Loading -> {
+                        // show loader
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessTodoAttendance -> {
@@ -124,7 +154,7 @@ class ToDoFragment : Fragment() {
         }
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.recyclerView)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        rvDialog?.adapter = AttendanceAdapter(list, requireContext())
+        rvDialog?.adapter = AttendanceAdapter(list, requireContext(), this)
         dialog.show()
     }
 
@@ -151,6 +181,9 @@ class ToDoFragment : Fragment() {
                 }
             }
         }
+    }
+
+    override fun click(request: RequestActionAddAttendance) {
     }
 }
 

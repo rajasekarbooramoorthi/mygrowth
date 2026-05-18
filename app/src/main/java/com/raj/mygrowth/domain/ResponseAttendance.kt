@@ -16,4 +16,5 @@ data class AttendanceItem(
     val id: String,
     val priority: String,
     val status: Int,
+    val date: String,
 )

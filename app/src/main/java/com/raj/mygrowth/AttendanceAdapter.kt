@@ -9,11 +9,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.ColorUtilities.colorsMulti
 import com.raj.mygrowth.databinding.AdapterAttendanceBinding
 import com.raj.mygrowth.domain.AttendanceData
+import com.raj.mygrowth.interfaces.ClickAttendance
 import kotlin.math.abs
 
 class AttendanceAdapter(
     private val list: List<AttendanceData>,
-    private val context: Context
+    private val context: Context,
+    private val clickAttendance: ClickAttendance
 ) : RecyclerView.Adapter<AttendanceAdapter.ViewHolder>() {
 
 
@@ -42,7 +44,7 @@ class AttendanceAdapter(
         }
 
         if (holder.binding.recyclerView.adapter == null) {
-            holder.binding.recyclerView.adapter = AdapterAttendanceItem(item.list, context)
+            holder.binding.recyclerView.adapter = AdapterGetAttendanceItem(item.list, context,clickAttendance)
         }
 
         val index = abs(position.hashCode()) % colorsMulti.size
