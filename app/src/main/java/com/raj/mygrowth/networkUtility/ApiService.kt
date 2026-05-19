@@ -69,7 +69,7 @@ interface ApiService {
 
     @POST("getmydata.php")
     suspend fun getaddAttendance(
-        @Body request: RequestActionGetAttendance
+        @Body request: RequestAction
     ): ResponseGetAttendance
 
     @POST("getmydata.php")

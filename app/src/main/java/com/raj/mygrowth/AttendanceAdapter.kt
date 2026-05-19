@@ -3,7 +3,6 @@ package com.raj.mygrowth
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.ColorUtilities.colorsMulti
@@ -41,11 +40,6 @@ class AttendanceAdapter(
         if (holder.binding.recyclerView.layoutManager == null) {
             holder.binding.recyclerView.layoutManager =
                 LinearLayoutManager(holder.itemView.context)
-        }
-
-        if (holder.binding.recyclerView.adapter == null) {
-            holder.binding.recyclerView.adapter =
-                AdapterGetAttendanceItem(item.list, clickAttendance)
         }
 
         val index = abs(position.hashCode()) % colorsMulti.size

@@ -1,16 +1,15 @@
 package com.raj.mygrowth
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterAttendanceGetItemBinding
-import com.raj.mygrowth.domain.AttendanceItem
+import com.raj.mygrowth.domain.AttendanceGetItem
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.interfaces.ClickAttendance
 
 class AdapterGetAttendanceItem(
-    private val list: List<AttendanceItem>,
+    private val list: List<AttendanceGetItem>,
     val clickAttendance: ClickAttendance
 
 ) : RecyclerView.Adapter<AdapterGetAttendanceItem.ViewHolder>() {
@@ -39,11 +38,11 @@ class AdapterGetAttendanceItem(
             }
         }
 
-        val name = item.name.capitalizeWords()
+        val name = item.name
         holder.binding.tvName.text = name
         holder.binding.checkBok.setOnCheckedChangeListener { button, bool ->
             val status = if (bool) 1 else 0
-            clickAttendance.click(RequestActionAddAttendance("", status, item.id, item.date))
+            clickAttendance.click(RequestActionAddAttendance("", status, item.id, ""))
         }
         //holder.binding.ivName.setBackgroundResource(if (item.status == 1) R.drawable.ic_present else R.drawable.ic_absent)
     }

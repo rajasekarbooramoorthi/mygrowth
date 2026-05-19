@@ -20,6 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.Utilities.getCurrentDate
 import com.raj.mygrowth.databinding.FragmentTodoBinding
 import com.raj.mygrowth.domain.AttendanceData
+import com.raj.mygrowth.domain.AttendanceGetItem
 import com.raj.mygrowth.domain.AttendanceItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
@@ -144,7 +145,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     }
 
 
-    fun dialog(list: List<AttendanceItem>) {
+    fun dialog(list: List<AttendanceGetItem>) {
         val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         dialog.setContentView(R.layout.add_attendance)
         dialog.setCancelable(true)
@@ -169,10 +170,8 @@ class ToDoFragment : Fragment(), ClickAttendance {
 
     fun callApiAddAttendance() {
         viewModel.fetchGetAttendance(
-            RequestActionGetAttendance(
-                "get_add_attendance",
-                getCurrentDate()
-            )
+            RequestAction(
+                "get_add_attendance")
         )
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->

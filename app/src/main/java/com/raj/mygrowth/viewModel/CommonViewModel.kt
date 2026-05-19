@@ -65,7 +65,7 @@ class CommonViewModel(
         emit(api.getAttendance(request))
     }.flowOn(Dispatchers.IO)
 
-    fun getAddAttendance(request: RequestActionGetAttendance): Flow<ResponseGetAttendance> = flow {
+    fun getAddAttendance(request: RequestAction): Flow<ResponseGetAttendance> = flow {
         emit(api.getaddAttendance(request))
     }.flowOn(Dispatchers.IO)
 
@@ -97,7 +97,7 @@ class CommonViewModel(
         }
     }
 
-    fun fetchGetAttendance(request: RequestActionGetAttendance) {
+    fun fetchGetAttendance(request: RequestAction) {
         viewModelScope.launch {
             getAddAttendance(request).onStart {
                 _uiState.value = UiState.Loading
