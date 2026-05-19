@@ -9,6 +9,7 @@ import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
 import com.raj.mygrowth.domain.RequestActionGetAttendance
 import com.raj.mygrowth.domain.ResponseAttendance
+import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
@@ -64,7 +65,7 @@ class CommonViewModel(
         emit(api.getAttendance(request))
     }.flowOn(Dispatchers.IO)
 
-    fun getAddAttendance(request: RequestActionGetAttendance): Flow<ResponseAttendance> = flow {
+    fun getAddAttendance(request: RequestActionGetAttendance): Flow<ResponseGetAttendance> = flow {
         emit(api.getaddAttendance(request))
     }.flowOn(Dispatchers.IO)
 

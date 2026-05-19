@@ -11,6 +11,7 @@ import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
+import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponsePassword
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
@@ -69,7 +70,7 @@ interface ApiService {
     @POST("getmydata.php")
     suspend fun getaddAttendance(
         @Body request: RequestActionGetAttendance
-    ): ResponseAttendance
+    ): ResponseGetAttendance
 
     @POST("getmydata.php")
     suspend fun getSprint(

@@ -11,7 +11,6 @@ import com.raj.mygrowth.interfaces.ClickAttendance
 
 class AdapterGetAttendanceItem(
     private val list: List<AttendanceItem>,
-    private val context: Context,
     val clickAttendance: ClickAttendance
 
 ) : RecyclerView.Adapter<AdapterGetAttendanceItem.ViewHolder>() {

@@ -2,6 +2,7 @@ package com.raj.mygrowth.uiState
 
 import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.domain.ResponseAttendance
+import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskItem
@@ -12,7 +13,7 @@ sealed class UiState {
     object Loading : UiState()
     data class SuccessWorkout(val data: WorkoutResponse) : UiState()
     data class SuccessTodoAttendance(val data: ResponseAttendance) : UiState()
-    data class SuccessGetAddAttendance(val data: ResponseAttendance) : UiState()
+    data class SuccessGetAddAttendance(val data: ResponseGetAttendance) : UiState()
     data class SuccessSprintMaster(val data: SprintMasterResponse) : UiState()
     data class SuccessSprintTask(val data: SprintTaskResponse) : UiState()
     data class SuccessSprintTaskAdd(val data: ResponseSimple) : UiState()

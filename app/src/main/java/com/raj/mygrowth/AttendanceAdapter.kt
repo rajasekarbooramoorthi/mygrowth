@@ -44,11 +44,12 @@ class AttendanceAdapter(
         }
 
         if (holder.binding.recyclerView.adapter == null) {
-            holder.binding.recyclerView.adapter = AdapterGetAttendanceItem(item.list, context,clickAttendance)
+            holder.binding.recyclerView.adapter =
+                AdapterGetAttendanceItem(item.list, clickAttendance)
         }
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
-       // holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
+        // holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
     }
 }

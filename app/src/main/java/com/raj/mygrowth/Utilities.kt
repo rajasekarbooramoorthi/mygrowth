@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-class Utilities {
+object Utilities {
     private fun readCsvFile(uri: Uri, context: Context) {
         try {
             val inputStream = context.contentResolver.openInputStream(uri)
@@ -72,10 +72,10 @@ class Utilities {
         }
     }
 
-    fun getCurrentDate() {
+    fun getCurrentDate(): String {
         val currentDate = Date()
-        val formatter = SimpleDateFormat("dd MMMM yyyy", Locale.getDefault())
+        val formatter = SimpleDateFormat("yyyy dd MMMM", Locale.getDefault())
         val formattedDate = formatter.format(currentDate)
-        println(formattedDate)
+        return formattedDate
     }
 }

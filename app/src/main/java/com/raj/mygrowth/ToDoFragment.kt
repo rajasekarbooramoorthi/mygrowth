@@ -17,8 +17,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.raj.mygrowth.Utilities.getCurrentDate
 import com.raj.mygrowth.databinding.FragmentTodoBinding
 import com.raj.mygrowth.domain.AttendanceData
+import com.raj.mygrowth.domain.AttendanceItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionGetAttendance
@@ -47,7 +49,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        callApi()
+        callApiReport()
     }
 
 
@@ -57,7 +59,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     }
 
 
-    fun callApi() {
+    fun callApiReport() {
         viewModel.fetchAttendance(RequestAction("get_habit_todo_attendance"))
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
@@ -86,8 +88,15 @@ class ToDoFragment : Fragment(), ClickAttendance {
         }
     }
 
-    fun callApiAdd() {
-        viewModel.addAttendance(RequestActionAddAttendance("get_habit_todo_attendance", "", "", ""))
+    fun callApiSendAttendance(request: RequestActionAddAttendance) {
+        viewModel.addAttendance(
+            RequestActionAddAttendance(
+                "get_habit_todo_attendance",
+                request.status,
+                request.id,
+                getCurrentDate()
+            )
+        )
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
                 when (state) {
@@ -135,7 +144,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     }
 
 
-    fun dialog(list: List<AttendanceData>) {
+    fun dialog(list: List<AttendanceItem>) {
         val dialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         dialog.setContentView(R.layout.add_attendance)
         dialog.setCancelable(true)
@@ -154,19 +163,23 @@ class ToDoFragment : Fragment(), ClickAttendance {
         }
         val rvDialog = dialog.findViewById<RecyclerView>(R.id.recyclerView)
         rvDialog?.layoutManager = LinearLayoutManager(requireContext())
-        rvDialog?.adapter = AttendanceAdapter(list, requireContext(), this)
+        rvDialog?.adapter = AdapterGetAttendanceItem(list, this)
         dialog.show()
     }
 
     fun callApiAddAttendance() {
-        viewModel.fetchGetAttendance(RequestActionGetAttendance("get_add_attendance", "2026-05-02"))
+        viewModel.fetchGetAttendance(
+            RequestActionGetAttendance(
+                "get_add_attendance",
+                getCurrentDate()
+            )
+        )
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
                 when (state) {
                     is UiState.Loading -> {
                         // show loader
                         //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
-
                     }
 
                     is UiState.SuccessGetAddAttendance -> {
@@ -184,6 +197,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     }
 
     override fun click(request: RequestActionAddAttendance) {
+        callApiSendAttendance(request)
     }
 }
 
