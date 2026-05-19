@@ -74,7 +74,7 @@ object Utilities {
 
     fun getCurrentDate(): String {
         val currentDate = Date()
-        val formatter = SimpleDateFormat("yyyy dd MMMM", Locale.getDefault())
+        val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val formattedDate = formatter.format(currentDate)
         return formattedDate
     }

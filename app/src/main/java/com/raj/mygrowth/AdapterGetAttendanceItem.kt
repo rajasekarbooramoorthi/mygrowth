@@ -13,8 +13,6 @@ class AdapterGetAttendanceItem(
     val clickAttendance: ClickAttendance
 
 ) : RecyclerView.Adapter<AdapterGetAttendanceItem.ViewHolder>() {
-
-
     class ViewHolder(val binding: AdapterAttendanceGetItemBinding) :
         RecyclerView.ViewHolder(binding.root)
 
@@ -26,10 +24,8 @@ class AdapterGetAttendanceItem(
     }
 
     override fun getItemCount(): Int = list.size
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = list[position]
-
         fun String.capitalizeWords(): String {
             return this.split(" ").joinToString(" ") { word ->
                 word.replaceFirstChar {
@@ -40,10 +36,10 @@ class AdapterGetAttendanceItem(
 
         val name = item.name
         holder.binding.tvName.text = name
-        holder.binding.checkBok.setOnCheckedChangeListener { button, bool ->
+        holder.binding.checkBox.setOnCheckedChangeListener { _, bool ->
             val status = if (bool) 1 else 0
             clickAttendance.click(RequestActionAddAttendance("", status, item.id, ""))
         }
-        //holder.binding.ivName.setBackgroundResource(if (item.status == 1) R.drawable.ic_present else R.drawable.ic_absent)
+        holder.binding.ivPriority.setBackgroundResource(if (item.priority == 1) R.drawable.ic_priority_high else R.drawable.ic_priority_low)
     }
 }

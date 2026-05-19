@@ -92,7 +92,7 @@ class ToDoFragment : Fragment(), ClickAttendance {
     fun callApiSendAttendance(request: RequestActionAddAttendance) {
         viewModel.addAttendance(
             RequestActionAddAttendance(
-                "get_habit_todo_attendance",
+                "insert_daily_attendance",
                 request.status,
                 request.id,
                 getCurrentDate()

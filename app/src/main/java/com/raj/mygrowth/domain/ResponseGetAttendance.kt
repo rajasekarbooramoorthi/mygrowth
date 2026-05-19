@@ -8,5 +8,5 @@ data class ResponseGetAttendance(
 data class AttendanceGetItem(
     val name: String,
     val id: String,
-    val priority: String,
+    val priority: Int,
 )
