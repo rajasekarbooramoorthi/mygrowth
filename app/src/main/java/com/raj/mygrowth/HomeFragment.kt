@@ -70,8 +70,7 @@ class HomeFragment : Fragment(), SimpleClick {
                             processedData.add(DailyTask(task.taskName, task.list))
                         }
                     }
-                    val adapter =
-                        DailyTaskAdapter(processedData, this@HomeFragment, requireContext())
+                    val adapter = DailyTaskAdapter(processedData, this@HomeFragment, requireContext())
                     binding.rvDailyTask.adapter = adapter
                     var position = 0
                     response.data.forEachIndexed { index, item ->
