@@ -28,4 +28,8 @@
         android:id="@+id/weightFragment"
         android:icon="@drawable/ic_profile"
         android:title="Weight Gain" />
+    <item
+        android:id="@+id/addToDoAttendance"
+        android:icon="@drawable/ic_profile"
+        android:title="Mark Attendance" />
 </menu>

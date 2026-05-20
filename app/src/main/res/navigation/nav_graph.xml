@@ -63,4 +63,9 @@
         android:id="@+id/weightFragment"
         android:name="com.raj.mygrowth.WeightGainReportFragment"
         android:label="Weight Gain" />
+
+    <fragment
+        android:id="@+id/addToDoAttendance"
+        android:name="com.raj.mygrowth.ToDoAddAttendanceFragment"
+        android:label="Mark Attendance" />
 </navigation>

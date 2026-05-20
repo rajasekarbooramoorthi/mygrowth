@@ -19,12 +19,9 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.Utilities.getCurrentDate
 import com.raj.mygrowth.databinding.FragmentTodoBinding
-import com.raj.mygrowth.domain.AttendanceData
 import com.raj.mygrowth.domain.AttendanceGetItem
-import com.raj.mygrowth.domain.AttendanceItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
-import com.raj.mygrowth.domain.RequestActionGetAttendance
 import com.raj.mygrowth.interfaces.ClickAttendance
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
