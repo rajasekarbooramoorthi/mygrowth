@@ -34,8 +34,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_present" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/ic_present.svg" />
+                            <entry key="outputName" value="ic_learning" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/ic_learning.svg" />
                           </map>
                         </option>
                       </PersistentState>

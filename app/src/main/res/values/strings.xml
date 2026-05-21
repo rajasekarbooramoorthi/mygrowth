@@ -33,5 +33,15 @@
     <string name="open">open</string>
     <string name="close">close</string>
     <string name="details">Details</string>
+    <string name="workout">Workout</string>
+    <string name="diet_plan">Diet Plan</string>
+    <string name="todo_attendance">ToDo Report</string>
+    <string name="kural">Kural</string>
+    <string name="sprint">Sprint</string>
+    <string name="add_task">Add Task</string>
+    <string name="weight_gain">Weight Gain</string>
+    <string name="mark_attendance">Mark Attendance</string>
+    <string name="password">Password</string>
+    <string name="learning">Learning</string>
 
 </resources>

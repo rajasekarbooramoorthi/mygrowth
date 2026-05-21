@@ -1,35 +1,35 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/workoutFragment"
-        android:icon="@drawable/ic_home"
-        android:title="Workout" />
+        android:icon="@drawable/ic_workout"
+        android:title="@string/workout" />
     <item
         android:id="@+id/dietFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Diet Plan" />
+        android:icon="@drawable/ic_diet"
+        android:title="@string/diet_plan" />
     <item
         android:id="@+id/toDoFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="ToDo Attendance" />
+        android:icon="@drawable/ic_todo_report"
+        android:title="@string/todo_attendance" />
     <item
         android:id="@+id/thirukuralFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Kural" />
+        android:icon="@drawable/ic_kural"
+        android:title="@string/kural" />
     <item
-        android:id="@+id/sprintFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Sprint" />
+        android:id="@+id/credentialsFragment"
+        android:icon="@drawable/ic_cred"
+        android:title="@string/password" />
     <item
         android:id="@+id/addSprintTask"
-        android:icon="@drawable/ic_profile"
-        android:title="Add Task" />
+        android:icon="@drawable/ic_add_task"
+        android:title="@string/add_task" />
 
     <item
         android:id="@+id/weightFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="Weight Gain" />
+        android:icon="@drawable/ic_timeline"
+        android:title="@string/weight_gain" />
     <item
         android:id="@+id/addToDoAttendance"
-        android:icon="@drawable/ic_profile"
-        android:title="Mark Attendance" />
+        android:icon="@drawable/ic_calendar"
+        android:title="@string/mark_attendance" />
 </menu>

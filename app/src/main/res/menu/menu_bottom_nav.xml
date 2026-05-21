@@ -6,8 +6,8 @@
         android:title="ToDo" />
 
     <item
-        android:id="@+id/credentialsFragment"
-        android:icon="@drawable/ic_cred"
+        android:id="@+id/sprintFragment"
+        android:icon="@drawable/ic_sprint"
         android:title="Cred" />
 
     <item
@@ -17,6 +17,6 @@
 
     <item
         android:id="@+id/androidCareer"
-        android:icon="@drawable/ic_work"
-        android:title="Career" />
+        android:icon="@drawable/ic_learning"
+        android:title="@string/learning" />
 </menu>

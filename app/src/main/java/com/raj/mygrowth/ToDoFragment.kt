@@ -40,7 +40,6 @@ class ToDoFragment : Fragment(), ClickAttendance {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentTodoBinding.inflate(inflater, container, false)
-        setupMenu()
         return binding.root
     }
 
