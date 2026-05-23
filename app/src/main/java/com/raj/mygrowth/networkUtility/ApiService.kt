@@ -54,10 +54,10 @@ interface ApiService {
     ): ResponseSimple
 
 
-    @GET("main.json")
+    @GET("json/main.json")
     suspend fun getMaster(): CategoryMasterResponse
 
-    @GET("kural.json")
+    @GET("json/kural.json")
     suspend fun getThirukural(
 
     ): ThirukuralResponse
@@ -93,7 +93,7 @@ interface ApiService {
         @Body request: RequestActionAddAttendance
     ): ResponseSimple
 
-    @GET("weightGainTimeline.json")
+    @GET("json/weightGainTimeline.json")
     suspend fun getWeightGainTimeLine(): WeightGainResponse
 
 }
