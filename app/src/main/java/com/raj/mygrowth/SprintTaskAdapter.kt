@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.ColorUtilities.colorsMulti
+import com.raj.mygrowth.ColorUtilities.colorsMultiText
 import com.raj.mygrowth.databinding.AdapterTaskSprintBinding
 import com.raj.mygrowth.domain.SprintTaskItem
 import kotlin.math.abs
@@ -38,6 +39,11 @@ class SprintTaskAdapter(
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
+
+        val indexs = abs(position.hashCode()) % colorsMultiText.size
+        val colorRess = colorsMultiText[indexs]
+
+        holder.binding.viewLine.setBackgroundColor(ContextCompat.getColor(context, colorRess))
         holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
     }
 }
