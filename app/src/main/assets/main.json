@@ -15609,7 +15609,7 @@
           "subCategoryId": 102,
           "subcategoryName": "Books Summary",
           "subCategoryTag": "get_master_skills",
-          "folderName": "Books_Summary",
+          "folderName": "BookSummary",
           "itemList": [
             {
               "id": "1",
@@ -15687,7 +15687,7 @@
           "subCategoryId": 102,
           "subcategoryName": "Personal Development",
           "subCategoryTag": "get_master_skills",
-          "folderName": "Books_Summary",
+          "folderName": "Development",
           "itemList": [
             {
               "id": "1",
@@ -15743,6 +15743,7 @@
         {
           "subCategoryId": 102,
           "subcategoryName": "Communication",
+          "folderName": "English Communication",
           "subCategoryTag": "get_master_skills",
           "itemList": [
             {
