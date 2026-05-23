@@ -92,4 +92,9 @@
     <color name="green_present">#66BB6A</color>
     <color name="red_absent">#EF5350</color>
 
+    <color name="deep_orange_light_time_line">#FFAB91</color>
+
+    <color name="teal_dark_light_time_line">#80CBC4</color>
+
+
 </resources>

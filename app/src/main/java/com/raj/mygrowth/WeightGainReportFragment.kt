@@ -1,23 +1,27 @@
 package com.raj.mygrowth
 
-import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
+import com.google.gson.Gson
 import com.raj.mygrowth.databinding.FragmentWeightGainReportBinding
 import com.raj.mygrowth.databinding.FragmentWeightGainReportBinding.inflate
-import com.raj.mygrowth.domain.WeightData
+import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.repository.Repository
+import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
+import kotlinx.coroutines.launch
 
 class WeightGainReportFragment : Fragment() {
     private var _binding: FragmentWeightGainReportBinding? = null
@@ -25,10 +29,10 @@ class WeightGainReportFragment : Fragment() {
     private val viewModel: CommonViewModel by viewModels {
         CommonViewModel.CommonViewModelFactory(Repository(requireContext()))
     }
+    private val gson by lazy { Gson() }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = inflate(inflater, container, false)
         return binding.root
@@ -36,141 +40,32 @@ class WeightGainReportFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setupChart()
+        callApi()
     }
 
-
-    private fun setupChart() {
+    private fun setupChart(dataResponse: WeightGainResponse) {
 
         val targetEntries = ArrayList<Entry>()
         val currentEntries = ArrayList<Entry>()
         val labels = ArrayList<String>()
 
-        // =========================
-        // TARGET WEIGHT
-        // =========================
-
-        val targetWeightList = listOf(
-
-            // MAY
-            48.400f,
-            50.75f,
-            51.5f,
-            52.25f,
-
-            // JUNE
-            53f,
-            53.75f,
-            54.5f,
-            55.25f,
-
-            // JULY
-            56f,
-            56.75f,
-            57.5f,
-            58.25f,
-
-            // AUGUST
-            59f,
-            59.75f,
-            60.5f,
-            61.25f,
-
-            // SEPTEMBER
-            62f,
-            62.75f,
-            63.5f,
-            64.25f,
-
-            // OCTOBER
-            65f,
-            65.75f,
-            66.5f,
-            67.25f
-        )
-
-        // =========================
-        // CURRENT WEIGHT
-        // ADD WEEKLY DATA HERE
-        // =========================
-
-        val currentWeightList = mutableListOf(
-            48.400f,
-            49f,
-            50.400f,
-            51f,
-
-            51.400f,
-        )
-
-        // =========================
-        // LABELS
-        // =========================
-
-        val weekLabels = listOf(
-
-            "W1\nMay",
-            "W2",
-            "W3",
-            "W4",
-
-            "W1\nJun",
-            "W2",
-            "W3",
-            "W4",
-
-            "W1\nJul",
-            "W2",
-            "W3",
-            "W4",
-
-            "W1\nAug",
-            "W2",
-            "W3",
-            "W4",
-
-            "W1\nSep",
-            "W2",
-            "W3",
-            "W4",
-
-            "W1\nOct",
-            "W2",
-            "W3",
-            "W4"
-        )
-
-        // =========================
-        // TARGET ENTRIES
-        // =========================
-
-        for (i in targetWeightList.indices) {
+        for (i in dataResponse.targetWeight.indices) {
             targetEntries.add(
-                Entry(i.toFloat(), targetWeightList[i])
+                Entry(i.toFloat(), dataResponse.targetWeight[i].weight)
             )
-            labels.add(weekLabels[i])
+            labels.add(dataResponse.targetWeight[i].week)
         }
 
-        // =========================
-        // CURRENT ENTRIES
-        // ONLY AVAILABLE DATA
-        // =========================
-
-        for (i in currentWeightList.indices) {
+        for (i in dataResponse.currentWeight.indices) {
             currentEntries.add(
-                Entry(i.toFloat(), currentWeightList[i])
+                Entry(i.toFloat(), dataResponse.currentWeight[i].weight)
             )
         }
-
-        // =========================
-        // TARGET LINE
-        // =========================
 
         val targetDataSet = LineDataSet(
-            targetEntries,
-            "Target Weight"
+            targetEntries, "Target Weight"
         ).apply {
-            color = getColor(requireContext(), R.color.deep_orange_light)
+            color = getColor(requireContext(), R.color.deep_orange_light_time_line)
             lineWidth = 3f
             setCircleColor(getColor(requireContext(), R.color.amber_dark_50))
             circleRadius = 4f
@@ -178,23 +73,16 @@ class WeightGainReportFragment : Fragment() {
             mode = LineDataSet.Mode.CUBIC_BEZIER
         }
 
-        // =========================
-        // CURRENT LINE
-        // =========================
-
         val currentDataSet = LineDataSet(
-            currentEntries,
-            "Current Weight"
+            currentEntries, "Current Weight"
         ).apply {
             color = getColor(
-                requireContext(),
-                R.color.teal_dark_50
+                requireContext(), R.color.teal_dark_50
             )
             lineWidth = 3f
             setCircleColor(
                 getColor(
-                    requireContext(),
-                    R.color.teal_light
+                    requireContext(), R.color.teal_dark_light_time_line
                 )
             )
             circleRadius = 5f
@@ -203,13 +91,8 @@ class WeightGainReportFragment : Fragment() {
         }
 
         val lineData = LineData(
-            targetDataSet,
-            currentDataSet
+            targetDataSet, currentDataSet
         )
-
-        // =========================
-        // CHART UI
-        // =========================
 
         binding.lineChart.apply {
 
@@ -239,18 +122,31 @@ class WeightGainReportFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-}
 
-/*
-1.Communication
-2.Pronunciation
-3.Personal Development
-4.Posture
-5.Android Interview Question Phase 1
-6.Android Remining Compensation Phase 2
-7.Fullstack
-8.Data Structure
-9.IBM Goal Phase 1
-10.IBM Phase 2
-11.Music
-*/
+    private fun loadData(): String {
+        return requireContext().assets.open("weightGainTimeline.json").bufferedReader()
+            .use { it.readText() }
+    }
+
+    fun callApi() {
+        viewModel.fetchWeightGainTimeLine()
+        lifecycleScope.launch {
+            viewModel.uiState.collect { state ->
+                when (state) {
+                    is UiState.Loading -> {}
+
+                    is UiState.SuccessWeightGainTimeLine -> {
+                        val data = state.data
+                        setupChart(data)
+                    }
+
+                    is UiState.Error -> {
+                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                    }
+
+                    else -> {}
+                }
+            }
+        }
+    }
+}

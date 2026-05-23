@@ -17,6 +17,7 @@ import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.domain.ThirukuralResponse
+import com.raj.mygrowth.domain.WeightGainResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -91,5 +92,8 @@ interface ApiService {
     suspend fun addAttendanceRequest(
         @Body request: RequestActionAddAttendance
     ): ResponseSimple
+
+    @GET("weightGainTimeline.json")
+    suspend fun getWeightGainTimeLine(): WeightGainResponse
 
 }

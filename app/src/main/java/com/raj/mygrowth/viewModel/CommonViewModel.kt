@@ -7,12 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
-import com.raj.mygrowth.domain.RequestActionGetAttendance
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
+import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import com.raj.mygrowth.repository.Repository
@@ -85,6 +85,10 @@ class CommonViewModel(
         emit(api.addAttendanceRequest(request))
     }.flowOn(Dispatchers.IO)
 
+    fun getWeightGainTimeLine(): Flow<WeightGainResponse> = flow {
+        emit(api.getWeightGainTimeLine())
+    }.flowOn(Dispatchers.IO)
+
     fun fetchAttendance(request: RequestAction) {
         viewModelScope.launch {
             getAttendance(request).onStart {
@@ -153,6 +157,18 @@ class CommonViewModel(
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
             }.collect { data ->
                 _uiState.value = UiState.SuccessSprintTaskAdd(data)
+            }
+        }
+    }
+
+    fun fetchWeightGainTimeLine() {
+        viewModelScope.launch {
+            getWeightGainTimeLine().onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessWeightGainTimeLine(data)
             }
         }
     }

@@ -5,8 +5,8 @@ import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
-import com.raj.mygrowth.domain.SprintTaskItem
 import com.raj.mygrowth.domain.SprintTaskResponse
+import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.domain.WorkoutResponse
 
 sealed class UiState {
@@ -17,6 +17,7 @@ sealed class UiState {
     data class SuccessSprintMaster(val data: SprintMasterResponse) : UiState()
     data class SuccessSprintTask(val data: SprintTaskResponse) : UiState()
     data class SuccessSprintTaskAdd(val data: ResponseSimple) : UiState()
+    data class SuccessWeightGainTimeLine(val data: WeightGainResponse) : UiState()
     data class SuccessDiet(val data: DietResponse) : UiState()
     data class Error(val message: String) : UiState()
 }

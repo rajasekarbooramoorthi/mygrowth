@@ -8,7 +8,7 @@
             <LayoutPositions>
               <option name="myPositions">
                 <map>
-                  <entry key="a">
+                  <entry key="addSprintTask">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
@@ -20,7 +20,7 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="addSprintTask">
+                  <entry key="addToDoAttendance">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">

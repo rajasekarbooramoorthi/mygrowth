@@ -54,7 +54,6 @@ class ToDoFragment : Fragment() {
                     is UiState.Loading -> {
                         // show loader
                         //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
-
                     }
 
                     is UiState.SuccessTodoAttendance -> {
