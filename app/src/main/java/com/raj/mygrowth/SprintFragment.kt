@@ -9,12 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentSprintBinding
-import com.raj.mygrowth.databinding.FragmentTodoBinding
-import com.raj.mygrowth.databinding.FragmentWorkoutBinding
 import com.raj.mygrowth.domain.RequestAction
-import com.raj.mygrowth.domain.WorkoutResponse
 import com.raj.mygrowth.interfaces.AdapterClick
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
@@ -49,12 +45,10 @@ class SprintFragment : Fragment(), AdapterClick {
         callApi()
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
 
     fun callApi() {
         viewModel.fetchSprint(RequestAction("get_sprint_master"))

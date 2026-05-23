@@ -8,13 +8,12 @@
     <item
         android:id="@+id/sprintFragment"
         android:icon="@drawable/ic_sprint"
-        android:title="Cred" />
+        android:title="Sprint" />
 
     <item
-        android:id="@+id/androidFinance"
-        android:icon="@drawable/ic_fin"
-        android:title="Fin" />
-
+        android:id="@+id/addSprintTask"
+        android:icon="@drawable/ic_add_task"
+        android:title="@string/add_task" />
     <item
         android:id="@+id/androidCareer"
         android:icon="@drawable/ic_learning"

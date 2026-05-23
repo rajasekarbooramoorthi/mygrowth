@@ -19,10 +19,7 @@
         android:id="@+id/credentialsFragment"
         android:icon="@drawable/ic_cred"
         android:title="@string/password" />
-    <item
-        android:id="@+id/addSprintTask"
-        android:icon="@drawable/ic_add_task"
-        android:title="@string/add_task" />
+
 
     <item
         android:id="@+id/weightFragment"
@@ -32,4 +29,9 @@
         android:id="@+id/addToDoAttendance"
         android:icon="@drawable/ic_calendar"
         android:title="@string/mark_attendance" />
+
+    <item
+        android:id="@+id/androidFinance"
+        android:icon="@drawable/ic_fin"
+        android:title="Financial" />
 </menu>
