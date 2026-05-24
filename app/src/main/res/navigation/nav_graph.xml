@@ -57,7 +57,7 @@
 
     <activity
         android:id="@+id/addSprintTask"
-        android:name="com.raj.mygrowth.AddSprintTaskActivity"
+        android:name="com.raj.mygrowth.QuitZillaActivity"
         android:label="Add Sprint Task" />
     <fragment
         android:id="@+id/weightFragment"
