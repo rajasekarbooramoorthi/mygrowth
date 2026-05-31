@@ -34,8 +34,9 @@ class QuitZillaReportAdapter(
         val formattedTitle = item.name.replaceFirstChar { it.uppercase() }
 
         holder.binding.tvName.text = formattedTitle
-        holder.binding.tvDetail.text = (item.days) + "Days"
+        holder.binding.tvDetail.text = "Day " + (item.days)
         holder.binding.tvDescription.text = item.description
+        holder.binding.tvId.text = item.startDate + " vs " + item.endDate
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
