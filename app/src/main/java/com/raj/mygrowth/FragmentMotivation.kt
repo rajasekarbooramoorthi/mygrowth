@@ -48,19 +48,16 @@ class FragmentMotivation : Fragment() {
                 when (state) {
 
                     is UiState.Loading -> {
-                        // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessQuitZillaMotivate -> {
-                        val list = state.data.data
+                        val list = state.data.data.toMutableList()
+                        list.shuffle()
                         val adapter = QuitZillaMotivationAdapter(list, requireContext())
                         binding.recyclerViewVertical.adapter = adapter
-                        Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.Error -> {
-                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
                     }
 
                     else -> {}

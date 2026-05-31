@@ -12,6 +12,7 @@ import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponsePassword
+import com.raj.mygrowth.domain.ResponseQuitZillaBenefits
 import com.raj.mygrowth.domain.ResponseQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseQuitZillaMotivation
 import com.raj.mygrowth.domain.ResponseSimple
@@ -88,6 +89,10 @@ interface ApiService {
     suspend fun getQuitZillaMotivation(
         @Body request: RequestAction
     ): ResponseQuitZillaMotivation
+
+    @GET("json/nfb_benefits.json")
+    suspend fun getQuitZillaBenefits(
+    ): ResponseQuitZillaBenefits
 
     @POST("getmydata.php")
     suspend fun getSprintTask(

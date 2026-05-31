@@ -8,19 +8,17 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.raj.mygrowth.adapter.QuitZillaReportAdapter
-import com.raj.mygrowth.databinding.FragmentQuitZillaReportBinding
-import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.adapter.QuitZillaBenefitsAdapter
+import com.raj.mygrowth.databinding.FragmentBenifitsBinding
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
-import kotlin.getValue
 
 class FragmentBenefits : Fragment() {
-    private var _binding: FragmentQuitZillaReportBinding? = null
+    private var _binding: FragmentBenifitsBinding? = null
     private val binding get() = _binding!!
 
     private val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
@@ -33,7 +31,7 @@ class FragmentBenefits : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentQuitZillaReportBinding.inflate(inflater, container, false)
+        _binding = FragmentBenifitsBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -43,25 +41,22 @@ class FragmentBenefits : Fragment() {
     }
 
     private fun callApi() {
-        viewModel.fetchQuitZillaReport(RequestAction("get_quit_zilla_master"))
+        viewModel.fetchQuitZillaBenefits()
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
                 when (state) {
 
                     is UiState.Loading -> {
-                        // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
-                    is UiState.SuccessQuitZillaReport -> {
-                        val list = state.data.data
-                        val adapter = QuitZillaReportAdapter(list, requireContext())
+                    is UiState.SuccessQuitZillaBenefits -> {
+                        val list = state.data.data.toMutableList()
+                        list.shuffle()
+                        val adapter = QuitZillaBenefitsAdapter(list, requireContext())
                         binding.recyclerViewVertical.adapter = adapter
-                        Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.Error -> {
-                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
                     }
 
                     else -> {}
