@@ -2,12 +2,16 @@ package com.raj.mygrowth
 
 import android.content.Context
 import android.net.Uri
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import com.raj.mygrowth.domain.ConceptModel
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.Date
 import java.util.Locale
 
@@ -77,5 +81,20 @@ object Utilities {
         val formatter = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
         val formattedDate = formatter.format(currentDate)
         return formattedDate
+    }
+
+
+     @RequiresApi(Build.VERSION_CODES.O)
+     fun isDateBetween(
+        currentDate: String,
+        startDate: String,
+        endDate: String
+    ): Boolean {
+
+        val current = LocalDate.parse(currentDate)
+        val start = LocalDate.parse(startDate)
+        val end = LocalDate.parse(endDate)
+
+        return current in start..end
     }
 }

@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="text_size_too_small">@dimen/_9sdp</dimen>
+    <dimen name="text_size_small">@dimen/_11sdp</dimen>
+    <dimen name="text_size_medium">@dimen/_15sdp</dimen>
+    <dimen name="text_size_medium_low">@dimen/_13sdp</dimen>
+    <dimen name="text_size_large">@dimen/_17sdp</dimen>
+</resources>

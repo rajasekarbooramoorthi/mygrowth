@@ -7,5 +7,6 @@ data class SprintMasterItem(
     val name: String,
     val description: String,
     val status: String,
-    val date: String
+    val sdate: String,
+    val edate: String
 )
