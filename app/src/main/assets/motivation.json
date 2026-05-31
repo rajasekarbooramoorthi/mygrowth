@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "title": "Every Day Is a New Choice",
+    "description": "You don't have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are.",
+    "category": "Motivation"
+  },
+  {
+    "id": 2,
+    "title": "Your Brain Is Rewiring",
+    "description": "Each day clean is a day your dopamine system heals. The fog lifts, the drive returns, the clarity you crave is already forming beneath the surface.",
+    "category": "Healing"
+  },
+  {
+    "id": 3,
+    "title": "Discipline Outlasts Motivation",
+    "description": "Motivation comes and goes like the weather. Discipline is the house you build so the storm doesn't touch you. Build it brick by brick.",
+    "category": "Discipline"
+  },
+  {
+    "id": 4,
+    "title": "You Are Not Your Urges",
+    "description": "An urge is just a wave. It rises, peaks, and falls — with or without your cooperation. You are the shore. Let it pass.",
+    "category": "Mindset"
+  },
+  {
+    "id": 5,
+    "title": "Real Men Choose Difficulty",
+    "description": "Anyone can give in to what's easy. Real strength is doing the hard thing when nobody is watching and nothing is forcing you except your own character.",
+    "category": "Strength"
+  },
+  {
+    "id": 6,
+    "title": "Your Future Self Is Watching",
+    "description": "The man you want to become is watching every decision you make right now. Make him proud. He is counting on you.",
+    "category": "Purpose"
+  },
+  {
+    "id": 7,
+    "title": "You Are Becoming Better",
+    "description": "Every day you choose growth over comfort, you become a stronger and more capable version of yourself.",
+    "category": "Motivation"
+  },
+  {
+    "id": 8,
+    "title": "Reclaim Your Energy",
+    "description": "That energy you've been wasting? It's yours. Creativity, ambition, presence — they return when you stop leaking your life force into a screen.",
+    "category": "Healing"
+  },
+  {
+    "id": 9,
+    "title": "Identity Beats Willpower",
+    "description": "Don't say 'I'm trying to quit.' Say 'I'm someone who doesn't do that anymore.' Identity is stronger than resolve.",
+    "category": "Identity"
+  },
+  {
+    "id": 10,
+    "title": "The Streak Is Secondary",
+    "description": "Numbers on a calendar don't define you. The intention you wake up with each morning — that's what changes you.",
+    "category": "Mindset"
+  },
+  {
+    "id": 11,
+    "title": "Hard Moments Make Hard Men",
+    "description": "Every time you face the urge and walk away, you deposit strength into who you are. Those deposits never disappear.",
+    "category": "Strength"
+  },
+  {
+    "id": 12,
+    "title": "Clarity Is Your Birthright",
+    "description": "Mental fog is not your natural state. When you stop numbing yourself, your mind sharpens into the tool it was always meant to be.",
+    "category": "Healing"
+  },
+  {
+    "id": 13,
+    "title": "Small Wins Compound",
+    "description": "You didn't lose control today. That's a win. Stack enough of those and you don't recognize the man in the mirror — in the best way.",
+    "category": "Motivation"
+  },
+  {
+    "id": 14,
+    "title": "Boredom Is Not the Enemy",
+    "description": "Boredom is the signal that your brain is searching for real stimulation. Use it. Create. Move. Build. That restlessness is raw fuel.",
+    "category": "Mindset"
+  },
+  {
+    "id": 15,
+    "title": "You're Breaking a Cycle",
+    "description": "Every addict before you thought they couldn't stop. You're proving them wrong. You're breaking a pattern that your ancestors never had to fight.",
+    "category": "Purpose"
+  },
+  {
+    "id": 16,
+    "title": "Accountability Is Strength",
+    "description": "Telling the truth about your struggle to yourself or someone you trust is not weakness. It's the foundation every lasting change is built on.",
+    "category": "Discipline"
+  },
+  {
+    "id": 17,
+    "title": "Lust Is Not Love",
+    "description": "What you've been chasing is a simulation. Real connection, real intimacy, real love — those wait for the man willing to pursue them.",
+    "category": "Healing"
+  },
+  {
+    "id": 18,
+    "title": "Your Nervous System Heals",
+    "description": "Anxiety, numbness, low confidence — these are symptoms, not your personality. They are leaving as you heal. Give it time.",
+    "category": "Healing"
+  },
+  {
+    "id": 19,
+    "title": "Choose the Harder Right",
+    "description": "The easy wrong is always available. The harder right is always possible. Character is choosing the right path when the easy one is inches away.",
+    "category": "Discipline"
+  },
+  {
+    "id": 20,
+    "title": "Confidence Is Built, Not Found",
+    "description": "You don't find confidence — you earn it through actions that align with your values. Every clean day earns more.",
+    "category": "Identity"
+  },
+  {
+    "id": 21,
+    "title": "Your Attention Is Precious",
+    "description": "Where attention goes, energy flows. You are taking your attention back from something that was stealing it, and directing it toward your life.",
+    "category": "Purpose"
+  },
+  {
+    "id": 22,
+    "title": "Relapse Is Not the End",
+    "description": "A stumble is data, not a death sentence. It tells you where the path is slippery. Learn, adjust, keep walking.",
+    "category": "Mindset"
+  },
+  {
+    "id": 23,
+    "title": "Silence the Inner Negotiator",
+    "description": "The voice that says 'just this once' has lied to you before. You know how this ends. Don't negotiate with it.",
+    "category": "Discipline"
+  },
+  {
+    "id": 24,
+    "title": "Deep Work Becomes Possible",
+    "description": "When your brain isn't craving constant stimulation, it can finally go deep. Deep work, deep thought, deep relationships — all become available.",
+    "category": "Purpose"
+  },
+  {
+    "id": 25,
+    "title": "You Are Rewiring Reward",
+    "description": "Every day clean teaches your brain that patience and effort lead to reward. That lesson will serve every goal you ever pursue.",
+    "category": "Healing"
+  },
+  {
+    "id": 26,
+    "title": "The Body Follows the Mind",
+    "description": "When your mind is clear and disciplined, the body follows. Energy improves, posture shifts, presence grows. You feel it in your bones.",
+    "category": "Strength"
+  },
+  {
+    "id": 27,
+    "title": "You Are Worth Fighting For",
+    "description": "This fight isn't just about a habit. It's about whether you believe you deserve a better life. You do. Keep fighting for it.",
+    "category": "Identity"
+  },
+  {
+    "id": 28,
+    "title": "Momentum Is Fragile and Powerful",
+    "description": "Getting started is the hardest part. Once you have days behind you, you carry forward momentum. Protect it.",
+    "category": "Motivation"
+  },
+  {
+    "id": 29,
+    "title": "Emotions Become Your Teachers",
+    "description": "Without the numbing escape, emotions become raw and real. That's not a problem — that's you finally learning to feel and process life.",
+    "category": "Mindset"
+  },
+  {
+    "id": 30,
+    "title": "True Masculinity Is Mastery",
+    "description": "Mastery of self is the oldest and most respected form of strength. Every culture that ever stood for something honored the man who ruled himself.",
+    "category": "Strength"
+  },
+  {
+    "id": 31,
+    "title": "Replace, Don't Just Remove",
+    "description": "The brain hates a vacuum. Don't just stop — replace the ritual with movement, cold water, journaling, or calling someone who holds you up.",
+    "category": "Discipline"
+  },
+  {
+    "id": 32,
+    "title": "Your Relationships Will Transform",
+    "description": "When you stop escaping into fantasy, you show up more fully to real people. Eye contact, empathy, presence — they all improve.",
+    "category": "Healing"
+  },
+  {
+    "id": 33,
+    "title": "Temptation Fades With Distance",
+    "description": "The first few seconds of an urge are the strongest. Delay ten minutes and it shrinks dramatically. You only need to outlast the spike.",
+    "category": "Mindset"
+  },
+  {
+    "id": 34,
+    "title": "You Are Not Alone in This",
+    "description": "Millions of men are fighting this exact battle at this exact moment. You are part of something larger than one person's struggle.",
+    "category": "Purpose"
+  },
+  {
+    "id": 35,
+    "title": "Shame Has No Place Here",
+    "description": "Shame keeps you trapped. Responsibility sets you free. Don't punish yourself for the past — use today to do differently.",
+    "category": "Healing"
+  },
+  {
+    "id": 36,
+    "title": "Willpower Is a Muscle",
+    "description": "Like any muscle, willpower grows with use and atrophies with neglect. Every time you flex it, it gets stronger for the next challenge.",
+    "category": "Strength"
+  },
+  {
+    "id": 37,
+    "title": "Your Goals Need You Clear",
+    "description": "The business, the relationship, the fitness — everything you want requires your full attention. You can't give your best while distracted.",
+    "category": "Purpose"
+  },
+  {
+    "id": 38,
+    "title": "Morning Routines Are Armor",
+    "description": "How you start your morning is how you meet the day. A strong routine is a wall between you and the first urge.",
+    "category": "Discipline"
+  },
+  {
+    "id": 39,
+    "title": "You're Choosing Presence",
+    "description": "Every day clean is a day you choose to be present — to your life, your goals, your people, your own growth.",
+    "category": "Mindset"
+  },
+  {
+    "id": 40,
+    "title": "Courage Means Acting Afraid",
+    "description": "You don't need to feel strong to act strong. Do the right thing scared, tired, and doubting — and strength follows the action.",
+    "category": "Motivation"
+  },
+  {
+    "id": 41,
+    "title": "This Struggle Is Shaping You",
+    "description": "The hardest battles leave the deepest marks of character. You are not just surviving this — you are being formed by it.",
+    "category": "Identity"
+  },
+  {
+    "id": 42,
+    "title": "Your Highest Self Knows",
+    "description": "Somewhere in you, beneath the urges and the noise, is the version of yourself you most respect. He already knows the answer.",
+    "category": "Identity"
+  },
+  {
+    "id": 43,
+    "title": "Progress Is Non-Linear",
+    "description": "Some days feel like steps backward. They aren't. Every challenge you don't give in to is still forward motion, even when it doesn't feel like it.",
+    "category": "Motivation"
+  },
+  {
+    "id": 44,
+    "title": "Triggers Are Teachers",
+    "description": "Notice what situation, emotion, or environment precedes the urge. That information is power. Map it, then plan around it.",
+    "category": "Mindset"
+  },
+  {
+    "id": 45,
+    "title": "Self-Respect Is the Foundation",
+    "description": "Everything good in life — confidence, relationships, ambition — is built on self-respect. This fight is about earning it back.",
+    "category": "Identity"
+  },
+  {
+    "id": 46,
+    "title": "Cold Showers Are Your Ally",
+    "description": "Discomfort on demand is training for life. A cold shower in the morning tells your nervous system: I am in control, not my comfort.",
+    "category": "Discipline"
+  },
+  {
+    "id": 47,
+    "title": "The Urge Doesn't Control You",
+    "description": "An urge is a thought with extra pressure. Thoughts come and go without permission. They don't get to determine your actions.",
+    "category": "Strength"
+  },
+  {
+    "id": 48,
+    "title": "One Year From Now",
+    "description": "Imagine looking back one year from today, having held the line. What does that version of you feel? Work backward from that vision.",
+    "category": "Purpose"
+  },
+  {
+    "id": 49,
+    "title": "Your Sleep Will Improve",
+    "description": "Many men report deeper, more restoring sleep as they heal. Rest is the hidden variable in everything you want — energy, mood, performance.",
+    "category": "Healing"
+  },
+  {
+    "id": 50,
+    "title": "You Are Practicing Patience",
+    "description": "Instant gratification is the enemy of everything worth having. Every time you delay the impulse, you practice the most valuable skill there is.",
+    "category": "Discipline"
+  },
+  {
+    "id": 51,
+    "title": "Connection Is the Cure",
+    "description": "Isolation feeds the habit. Human connection — real conversation, shared purpose, physical presence with others — is the antidote.",
+    "category": "Healing"
+  },
+  {
+    "id": 52,
+    "title": "You Deserve Earned Pleasure",
+    "description": "Not all pleasure is equal. Earned pleasure, the kind that comes after effort, is deeper, longer-lasting, and leaves no shame behind.",
+    "category": "Mindset"
+  },
+  {
+    "id": 53,
+    "title": "Your Brain Will Thank You",
+    "description": "Neuroplasticity is real. The changes happening in your prefrontal cortex as you heal are measurable and permanent. You're literally rewiring.",
+    "category": "Healing"
+  },
+  {
+    "id": 54,
+    "title": "Action Precedes Feeling",
+    "description": "You won't always feel like being strong. Do the strong thing anyway. The feeling follows the action, not the other way around.",
+    "category": "Motivation"
+  },
+  {
+    "id": 55,
+    "title": "Protect Your Morning",
+    "description": "The first hour of your day sets the tone for everything. Guard it fiercely. No screens, no triggers — just intention.",
+    "category": "Discipline"
+  },
+  {
+    "id": 56,
+    "title": "Sobriety Is Sophistication",
+    "description": "The man who has mastered his instincts operates at a higher level. Clarity of mind is the ultimate sophistication.",
+    "category": "Identity"
+  },
+  {
+    "id": 57,
+    "title": "Feed What You Want to Grow",
+    "description": "Whatever you consistently feed grows stronger. Feed discipline, not the urge. Feed purpose, not escape. You control the diet of your mind.",
+    "category": "Mindset"
+  },
+  {
+    "id": 58,
+    "title": "Nothing Is Lost in Waiting",
+    "description": "The things you want — connection, success, intimacy — they are not disappearing. Waiting with intention brings you closer, not further.",
+    "category": "Purpose"
+  },
+  {
+    "id": 59,
+    "title": "Your Body Is Recovering",
+    "description": "Testosterone, energy, drive — these systems recover. The timeline varies, but the direction is always forward when you stay consistent.",
+    "category": "Healing"
+  },
+  {
+    "id": 60,
+    "title": "The Trigger Is Not the Trap",
+    "description": "The trigger isn't the problem — your automatic response to it is. Between trigger and response is a gap. In that gap lives your freedom.",
+    "category": "Mindset"
+  },
+  {
+    "id": 61,
+    "title": "Being Hard to Distract Is Power",
+    "description": "In a world engineered to steal your attention, the ability to stay focused on what matters is a genuine competitive advantage.",
+    "category": "Strength"
+  },
+  {
+    "id": 62,
+    "title": "Your Story Isn't Finished",
+    "description": "You're not at the end of a failure story. You are at the beginning of a comeback. The best chapters haven't been written yet.",
+    "category": "Motivation"
+  },
+  {
+    "id": 63,
+    "title": "Emotional Regulation Is a Skill",
+    "description": "Handling boredom, loneliness, stress, and anxiety without numbing out — this is a skill. You are building it every day you stay clean.",
+    "category": "Mindset"
+  },
+  {
+    "id": 64,
+    "title": "Every Habit Has a Keystone",
+    "description": "Quit this one thing and watch other areas improve automatically. Sleep, diet, exercise, relationships — they all shift when you shift.",
+    "category": "Purpose"
+  },
+  {
+    "id": 65,
+    "title": "Grace and Grit Together",
+    "description": "Be relentlessly disciplined and deeply compassionate with yourself at once. Neither self-punishment nor self-pity — just forward movement.",
+    "category": "Identity"
+  },
+  {
+    "id": 66,
+    "title": "You're Teaching Your Children",
+    "description": "Even if they never know the details, the man you are becoming shows up in how you parent, model, and love. Do it for them too.",
+    "category": "Purpose"
+  },
+  {
+    "id": 67,
+    "title": "Solitude Can Be Strength",
+    "description": "Learn to sit with yourself without filling the silence. That capacity — to be alone without escaping — is rare and powerful.",
+    "category": "Mindset"
+  },
+  {
+    "id": 68,
+    "title": "Track What You Protect",
+    "description": "What you measure, you protect. A simple streak counter isn't about obsessing over numbers — it's about taking your commitment seriously.",
+    "category": "Discipline"
+  },
+  {
+    "id": 69,
+    "title": "You Were Born for More",
+    "description": "Deep down you know there is more for you than this loop. The restlessness you feel is the proof. Follow it toward something real.",
+    "category": "Identity"
+  },
+  {
+    "id": 70,
+    "title": "Today Is Enough",
+    "description": "Don't carry the weight of forever. You don't have to never relapse — you just have to not relapse today. That is always achievable.",
+    "category": "Motivation"
+  },
+  {
+    "id": 71,
+    "title": "Physical Challenge Clears the Mind",
+    "description": "When the urge hits, move your body. Run, lift, do push-ups. The body that just worked hard has less room for destructive impulses.",
+    "category": "Strength"
+  },
+  {
+    "id": 72,
+    "title": "Peace Comes After the Fight",
+    "description": "The anxiety and restlessness of early recovery are temporary. On the other side is a calm confidence you haven't felt before.",
+    "category": "Healing"
+  },
+  {
+    "id": 73,
+    "title": "Authenticity Becomes Natural",
+    "description": "When you stop hiding a secret life, your energy goes into being genuinely present. People feel the difference. You feel the difference.",
+    "category": "Identity"
+  },
+  {
+    "id": 74,
+    "title": "The Fog of Relapse",
+    "description": "Remember how unclear and hollow you felt after giving in. That fog is real and heavy. Today's discipline is tomorrow's clarity.",
+    "category": "Mindset"
+  },
+  {
+    "id": 75,
+    "title": "Build a Life You Don't Need to Escape From",
+    "description": "The ultimate goal isn't just quitting — it's building a life so fulfilling that the escape hatch holds no appeal.",
+    "category": "Purpose"
+  },
+  {
+    "id": 76,
+    "title": "Every 'No' Is a 'Yes' to Something Better",
+    "description": "Every time you refuse the urge, you are saying yes to energy, yes to focus, yes to the person you are becoming.",
+    "category": "Motivation"
+  },
+  {
+    "id": 77,
+    "title": "Community Accelerates Change",
+    "description": "Find others on the same path. Shared struggle shared openly becomes shared strength. You don't have to fight alone.",
+    "category": "Healing"
+  },
+  {
+    "id": 78,
+    "title": "Honesty Is Your Compass",
+    "description": "Be ruthlessly honest with yourself about your patterns, your triggers, and your progress. Self-deception is the beginning of relapse.",
+    "category": "Discipline"
+  },
+  {
+    "id": 79,
+    "title": "Virtue Returns in Quiet",
+    "description": "Values you thought you'd lost — integrity, honor, care for others — quietly return as you heal. You'll notice them in small moments.",
+    "category": "Healing"
+  },
+  {
+    "id": 80,
+    "title": "Silence the Shame Spiral",
+    "description": "One moment of weakness doesn't define a week. One bad week doesn't define a month. The spiral only wins if you let it keep going.",
+    "category": "Mindset"
+  },
+  {
+    "id": 81,
+    "title": "Grit Is the Real Superpower",
+    "description": "Talent matters less than persistence. The man who keeps getting up, however imperfectly, always outperforms the man who gives up cleanly.",
+    "category": "Strength"
+  },
+  {
+    "id": 82,
+    "title": "You Have More Support Than You Know",
+    "description": "There are books, communities, coaches, and friends who have walked this exact path. You are not navigating unmapped territory.",
+    "category": "Purpose"
+  },
+  {
+    "id": 83,
+    "title": "Value Grows in Difficulty",
+    "description": "Things that cost nothing are worth nothing. The character being built in this fight has a high price and incalculable value.",
+    "category": "Identity"
+  },
+  {
+    "id": 84,
+    "title": "You're Creating New Neural Grooves",
+    "description": "Literally every time you choose a healthy response over the old pattern, you deepen new neural pathways. Science is on your side.",
+    "category": "Healing"
+  },
+  {
+    "id": 85,
+    "title": "Live at the Edge of Your Comfort Zone",
+    "description": "Comfort is where growth stops. The slight discomfort of resistance is the sensation of becoming more than you were.",
+    "category": "Mindset"
+  },
+  {
+    "id": 86,
+    "title": "You're a Leader Whether You Know It",
+    "description": "How you handle your private battles determines how you show up publicly. Leadership begins in the hidden decisions.",
+    "category": "Purpose"
+  },
+  {
+    "id": 87,
+    "title": "Hunger Replaces Numbness",
+    "description": "As numbness fades, a healthy hunger for real experience grows. For learning, creating, achieving, loving. Let it grow.",
+    "category": "Healing"
+  },
+  {
+    "id": 88,
+    "title": "The Return of Ambition",
+    "description": "One of the first things men report as they recover is the return of drive — real ambition for goals that matter. It's coming for you.",
+    "category": "Motivation"
+  },
+  {
+    "id": 89,
+    "title": "Every Morning Is a Reset",
+    "description": "Yesterday's failure does not contaminate today. The sun comes up on a blank page. Fill it with something you'd be proud to reread.",
+    "category": "Mindset"
+  },
+  {
+    "id": 90,
+    "title": "Discipline Makes Decisions Easier",
+    "description": "The more consistently disciplined you are, the fewer exhausting willpower decisions you face. Discipline becomes its own momentum.",
+    "category": "Discipline"
+  },
+  {
+    "id": 91,
+    "title": "Look People in the Eye",
+    "description": "The confidence to hold eye contact returns as shame lifts. It's a small thing that changes everything about how you move through the world.",
+    "category": "Identity"
+  },
+  {
+    "id": 92,
+    "title": "Your Relationships Deserve Your Whole Self",
+    "description": "Not the distracted, numbed-out, half-present version. Your friends, family, and partner deserve the full, alive, clear version of you.",
+    "category": "Purpose"
+  },
+  {
+    "id": 93,
+    "title": "Gratitude Replaces Craving",
+    "description": "When you practice gratitude for what you already have, the craving for artificial highs loses its grip. Try it. It works.",
+    "category": "Mindset"
+  },
+  {
+    "id": 94,
+    "title": "The Hard Path Leads Somewhere Real",
+    "description": "Every shortcut leads somewhere fake. The hard path — the one that requires real effort and real sacrifice — leads to real reward.",
+    "category": "Discipline"
+  },
+  {
+    "id": 95,
+    "title": "You're Reclaiming Your Story",
+    "description": "For too long this habit wrote your story. Now you are taking the pen back. What you write from here is entirely up to you.",
+    "category": "Identity"
+  },
+  {
+    "id": 96,
+    "title": "Stress Is a Trigger — Know It",
+    "description": "Stress, failure, and overwhelm are classic triggers. When life gets hard, have a plan already in place so you don't improvise in the moment.",
+    "category": "Discipline"
+  },
+  {
+    "id": 97,
+    "title": "The Version of You at 80",
+    "description": "Imagine being 80 and looking back at this moment. Will you wish you'd given up more easily, or that you'd fought harder?",
+    "category": "Purpose"
+  },
+  {
+    "id": 98,
+    "title": "You Can Do Hard Things",
+    "description": "You've already proven it. Every day you make it through is evidence that you are capable of far more than your worst urges suggest.",
+    "category": "Strength"
+  },
+  {
+    "id": 99,
+    "title": "The Quiet Life Is the Powerful Life",
+    "description": "The most powerful men are not the loudest in the room. They are the most composed, most present, most self-possessed.",
+    "category": "Strength"
+  },
+  {
+    "id": 100,
+    "title": "Your War Is Worth Fighting",
+    "description": "Not every battle is worth fighting. This one is. What you win here — your mind, your integrity, your potential — is worth every hard day.",
+    "category": "Motivation"
+  },
+  {
+    "id": 101,
+    "title": "Silence the Algorithm",
+    "description": "The platforms are designed to keep you hooked. Every time you close the app and choose something real, you win against a machine built to own you.",
+    "category": "Discipline"
+  },
+  {
+    "id": 102,
+    "title": "Setbacks Are Setup",
+    "description": "The hardest setbacks often precede the biggest breakthroughs. Don't quit before the shift. It's closer than it feels.",
+    "category": "Motivation"
+  },
+  {
+    "id": 103,
+    "title": "You Attract What You Embody",
+    "description": "As you change, the people and opportunities that find you change too. Your energy, confidence, and clarity send a signal.",
+    "category": "Identity"
+  },
+  {
+    "id": 104,
+    "title": "Your Mind Is Getting Sharper",
+    "description": "The cognitive fog lifts. Memory, focus, and quick thinking improve. Your brain is returning to its natural operating power.",
+    "category": "Healing"
+  },
+  {
+    "id": 105,
+    "title": "Small Rituals Hold Big Lines",
+    "description": "A morning prayer, a journal entry, a workout — small rituals anchor you in values and make the day less vulnerable to impulse.",
+    "category": "Discipline"
+  },
+  {
+    "id": 106,
+    "title": "Don't Test Yourself Unnecessarily",
+    "description": "You don't have to prove you can resist by sitting next to the fire. Wisdom is knowing when to walk away from the situation entirely.",
+    "category": "Mindset"
+  },
+  {
+    "id": 107,
+    "title": "Joy Returns Slowly But Completely",
+    "description": "Anhedonia — the inability to feel pleasure — is real in early recovery. Push through it. The colors come back. Joy returns.",
+    "category": "Healing"
+  },
+  {
+    "id": 108,
+    "title": "You Are Doing the Real Work",
+    "description": "Self-mastery is not a trend. It's not content. It's real work done in private, with no audience and no applause. It is everything.",
+    "category": "Identity"
+  },
+  {
+    "id": 109,
+    "title": "One Degree Changes the Trajectory",
+    "description": "A single degree of course correction seems small today. Over a year, over a decade, over a lifetime, it takes you somewhere completely different.",
+    "category": "Purpose"
+  },
+  {
+    "id": 110,
+    "title": "Time Is the Currency of Life",
+    "description": "Every hour spent in the loop is an hour not spent building, connecting, growing. You are buying back your time.",
+    "category": "Motivation"
+  },
+  {
+    "id": 111,
+    "title": "The Body Keeps Score — Let It Heal",
+    "description": "Stress, anxiety, and shame live in the body as much as the mind. Movement, rest, and clean living let the body start releasing them.",
+    "category": "Healing"
+  },
+  {
+    "id": 112,
+    "title": "You Are More Than Your Worst Day",
+    "description": "One failure doesn't measure you. A thousand small recoveries do. You are the pattern, not the exception.",
+    "category": "Mindset"
+  },
+  {
+    "id": 113,
+    "title": "Real Intimacy Requires Presence",
+    "description": "What you are working toward — real closeness, real vulnerability, real love — requires a clear and present mind. You're building toward it.",
+    "category": "Purpose"
+  },
+  {
+    "id": 114,
+    "title": "Character Is What You Do Alone",
+    "description": "No one is watching. No one will know. And yet — here you are, choosing right. That is character, and it is rare.",
+    "category": "Identity"
+  },
+  {
+    "id": 115,
+    "title": "The Habit Is Not You",
+    "description": "You are not the habit. You are the one fighting it. That distinction is everything. The fighter is always separate from the fight.",
+    "category": "Mindset"
+  },
+  {
+    "id": 116,
+    "title": "Peaks Follow Valleys",
+    "description": "The valley of early withdrawal is followed by genuine peaks of clarity, energy, and confidence. The valley is not the destination.",
+    "category": "Healing"
+  },
+  {
+    "id": 117,
+    "title": "You Are Choosing Reality",
+    "description": "Fantasy is comfortable but hollow. Reality — with all its difficulty and richness — is where real life happens. You are choosing it.",
+    "category": "Purpose"
+  },
+  {
+    "id": 118,
+    "title": "Your Standards Are Rising",
+    "description": "Something shifts as you stay clean. What you accept from yourself and others begins to change. Standards rise when self-respect rises.",
+    "category": "Identity"
+  },
+  {
+    "id": 119,
+    "title": "Discomfort Is Temporary",
+    "description": "Every urge, every craving, every difficult emotion — temporary. Every piece of strength you build from them — permanent.",
+    "category": "Strength"
+  },
+  {
+    "id": 120,
+    "title": "You Are Enough, Right Now",
+    "description": "You don't need to earn the right to pursue this. You are worthy of recovery and growth exactly as you are at this very moment.",
+    "category": "Motivation"
+  },
+  {
+    "id": 121,
+    "title": "Train Your Brain to Delay",
+    "description": "Practice delaying small pleasures daily. Delay the coffee, finish the hard task first. Each delay trains the same circuits you need for recovery.",
+    "category": "Discipline"
+  },
+  {
+    "id": 122,
+    "title": "Real Confidence Has Roots",
+    "description": "The shallow confidence of performance fades under pressure. Quiet confidence built on integrity and effort holds steady through anything.",
+    "category": "Identity"
+  },
+  {
+    "id": 123,
+    "title": "Let Curiosity Replace Craving",
+    "description": "Turn the nervous energy of a craving into curiosity: what am I actually feeling right now? What do I actually need? Get curious, not reactive.",
+    "category": "Mindset"
+  },
+  {
+    "id": 124,
+    "title": "Hard Work Is Honest Work",
+    "description": "There is no hack, no supplement, no shortcut that replaces honest effort applied consistently over time. You know this. Act like it.",
+    "category": "Discipline"
+  },
+  {
+    "id": 125,
+    "title": "Your Brain Wants to Heal",
+    "description": "The brain is biased toward recovery when given the chance. It will heal itself if you stop reinjuring it. Get out of the way and let it.",
+    "category": "Healing"
+  },
+  {
+    "id": 126,
+    "title": "Depth Over Breadth",
+    "description": "One deep, honest conversation with one real person is worth more than a hundred shallow interactions. Pursue depth in everything.",
+    "category": "Purpose"
+  },
+  {
+    "id": 127,
+    "title": "The Warrior Within You Knows",
+    "description": "There is a part of you that has always known what you're capable of. That part is not surprised by your progress. It expected it.",
+    "category": "Strength"
+  },
+  {
+    "id": 128,
+    "title": "Values Are What You Do",
+    "description": "You don't have values because you believe them — you have values because you act on them. Show what you value through your actions today.",
+    "category": "Discipline"
+  },
+  {
+    "id": 129,
+    "title": "Every Moment Is a Micro-Decision",
+    "description": "Life is made of small decisions that seem insignificant in isolation. Aggregate enough good ones and you look up to find yourself transformed.",
+    "category": "Mindset"
+  },
+  {
+    "id": 130,
+    "title": "You Are Writing a New Blueprint",
+    "description": "Your children, your friends, your community — they are watching a new kind of man be built. The blueprint you create here matters.",
+    "category": "Purpose"
+  },
+  {
+    "id": 131,
+    "title": "Fear Less by Doing More",
+    "description": "Confidence is not the absence of fear. It is the willingness to act despite fear. The doing shrinks the fearing. Always.",
+    "category": "Strength"
+  },
+  {
+    "id": 132,
+    "title": "The Comeback Is Always Possible",
+    "description": "No matter how long the streak broke, the comeback begins in the next breath. The next decision. Right now. Not tomorrow.",
+    "category": "Motivation"
+  },
+  {
+    "id": 133,
+    "title": "Invest in Systems, Not Willpower",
+    "description": "Willpower runs out. Systems — your environment, your schedule, your community — hold when willpower fails. Engineer your life for success.",
+    "category": "Discipline"
+  },
+  {
+    "id": 134,
+    "title": "Your Sensitivity Is Returning",
+    "description": "Numbing out doesn't just suppress urges — it suppresses everything. As it lifts, you feel music more, sunsets more, presence more.",
+    "category": "Healing"
+  },
+  {
+    "id": 135,
+    "title": "Purpose Is the Ultimate Shield",
+    "description": "The man with a clear purpose has less room for destructive habits. Build something that matters, and the habits that don't serve it fall away.",
+    "category": "Purpose"
+  },
+  {
+    "id": 136,
+    "title": "You Are Teaching Discipline to Future You",
+    "description": "Every hard day you get through creates a version of you better equipped to handle the next hard day. You are training your future self.",
+    "category": "Discipline"
+  },
+  {
+    "id": 137,
+    "title": "The Gap Between Stimulus and Response",
+    "description": "In that gap between urge and action lives your freedom. Widen the gap. Count to ten. Breathe. Call someone. The gap is your power.",
+    "category": "Mindset"
+  },
+  {
+    "id": 138,
+    "title": "Recovery Is Not Linear",
+    "description": "Healing isn't a straight line — it curves, dips, and sometimes feels like backward motion. Trust the process more than the momentary feeling.",
+    "category": "Healing"
+  },
+  {
+    "id": 139,
+    "title": "Integrity With Yourself Matters Most",
+    "description": "You can deceive anyone but yourself. When you are honest with yourself about your choices, every other form of integrity follows naturally.",
+    "category": "Identity"
+  },
+  {
+    "id": 140,
+    "title": "The Day You Quit Quitting",
+    "description": "There is a day in every man's recovery when he stops negotiating, stops bargaining, and simply decides. Today can be that day.",
+    "category": "Motivation"
+  },
+  {
+    "id": 141,
+    "title": "You Are Becoming Harder to Manipulate",
+    "description": "The clearer your mind, the less the media, the algorithms, and the shallow world can pull your strings. Mental clarity is sovereignty.",
+    "category": "Strength"
+  },
+  {
+    "id": 142,
+    "title": "Journal Through the Storm",
+    "description": "When the urge is loud and the mind is chaotic, write. Put the words on a page and the pressure that built them deflates.",
+    "category": "Discipline"
+  },
+  {
+    "id": 143,
+    "title": "The Real High Is Achievement",
+    "description": "The dopamine hit from real achievement — completing a project, finishing a run, mastering a skill — is healthier and lasts longer. Chase that.",
+    "category": "Purpose"
+  },
+  {
+    "id": 144,
+    "title": "You Are Learning to Be Alone Without Escaping",
+    "description": "The ability to sit with yourself, unfiltered and unoccupied, is one of the rarest and most powerful capacities a person can develop.",
+    "category": "Mindset"
+  },
+  {
+    "id": 145,
+    "title": "Something Is Shifting Inside You",
+    "description": "Even on the hardest days, something deeper is shifting. Foundations being laid. Character being forged. Trust the invisible progress.",
+    "category": "Motivation"
+  },
+  {
+    "id": 146,
+    "title": "Choose Long-Term Over Short-Term",
+    "description": "The short-term discomfort of resistance always yields to long-term reward. The short-term pleasure of giving in always yields to long-term cost.",
+    "category": "Discipline"
+  },
+  {
+    "id": 147,
+    "title": "Real Strength Has Nothing to Prove",
+    "description": "The man who has mastered himself doesn't need to perform strength for others. His composure speaks for itself in every room he enters.",
+    "category": "Strength"
+  },
+  {
+    "id": 148,
+    "title": "Your Presence Is a Gift",
+    "description": "When you're fully present — not numbed out, not distracted, not managing a secret — you give people a gift: the real you.",
+    "category": "Purpose"
+  },
+  {
+    "id": 149,
+    "title": "Progress Is Happening Even Now",
+    "description": "On days you feel nothing, change is still occurring. Healing in the background, quietly and without fanfare. Keep showing up.",
+    "category": "Healing"
+  },
+  {
+    "id": 150,
+    "title": "You Are More Than Enough",
+    "description": "This fight does not define your worth. You have always been enough. You are simply becoming the person who knows it.",
+    "category": "Identity"
+  },
+  {
+    "id": 151,
+    "title": "Make Peace With Imperfection",
+    "description": "You will not be perfect at this. No one is. Perfection is not the goal — consistent effort across imperfection is. Keep going.",
+    "category": "Mindset"
+  },
+  {
+    "id": 152,
+    "title": "Momentum Builds on Itself",
+    "description": "The first week is the hardest. Then the second gets easier. Then the month. The momentum of discipline compounds like interest.",
+    "category": "Motivation"
+  },
+  {
+    "id": 153,
+    "title": "Your Brain Is Your Responsibility",
+    "description": "Nobody else is going to protect your mind for you. Guard your inputs fiercely: what you watch, read, and expose yourself to matters enormously.",
+    "category": "Discipline"
+  },
+  {
+    "id": 154,
+    "title": "Honoring Your Past Self",
+    "description": "Think of the version of you who first decided to change. That person deserves to see you succeed. Honor that earlier courage today.",
+    "category": "Purpose"
+  },
+  {
+    "id": 155,
+    "title": "Pain Points to What Needs Healing",
+    "description": "Behind every strong urge is usually pain that's asking to be felt, not escaped. Get curious about the pain. It's trying to tell you something.",
+    "category": "Healing"
+  },
+  {
+    "id": 156,
+    "title": "You Are Earning the Right to Lead",
+    "description": "The man who cannot lead himself cannot lead others. Every day of mastery earns you the credibility to influence the world around you.",
+    "category": "Leadership"
+  },
+  {
+    "id": 157,
+    "title": "Free Time Is an Asset",
+    "description": "The hours you reclaim from the loop are yours. Learn a language. Build a skill. Go somewhere. That time is now a resource, not a liability.",
+    "category": "Purpose"
+  },
+  {
+    "id": 158,
+    "title": "Discipline Is Self-Love",
+    "description": "Real self-love is not indulgence — it's doing what you need to do even when you don't want to. Future you is the one who benefits.",
+    "category": "Discipline"
+  },
+  {
+    "id": 159,
+    "title": "Anger Is Better Than Shame",
+    "description": "If you feel angry about where you've been, good. Use it. Anger gets you moving. Channel it into effort, not self-destruction.",
+    "category": "Mindset"
+  },
+  {
+    "id": 160,
+    "title": "You Are Not Behind",
+    "description": "There is no timetable. No age at which it's too late. Every day you start is the right day. Every day you continue is progress.",
+    "category": "Motivation"
+  },
+  {
+    "id": 161,
+    "title": "The Small Things Reveal the Big Things",
+    "description": "How you handle the small temptations reveals how you'll handle the large ones. Every small win is practice for the moments that matter.",
+    "category": "Discipline"
+  },
+  {
+    "id": 162,
+    "title": "You Are a Different Person Now",
+    "description": "The person who first struggled is not the person reading this. Growth has already happened. You are already in motion.",
+    "category": "Identity"
+  },
+  {
+    "id": 163,
+    "title": "Real Relaxation Is Not Numbing",
+    "description": "True rest restores you. Numbing depletes you. Learn to rest without escaping — sleep, walks, nature, silence — and you restore actual energy.",
+    "category": "Healing"
+  },
+  {
+    "id": 164,
+    "title": "Courage Compounds",
+    "description": "One act of courage makes the next easier. One day of holding the line makes the next day's holding slightly less effortful.",
+    "category": "Strength"
+  },
+  {
+    "id": 165,
+    "title": "Your Body Language Is Changing",
+    "description": "Men in recovery often notice their body language shift: head up, shoulders back, eye contact held. Confidence is physical before it is mental.",
+    "category": "Identity"
+  },
+  {
+    "id": 166,
+    "title": "The Brain's Default Is Toward Recovery",
+    "description": "Given the right inputs and the removal of harmful ones, the brain actively works to restore balance. You are working with biology, not against it.",
+    "category": "Healing"
+  },
+  {
+    "id": 167,
+    "title": "Purpose Makes Resistance Easier",
+    "description": "The man who knows why he's fighting has a fuel source that pure willpower can never match. Find your why. Return to it daily.",
+    "category": "Purpose"
+  },
+  {
+    "id": 168,
+    "title": "You Are Practicing Presence",
+    "description": "Recovery is fundamentally about presence — being here, in reality, with all its imperfection. Every day you stay, you practice this essential skill.",
+    "category": "Mindset"
+  },
+  {
+    "id": 169,
+    "title": "Fight for the Life You Deserve",
+    "description": "Not the mediocre life of half-present existence. Not the numb life of managed escape. The full, alive, real life. It is yours to fight for.",
+    "category": "Motivation"
+  },
+  {
+    "id": 170,
+    "title": "The Superpower Is Showing Up",
+    "description": "Not talent, not intelligence — showing up consistently when it's hard is the actual superpower. You are demonstrating it right now.",
+    "category": "Discipline"
+  },
+  {
+    "id": 171,
+    "title": "Your Voice Becomes Clearer",
+    "description": "As shame lifts, your actual voice — your real opinion, your authentic self — becomes clearer and stronger. Speak more. The world needs you.",
+    "category": "Identity"
+  },
+  {
+    "id": 172,
+    "title": "Sunrise After the Dark Night",
+    "description": "There are dark nights on this path. But every single one of them has ended in a morning. You only need to make it to the morning.",
+    "category": "Healing"
+  },
+  {
+    "id": 173,
+    "title": "Mastery Is a Daily Practice",
+    "description": "You don't arrive at mastery and stay. You practice it daily, sometimes losing ground, sometimes gaining, always moving.",
+    "category": "Mindset"
+  },
+  {
+    "id": 174,
+    "title": "You Are More Powerful Than You Think",
+    "description": "The fact that you're fighting this at all proves you have more strength than most. You don't need more power — you need to trust the power you have.",
+    "category": "Strength"
+  },
+  {
+    "id": 175,
+    "title": "Community Is Not Optional",
+    "description": "Lone wolves lose eventually. Accountability partners, communities, mentors — plug in. The investment in human connection is always worth it.",
+    "category": "Purpose"
+  },
+  {
+    "id": 176,
+    "title": "Every Failure Teaches If You Let It",
+    "description": "You can make every stumble a classroom or a cemetery. If you extract the lesson and keep moving, nothing is truly wasted.",
+    "category": "Mindset"
+  },
+  {
+    "id": 177,
+    "title": "Genuine Peace Is Possible",
+    "description": "Not the fake peace of numbing, not the exhausted peace of giving up. The genuine, earned, sustainable peace of a man who has chosen himself.",
+    "category": "Healing"
+  },
+  {
+    "id": 178,
+    "title": "You Are Already a Success Story in Progress",
+    "description": "Not a failure who keeps trying. A success story still being written. The ending hasn't been written — but the arc is clear if you keep going.",
+    "category": "Motivation"
+  },
+  {
+    "id": 179,
+    "title": "The Man on the Other Side",
+    "description": "Imagine the man who made it. The confidence he carries. The relationships he has. The things he built. You are becoming him. Keep going.",
+    "category": "Identity"
+  },
+  {
+    "id": 180,
+    "title": "Serve Something Larger Than Yourself",
+    "description": "The fight gets easier when it's not just about you. Fight for your family, your community, your future children, your brothers on the same path.",
+    "category": "Purpose"
+  },
+  {
+    "id": 181,
+    "title": "Rest Is Not Retreat",
+    "description": "Rest is part of the battle plan. Exhausted soldiers make mistakes. Intentional rest is how you stay in the fight long term.",
+    "category": "Discipline"
+  },
+  {
+    "id": 182,
+    "title": "You Can Be Your Own Hero",
+    "description": "The hero you've been looking for in movies, in mentors, in role models — that man lives inside you. He is built through choices like today's.",
+    "category": "Identity"
+  },
+  {
+    "id": 183,
+    "title": "Your Children Will Tell Your Story",
+    "description": "Long after you are gone, the kind of man you were in your private moments will ripple forward through generations. Make it a good story.",
+    "category": "Purpose"
+  },
+  {
+    "id": 184,
+    "title": "Every Win Is Worth Celebrating",
+    "description": "Don't dismiss your progress. One day, one week, one month — celebrate it sincerely. What you celebrate, you reinforce.",
+    "category": "Motivation"
+  },
+  {
+    "id": 185,
+    "title": "Accountability Is a Bridge",
+    "description": "Between the person you are and the person you want to be stands the bridge of accountability — to yourself, to someone else, to your values.",
+    "category": "Discipline"
+  },
+  {
+    "id": 186,
+    "title": "This Fight Is Sacred Work",
+    "description": "You are doing something that takes more courage than most people ever demonstrate. This is sacred work. Treat it that way.",
+    "category": "Identity"
+  },
+  {
+    "id": 187,
+    "title": "You Don't Need to Figure It All Out",
+    "description": "You don't need a perfect plan. You need the next right action. Take it. The next one will reveal itself when you do.",
+    "category": "Mindset"
+  },
+  {
+    "id": 188,
+    "title": "Equanimity Is the Goal",
+    "description": "Not constant highs. Not numb flatness. The steady, centered, grounded equanimity of a man who has made peace with the difficulty of life.",
+    "category": "Healing"
+  },
+  {
+    "id": 189,
+    "title": "Your Investment Is Compounding",
+    "description": "Every day of recovery adds compound interest to the account of your character. Today's deposit seems small. Ten years of deposits is a fortune.",
+    "category": "Purpose"
+  },
+  {
+    "id": 190,
+    "title": "You Are Always Becoming",
+    "description": "You are not a fixed thing. You are a process. A direction. A becoming. As long as the direction is forward, you are succeeding.",
+    "category": "Motivation"
+  },
+  {
+    "id": 191,
+    "title": "The Life You Want Is Waiting",
+    "description": "On the other side of this discipline is the life you've dreamed of — the relationships, the work, the health, the peace. It's there. Keep walking.",
+    "category": "Purpose"
+  },
+  {
+    "id": 192,
+    "title": "Difficult Conversations Become Possible",
+    "description": "As shame decreases and clarity increases, the hard conversations you've been avoiding become possible. Real relationships require them.",
+    "category": "Healing"
+  },
+  {
+    "id": 193,
+    "title": "You Are Reclaiming Time",
+    "description": "The hours spent in the loop are hours not spent reading, learning, building, loving. Recovery is also a time machine back to your life.",
+    "category": "Motivation"
+  },
+  {
+    "id": 194,
+    "title": "Emotional Courage Is Real Courage",
+    "description": "The courage to feel your sadness, your loneliness, your grief without escaping — this is the rarest and realest courage there is.",
+    "category": "Strength"
+  },
+  {
+    "id": 195,
+    "title": "Accept Where You Are Today",
+    "description": "Acceptance of today's reality, without resignation, is the foundation of effective change. Know where you are so you can move from here.",
+    "category": "Mindset"
+  },
+  {
+    "id": 196,
+    "title": "This Is Your Defining Chapter",
+    "description": "Every life has chapters that define it. This is yours. The way you fight here shapes everything that comes after. Fight accordingly.",
+    "category": "Identity"
+  },
+  {
+    "id": 197,
+    "title": "You Are Doing the Impossible Daily",
+    "description": "Millions of people want to change and don't. You are actually doing it. That is extraordinary, even if it doesn't always feel that way.",
+    "category": "Motivation"
+  },
+  {
+    "id": 198,
+    "title": "The World Needs You Whole",
+    "description": "Not fractured, not numbed, not half-present. The world you move through needs the whole version of you. Show up whole.",
+    "category": "Purpose"
+  },
+  {
+    "id": 199,
+    "title": "Tomorrow Is Shaped by Today",
+    "description": "The tomorrow you want is not built on chance. It is built on the choices you make today, in private, when nobody is watching.",
+    "category": "Discipline"
+  },
+  {
+    "id": 200,
+    "title": "You Are the Answer You've Been Searching For",
+    "description": "Not a product. Not a quick fix. Not a guru's system. You are the answer. This work you're doing is the most effective path there is.",
+    "category": "Identity"
+  },
+  {
+    "id": 201,
+    "title": "Breathe Through the Urge",
+    "description": "Deep breathing activates the parasympathetic system and reduces the intensity of cravings within minutes. It sounds simple because it is — and it works.",
+    "category": "Discipline"
+  },
+  {
+    "id": 202,
+    "title": "You Are Stronger Than Yesterday",
+    "description": "Not by a lot. Maybe by a fraction. But the direction matters more than the distance. Slightly stronger, every single day.",
+    "category": "Strength"
+  },
+  {
+    "id": 203,
+    "title": "Pain Is Temporary, Regret Is Longer",
+    "description": "The pain of resistance fades in minutes. The regret of giving in can linger for days. Choose your pain wisely.",
+    "category": "Mindset"
+  },
+  {
+    "id": 204,
+    "title": "Your Testosterone Thanks You",
+    "description": "Abstinence has measurable effects on testosterone and energy levels. What you feel is not just psychological — it's biological. The science backs you.",
+    "category": "Healing"
+  },
+  {
+    "id": 205,
+    "title": "Impermanence Is Your Friend",
+    "description": "This moment of temptation will pass. This struggle will not last forever. Nothing does. Cling to that truth when the urge feels permanent.",
+    "category": "Mindset"
+  },
+  {
+    "id": 206,
+    "title": "You Are Writing the Manual",
+    "description": "By doing this, you're creating a personal manual for how to rise. One day, you'll pass it on to a son, a friend, a stranger who needs it.",
+    "category": "Purpose"
+  },
+  {
+    "id": 207,
+    "title": "Honor the Hard Days Most",
+    "description": "Easy days don't build character. The days when every part of you wants to give in and you don't — those days are building something permanent.",
+    "category": "Strength"
+  },
+  {
+    "id": 208,
+    "title": "Your Silence Can Be Powerful",
+    "description": "You don't have to explain your path to everyone. You can simply live it. The results will speak loudly enough on their own.",
+    "category": "Identity"
+  },
+  {
+    "id": 209,
+    "title": "Nature Resets the Nervous System",
+    "description": "Step outside. Walk. Look up. The natural world is one of the most powerful antidotes to the artificial stimulation loop. Use it freely.",
+    "category": "Healing"
+  },
+  {
+    "id": 210,
+    "title": "Choose Who Gets Your Attention",
+    "description": "Your attention is the most valuable resource you own. Choosing what and who receives it is the first act of real sovereignty.",
+    "category": "Purpose"
+  },
+  {
+    "id": 211,
+    "title": "Forgive Yourself and Keep Moving",
+    "description": "Self-forgiveness is not permission to repeat — it is the engine of real change. Forgive fully, then move immediately toward something better.",
+    "category": "Mindset"
+  },
+  {
+    "id": 212,
+    "title": "The Man You Want to Be Is Already Inside You",
+    "description": "You don't need to become someone different. You need to uncover the man who has always been there, buried under habit and hesitation.",
+    "category": "Identity"
+  },
+  {
+    "id": 213,
+    "title": "Your Instincts Are Returning",
+    "description": "The distorted instincts shaped by the habit are gradually correcting. Your sense of what is real, attractive, and meaningful is recalibrating.",
+    "category": "Healing"
+  },
+  {
+    "id": 214,
+    "title": "You Are Living With Integrity",
+    "description": "Integrity is alignment between what you believe and how you live. Every clean day closes the gap between your values and your actions.",
+    "category": "Discipline"
+  },
+  {
+    "id": 215,
+    "title": "Let the Pain Speak",
+    "description": "Instead of silencing the difficult feelings with escape, let them speak. They are pointing at something important. Listen before acting.",
+    "category": "Mindset"
+  },
+  {
+    "id": 216,
+    "title": "You Are Building Emotional Stamina",
+    "description": "Every time you sit with discomfort without escaping, your emotional stamina grows. This capacity serves every area of your life.",
+    "category": "Strength"
+  },
+  {
+    "id": 217,
+    "title": "The Reward Delay Is the Point",
+    "description": "Delayed gratification is not just a strategy — it is a philosophy. Choosing future reward over immediate pleasure is the definition of maturity.",
+    "category": "Discipline"
+  },
+  {
+    "id": 218,
+    "title": "Your Creativity Is Coming Back",
+    "description": "Many men in recovery report a surge of creative energy as the artificial stimulation fades. Ideas, art, projects, inventions — they return.",
+    "category": "Healing"
+  },
+  {
+    "id": 219,
+    "title": "Every Day You Are Voting",
+    "description": "Every day you are casting a vote for the man you are becoming. Consistent votes in one direction elect a new character over time.",
+    "category": "Identity"
+  },
+  {
+    "id": 220,
+    "title": "Real Freedom Is Self-Command",
+    "description": "Freedom from external control means little without freedom from internal impulse. Self-command is the deepest and truest freedom there is.",
+    "category": "Strength"
+  },
+  {
+    "id": 221,
+    "title": "Look Back Proudly at the Week",
+    "description": "At the end of each week, you want to look back and see a man who made hard choices and stayed true. Build that review into your week.",
+    "category": "Discipline"
+  },
+  {
+    "id": 222,
+    "title": "What You Protect Grows",
+    "description": "Time protected grows into achievement. Energy protected grows into vitality. Intention protected grows into identity. Protect accordingly.",
+    "category": "Purpose"
+  },
+  {
+    "id": 223,
+    "title": "Recovery Is an Act of Love",
+    "description": "For the people in your life who deserve the best of you — this is an act of love. Every clean day is a gift to them, given in private.",
+    "category": "Purpose"
+  },
+  {
+    "id": 224,
+    "title": "Trust the Process on Dark Days",
+    "description": "Dark days test the faith. Trust what you've built. The evidence of past resilience is real. Draw on it when today's evidence is scarce.",
+    "category": "Motivation"
+  },
+  {
+    "id": 225,
+    "title": "You Are Living at a Higher Level",
+    "description": "Many men never fight this. They give in, over and over, and never reach for more. You are fighting. You are already operating at a higher level.",
+    "category": "Identity"
+  },
+  {
+    "id": 226,
+    "title": "Your Example Ripples Outward",
+    "description": "The man you become changes everyone around you. Your children, your friends, your community — your private transformation has public consequences.",
+    "category": "Purpose"
+  },
+  {
+    "id": 227,
+    "title": "Life Is Rich Without the Escape",
+    "description": "When the escape hatch closes, you are forced into the richness of real life — difficult, surprising, alive. You may not expect to love it. You will.",
+    "category": "Healing"
+  },
+  {
+    "id": 228,
+    "title": "The Next Five Minutes Are Winnable",
+    "description": "Don't fight the next year. Don't fight forever. Fight the next five minutes. Win those. Then win the next five. This is how it's done.",
+    "category": "Motivation"
+  },
+  {
+    "id": 229,
+    "title": "Your Relationship With Yourself Is Changing",
+    "description": "Perhaps the deepest change is the relationship you are building with yourself — more honest, more respectful, more compassionate. That is the victory.",
+    "category": "Identity"
+  },
+  {
+    "id": 230,
+    "title": "The War Is Won in the Morning",
+    "description": "The habits and choices you make in your first hour shape the mental state for the rest of the day. Win the morning. Win the day.",
+    "category": "Discipline"
+  },
+  {
+    "id": 231,
+    "title": "You Have Earned the Right to Rest",
+    "description": "On hard days, when you've held the line, rest without guilt. You earned it. Tomorrow you get back to work.",
+    "category": "Strength"
+  },
+  {
+    "id": 232,
+    "title": "Accountability Creates Follow-Through",
+    "description": "When you say it out loud to another human being, the chance you follow through increases dramatically. Speak your commitments.",
+    "category": "Discipline"
+  },
+  {
+    "id": 233,
+    "title": "You Are Becoming Someone People Trust",
+    "description": "Reliability, presence, and follow-through — these return as the habit fades. You become the kind of person others can count on.",
+    "category": "Identity"
+  },
+  {
+    "id": 234,
+    "title": "The Path Is Long and Worth It",
+    "description": "Nobody promised this would be quick. The path is long and winding and sometimes backtrack. But every mile forward is permanently banked.",
+    "category": "Motivation"
+  },
+  {
+    "id": 235,
+    "title": "True Rest Is Not Earned — It Is Practiced",
+    "description": "You don't earn rest with enough productivity. You practice rest as a discipline — scheduled, protected, real. It restores what discipline depletes.",
+    "category": "Healing"
+  },
+  {
+    "id": 236,
+    "title": "Your Anger About the Past Is Valid",
+    "description": "If you feel angry about time lost, energy wasted, relationships damaged — that anger is valid. Use it as fuel, not as a cage.",
+    "category": "Mindset"
+  },
+  {
+    "id": 237,
+    "title": "The Urge Will Pass Even If You Do Nothing",
+    "description": "You do not have to act on it. You do not have to fix it. You simply have to wait. The urge always passes. Always.",
+    "category": "Mindset"
+  },
+  {
+    "id": 238,
+    "title": "You Are Not Fighting Alone in Time",
+    "description": "Every man who ever mastered himself and wrote it down, who ever held the line in private, walked this path before you. You follow in real company.",
+    "category": "Strength"
+  },
+  {
+    "id": 239,
+    "title": "The Secret to Long Streaks Is Short Thinking",
+    "description": "Long streaks are not achieved by thinking about the long term. They are achieved by making the right choice one moment at a time.",
+    "category": "Discipline"
+  },
+  {
+    "id": 240,
+    "title": "Your Hope Is Evidence",
+    "description": "The fact that you hope for better — that you believe change is possible — is itself evidence of the recovery already underway inside you.",
+    "category": "Motivation"
+  },
+  {
+    "id": 241,
+    "title": "Real Men Ask for Help",
+    "description": "Seeking help is not weakness — it's strategy. The strongest men in history had mentors, allies, and teachers. Be like them.",
+    "category": "Strength"
+  },
+  {
+    "id": 242,
+    "title": "You Are Becoming Harder to Break",
+    "description": "Every hard day that doesn't break you adds to your structural integrity. You are being stress-tested into unbreakability.",
+    "category": "Strength"
+  },
+  {
+    "id": 243,
+    "title": "The Mission Gives Meaning to the Sacrifice",
+    "description": "When you know what you're fighting for, the sacrifice makes sense. Define your mission. Let it carry you through the days it's hard to carry yourself.",
+    "category": "Purpose"
+  },
+  {
+    "id": 244,
+    "title": "Slow Change Is Still Change",
+    "description": "Dramatic transformations are made of thousands of boring improvements. Don't dismiss the slow days. They are the substance of transformation.",
+    "category": "Motivation"
+  },
+  {
+    "id": 245,
+    "title": "You Are Learning to Love Reality",
+    "description": "Unfiltered reality, with all its difficulty and beauty, is the only place where real things happen. You are learning to love living in it.",
+    "category": "Mindset"
+  },
+  {
+    "id": 246,
+    "title": "Character Is Built in Private",
+    "description": "The audience doesn't create character — solitude does. What you choose when no one is watching is the truest measurement of who you are.",
+    "category": "Identity"
+  },
+  {
+    "id": 247,
+    "title": "Keep Showing Up",
+    "description": "That's it. That's the secret. Keep showing up — imperfect, tired, sometimes struggling — and keep showing up anyway. It is enough.",
+    "category": "Motivation"
+  },
+  {
+    "id": 248,
+    "title": "You Are Earning Your Own Respect",
+    "description": "Not the approval of others. Not the admiration of strangers. Your own deep, quiet, unshakeable respect for the person you are becoming.",
+    "category": "Identity"
+  },
+  {
+    "id": 249,
+    "title": "Every Version of You Gets Better",
+    "description": "Version 1 struggled. Version 2 learned. Version 3 is fighting. Version 4 — the one coming — holds the line almost effortlessly. It gets easier.",
+    "category": "Healing"
+  },
+  {
+    "id": 250,
+    "title": "Go Be the Person You Needed",
+    "description": "The mentor, the role model, the example — for someone younger and still fighting. You will become that person. Keep going until you are.",
+    "category": "Purpose"
+  },
+  {
+    "id": 251,
+    "title": "Silence Is Productive",
+    "description": "In a world of constant stimulation, the ability to sit in silence is rare and powerful. Practice it. Thoughts clarify in silence.",
+    "category": "Mindset"
+  },
+  {
+    "id": 252,
+    "title": "You Are Worthy of Your Own Effort",
+    "description": "Not everyone will fight for themselves. You are. That makes you worthy not just of the results — but of the fight itself.",
+    "category": "Identity"
+  },
+  {
+    "id": 253,
+    "title": "Sweat Clears the Mind",
+    "description": "Physical exercise is one of the most reliable tools for managing the urge cycle. Use your body to protect your mind. They are connected.",
+    "category": "Strength"
+  },
+  {
+    "id": 254,
+    "title": "Build Your Emergency Protocol",
+    "description": "Have a 3-step plan for when the urge hits hardest. Know it before the urge arrives. Rehearse it. When the moment comes, execute without thinking.",
+    "category": "Discipline"
+  },
+  {
+    "id": 255,
+    "title": "Your Gratitude Muscle Is Growing",
+    "description": "As numbness fades, small things become genuinely beautiful again. The sunrise. A laugh. A meal. Your capacity for gratitude is being restored.",
+    "category": "Healing"
+  },
+  {
+    "id": 256,
+    "title": "One Conversation Can Change Everything",
+    "description": "Sometimes one honest conversation with one person who understands changes the trajectory entirely. Be willing to have that conversation.",
+    "category": "Purpose"
+  },
+  {
+    "id": 257,
+    "title": "Patience Is Active, Not Passive",
+    "description": "Waiting is passive. Patience is active — choosing to trust the process and continue forward while the results are still forming. Keep acting.",
+    "category": "Discipline"
+  },
+  {
+    "id": 258,
+    "title": "The Hard Path Is the Right Path",
+    "description": "Not because suffering is noble. Because growth lives on the other side of difficulty, and always has. The hard path leads to real reward.",
+    "category": "Motivation"
+  },
+  {
+    "id": 259,
+    "title": "You Are Better at This Than You Think",
+    "description": "The self-doubt, the inner critic, the voice that says you'll fail — it is wrong about you. You are more capable than it knows.",
+    "category": "Strength"
+  },
+  {
+    "id": 260,
+    "title": "Dignity Increases With Every Choice",
+    "description": "Dignity is not given. It is built through choices that align with your deepest values. Every clean day builds it. Every relapse chips it. Choose wisely.",
+    "category": "Identity"
+  },
+  {
+    "id": 261,
+    "title": "Your Recovery Will Help Others",
+    "description": "The story you are living right now will be exactly the story someone else needs to hear. Fight well — your testimony matters.",
+    "category": "Purpose"
+  },
+  {
+    "id": 262,
+    "title": "Fear of Failure Is Not a Reason to Stop",
+    "description": "Fear of failing is an emotion. It is not a strategy. Do not let an emotion make your decisions. Let your values do that.",
+    "category": "Mindset"
+  },
+  {
+    "id": 263,
+    "title": "The Tipping Point Is Coming",
+    "description": "There is a moment in recovery where the clean state starts to feel more normal than the addicted state. You are moving toward it.",
+    "category": "Healing"
+  },
+  {
+    "id": 264,
+    "title": "You Get to Choose the Narrative",
+    "description": "The story of your life is not already written. You are holding the pen. Write the chapter where you overcame. It's yours to write.",
+    "category": "Motivation"
+  },
+  {
+    "id": 265,
+    "title": "Real Self-Care Is Hard",
+    "description": "A bubble bath is not self-care if the harder things are being avoided. Real self-care is the discipline to do what you need even when you don't want to.",
+    "category": "Discipline"
+  },
+  {
+    "id": 266,
+    "title": "What You Resist, You Strengthen",
+    "description": "Every time you face the urge and choose differently, you weaken the neural pathway and strengthen the alternative. You are literally reshaping your brain.",
+    "category": "Strength"
+  },
+  {
+    "id": 267,
+    "title": "Intimacy Requires Vulnerability",
+    "description": "Real intimacy — the kind you want — requires vulnerability. Vulnerability requires a clear, present, unashamed mind. You're building that mind.",
+    "category": "Healing"
+  },
+  {
+    "id": 268,
+    "title": "You Are Allowed to Want More",
+    "description": "Wanting a better life is not arrogance. Wanting to be free of this is not excessive. Wanting to be your best self is completely right.",
+    "category": "Identity"
+  },
+  {
+    "id": 269,
+    "title": "Hope Is a Strategy",
+    "description": "Maintaining hope when the evidence is thin is not naivety — it is a discipline. The hopeful man keeps trying. The man without hope stops.",
+    "category": "Motivation"
+  },
+  {
+    "id": 270,
+    "title": "Do It for the Version of You Who Couldn't",
+    "description": "There was a version of you who couldn't resist. This version can. Do it for him. Do it to honor how far you've already come.",
+    "category": "Purpose"
+  },
+  {
+    "id": 271,
+    "title": "Your Time Is Yours Again",
+    "description": "Hours reclaimed. Mental bandwidth returned. Attention redirected. The clock is no longer running for the habit — it's running for you.",
+    "category": "Motivation"
+  },
+  {
+    "id": 272,
+    "title": "Deep Breathing Is a Superpower",
+    "description": "4-7-8 breathing. Box breathing. Diaphragmatic breathing. These tools dial down the nervous system in real time. They are always available to you.",
+    "category": "Discipline"
+  },
+  {
+    "id": 273,
+    "title": "The War Within Is the Only War That Matters",
+    "description": "External victories are hollow if won by a man who cannot rule himself. The internal battle is the one that determines everything else.",
+    "category": "Strength"
+  },
+  {
+    "id": 274,
+    "title": "You Are More Real Than You've Ever Been",
+    "description": "Without the filter of artificial stimulation, you are encountering your actual self. It may be uncomfortable. It is also true. And truth heals.",
+    "category": "Healing"
+  },
+  {
+    "id": 275,
+    "title": "Every Good Choice Has Ripple Effects",
+    "description": "The discipline you practice today ripples into better sleep, better relationships, better work, better health. One choice touches everything.",
+    "category": "Purpose"
+  },
+  {
+    "id": 276,
+    "title": "Recovery Requires Repetition",
+    "description": "There is no one transformative moment. There are a thousand repeated right choices. Recovery is not an event. It is a practice.",
+    "category": "Mindset"
+  },
+  {
+    "id": 277,
+    "title": "You've Always Had the Answer",
+    "description": "Deep down, before any advice and any system, you always knew what the right choice was. Trust that knowledge. Act from it.",
+    "category": "Identity"
+  },
+  {
+    "id": 278,
+    "title": "Your Path Is Unique and Universal",
+    "description": "The specifics of your story are yours alone. The core of the fight — choosing mastery over impulse — belongs to every man who has ever grown.",
+    "category": "Motivation"
+  },
+  {
+    "id": 279,
+    "title": "Energy Management Is Life Management",
+    "description": "Your energy is finite. Where it goes determines what gets built and what gets neglected. Manage it like the precious resource it is.",
+    "category": "Discipline"
+  },
+  {
+    "id": 280,
+    "title": "The Finish Line Is Not the Point",
+    "description": "The point is not reaching 90 days or 365 days. The point is becoming the man who makes that choice automatically. The journey changes you.",
+    "category": "Purpose"
+  },
+  {
+    "id": 281,
+    "title": "Be Generous With Your Growth",
+    "description": "Share what you're learning — not to perform, but because generosity accelerates your own growth and helps others. What you give comes back.",
+    "category": "Purpose"
+  },
+  {
+    "id": 282,
+    "title": "You Are Practicing the Hardest Skill",
+    "description": "Self-regulation in the face of strong biological impulses is the hardest skill there is. You are practicing the thing most people never try.",
+    "category": "Strength"
+  },
+  {
+    "id": 283,
+    "title": "The Fog Is Lifting",
+    "description": "Slowly, gradually, the fog that came with the habit is lifting. You may not feel it day to day, but look back six weeks and you'll see it.",
+    "category": "Healing"
+  },
+  {
+    "id": 284,
+    "title": "You Can Disagree With Your Brain",
+    "description": "Your brain makes suggestions. It is not the boss. You are the one who decides whether to act on the suggestion. Exercise that authority.",
+    "category": "Mindset"
+  },
+  {
+    "id": 285,
+    "title": "Honor the Body Doing the Work",
+    "description": "Your body is working hard to heal. Feed it well. Sleep it well. Move it well. Your physical body is the vehicle of your recovery.",
+    "category": "Healing"
+  },
+  {
+    "id": 286,
+    "title": "The Real You Is Emerging",
+    "description": "Under the habit, under the shame, under the fog — the real you is there. He's been there the whole time. He's coming out now.",
+    "category": "Identity"
+  },
+  {
+    "id": 287,
+    "title": "Make the Next Right Move",
+    "description": "Not the perfect move. Not the complete plan. Just the next right move. Then the next. This is how mountains are climbed.",
+    "category": "Motivation"
+  },
+  {
+    "id": 288,
+    "title": "Victory Is Quiet",
+    "description": "You won't celebrate publicly. There won't be an award. The victory is quiet, private, personal. And it is more real than any public trophy.",
+    "category": "Identity"
+  },
+  {
+    "id": 289,
+    "title": "Go One More Day",
+    "description": "Don't think about the month. Don't think about the year. Just go one more day. Then do it again tomorrow. One more day, stacked, changes everything.",
+    "category": "Motivation"
+  },
+  {
+    "id": 290,
+    "title": "You Are Becoming Unbreakable",
+    "description": "Not in the fragile sense of someone who never fails. But in the deep sense of someone who can fail, get up, and keep going — indefinitely.",
+    "category": "Strength"
+  },
+  {
+    "id": 291,
+    "title": "Accountability Is Not a Weakness",
+    "description": "Telling another person your commitment is not weakness — it is leverage. Use other humans as structure when your own will isn't enough.",
+    "category": "Discipline"
+  },
+  {
+    "id": 292,
+    "title": "Your Story Has a Chapter Called Victory",
+    "description": "It may not be written yet. But that chapter exists. You are writing the pages that lead up to it right now, today.",
+    "category": "Motivation"
+  },
+  {
+    "id": 293,
+    "title": "Find Beauty in the Fight",
+    "description": "There is something profoundly beautiful about a man choosing to fight for himself when giving up would be easier. See the beauty in your own battle.",
+    "category": "Identity"
+  },
+  {
+    "id": 294,
+    "title": "The Present Moment Is Enough",
+    "description": "Not the past streak. Not the future goal. The present moment — this choice, right now — is where all change actually lives.",
+    "category": "Mindset"
+  },
+  {
+    "id": 295,
+    "title": "You Are Right to Want More",
+    "description": "The hunger for more — more clarity, more presence, more real life — is a healthy hunger. It points you in the right direction. Follow it.",
+    "category": "Purpose"
+  },
+  {
+    "id": 296,
+    "title": "Character Earns Trust",
+    "description": "The trust you earn from yourself — I said I would do this and I did — is the foundation of all other trust. Build it daily.",
+    "category": "Identity"
+  },
+  {
+    "id": 297,
+    "title": "Healing Happens in Community",
+    "description": "Individual effort matters. Community accelerates it. Both are needed. Don't choose one over the other.",
+    "category": "Healing"
+  },
+  {
+    "id": 298,
+    "title": "You Are Teaching Yourself to Win",
+    "description": "Every win, however small, teaches your brain that winning is possible. The learning compounds. You are teaching yourself how to succeed at life.",
+    "category": "Motivation"
+  },
+  {
+    "id": 299,
+    "title": "The Man You Are Becoming Needs You",
+    "description": "He cannot come into being without the choices you make today. He needs you to hold the line. Do it for him.",
+    "category": "Identity"
+  },
+  {
+    "id": 300,
+    "title": "This Is the Work That Matters",
+    "description": "Not the achievement for its own sake. Not the streak count. The work of becoming — day by day, choice by choice — is the work that actually matters.",
+    "category": "Purpose"
+  }
+]
