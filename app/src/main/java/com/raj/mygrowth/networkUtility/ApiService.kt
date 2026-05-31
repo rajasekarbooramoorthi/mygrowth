@@ -12,6 +12,7 @@ import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
 import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponsePassword
+import com.raj.mygrowth.domain.ResponseQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
@@ -76,6 +77,11 @@ interface ApiService {
     suspend fun getSprint(
         @Body request: RequestAction
     ): SprintMasterResponse
+
+    @POST("getmydata.php")
+    suspend fun getQuitZillaReport(
+        @Body request: RequestAction
+    ): ResponseQuitZillaMaster
 
     @POST("getmydata.php")
     suspend fun getSprintTask(

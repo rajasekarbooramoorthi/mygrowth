@@ -3,6 +3,7 @@ package com.raj.mygrowth.uiState
 import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseGetAttendance
+import com.raj.mygrowth.domain.ResponseQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
@@ -18,6 +19,11 @@ sealed class UiState {
     data class SuccessSprintTask(val data: SprintTaskResponse) : UiState()
     data class SuccessSprintTaskAdd(val data: ResponseSimple) : UiState()
     data class SuccessWeightGainTimeLine(val data: WeightGainResponse) : UiState()
+    data class SuccessQuitZillaReport(val data: ResponseQuitZillaMaster) : UiState()
+    data class SuccessMotivate(val data: ResponseQuitZillaMaster) : UiState()
+    data class SuccessTrack(val data: ResponseQuitZillaMaster) : UiState()
+    data class SuccessBenefits(val data: ResponseQuitZillaMaster) : UiState()
+    data class SuccessQuotes(val data: ResponseQuitZillaMaster) : UiState()
     data class SuccessDiet(val data: DietResponse) : UiState()
     data class Error(val message: String) : UiState()
 }

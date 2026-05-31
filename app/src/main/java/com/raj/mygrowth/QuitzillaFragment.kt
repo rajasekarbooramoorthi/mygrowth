@@ -55,7 +55,7 @@ class QuitzillaFragment : Fragment() {
     }
 
     private fun callApi() {
-        viewModel.fetchSprint(RequestAction("get_quitzilla_master"))
+        viewModel.fetchSprint(RequestAction("get_quit_zilla_master"))
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
                 when (state) {

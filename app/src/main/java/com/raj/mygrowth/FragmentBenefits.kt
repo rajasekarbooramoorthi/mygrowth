@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.raj.mygrowth.adapter.QuitZillaReportAdapter
-import com.raj.mygrowth.databinding.FragmentMotivationBinding
 import com.raj.mygrowth.databinding.FragmentQuitZillaReportBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.repository.Repository
@@ -20,7 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import kotlin.getValue
 
-class FragmentMotivation : Fragment() {
+class FragmentBenefits : Fragment() {
     private var _binding: FragmentQuitZillaReportBinding? = null
     private val binding get() = _binding!!
 
