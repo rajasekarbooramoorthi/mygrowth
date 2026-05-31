@@ -1,0 +1,51 @@
+
+
+
+INSERT INTO QuitZilla_Master (
+    QZ_NAME,
+    QZ_DESCRIPTION,
+    QZ_STATUS,
+    QZ_START_DATE,
+    QZ_END_DATE
+) VALUES
+(
+    'Quit Smoking',
+    'Track smoking-free days',
+    1,
+    '2026-05-31',
+    '2026-05-31'
+),
+(
+    'Quit Alcohol',
+    'Monitor alcohol-free progress',
+    1,
+    '2026-05-31',
+     '2026-05-31'
+
+),
+(
+    'Quit Junk Food',
+    'Build healthier eating habits',
+    1,
+    '2026-05-31',
+        '2026-05-31'
+
+),
+(
+    'Quit Social Media',
+    'Reduce screen time and distractions',
+    1,
+    '2026-05-31',
+        '2026-05-31'
+
+),
+(
+    'Quit Gaming',
+    'Control gaming addiction',
+    1,
+    '2026-05-31',
+        '2026-05-31'
+
+);
+
+

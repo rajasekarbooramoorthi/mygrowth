@@ -4,8 +4,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
-import com.google.android.material.tabs.TabLayoutMediator
-import com.raj.mygrowth.adapter.ViewPagerAdapter
 import com.raj.mygrowth.databinding.ActitvityQuitZillaBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.repository.Repository
@@ -27,21 +25,6 @@ class QuitZillaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setToolbarInsetsActivity()
 
-        binding = ActitvityQuitZillaBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        callApi()
-
-        binding.viewPager.adapter = ViewPagerAdapter(this)
-
-        val adapter = ViewPagerAdapter(this)
-
-        TabLayoutMediator(
-            binding.tabLayout,
-            binding.viewPager
-        ) { tab, position ->
-            tab.text = adapter.tabTitles [position]
-        }.attach()
     }
 
     private fun callApi() {
@@ -67,6 +50,9 @@ class QuitZillaActivity : AppCompatActivity() {
             }
         }
     }
+
+
+
 
 
 }
