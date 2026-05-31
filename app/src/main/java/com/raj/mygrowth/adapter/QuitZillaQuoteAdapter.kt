@@ -7,7 +7,6 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.ColorUtilities.colorsMulti
 import com.raj.mygrowth.ColorUtilities.colorsMultiText
-import com.raj.mygrowth.databinding.AdapterQuitZillaMotivationBinding
 import com.raj.mygrowth.databinding.AdapterQuitZillaQuoteBinding
 import com.raj.mygrowth.domain.QuitZillaQuoteItem
 import kotlin.math.abs
@@ -34,7 +33,7 @@ class QuitZillaQuoteAdapter(
 
         val formattedTitle = item.Quote.replaceFirstChar { it.uppercase() }
 
-        holder.binding.tvId.text = position.toString() + 1
+        holder.binding.tvId.text = (position + 1).toString()
         holder.binding.tvTitle.text = item.Author
         holder.binding.tvDescription.text = formattedTitle
 
