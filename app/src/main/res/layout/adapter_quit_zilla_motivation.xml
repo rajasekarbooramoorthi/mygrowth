@@ -39,54 +39,44 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:weightSum="2">
+
 
                         <TextView
-                            android:id="@+id/tvName"
+                            android:id="@+id/tvTitle"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_7sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="1.9"
+                            android:layout_weight="1.7"
                             android:fontFamily="@font/sans_bold"
-                            android:text="Task Name"
-                            android:textSize="@dimen/text_size_medium" />
+                            android:text="Your Brain Is Rewiring"
+                            android:textSize="@dimen/text_size_large" />
+
+                        <TextView
+                            android:id="@+id/tvCategory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="0.3"
+                            android:fontFamily="@font/sans_regular"
+                            android:text="Success"
+                            android:textSize="@dimen/text_size_too_small" />
+
 
                         <TextView
                             android:id="@+id/tvId"
-                            android:layout_width="0dp"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
+                            android:layout_marginStart="@dimen/_1sdp"
                             android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
                             android:fontFamily="@font/sans_regular"
-                            android:text="34354"
-                            android:textSize="@dimen/text_size_too_small" />
-
-                        <TextView
-                            android:id="@+id/tvStatus"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.5"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="In Progress"
-                            android:textSize="@dimen/text_size_too_small" />
-
-                        <TextView
-                            android:id="@+id/tvTag"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="5.0.0"
+                            android:text="5"
                             android:textSize="@dimen/text_size_too_small" />
 
                     </LinearLayout>
@@ -96,20 +86,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
                         android:fontFamily="@font/sans_regular"
-                        android:text="sgdhfjgkhlj"
-                        android:textSize="@dimen/text_size_too_small" />
-
-                    <TextView
-                        android:id="@+id/tvDetail"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/sans_regular"
-                        android:text="fdsgfhugdhfhgueg uyetfyuewg fyewgtyf dwyufreyugfuydsgfyusede fdsyufgydsufguydsg fyudsf yuds ufygsduyfgyuds yuf dsyfyu ewyfgew y fcuer gcergwrec cg er gder gfeuger"
-                        android:textSize="@dimen/text_size_too_small" />
+                        android:text="You don't have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are."
+                        android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

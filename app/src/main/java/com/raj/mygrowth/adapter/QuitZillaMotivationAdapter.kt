@@ -33,9 +33,9 @@ class QuitZillaMotivationAdapter(
 
         val formattedTitle = item.description.replaceFirstChar { it.uppercase() }
 
-        holder.binding.tvName.text = formattedTitle
-        holder.binding.tvDetail.text = (item.title)
-        holder.binding.tvDescription.text = item.description
+        holder.binding.tvId.text = item.id
+        holder.binding.tvTitle.text = item.title
+        holder.binding.tvDescription.text = formattedTitle
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]
