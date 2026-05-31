@@ -49,14 +49,14 @@ class FragmentRGUpdate : Fragment() {
 
                     is UiState.Loading -> {
                         // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessQuitZillaReport -> {
                         val list = state.data.data
                         val adapter = QuitZillaReportAdapter(list, requireContext())
                         binding.recyclerViewVertical.adapter = adapter
-                        Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.Error -> {

@@ -60,14 +60,14 @@ class ToDoAddAttendanceFragment : Fragment(), ClickAttendance {
                 when (state) {
                     is UiState.Loading -> {
                         // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.SuccessGetAddAttendance -> {
                         val data = state.data.data
                         val adapter = AdapterGetAttendanceItem(data, this@ToDoAddAttendanceFragment)
                         binding.recyclerView.adapter = adapter
-                        Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
 
                     }
 

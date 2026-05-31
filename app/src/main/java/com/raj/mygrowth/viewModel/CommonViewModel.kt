@@ -12,6 +12,7 @@ import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseQuitZillaBenefits
 import com.raj.mygrowth.domain.ResponseQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseQuitZillaMotivation
+import com.raj.mygrowth.domain.ResponseQuitZillaQuote
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
@@ -86,6 +87,10 @@ class CommonViewModel(
 
     fun getQuitZillaBenefits(): Flow<ResponseQuitZillaBenefits> = flow {
         emit(api.getQuitZillaBenefits())
+    }.flowOn(Dispatchers.IO)
+
+    fun getQuote(): Flow<ResponseQuitZillaQuote> = flow {
+        emit(api.getQuote())
     }.flowOn(Dispatchers.IO)
 
     fun getSprintTask(request: RequestAction): Flow<SprintTaskResponse> = flow {
@@ -172,6 +177,18 @@ class CommonViewModel(
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
             }.collect { data ->
                 _uiState.value = UiState.SuccessQuitZillaBenefits(data)
+            }
+        }
+    }
+
+    fun fetchQuote() {
+        viewModelScope.launch {
+            getQuote().onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessQuotes(data)
             }
         }
     }

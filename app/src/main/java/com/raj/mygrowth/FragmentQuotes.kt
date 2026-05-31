@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import com.raj.mygrowth.adapter.QuitZillaQuoteAdapter
 import com.raj.mygrowth.adapter.QuitZillaReportAdapter
 import com.raj.mygrowth.databinding.FragmentQuitZillaReportBinding
 import com.raj.mygrowth.domain.RequestAction
@@ -43,21 +44,21 @@ class FragmentQuotes : Fragment() {
     }
 
     private fun callApi() {
-        viewModel.fetchQuitZillaReport(RequestAction("get_quit_zilla_master"))
+        viewModel.fetchQuote()
         lifecycleScope.launch {
             viewModel.uiState.collect { state ->
                 when (state) {
 
                     is UiState.Loading -> {
                         // show loader
-                        Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Loading", Toast.LENGTH_SHORT).show()
                     }
 
-                    is UiState.SuccessQuitZillaReport -> {
+                    is UiState.SuccessQuotes -> {
                         val list = state.data.data
-                        val adapter = QuitZillaReportAdapter(list, requireContext())
+                        val adapter = QuitZillaQuoteAdapter(list, requireContext())
                         binding.recyclerViewVertical.adapter = adapter
-                        Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
                     }
 
                     is UiState.Error -> {

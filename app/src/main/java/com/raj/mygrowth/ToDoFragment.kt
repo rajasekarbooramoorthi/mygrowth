@@ -64,7 +64,7 @@ class ToDoFragment : Fragment() {
 
                     is UiState.Error -> {
                         // show error
-                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
 
                     }
 
@@ -99,7 +99,7 @@ class ToDoFragment : Fragment() {
 
                     is UiState.Error -> {
                         // show error
-                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
 
                     }
 
