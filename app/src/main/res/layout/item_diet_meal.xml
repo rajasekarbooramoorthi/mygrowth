@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/sans_bold"
-                android:textSize="@dimen/_13ssp" />
+                android:textSize="@dimen/text_size_medium" />
 
             <TextView
                 android:id="@+id/tvLabel"
@@ -41,7 +41,7 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/sans_regular"
-                android:textSize="@dimen/_11ssp" />
+                android:textSize="@dimen/text_size_small" />
 
             <TextView
                 android:id="@+id/tvFood"
@@ -50,7 +50,7 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/sans_regular"
-                android:textSize="@dimen/_11ssp" />
+                android:textSize="@dimen/text_size_small" />
 
             <TextView
                 android:id="@+id/tvNotes"
@@ -59,7 +59,7 @@
                 android:layout_marginStart="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:fontFamily="@font/sans_regular"
-                 android:textSize="@dimen/_11ssp" />
+                 android:textSize="@dimen/text_size_small" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

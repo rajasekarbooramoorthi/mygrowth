@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sans_bold"
                 android:text="Bench Press"
-                android:textSize="@dimen/_13ssp"
+                android:textSize="@dimen/text_size_medium_low"
                 app:layout_constraintEnd_toStartOf="@id/tvSets"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/sans_regular"
                 android:text="4 sets"
-                android:textSize="@dimen/_11ssp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +54,8 @@
                 android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/sans_regular"
                 android:text="6-8 reps"
-                android:textSize="@dimen/_11ssp"
+                android:layout_marginStart="@dimen/_3sdp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvName" />
 
@@ -67,7 +68,7 @@
                 android:fontFamily="@font/sans_regular"
                 android:text="Rest 90 sec"
 
-                android:textSize="@dimen/_11ssp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintStart_toEndOf="@id/tvReps"
                 app:layout_constraintTop_toBottomOf="@id/tvName" />
 
@@ -77,10 +78,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:fontFamily="@font/sans_regular"
+                android:layout_marginStart="@dimen/_3sdp"
                 android:text="Notes"
 
                 android:textColor="#777"
-                android:textSize="@dimen/_11ssp"
+                android:textSize="@dimen/text_size_small"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvReps" />
