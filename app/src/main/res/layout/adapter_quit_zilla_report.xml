@@ -41,60 +41,79 @@
                         android:orientation="horizontal"
                         android:weightSum="3">
 
-                        <TextView
-                            android:id="@+id/tvName"
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="1.9"
-                            android:fontFamily="@font/sans_bold"
-                            android:text="Task Name"
-                            android:textSize="@dimen/text_size_medium" />
+                            android:layout_weight="2.9"
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tvStatus"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
-                            android:fontFamily="@font/sans_regular"
-                            android:textSize="@dimen/text_size_too_small" />
+                            <TextView
+                                android:id="@+id/tvName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/sans_bold"
+                                android:text="Task Name"
+                                android:textSize="@dimen/text_size_medium" />
 
-                        <TextView
-                            android:id="@+id/tvDetail"
-                            android:layout_width="0dp"
+                            <TextView
+                                android:id="@+id/tvDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/sans_regular"
+                                android:text="sgdhfjgkhlj"
+                                android:textSize="@dimen/text_size_medium" />
+
+                            <TextView
+                                android:id="@+id/tvDetail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:fontFamily="@font/sans_bold"
+                                android:textSize="@dimen/text_size_small" />
+                        </LinearLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
+                            android:layout_gravity="end|top"
                             android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.5"
-                            android:fontFamily="@font/sans_bold"
-                            android:textSize="@dimen/text_size_small" />
+                            android:layout_marginEnd="@dimen/_3sdp">
+
+                            <com.google.android.material.progressindicator.CircularProgressIndicator
+                                android:id="@+id/progressBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:progress="60"
+                                app:indicatorColor="@color/progressLinearIndicatorColor"
+                                app:trackColor="@color/progressLinearTrackColor" />
+
+                            <TextView
+                                android:id="@+id/tvProgress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_1sdp"
+                                android:text="60%"
+                                android:textSize="@dimen/_5sdp" />
+                        </FrameLayout>
 
                     </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/tvDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
-                        android:fontFamily="@font/sans_regular"
-                        android:text="sgdhfjgkhlj"
-                        android:textSize="@dimen/text_size_medium" />
 
                     <TextView
                         android:id="@+id/tvId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_13sdp"
+                        android:layout_marginBottom="@dimen/_7sdp"
                         android:fontFamily="@font/sans_regular"
-                        android:text="r"
+                        android:text=""
                         android:textSize="@dimen/text_size_too_small" />
 
                 </LinearLayout>

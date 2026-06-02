@@ -9,5 +9,6 @@ data class ResponseQuitZillaMasterItem(
     val status: String,
     val startDate: String,
     val endDate: String,
-    val days: String
+    val days: String,
+    val percentage: Int,
 )

@@ -4,6 +4,7 @@ package com.raj.mygrowth.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
@@ -17,6 +18,7 @@ import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.domain.WeightGainResponse
+import com.raj.mygrowth.domain.WorkoutResponse
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import com.raj.mygrowth.repository.Repository
@@ -43,7 +45,7 @@ class CommonViewModel(
 
     fun fetchWorkoutPlan() {
         viewModelScope.launch {
-            repository.getWorkoutPlan().onStart {
+            getWorkoutPlan().onStart {
                 _uiState.value = UiState.Loading
             }.catch { e ->
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
@@ -53,9 +55,14 @@ class CommonViewModel(
         }
     }
 
+    fun getWorkoutPlan(): Flow<WorkoutResponse> = flow {
+        emit(api.getWorkoutPlan())
+    }.flowOn(Dispatchers.IO)
+
+
     fun fetchDietPlan() {
         viewModelScope.launch {
-            repository.getDietPlan().onStart {
+            getDietPlan().onStart {
                 _uiState.value = UiState.Loading
             }.catch { e ->
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
@@ -67,6 +74,10 @@ class CommonViewModel(
 
     fun getAttendance(request: RequestAction): Flow<ResponseAttendance> = flow {
         emit(api.getAttendance(request))
+    }.flowOn(Dispatchers.IO)
+
+    fun getDietPlan(): Flow<DietResponse> = flow {
+        emit(api.getDietPlan())
     }.flowOn(Dispatchers.IO)
 
     fun getAddAttendance(request: RequestAction): Flow<ResponseGetAttendance> = flow {

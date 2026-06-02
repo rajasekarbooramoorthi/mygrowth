@@ -2,6 +2,7 @@ package com.raj.mygrowth.networkUtility
 
 import com.raj.mygrowth.domain.CategoryMasterResponse
 import com.raj.mygrowth.domain.DailyTaskResponse
+import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
@@ -21,6 +22,7 @@ import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.domain.ThirukuralResponse
 import com.raj.mygrowth.domain.WeightGainResponse
+import com.raj.mygrowth.domain.WorkoutResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
@@ -90,6 +92,14 @@ interface ApiService {
     suspend fun getQuitZillaMotivation(
         @Body request: RequestAction
     ): ResponseQuitZillaMotivation
+
+    @GET("json/workout.json")
+    suspend fun getWorkoutPlan(
+    ): WorkoutResponse
+
+    @GET("json/diet.json")
+    suspend fun getDietPlan(
+    ): DietResponse
 
     @GET("json/nfb_benefits.json")
     suspend fun getQuitZillaBenefits(

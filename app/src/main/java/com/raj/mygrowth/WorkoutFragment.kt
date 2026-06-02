@@ -10,7 +10,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.raj.mygrowth.databinding.FragmentWorkoutBinding
-import com.raj.mygrowth.domain.WorkoutResponse
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel

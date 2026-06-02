@@ -37,6 +37,8 @@ class QuitZillaReportAdapter(
         holder.binding.tvDetail.text = "Day " + (item.days)
         holder.binding.tvDescription.text = item.description
         holder.binding.tvId.text = item.startDate + " vs " + item.endDate
+        holder.binding.progressBar.progress = item.percentage
+        holder.binding.tvProgress.text = item.percentage.toString() + "%"
 
         val index = abs(position.hashCode()) % colorsMulti.size
         val colorRes = colorsMulti[index]

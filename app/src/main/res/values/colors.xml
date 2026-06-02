@@ -96,5 +96,8 @@
 
     <color name="teal_dark_light_time_line">#80CBC4</color>
 
+    <color name="progressLinearIndicatorColor">#81C784</color>
+    <color name="progressLinearTrackColor">#EF9A9A</color>
+
 
 </resources>
