@@ -21,6 +21,7 @@ import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
 import com.raj.mygrowth.domain.ThirukuralResponse
+import com.raj.mygrowth.domain.ThirukuralResponseLatest
 import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.domain.WorkoutResponse
 import retrofit2.http.Body
@@ -62,10 +63,10 @@ interface ApiService {
     @GET("json/main.json")
     suspend fun getMaster(): CategoryMasterResponse
 
-    @GET("json/kural.json")
+    @GET("json/thirukural.json")
     suspend fun getThirukural(
 
-    ): ThirukuralResponse
+    ): ThirukuralResponseLatest
 
 
     @POST("getmydata.php")

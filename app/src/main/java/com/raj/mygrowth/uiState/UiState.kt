@@ -10,6 +10,8 @@ import com.raj.mygrowth.domain.ResponseQuitZillaQuote
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
+import com.raj.mygrowth.domain.ThirukuralResponse
+import com.raj.mygrowth.domain.ThirukuralResponseLatest
 import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.domain.WorkoutResponse
 
@@ -28,5 +30,6 @@ sealed class UiState {
     data class SuccessQuitZillaBenefits(val data: ResponseQuitZillaBenefits) : UiState()
     data class SuccessQuotes(val data: ResponseQuitZillaQuote) : UiState()
     data class SuccessDiet(val data: DietResponse) : UiState()
+    data class SuccessThirukural(val data: ThirukuralResponseLatest) : UiState()
     data class Error(val message: String) : UiState()
 }

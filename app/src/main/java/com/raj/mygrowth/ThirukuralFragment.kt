@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -23,9 +24,13 @@ import com.raj.mygrowth.domain.ThirukuralResponseLatest
 import com.raj.mygrowth.domain.kural
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
+import com.raj.mygrowth.repository.Repository
+import com.raj.mygrowth.uiState.UiState
+import com.raj.mygrowth.viewModel.CommonViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import kotlin.getValue
 
 class ThirukuralFragment : Fragment() {
 
@@ -38,7 +43,11 @@ class ThirukuralFragment : Fragment() {
     private var currentIndex = 0
     private val pageSize = 20
     private var isLoading = false
-
+    private val viewModel: CommonViewModel by viewModels {
+        CommonViewModel.CommonViewModelFactory(
+            Repository(requireContext())
+        )
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -49,7 +58,7 @@ class ThirukuralFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         //setupRecyclerView()
-        loadData()
+        callApi()
     }
 
     private fun setupRecyclerView_() {
@@ -176,32 +185,43 @@ class ThirukuralFragment : Fragment() {
     }
 
 
-    private fun loadApi() {
+    fun callApi() {
+        viewModel.fetchThirukural()
+        lifecycleScope.launch {
+            viewModel.uiState.collect { state ->
+                when (state) {
+                    is UiState.Loading -> {
+                        // show loader
+                    }
 
-        showLoading()
-        binding.searchView.visibility = View.GONE
+                    is UiState.SuccessThirukural -> {
 
-        viewLifecycleOwner.lifecycleScope.launch {
+                        fullList = state.data.kural
+                        val adapter = KuralAdapter()
 
-            try {
-                val response = withContext(Dispatchers.IO) {
-                    api.getThirukural()
+                        binding.recyclerViewVertical.apply {
+                            layoutManager = LinearLayoutManager(context)
+                            itemAnimator = null
+                            this.adapter = adapter
+                        }
+
+                        // Load first page
+                        loadNextPage(adapter)
+
+                        // Scroll listener
+                        setupPagination(adapter)
+
+                        setupSearch(adapter)
+                    }
+
+                    is UiState.Error -> {
+                        // show error
+                    }
+
+                    else -> {
+
+                    }
                 }
-                hideLoading()
-
-                val list = response.features.take(150)
-
-                binding.recyclerViewVertical.apply {
-                    layoutManager = LinearLayoutManager(requireContext())
-                    itemAnimator = null   // 🚀 removes lag
-                    //this.adapter = KuralAdapter(list)
-                }
-
-            } catch (e: Exception) {
-                showError(e)
-            } finally {
-                hideLoading()
-                loadData()
             }
         }
     }

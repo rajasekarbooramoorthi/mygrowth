@@ -17,6 +17,7 @@ import com.raj.mygrowth.domain.ResponseQuitZillaQuote
 import com.raj.mygrowth.domain.ResponseSimple
 import com.raj.mygrowth.domain.SprintMasterResponse
 import com.raj.mygrowth.domain.SprintTaskResponse
+import com.raj.mygrowth.domain.ThirukuralResponseLatest
 import com.raj.mygrowth.domain.WeightGainResponse
 import com.raj.mygrowth.domain.WorkoutResponse
 import com.raj.mygrowth.networkUtility.ApiService
@@ -72,6 +73,18 @@ class CommonViewModel(
         }
     }
 
+    fun fetchThirukural() {
+        viewModelScope.launch {
+            getThirukural().onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessThirukural(data)
+            }
+        }
+    }
+
     fun getAttendance(request: RequestAction): Flow<ResponseAttendance> = flow {
         emit(api.getAttendance(request))
     }.flowOn(Dispatchers.IO)
@@ -118,6 +131,10 @@ class CommonViewModel(
 
     fun getWeightGainTimeLine(): Flow<WeightGainResponse> = flow {
         emit(api.getWeightGainTimeLine())
+    }.flowOn(Dispatchers.IO)
+
+    fun getThirukural(): Flow<ThirukuralResponseLatest> = flow {
+        emit(api.getThirukural())
     }.flowOn(Dispatchers.IO)
 
     fun fetchAttendance(request: RequestAction) {
