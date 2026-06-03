@@ -12,12 +12,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.databinding.FragmentSprintBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.interfaces.AdapterClick
+import com.raj.mygrowth.interfaces.SprintAdapterClick
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
 import kotlinx.coroutines.launch
 
-class SprintFragment : Fragment(), AdapterClick {
+class SprintFragment : Fragment(), AdapterClick, SprintAdapterClick {
     private var _binding: FragmentSprintBinding? = null
     private val binding get() = _binding!!
     private val viewModel: CommonViewModel by viewModels {
@@ -90,7 +91,7 @@ class SprintFragment : Fragment(), AdapterClick {
 
                     is UiState.SuccessSprintTask -> {
                         val data = state.data.data
-                        val adapter = SprintTaskAdapter(data, requireContext())
+                        val adapter = SprintTaskAdapter(data, requireContext(), this@SprintFragment)
                         binding.recyclerViewTask.adapter = adapter
                     }
 
@@ -107,8 +108,11 @@ class SprintFragment : Fragment(), AdapterClick {
     }
 
     override fun click(id: String) {
-
         callApis(id)
+    }
+
+    override fun SprintTaskClick(id: String) {
+
     }
 }
 

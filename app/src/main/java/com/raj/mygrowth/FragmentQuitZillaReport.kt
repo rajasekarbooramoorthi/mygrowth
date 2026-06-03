@@ -194,23 +194,18 @@ class FragmentQuitZillaReport : Fragment(), AdapterClick {
 
     @SuppressLint("DefaultLocale")
     fun showNormalDatePicker(onDateSelected: (String) -> Unit) {
-
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
-
         val datePicker = DatePickerDialog(
             requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
-
                 val formattedDate = String.format(
                     "%04d-%02d-%02d", selectedYear, selectedMonth + 1, selectedDay
                 )
-
                 onDateSelected(formattedDate)
             }, year, month, day
         )
-
         datePicker.show()
     }
 

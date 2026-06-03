@@ -9,11 +9,13 @@ import com.raj.mygrowth.ColorUtilities.colorsMulti
 import com.raj.mygrowth.ColorUtilities.colorsMultiText
 import com.raj.mygrowth.databinding.AdapterTaskSprintBinding
 import com.raj.mygrowth.domain.SprintTaskItem
+import com.raj.mygrowth.interfaces.SprintAdapterClick
 import kotlin.math.abs
 
 class SprintTaskAdapter(
     private val list: List<SprintTaskItem>,
     private val context: Context,
+    val ClickID: SprintAdapterClick
 ) : RecyclerView.Adapter<SprintTaskAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: AdapterTaskSprintBinding) :
@@ -36,14 +38,53 @@ class SprintTaskAdapter(
         holder.binding.tvName.text = formattedTitle
         holder.binding.tvDetail.text = item.details
         holder.binding.tvDescription.text = item.description
+        holder.binding.tvId.text = "000" + item.id
+        when (item.status) {
+            "0" -> {
+                holder.binding.tvStatus.text = "Yet to start"
+                holder.binding.tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.orange_dark_50
+                    )
+                )
+            }
 
-        val index = abs(position.hashCode()) % colorsMulti.size
-        val colorRes = colorsMulti[index]
+            "1" -> {
+                holder.binding.tvStatus.text = "In-Progress"
+                holder.binding.tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.blue_grey_dark_50
+                    )
+                )
+            }
 
-        val indexs = abs(position.hashCode()) % colorsMultiText.size
-        val colorRess = colorsMultiText[indexs]
+            "2" -> {
+                holder.binding.tvStatus.text = "Done"
+                holder.binding.tvStatus.setTextColor(
+                    ContextCompat.getColor(
+                        context,
+                        R.color.cyan_dark_50
+                    )
+                )
+            }
+        }
 
-        holder.binding.viewLine.setBackgroundColor(ContextCompat.getColor(context, colorRess))
-        holder.binding.cardView.setCardBackgroundColor(ContextCompat.getColor(context, colorRes))
+        holder.binding.viewLine.setBackgroundColor(
+            ContextCompat.getColor(
+                context,
+                colorsMultiText[abs(position.hashCode()) % colorsMultiText.size]
+            )
+        )
+        holder.binding.cardView.setCardBackgroundColor(
+            ContextCompat.getColor(
+                context,
+                colorsMulti[abs(position.hashCode()) % colorsMulti.size]
+            )
+        )
+        holder.binding.tvEdit.setOnClickListener {
+            ClickID.SprintTaskClick(item.id)
+        }
     }
 }

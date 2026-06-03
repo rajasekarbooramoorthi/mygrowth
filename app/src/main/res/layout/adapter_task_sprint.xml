@@ -48,7 +48,7 @@
                             android:layout_marginStart="@dimen/_7sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="1.9"
+                            android:layout_weight="2"
                             android:fontFamily="@font/sans_bold"
                             android:text="Task Name"
                             android:textSize="@dimen/text_size_medium" />
@@ -72,22 +72,10 @@
                             android:layout_marginStart="@dimen/_7sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.5"
+                            android:layout_weight="0.7"
                             android:fontFamily="@font/sans_regular"
                             android:text="In Progress"
-                            android:textSize="@dimen/text_size_too_small" />
-
-                        <TextView
-                            android:id="@+id/tvTag"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="5.0.0"
-                            android:textSize="@dimen/text_size_too_small" />
+                            android:textSize="@dimen/text_size_small" />
 
                     </LinearLayout>
 
@@ -106,10 +94,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-                        android:text="fdsgfhugdhfhgueg uyetfyuewg fyewgtyf dwyufreyugfuydsgfyusede fdsyufgydsufguydsg fyudsf yuds ufygsduyfgyuds yuf dsyfyu ewyfgew y fcuer gcergwrec cg er gder gfeuger"
+                        android:text="fdsgfhugdhfhgueg uyetfyur gfeuger"
                         android:textSize="@dimen/text_size_too_small" />
+
+                    <TextView
+                        android:id="@+id/tvEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/sans_bold"
+                        android:text="@string/edit"
+                        android:textColor="@color/color_edit"
+                        android:textSize="@dimen/text_size_small" />
+
+
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

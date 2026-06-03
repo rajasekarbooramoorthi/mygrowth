@@ -98,6 +98,7 @@
 
     <color name="progressLinearIndicatorColor">#81C784</color>
     <color name="progressLinearTrackColor">#EF9A9A</color>
+    <color name="color_edit">#E57373</color>
 
 
 </resources>
