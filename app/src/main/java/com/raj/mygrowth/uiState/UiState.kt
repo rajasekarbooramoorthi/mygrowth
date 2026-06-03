@@ -25,6 +25,7 @@ sealed class UiState {
     data class SuccessSprintTaskAdd(val data: ResponseSimple) : UiState()
     data class SuccessWeightGainTimeLine(val data: WeightGainResponse) : UiState()
     data class SuccessQuitZillaReport(val data: ResponseQuitZillaMaster) : UiState()
+    data class SuccessQuitZillaUpdate(val data: ResponseSimple) : UiState()
     data class SuccessQuitZillaMotivate(val data: ResponseQuitZillaMotivation) : UiState()
     data class SuccessTrack(val data: ResponseQuitZillaMaster) : UiState()
     data class SuccessQuitZillaBenefits(val data: ResponseQuitZillaBenefits) : UiState()

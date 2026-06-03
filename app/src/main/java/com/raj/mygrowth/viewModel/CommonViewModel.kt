@@ -8,6 +8,7 @@ import com.raj.mygrowth.domain.DietResponse
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
+import com.raj.mygrowth.domain.RequestQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseGetAttendance
 import com.raj.mygrowth.domain.ResponseQuitZillaBenefits
@@ -105,6 +106,11 @@ class CommonViewModel(
         emit(api.getQuitZillaReport(request))
     }.flowOn(Dispatchers.IO)
 
+    fun updateAddQuitZillaMaster(request: RequestQuitZillaMaster): Flow<ResponseSimple> =
+        flow {
+            emit(api.updateAddQuitZillaMaster(request))
+        }.flowOn(Dispatchers.IO)
+
     fun getQuitZillaMotivation(request: RequestAction): Flow<ResponseQuitZillaMotivation> = flow {
         emit(api.getQuitZillaMotivation(request))
     }.flowOn(Dispatchers.IO)
@@ -181,6 +187,18 @@ class CommonViewModel(
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")
             }.collect { data ->
                 _uiState.value = UiState.SuccessQuitZillaReport(data)
+            }
+        }
+    }
+
+    fun updateQuitZillaMaster(request: RequestQuitZillaMaster) {
+        viewModelScope.launch {
+            updateAddQuitZillaMaster(request).onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessQuitZillaUpdate(data)
             }
         }
     }

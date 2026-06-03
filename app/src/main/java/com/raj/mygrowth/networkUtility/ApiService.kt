@@ -8,6 +8,7 @@ import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionTaskCompleted
+import com.raj.mygrowth.domain.RequestQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseBankDetails
 import com.raj.mygrowth.domain.ResponseFinance
@@ -88,6 +89,11 @@ interface ApiService {
     suspend fun getQuitZillaReport(
         @Body request: RequestAction
     ): ResponseQuitZillaMaster
+
+    @POST("getmydata.php")
+    suspend fun updateAddQuitZillaMaster(
+        @Body request: RequestQuitZillaMaster
+    ): ResponseSimple
 
     @POST("json/nfb_motivation.json")
     suspend fun getQuitZillaMotivation(

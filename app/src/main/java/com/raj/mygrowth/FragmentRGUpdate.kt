@@ -54,8 +54,8 @@ class FragmentRGUpdate : Fragment() {
 
                     is UiState.SuccessQuitZillaReport -> {
                         val list = state.data.data
-                        val adapter = QuitZillaReportAdapter(list, requireContext())
-                        binding.recyclerViewVertical.adapter = adapter
+                       // val adapter = QuitZillaReportAdapter(list, requireContext())
+                       // binding.recyclerViewVertical.adapter = adapter
                         //Toast.makeText(requireContext(), "success", Toast.LENGTH_SHORT).show()
                     }
 
