@@ -9,6 +9,7 @@ import com.raj.mygrowth.domain.RequestActionAddSprintTask
 import com.raj.mygrowth.domain.RequestActionAddTask
 import com.raj.mygrowth.domain.RequestActionTaskCompleted
 import com.raj.mygrowth.domain.RequestActionUpdatePassword
+import com.raj.mygrowth.domain.RequestDankDetailsUpdate
 import com.raj.mygrowth.domain.RequestQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseBankDetails
@@ -89,6 +90,10 @@ interface ApiService {
     @POST("getmydata.php")
     suspend fun getUpdatePassword(
         @Body request: RequestActionUpdatePassword
+    ): ResponseSimple
+    @POST("getmydata.php")
+    suspend fun getUpdateBankDetails(
+        @Body request: RequestDankDetailsUpdate
     ): ResponseSimple
 
     @POST("getmydata.php")

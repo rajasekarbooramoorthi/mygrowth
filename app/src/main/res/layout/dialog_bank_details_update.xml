@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/textBankName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_17sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:fontFamily="@font/sans_regular"
+                    android:textColor="@color/green_dark_50"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:hint="Customer ID">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editCustomerId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                     android:hint="Account Number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editAccountNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                         android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                     android:hint="Card Number">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editCardNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    
+                    android:hint="Pin">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:hint="Login User Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editLoginUserName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    
+                    android:hint="Login Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editLoginPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    
+                    android:hint="Profile Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editProfilePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    
+                    android:hint="IFSC Code">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editIFSC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        
+                        android:gravity="start|top"
+                        android:inputType="textMultiLine"
+                        android:minHeight="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:paddingEnd="@dimen/_1sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:singleLine="false"
+                        android:textColorHint="@color/hint_color"
+                        android:textSize="@dimen/text_size_small" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/ThemeOverlay.Material3.FloatingActionButton.Primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_7sdp"
+                    android:background="@drawable/btn_rounded"
+                    android:fontFamily="@font/sans_regular"
+                    android:minWidth="@dimen/_100sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Update"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

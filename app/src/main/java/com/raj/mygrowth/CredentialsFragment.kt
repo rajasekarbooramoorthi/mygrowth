@@ -11,11 +11,15 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.raj.mygrowth.databinding.DialogBankDetailsUpdateBinding
 import com.raj.mygrowth.databinding.DialogUpdatePasswordBinding
 import com.raj.mygrowth.databinding.FragmentPasswordBinding
+import com.raj.mygrowth.domain.BankItem
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionUpdatePassword
+import com.raj.mygrowth.domain.RequestDankDetailsUpdate
 import com.raj.mygrowth.interfaces.AdapterClick
+import com.raj.mygrowth.interfaces.BankClick
 import com.raj.mygrowth.networkUtility.ApiService
 import com.raj.mygrowth.networkUtility.RetrofitClient
 import com.raj.mygrowth.repository.Repository
@@ -23,8 +27,9 @@ import com.raj.mygrowth.uiState.UiState
 import com.raj.mygrowth.viewModel.CommonViewModel
 import kotlinx.coroutines.launch
 
-class CredentialsFragment : Fragment(), AdapterClick {
+class CredentialsFragment : Fragment(), AdapterClick, BankClick {
     lateinit var dialogBottomSheetDialog: BottomSheetDialog
+    lateinit var dialogBottomSheetDialogBankDetails: BottomSheetDialog
     private val viewModel: CommonViewModel by viewModels {
         CommonViewModel.CommonViewModelFactory(Repository(requireContext()))
     }
@@ -39,6 +44,8 @@ class CredentialsFragment : Fragment(), AdapterClick {
     ): View {
         _binding = FragmentPasswordBinding.inflate(inflater, container, false)
         dialogBottomSheetDialog = BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
+        dialogBottomSheetDialogBankDetails =
+            BottomSheetDialog(requireContext(), R.style.BottomSheetTheme)
         return binding.root
     }
 
@@ -101,9 +108,8 @@ class CredentialsFragment : Fragment(), AdapterClick {
 
                 if (response.status) {
                     binding.rvPassword.layoutManager = LinearLayoutManager(requireContext())
-                    val adapter = BankDetailsAdapter(response.data)
+                    val adapter = BankDetailsAdapter(response.data, this@CredentialsFragment)
                     binding.rvPassword.adapter = adapter
-                    //Toast.makeText(requireContext(), "Data Loaded", Toast.LENGTH_SHORT).show()
                 }
 
 
@@ -144,6 +150,56 @@ class CredentialsFragment : Fragment(), AdapterClick {
         }
     }
 
+    fun dialogBankDetails(request: BankItem) {
+        val binding = DialogBankDetailsUpdateBinding.inflate(layoutInflater)
+        dialogBottomSheetDialogBankDetails.setContentView(binding.root)
+
+        dialogBottomSheetDialogBankDetails.setOnShowListener {
+            val bottomSheet =
+                (it as BottomSheetDialog).findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
+            bottomSheet?.let { sheet ->
+                BottomSheetBehavior.from(sheet).apply {
+                    state = BottomSheetBehavior.STATE_HALF_EXPANDED
+                    skipCollapsed = true
+                }
+                sheet.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT
+            }
+        }
+        dialogBottomSheetDialogBankDetails.show()
+
+        binding.apply {
+            textBankName.text = request.b_name
+            editCustomerId.setText(request.b_cust_id)
+            editAccountNumber.setText(request.b_acc_number)
+            editCardNumber.setText(request.b_card_num)
+            editPin.setText(request.b_cpin)
+            editLoginUserName.setText(request.b_user_name)
+            editLoginPassword.setText(request.b_psw)
+            editProfilePassword.setText(request.b_profile_password)
+            editIFSC.setText(request.b_ifsc_code)
+        }
+        binding.btnSubmit.setOnClickListener {
+            val password: String = binding.editPin.text.toString().trim()
+
+            if (password.isNotEmpty()) {
+                val requestAction = RequestDankDetailsUpdate(
+                    action = "",
+                    id = password,
+                    name = password,
+                    cust_id = password,
+                    acc_number = password,
+                    card_num = password,
+                    cpin = password,
+                    psw = "get_update_password",
+                    profile_password = "get_update_password",
+                    ifsc_code = "",
+                    user_name = ""
+                )
+                callApiUpdateBankDetails(requestAction)
+            }
+        }
+    }
+
 
     private fun callApiUpdatePassword(request: RequestActionUpdatePassword) {
         viewModel.fetchUpdatePassword(request)
@@ -169,7 +225,35 @@ class CredentialsFragment : Fragment(), AdapterClick {
         }
     }
 
+    private fun callApiUpdateBankDetails(request: RequestDankDetailsUpdate) {
+        viewModel.fetchUpdateBankDetails(request)
+        lifecycleScope.launch {
+            viewModel.uiState.collect { state ->
+                when (state) {
+
+                    is UiState.Loading -> {
+                        // show loader
+                    }
+
+                    is UiState.SuccessCommon -> {
+                        dialogBottomSheetDialogBankDetails.dismiss()
+                    }
+
+                    is UiState.Error -> {
+                        // show error
+                    }
+
+                    else -> {}
+                }
+            }
+        }
+    }
+
     override fun click(id: String) {
         dialog(id)
+    }
+
+    override fun clickBankDetails(request: BankItem) {
+        dialogBankDetails(request)
     }
 }

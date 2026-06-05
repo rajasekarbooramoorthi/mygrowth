@@ -9,6 +9,7 @@ import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddAttendance
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
 import com.raj.mygrowth.domain.RequestActionUpdatePassword
+import com.raj.mygrowth.domain.RequestDankDetailsUpdate
 import com.raj.mygrowth.domain.RequestQuitZillaMaster
 import com.raj.mygrowth.domain.ResponseAttendance
 import com.raj.mygrowth.domain.ResponseGetAttendance
@@ -107,6 +108,10 @@ class CommonViewModel(
         emit(api.getUpdatePassword(request))
     }.flowOn(Dispatchers.IO)
 
+    fun getUpdateBankDetails(request: RequestDankDetailsUpdate): Flow<ResponseSimple> = flow {
+        emit(api.getUpdateBankDetails(request))
+    }.flowOn(Dispatchers.IO)
+
     fun getQuitZillaReport(request: RequestAction): Flow<ResponseQuitZillaMaster> = flow {
         emit(api.getQuitZillaReport(request))
     }.flowOn(Dispatchers.IO)
@@ -187,6 +192,18 @@ class CommonViewModel(
     fun fetchUpdatePassword(request: RequestActionUpdatePassword) {
         viewModelScope.launch {
             getUpdatePassword(request).onStart {
+                _uiState.value = UiState.Loading
+            }.catch { e ->
+                _uiState.value = UiState.Error(e.message ?: "Something went wrong")
+            }.collect { data ->
+                _uiState.value = UiState.SuccessCommon(data)
+            }
+        }
+    }
+
+    fun fetchUpdateBankDetails(request: RequestDankDetailsUpdate) {
+        viewModelScope.launch {
+            getUpdateBankDetails(request).onStart {
                 _uiState.value = UiState.Loading
             }.catch { e ->
                 _uiState.value = UiState.Error(e.message ?: "Something went wrong")

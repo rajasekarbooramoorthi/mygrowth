@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterItemBankDetailsBinding
 import com.raj.mygrowth.domain.BankItem
+import com.raj.mygrowth.interfaces.BankClick
 
 class BankDetailsAdapter(
-    private val list: List<BankItem>
+    private val list: List<BankItem>,
+    private val bankClick: BankClick
 ) : RecyclerView.Adapter<BankDetailsAdapter.ViewHolder>() {
 
     private val visiblePasswordPositions = mutableSetOf<Int>()
@@ -31,13 +33,16 @@ class BankDetailsAdapter(
         holder.binding.item = item
         holder.binding.isVisible = visiblePasswordPositions.contains(position)
 
-        holder.binding.root.setOnClickListener {
+        holder.binding.icEye.setOnClickListener {
             if (visiblePasswordPositions.contains(position))
                 visiblePasswordPositions.remove(position)
             else
                 visiblePasswordPositions.add(position)
 
             notifyItemChanged(position)
+        }
+        holder.binding.tvEdit.setOnClickListener {
+            bankClick.clickBankDetails(item)
         }
 
         holder.binding.executePendingBindings()

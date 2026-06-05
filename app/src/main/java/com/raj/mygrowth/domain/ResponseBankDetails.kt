@@ -8,6 +8,8 @@ data class BankItem(
     val b_sno: String,
     val b_name: String,
     val b_cust_id: String,
+    val b_ifsc_code: String,
+    val b_user_name: String,
     val b_acc_number: String,
     val b_card_num: String,
     val b_cpin: String,

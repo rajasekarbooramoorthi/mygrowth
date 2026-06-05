@@ -48,8 +48,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left|center_vertical"
+                        android:layout_marginBottom="@dimen/_3sdp"
                         android:layout_weight="1.5"
-                        android:layout_marginBottom="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
                         android:gravity="left|center"
                         android:text="@{item.b_name}"
@@ -58,19 +58,27 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="right"
+                        android:layout_gravity="center_vertical|end"
                         android:layout_weight="0.5"
-                        android:gravity="right"
+                        android:gravity="center_vertical|end"
                         android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/icEye"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            app:srcCompat="@drawable/ic_eye" />
 
                         <TextView
                             android:id="@+id/tvEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="@dimen/_8sdp"
-                            android:text="Edit"
                             android:fontFamily="@font/sans_bold"
-                            android:textSize="@dimen/_12sdp" />
+                            android:paddingEnd="@dimen/_7sdp"
+                            android:text="@string/edit"
+                            android:textColor="@color/color_edit"
+                            android:textSize="@dimen/text_size_too_small" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -79,7 +87,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:weightSum="2">
 
@@ -116,7 +124,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
                     android:weightSum="2">
@@ -151,7 +159,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
                     android:weightSum="2">
@@ -186,7 +194,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
                     android:weightSum="2">
@@ -201,10 +209,10 @@
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_marginEnd="@dimen/_5sdp"
-                        android:fontFamily="@font/sans_regular"
-
                         android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+
+                        android:fontFamily="@font/sans_regular"
                         android:text=":" />
 
                     <TextView
@@ -221,7 +229,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
                     android:weightSum="2">
@@ -230,7 +238,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-
                         android:fontFamily="@font/sans_regular"
                         android:text="Password:" />
 
@@ -239,7 +246,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
@@ -248,7 +254,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_bold"
-                        android:textSize="@dimen/_16sdp"
                         android:text='@{isVisible ? item.b_psw : "******"}' />
                 </LinearLayout>
 
@@ -256,7 +261,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:fontFamily="@font/sans_regular"
 
                     android:orientation="horizontal"
@@ -293,7 +298,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_8sdp"
                     android:weightSum="2">
@@ -327,16 +332,16 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_8sdp"
                     android:weightSum="2">
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_weight="0.7"
-
                         android:layout_height="wrap_content"
+
+                        android:layout_weight="0.7"
                         android:fontFamily="@font/sans_regular"
                         android:text="Updated" />
 
