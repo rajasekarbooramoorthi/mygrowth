@@ -1,5 +1,6 @@
 package com.raj.mygrowth
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,6 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.databinding.FragmentSprintBinding
 import com.raj.mygrowth.domain.RequestAction
+import com.raj.mygrowth.domain.SprintTaskItem
 import com.raj.mygrowth.interfaces.AdapterClick
 import com.raj.mygrowth.interfaces.SprintAdapterClick
 import com.raj.mygrowth.repository.Repository
@@ -30,6 +32,13 @@ class SprintFragment : Fragment(), AdapterClick, SprintAdapterClick {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSprintBinding.inflate(inflater, container, false)
+        binding.ivAdd.setOnClickListener {
+            Toast.makeText(requireContext(), "Errgdfor", Toast.LENGTH_LONG).show()
+
+            requireContext().startActivity(
+                Intent(requireContext(), AddSprintTaskActivity::class.java)
+            )
+        }
         return binding.root
     }
 
@@ -111,8 +120,17 @@ class SprintFragment : Fragment(), AdapterClick, SprintAdapterClick {
         callApis(id)
     }
 
-    override fun SprintTaskClick(id: String) {
+    override fun sprintTaskClick(sprintTaskItem: SprintTaskItem) {
 
+        val intent = Intent(requireContext(), AddSprintTaskActivity::class.java).apply {
+            putExtra("id", sprintTaskItem.id)
+            putExtra("name", sprintTaskItem.name)
+            putExtra("description", sprintTaskItem.description)
+            putExtra("details", sprintTaskItem.details)
+            putExtra("status", sprintTaskItem.status)
+            putExtra("date", sprintTaskItem.date)
+        }
+        startActivity(intent)
     }
 }
 

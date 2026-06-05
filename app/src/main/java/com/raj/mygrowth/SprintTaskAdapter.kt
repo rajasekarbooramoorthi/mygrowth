@@ -84,7 +84,7 @@ class SprintTaskAdapter(
             )
         )
         holder.binding.tvEdit.setOnClickListener {
-            ClickID.SprintTaskClick(item.id)
+            ClickID.sprintTaskClick(item)
         }
     }
 }

@@ -1,12 +1,12 @@
 package com.raj.mygrowth
 
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.raj.mygrowth.ActionString.POST_ADD_TASK
+import com.raj.mygrowth.ActionString.POST_UPDATE_TASK
 import com.raj.mygrowth.databinding.ActitvityAddSprintTaskBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestActionAddSprintTask
@@ -21,6 +21,12 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
     private lateinit var binding: ActitvityAddSprintTaskBinding
     private var sprintID = ""
     private val context = this@AddSprintTaskActivity
+    var id: String = ""
+    var name: String = ""
+    var description: String = ""
+    var details: String = ""
+    var status: String = ""
+    var date: String = ""
     private val viewModel: CommonViewModel by viewModels {
         CommonViewModel.CommonViewModelFactory(Repository(this))
     }
@@ -28,6 +34,12 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setToolbarInsetsActivity()
+        id = intent.getStringExtra("id") ?: ""
+        name = intent.getStringExtra("name") ?: ""
+        description = intent.getStringExtra("description") ?: ""
+        details = intent.getStringExtra("details") ?: ""
+        status = intent.getStringExtra("status") ?: ""
+        date = intent.getStringExtra("date") ?: ""
 
         binding = ActitvityAddSprintTaskBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -38,6 +50,16 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
             validate()
         }
         callApi()
+
+        if (id != "") {
+
+            binding.editTextName.setText(name)
+            binding.editDescription.setText(description)
+            binding.editDetails.setText(details)
+            // Use sprintId
+        } else {
+            // Handle null case
+        }
     }
 
     private fun callApi() {
@@ -93,6 +115,30 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
         }
     }
 
+    private fun updateTask(request: RequestActionAddSprintTask) {
+        viewModel.addSprintTask(request)
+        lifecycleScope.launch {
+            viewModel.uiState.collect { state ->
+                when (state) {
+
+                    is UiState.Loading -> {
+                        // show loader
+                    }
+
+                    is UiState.SuccessSprintTaskAdd -> {
+                        //Toast.makeText(context, "success", Toast.LENGTH_SHORT).show()
+                    }
+
+                    is UiState.Error -> {
+                        // show error
+                    }
+
+                    else -> {}
+                }
+            }
+        }
+    }
+
     fun validate() {
         if (binding.editTextName.text.isNullOrEmpty()) {
             binding.editTextName.error = "is Empty"
@@ -111,16 +157,29 @@ class AddSprintTaskActivity : AppCompatActivity(), AdapterClick {
         } else if (sprintID.isEmpty()) {
             binding.chkPriority.error = "sprint is not selected"
         } else {
-            addTask(
-                RequestActionAddSprintTask(
-                    action = POST_ADD_TASK,
-                    name = binding.editTextName.text.toString().trim(),
-                    description = binding.editDescription.text.toString().trim(),
-                    details = binding.editDetails.text.toString().trim(),
-                    priority = binding.chkPriority.isChecked.toString(),
-                    id = sprintID
+            if (id == "") {
+                addTask(
+                    RequestActionAddSprintTask(
+                        action = POST_ADD_TASK,
+                        name = binding.editTextName.text.toString().trim(),
+                        description = binding.editDescription.text.toString().trim(),
+                        details = binding.editDetails.text.toString().trim(),
+                        priority = binding.chkPriority.isChecked.toString(),
+                        id = sprintID
+                    )
                 )
-            )
+            } else {
+                updateTask(
+                    RequestActionAddSprintTask(
+                        action = POST_UPDATE_TASK,
+                        name = binding.editTextName.text.toString().trim(),
+                        description = binding.editDescription.text.toString().trim(),
+                        details = binding.editDetails.text.toString().trim(),
+                        priority = binding.chkPriority.isChecked.toString(),
+                        id = id
+                    )
+                )
+            }
 
         }
     }

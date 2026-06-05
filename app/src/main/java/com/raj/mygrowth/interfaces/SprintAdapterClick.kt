@@ -1,5 +1,7 @@
 package com.raj.mygrowth.interfaces
 
+import com.raj.mygrowth.domain.SprintTaskItem
+
 interface SprintAdapterClick {
-    fun SprintTaskClick(id: String)
+    fun sprintTaskClick(sprintTaskItem: SprintTaskItem)
 }
