@@ -5,9 +5,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.raj.mygrowth.databinding.AdapterItemPasswordBinding
 import com.raj.mygrowth.domain.PasswordItem
+import com.raj.mygrowth.interfaces.AdapterClick
 
 class PasswordAdapterItem(
-    private val list: List<PasswordItem>
+    private val list: List<PasswordItem>,
+    private val click_: AdapterClick
 ) : RecyclerView.Adapter<PasswordAdapterItem.ViewHolder>() {
 
     private val visiblePasswordPositions = mutableSetOf<Int>()
@@ -31,7 +33,7 @@ class PasswordAdapterItem(
         holder.binding.item = item
         holder.binding.isVisible = visiblePasswordPositions.contains(position)
 
-        holder.binding.root.setOnClickListener {
+        holder.binding.tvPassword.setOnClickListener {
             if (visiblePasswordPositions.contains(position))
                 visiblePasswordPositions.remove(position)
             else
@@ -40,8 +42,8 @@ class PasswordAdapterItem(
             notifyItemChanged(position)
         }
 
-        holder.binding.root.setOnLongClickListener {
-            return@setOnLongClickListener true
+        holder.binding.tvEdit.setOnClickListener {
+            click_.click(item.psw_sno)
         }
 
         holder.binding.executePendingBindings()
