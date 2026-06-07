@@ -1,5 +1,4 @@
 package com.raj.mygrowth.domain
-
 class RequestDankDetailsUpdate(
     val action: String,
     val id: String,

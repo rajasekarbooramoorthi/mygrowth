@@ -52,7 +52,7 @@
                         android:layout_weight="1.5"
                         android:fontFamily="@font/sans_regular"
                         android:gravity="left|center"
-                        android:text="@{item.b_name}"
+                        android:text="@{item.bank_name}"
                         android:textSize="@dimen/_18ssp" />
 
                     <LinearLayout
@@ -111,8 +111,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
-
-                        android:text="@{item.b_cust_id}" />
+                        android:text="@{item.customer_id}" />
                 </LinearLayout>
                 <!--
                                 <View
@@ -152,7 +151,7 @@
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
 
-                        android:text="@{item.b_acc_number}" />
+                        android:text="@{item.account_number}" />
                 </LinearLayout>
 
                 <!-- Card Number -->
@@ -187,7 +186,7 @@
                         android:layout_weight="1.3"
 
                         android:fontFamily="@font/sans_regular"
-                        android:text='@{isVisible ? item.b_card_num : "**** **** **** ****"}' />
+                        android:text='@{isVisible ? item.card_number : "**** **** **** ****"}' />
                 </LinearLayout>
 
                 <!-- Card PIN -->
@@ -222,7 +221,7 @@
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
 
-                        android:text='@{isVisible ? item.b_cpin : "****"}' />
+                        android:text='@{isVisible ? item.card_pin : "****"}' />
                 </LinearLayout>
 
                 <!-- Login Password -->
@@ -254,7 +253,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_bold"
-                        android:text='@{isVisible ? item.b_psw : "******"}' />
+                        android:text='@{isVisible ? item.login_password : "******"}' />
                 </LinearLayout>
 
                 <!-- Profile Password -->
@@ -263,7 +262,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/_3sdp"
                     android:fontFamily="@font/sans_regular"
-
                     android:orientation="horizontal"
                     android:paddingTop="@dimen/_4sdp"
                     android:weightSum="2">
@@ -273,7 +271,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:fontFamily="@font/sans_regular"
-
                         android:text="Profile Pwd" />
 
                     <TextView
@@ -281,7 +278,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
@@ -290,8 +286,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
-
-                        android:text='@{isVisible ? item.b_profile_password : "******"}' />
+                        android:text='@{isVisible ? item.profile_password : "******"}' />
                 </LinearLayout>
 
                 <!-- Updated date -->
@@ -307,7 +302,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-
                         android:fontFamily="@font/sans_regular"
                         android:text="IFSC Code" />
 
@@ -316,7 +310,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
@@ -325,8 +318,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
-
-                        android:text="@{item.b_updated}" />
+                        android:text="@{item.ifsc_code}" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -340,7 +332,6 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-
                         android:layout_weight="0.7"
                         android:fontFamily="@font/sans_regular"
                         android:text="Updated" />
@@ -350,17 +341,27 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
                         android:id="@+id/tvUpdated"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.3"
-
+                        android:layout_weight="0.5"
                         android:fontFamily="@font/sans_regular"
-                        android:text="@{item.b_updated}" />
+                        android:text="@{item.updated_date}" />
+
+                    <TextView
+                        android:id="@+id/tvdays"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:text="@{item.days}" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Days" />
                 </LinearLayout>
 
             </LinearLayout>

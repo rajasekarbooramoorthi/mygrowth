@@ -33,6 +33,7 @@ class BankDetailsAdapter(
         holder.binding.item = item
         holder.binding.isVisible = visiblePasswordPositions.contains(position)
 
+
         holder.binding.icEye.setOnClickListener {
             if (visiblePasswordPositions.contains(position))
                 visiblePasswordPositions.remove(position)
@@ -44,7 +45,7 @@ class BankDetailsAdapter(
         holder.binding.tvEdit.setOnClickListener {
             bankClick.clickBankDetails(item)
         }
-
+        //holder.binding.tvdays.setText(Utilities.calculateDays(item.b_updated_date))
         holder.binding.executePendingBindings()
     }
 }

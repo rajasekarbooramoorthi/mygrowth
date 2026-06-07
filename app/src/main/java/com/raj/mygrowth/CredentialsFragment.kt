@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -168,32 +169,32 @@ class CredentialsFragment : Fragment(), AdapterClick, BankClick {
         dialogBottomSheetDialogBankDetails.show()
 
         binding.apply {
-            textBankName.text = request.b_name
-            editCustomerId.setText(request.b_cust_id)
-            editAccountNumber.setText(request.b_acc_number)
-            editCardNumber.setText(request.b_card_num)
-            editPin.setText(request.b_cpin)
-            editLoginUserName.setText(request.b_user_name)
-            editLoginPassword.setText(request.b_psw)
-            editProfilePassword.setText(request.b_profile_password)
-            editIFSC.setText(request.b_ifsc_code)
+            textBankName.text = request.bank_name
+            editCustomerId.setText(request.customer_id)
+            editAccountNumber.setText(request.account_number)
+            editCardNumber.setText(request.card_number)
+            editPin.setText(request.card_pin)
+            editLoginUserName.setText(request.user_name)
+            editLoginPassword.setText(request.login_password)
+            editProfilePassword.setText(request.profile_password)
+            editIFSC.setText(request.ifsc_code)
         }
         binding.btnSubmit.setOnClickListener {
             val password: String = binding.editPin.text.toString().trim()
 
             if (password.isNotEmpty()) {
                 val requestAction = RequestDankDetailsUpdate(
-                    action = "",
-                    id = password,
-                    name = password,
-                    cust_id = password,
-                    acc_number = password,
-                    card_num = password,
-                    cpin = password,
-                    psw = "get_update_password",
-                    profile_password = "get_update_password",
-                    ifsc_code = "",
-                    user_name = ""
+                    action = "update_bank_details",
+                    id = request.id,
+                    name = request.bank_name,
+                    cust_id = getTextValue(binding.editCustomerId),
+                    acc_number = getTextValue(binding.editAccountNumber),
+                    card_num = getTextValue(binding.editCardNumber),
+                    cpin = getTextValue(binding.editPin),
+                    psw = getTextValue(binding.editLoginPassword),
+                    profile_password = getTextValue(binding.editProfilePassword),
+                    ifsc_code = getTextValue(binding.editIFSC),
+                    user_name = getTextValue(binding.editLoginUserName)
                 )
                 callApiUpdateBankDetails(requestAction)
             }
@@ -255,5 +256,10 @@ class CredentialsFragment : Fragment(), AdapterClick, BankClick {
 
     override fun clickBankDetails(request: BankItem) {
         dialogBankDetails(request)
+    }
+
+    fun getTextValue(edittext: EditText): String {
+        val str = edittext.text.toString().trim()
+        return str
     }
 }
