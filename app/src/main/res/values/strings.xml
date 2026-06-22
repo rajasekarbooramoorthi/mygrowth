@@ -48,5 +48,9 @@
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
     <string name="edit">Edit</string>
+    <string name="_5">5</string>
+    <string name="you_don_t_have_to_be_perfect_you_just_have_to_choose_better_today_than_yesterday_that_single_choice_made_daily_rewrites_who_you_are">You don\'t have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are.</string>
+    <string name="your_brain_is_rewiring">Your Brain Is Rewiring</string>
+    <string name="_60">60%</string>
 
 </resources>

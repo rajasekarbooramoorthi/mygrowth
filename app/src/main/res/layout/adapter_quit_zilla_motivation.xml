@@ -49,34 +49,20 @@
                             android:layout_marginStart="@dimen/_7sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="1.7"
+                            android:layout_weight="1.9"
                             android:fontFamily="@font/sans_bold"
                             android:text="Your Brain Is Rewiring"
                             android:textSize="@dimen/text_size_large" />
-
-                        <TextView
-                            android:id="@+id/tvCategory"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="Success"
-                            android:textSize="@dimen/text_size_too_small" />
-
 
                         <TextView
                             android:id="@+id/tvId"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/_1sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginEnd="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="5"
+                            android:fontFamily="@font/sans_bold"
+                            android:text="@string/_5"
                             android:textSize="@dimen/text_size_too_small" />
 
                     </LinearLayout>

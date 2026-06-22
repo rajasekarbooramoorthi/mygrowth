@@ -1,13 +1,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -49,23 +46,10 @@
                             android:layout_marginStart="@dimen/_7sdp"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="1.7"
+                            android:layout_weight="1.9"
                             android:fontFamily="@font/sans_bold"
-                            android:text="Your Brain Is Rewiring"
+                            android:text="@string/your_brain_is_rewiring"
                             android:textSize="@dimen/text_size_large" />
-
-                        <TextView
-                            android:id="@+id/tvCategory"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/_7sdp"
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:layout_marginBottom="@dimen/_5sdp"
-                            android:layout_weight="0.3"
-                            android:fontFamily="@font/sans_regular"
-                            android:text="Success"
-                            android:textSize="@dimen/text_size_too_small" />
-
 
                         <TextView
                             android:id="@+id/tvId"
@@ -76,9 +60,7 @@
                             android:layout_marginEnd="@dimen/_3sdp"
                             android:layout_marginBottom="@dimen/_5sdp"
                             android:fontFamily="@font/sans_regular"
-                            android:text="5"
                             android:textSize="@dimen/text_size_too_small" />
-
                     </LinearLayout>
 
                     <TextView
@@ -88,7 +70,7 @@
                         android:layout_marginStart="@dimen/_7sdp"
                         android:layout_marginBottom="@dimen/_15sdp"
                         android:fontFamily="@font/sans_regular"
-                        android:text="You don't have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are."
+                        android:text="@string/you_don_t_have_to_be_perfect_you_just_have_to_choose_better_today_than_yesterday_that_single_choice_made_daily_rewrites_who_you_are"
                         android:textSize="@dimen/text_size_medium" />
                 </LinearLayout>
             </LinearLayout>
