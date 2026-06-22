@@ -11,4 +11,5 @@ data class ResponseQuitZillaMasterItem(
     val endDate: String,
     val days: String,
     val percentage: Int,
+    val priority: Int = 0,
 )

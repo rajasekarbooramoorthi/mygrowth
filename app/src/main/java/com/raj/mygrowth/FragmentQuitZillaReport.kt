@@ -17,6 +17,7 @@ import com.raj.mygrowth.databinding.DialogQuitzillaMasterBinding
 import com.raj.mygrowth.databinding.FragmentQuitZillaReportBinding
 import com.raj.mygrowth.domain.RequestAction
 import com.raj.mygrowth.domain.RequestQuitZillaMaster
+import com.raj.mygrowth.domain.ResponseQuitZillaMasterItem
 import com.raj.mygrowth.interfaces.AdapterClick
 import com.raj.mygrowth.repository.Repository
 import com.raj.mygrowth.uiState.UiState
@@ -85,11 +86,15 @@ class FragmentQuitZillaReport : Fragment(), AdapterClick {
     }
 
     override fun click(id: String) {
-        dialog(id)
+        // dialog(id)
+    }
+
+    override fun clickDetails(id: String, item: ResponseQuitZillaMasterItem) {
+        dialog(id, item)
     }
 
 
-    fun dialog(id: String) {
+    fun dialog(id: String, item: ResponseQuitZillaMasterItem) {
         ID = id
         var priority: String
         val binding = DialogQuitzillaMasterBinding.inflate(layoutInflater)
@@ -98,14 +103,24 @@ class FragmentQuitZillaReport : Fragment(), AdapterClick {
         binding.icStartDate.setOnClickListener {
             showNormalDatePicker { date ->
                 startDate = date
+                binding.textStartDateValue.text = startDate
             }
         }
         binding.icEndDate.setOnClickListener {
             showNormalDatePicker { date ->
                 endDate = date
+                binding.textEndDateValue.text = endDate
             }
         }
-
+        startDate = item.startDate
+        endDate = item.endDate
+        binding.apply {
+            editTextName.setText(item.name)
+            editTextNameDescription.setText(item.description)
+            textStartDateValue.text = item.startDate
+            textEndDateValue.text = item.endDate
+            cbPriority.isChecked = item.priority == 0
+        }
         dialogBottomSheetDialog.setOnShowListener {
             val bottomSheet =
                 (it as BottomSheetDialog).findViewById<View>(com.google.android.material.R.id.design_bottom_sheet)
@@ -119,7 +134,7 @@ class FragmentQuitZillaReport : Fragment(), AdapterClick {
         }
         dialogBottomSheetDialog.show()
 
-        binding.btnSubmit.setOnClickListener {
+        binding.btnQuitZillaSubmit.setOnClickListener {
 
             val taskName = binding.editTextName.text
             val taskDescription = binding.editTextNameDescription.text

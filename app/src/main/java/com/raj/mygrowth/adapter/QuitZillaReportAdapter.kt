@@ -55,7 +55,7 @@ class QuitZillaReportAdapter(
         )
 
         holder.binding.progressBar.setOnClickListener {
-            clickListener.click(item.sno)
+            clickListener.clickDetails(item.sno, item)
         }
     }
 }
