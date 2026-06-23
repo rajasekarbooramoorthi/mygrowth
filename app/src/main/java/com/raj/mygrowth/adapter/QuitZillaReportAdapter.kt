@@ -36,7 +36,7 @@ class QuitZillaReportAdapter(
         val formattedTitle = item.name.replaceFirstChar { it.uppercase() }
 
         holder.binding.tvName.text = formattedTitle
-        holder.binding.tvDetail.text = "Day " + (item.days)
+        holder.binding.tvDetail.text = (item.days) + " Day"
         holder.binding.tvDescription.text = item.description
         holder.binding.tvId.text = item.startDate + " vs " + item.endDate
         holder.binding.progressBar.progress = item.percentage
