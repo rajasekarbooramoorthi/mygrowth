@@ -68,10 +68,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:fontFamily="@font/sans_regular"
                         android:text="@string/you_don_t_have_to_be_perfect_you_just_have_to_choose_better_today_than_yesterday_that_single_choice_made_daily_rewrites_who_you_are"
                         android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tvTranslated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:fontFamily="@font/sans_regular"
+                        android:text="@string/you_don_t_have_to_be_perfect_you_just_have_to_choose_better_today_than_yesterday_that_single_choice_made_daily_rewrites_who_you_are"
+                        android:textSize="@dimen/text_size_too_small" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>

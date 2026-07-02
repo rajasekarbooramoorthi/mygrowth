@@ -72,10 +72,20 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_7sdp"
-                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:fontFamily="@font/sans_regular"
                         android:text="You don't have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are."
                         android:textSize="@dimen/text_size_medium" />
+
+                    <TextView
+                        android:id="@+id/tvTranslated"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:fontFamily="@font/sans_regular"
+                        android:text="You don't have to be perfect. You just have to choose better today than yesterday. That single choice, made daily, rewrites who you are."
+                        android:textSize="@dimen/text_size_too_small" />
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
