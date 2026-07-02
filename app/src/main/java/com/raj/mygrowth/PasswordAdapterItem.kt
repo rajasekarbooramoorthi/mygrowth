@@ -33,7 +33,7 @@ class PasswordAdapterItem(
         holder.binding.item = item
         holder.binding.isVisible = visiblePasswordPositions.contains(position)
 
-        holder.binding.tvPassword.setOnClickListener {
+        holder.binding.root.setOnClickListener {
             if (visiblePasswordPositions.contains(position))
                 visiblePasswordPositions.remove(position)
             else
@@ -42,7 +42,7 @@ class PasswordAdapterItem(
             notifyItemChanged(position)
         }
 
-        holder.binding.tvEdit.setOnClickListener {
+        holder.binding.idEdit.setOnClickListener {
             click_.click(item.psw_sno)
         }
 

@@ -70,15 +70,12 @@
                             android:layout_marginEnd="@dimen/_7sdp"
                             app:srcCompat="@drawable/ic_eye" />
 
-                        <TextView
+                        <androidx.appcompat.widget.AppCompatImageView
                             android:id="@+id/tvEdit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/sans_bold"
-                            android:paddingEnd="@dimen/_7sdp"
-                            android:text="@string/edit"
-                            android:textColor="@color/color_edit"
-                            android:textSize="@dimen/text_size_too_small" />
+                            android:layout_marginEnd="@dimen/_7sdp"
+                            app:srcCompat="@drawable/ic_edit" />
                     </LinearLayout>
 
                 </LinearLayout>
@@ -133,7 +130,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
                         android:fontFamily="@font/sans_regular"
-
                         android:text="Account Number" />
 
                     <TextView
@@ -141,7 +137,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
@@ -176,7 +171,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
                         android:fontFamily="@font/sans_regular"
-
                         android:text=":" />
 
                     <TextView
@@ -184,7 +178,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
-
                         android:fontFamily="@font/sans_regular"
                         android:text='@{isVisible ? item.card_number : "**** **** **** ****"}' />
                 </LinearLayout>
@@ -202,7 +195,6 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
-
                         android:fontFamily="@font/sans_regular"
                         android:text="PIN" />
 
@@ -210,7 +202,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="@dimen/_5sdp"
-
                         android:fontFamily="@font/sans_regular"
                         android:text=":" />
 
@@ -220,7 +211,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1.3"
                         android:fontFamily="@font/sans_regular"
-
                         android:text='@{isVisible ? item.card_pin : "****"}' />
                 </LinearLayout>
 
