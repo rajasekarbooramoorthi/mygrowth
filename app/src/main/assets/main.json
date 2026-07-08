@@ -16874,6 +16874,22 @@
               ]
             }
           ]
+        },
+        {
+          "subCategoryId": 9,
+          "subcategoryName": "Full Stack RoadMap",
+          "folderName": "RoadMaps",
+          "filetype": "pdf",
+          "added": true,
+          "itemList": [
+            {
+              "id": "8.1",
+              "name": "Full Stack + Microservices + AWS Roadmap",
+              "links": [
+                "Full_Stack _Microservices_AWS_Roadmap.pdf"
+              ]
+            }
+          ]
         }
       ]
     },
